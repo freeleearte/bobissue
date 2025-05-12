@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/bobStore.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="js/common.js"></script>
+    <script src="js/bobStore.js"></script>
 </head>
 
 <body>
@@ -78,252 +79,43 @@
                     <div class="filter">
                         <div class="filter_sec top">
                             <strong>필터</strong>
-                            <p><img src="asset/refresh_bob.png" alt="초기화">초기화</p>
+                            <p>초기화</p>
                         </div> <!-- //.filter_sec -->
                         <div class="filter_sec">
                             <em>브랜드별</em>
                             <ul>
-                                <li>프레시지</li>
-                                <li>백년밥상</li>
-                                <li>피코크</li>
+                                <li class="brand fresheasy">프레시지</li>
+                                <li class="brand bs100">백년밥상</li>
+                                <li class="brand peacock">피코크</li>
                             </ul>
                         </div> <!-- //.filter_sec -->
                         <div class="filter_sec">
                             <em>양</em>
                             <ul>
-                                <li>푸짐하게</li>
-                                <li>소담하게</li>
+                                <li class="amount big">푸짐하게</li>
+                                <li class="amount small">소담하게</li>
                             </ul>
                         </div> <!-- //.filter_sec -->
                         <div class="filter_sec">
                             <em>음식 카테고리별</em>
                             <ul>
-                                <li>국 / 탕 / 찌개 / 전골</li>
-                                <li>구이 / 볶음 / 찜</li>
-                                <li>정육 / 수산</li>
-                                <li>분식 / 튀김</li>
-                                <li>밥 / 면 / 반찬</li>
-                                <li>건강식품</li>
-                                <li>양식</li>
+                                <li class="category soup">국 / 탕 / 찌개 / 전골</li>
+                                <li class="category grill">구이 / 볶음 / 찜</li>
+                                <li class="category meat">정육 / 수산</li>
+                                <li class="category snack">분식 / 튀김</li>
+                                <li class="category rice">밥 / 면 / 반찬</li>
+                                <li class="category health">건강식품</li>
+                                <li class="category western">양식</li>
                             </ul>
                         </div> <!-- //.filter_sec -->
                     </div> <!-- //.filter -->
                     <div class="menu_wrap">
-                        <ul class="menu_list">
-                            <li class="menu fresheasy"><a href="#">
-                                    <div class="img"></div>
-                                    <div class="info">
-                                        <div class="top_txt">
-                                            <i></i>
-                                            <strong>매콤 깻잎 순대 볶음 냉장 밀키트 (2인분)</strong>
-                                        </div> <!-- //.top_txt -->
-                                        <div class="bottom_txt">
-                                            <span>17,000원</span>
-                                            <p>30%<em>11,900원</em></p>
-                                        </div> <!-- //.bottom_txt -->
-                                    </div> <!-- //.info -->
-                                </a></li> <!-- //.menu -->
-                            <li class="menu fresheasy"><a href="#">
-                                    <div class="img"></div>
-                                    <div class="info">
-                                        <div class="top_txt">
-                                            <i></i>
-                                            <strong>매콤 깻잎 순대 볶음 냉장 밀키트 (2인분)</strong>
-                                        </div> <!-- //.top_txt -->
-                                        <div class="bottom_txt">
-                                            <span>17,000원</span>
-                                            <p>30%<em>11,900원</em></p>
-                                        </div> <!-- //.bottom_txt -->
-                                    </div> <!-- //.info -->
-                                </a></li> <!-- //.menu -->
-                            <li class="menu fresheasy"><a href="#">
-                                    <div class="img"></div>
-                                    <div class="info">
-                                        <div class="top_txt">
-                                            <i></i>
-                                            <strong>매콤 깻잎 순대 볶음 냉장 밀키트 (2인분)</strong>
-                                        </div> <!-- //.top_txt -->
-                                        <div class="bottom_txt">
-                                            <span>17,000원</span>
-                                            <p>30%<em>11,900원</em></p>
-                                        </div> <!-- //.bottom_txt -->
-                                    </div> <!-- //.info -->
-                                </a></li> <!-- //.menu -->
-                            <li class="menu fresheasy"><a href="#">
-                                    <div class="img"></div>
-                                    <div class="info">
-                                        <div class="top_txt">
-                                            <i></i>
-                                            <strong>매콤 깻잎 순대 볶음 냉장 밀키트 (2인분)</strong>
-                                        </div> <!-- //.top_txt -->
-                                        <div class="bottom_txt">
-                                            <span>17,000원</span>
-                                            <p>30%<em>11,900원</em></p>
-                                        </div> <!-- //.bottom_txt -->
-                                    </div> <!-- //.info -->
-                                </a></li> <!-- //.menu -->
-                            <li class="menu fresheasy"><a href="#">
-                                    <div class="img"></div>
-                                    <div class="info">
-                                        <div class="top_txt">
-                                            <i></i>
-                                            <strong>매콤 깻잎 순대 볶음 냉장 밀키트 (2인분)</strong>
-                                        </div> <!-- //.top_txt -->
-                                        <div class="bottom_txt">
-                                            <span>17,000원</span>
-                                            <p>30%<em>11,900원</em></p>
-                                        </div> <!-- //.bottom_txt -->
-                                    </div> <!-- //.info -->
-                                </a></li> <!-- //.menu -->
-                            <li class="menu fresheasy"><a href="#">
-                                    <div class="img"></div>
-                                    <div class="info">
-                                        <div class="top_txt">
-                                            <i></i>
-                                            <strong>매콤 깻잎 순대 볶음 냉장 밀키트 (2인분)</strong>
-                                        </div> <!-- //.top_txt -->
-                                        <div class="bottom_txt">
-                                            <span>17,000원</span>
-                                            <p>30%<em>11,900원</em></p>
-                                        </div> <!-- //.bottom_txt -->
-                                    </div> <!-- //.info -->
-                                </a></li> <!-- //.menu -->
-                            <li class="menu fresheasy"><a href="#">
-                                    <div class="img"></div>
-                                    <div class="info">
-                                        <div class="top_txt">
-                                            <i></i>
-                                            <strong>매콤 깻잎 순대 볶음 냉장 밀키트 (2인분)</strong>
-                                        </div> <!-- //.top_txt -->
-                                        <div class="bottom_txt">
-                                            <span>17,000원</span>
-                                            <p>30%<em>11,900원</em></p>
-                                        </div> <!-- //.bottom_txt -->
-                                    </div> <!-- //.info -->
-                                </a></li> <!-- //.menu -->
-                            <li class="menu fresheasy"><a href="#">
-                                    <div class="img"></div>
-                                    <div class="info">
-                                        <div class="top_txt">
-                                            <i></i>
-                                            <strong>매콤 깻잎 순대 볶음 냉장 밀키트 (2인분)</strong>
-                                        </div> <!-- //.top_txt -->
-                                        <div class="bottom_txt">
-                                            <span>17,000원</span>
-                                            <p>30%<em>11,900원</em></p>
-                                        </div> <!-- //.bottom_txt -->
-                                    </div> <!-- //.info -->
-                                </a></li> <!-- //.menu -->
-                            <li class="menu fresheasy"><a href="#">
-                                    <div class="img"></div>
-                                    <div class="info">
-                                        <div class="top_txt">
-                                            <i></i>
-                                            <strong>매콤 깻잎 순대 볶음 냉장 밀키트 (2인분)</strong>
-                                        </div> <!-- //.top_txt -->
-                                        <div class="bottom_txt">
-                                            <span>17,000원</span>
-                                            <p>30%<em>11,900원</em></p>
-                                        </div> <!-- //.bottom_txt -->
-                                    </div> <!-- //.info -->
-                                </a></li> <!-- //.menu -->
-                            <li class="menu fresheasy"><a href="#">
-                                    <div class="img"></div>
-                                    <div class="info">
-                                        <div class="top_txt">
-                                            <i></i>
-                                            <strong>매콤 깻잎 순대 볶음 냉장 밀키트 (2인분)</strong>
-                                        </div> <!-- //.top_txt -->
-                                        <div class="bottom_txt">
-                                            <span>17,000원</span>
-                                            <p>30%<em>11,900원</em></p>
-                                        </div> <!-- //.bottom_txt -->
-                                    </div> <!-- //.info -->
-                                </a></li> <!-- //.menu -->
-                            <li class="menu fresheasy"><a href="#">
-                                    <div class="img"></div>
-                                    <div class="info">
-                                        <div class="top_txt">
-                                            <i></i>
-                                            <strong>매콤 깻잎 순대 볶음 냉장 밀키트 (2인분)</strong>
-                                        </div> <!-- //.top_txt -->
-                                        <div class="bottom_txt">
-                                            <span>17,000원</span>
-                                            <p>30%<em>11,900원</em></p>
-                                        </div> <!-- //.bottom_txt -->
-                                    </div> <!-- //.info -->
-                                </a></li> <!-- //.menu -->
-                            <li class="menu fresheasy"><a href="#">
-                                    <div class="img"></div>
-                                    <div class="info">
-                                        <div class="top_txt">
-                                            <i></i>
-                                            <strong>매콤 깻잎 순대 볶음 냉장 밀키트 (2인분)</strong>
-                                        </div> <!-- //.top_txt -->
-                                        <div class="bottom_txt">
-                                            <span>17,000원</span>
-                                            <p>30%<em>11,900원</em></p>
-                                        </div> <!-- //.bottom_txt -->
-                                    </div> <!-- //.info -->
-                                </a></li> <!-- //.menu -->
-                            <li class="menu fresheasy"><a href="#">
-                                    <div class="img"></div>
-                                    <div class="info">
-                                        <div class="top_txt">
-                                            <i></i>
-                                            <strong>매콤 깻잎 순대 볶음 냉장 밀키트 (2인분)</strong>
-                                        </div> <!-- //.top_txt -->
-                                        <div class="bottom_txt">
-                                            <span>17,000원</span>
-                                            <p>30%<em>11,900원</em></p>
-                                        </div> <!-- //.bottom_txt -->
-                                    </div> <!-- //.info -->
-                                </a></li> <!-- //.menu -->
-                            <li class="menu fresheasy"><a href="#">
-                                    <div class="img"></div>
-                                    <div class="info">
-                                        <div class="top_txt">
-                                            <i></i>
-                                            <strong>매콤 깻잎 순대 볶음 냉장 밀키트 (2인분)</strong>
-                                        </div> <!-- //.top_txt -->
-                                        <div class="bottom_txt">
-                                            <span>17,000원</span>
-                                            <p>30%<em>11,900원</em></p>
-                                        </div> <!-- //.bottom_txt -->
-                                    </div> <!-- //.info -->
-                                </a></li> <!-- //.menu -->
-                            <li class="menu fresheasy"><a href="#">
-                                    <div class="img"></div>
-                                    <div class="info">
-                                        <div class="top_txt">
-                                            <i></i>
-                                            <strong>매콤 깻잎 순대 볶음 냉장 밀키트 (2인분)</strong>
-                                        </div> <!-- //.top_txt -->
-                                        <div class="bottom_txt">
-                                            <span>17,000원</span>
-                                            <p>30%<em>11,900원</em></p>
-                                        </div> <!-- //.bottom_txt -->
-                                    </div> <!-- //.info -->
-                                </a></li> <!-- //.menu -->
-                            <li class="menu fresheasy"><a href="#">
-                                    <div class="img"></div>
-                                    <div class="info">
-                                        <div class="top_txt">
-                                            <i></i>
-                                            <strong>매콤 깻잎 순대 볶음 냉장 밀키트 (2인분)</strong>
-                                        </div> <!-- //.top_txt -->
-                                        <div class="bottom_txt">
-                                            <span>17,000원</span>
-                                            <p>30%<em>11,900원</em></p>
-                                        </div> <!-- //.bottom_txt -->
-                                    </div> <!-- //.info -->
-                                </a></li> <!-- //.menu -->
-                        </ul> <!-- //.menu_list -->
+                        <ul class="menu_list"></ul>
                         <ul class="pagination">
                             <li class="left_btn"><img src="asset/left_bob.png" alt="왼쪽 버튼"></li>
-                            <li class="on">1</li>
-                            <li>2</li>
-                            <li>3</li>
+                            <li class="page-btn" data-page="1">1</li>
+                            <li class="page-btn" data-page="2">2</li>
+                            <li class="page-btn" data-page="3">3</li>
                             <li class="right_btn"><img src="asset/right_bob.png" alt="오른쪽 버튼"></li>
                         </ul> <!-- //.pagination -->
                     </div> <!-- //.menu_wrap -->

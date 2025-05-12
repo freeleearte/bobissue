@@ -89,6 +89,7 @@ section .txt {
 }
 
 section .txt h2 {
+    font-family: var(--title-font);
     font-size: 80px;
     font-weight: 800;
     color: var(--sub-color-2);
@@ -96,7 +97,7 @@ section .txt h2 {
 }
 
 section .txt h2 strong {
-    font-family: var(--eng-font);
+    /* font-family: var(--eng-font); */
 }
 
 section .txt h2 span {
@@ -111,11 +112,11 @@ section .txt p {
     line-height: 42px;
 }
 
-section article button.more {
+section button.more {
     width: 330px;
     height: 60px;
     border: 0;
-    border-radius: 50px;
+    border-radius: 15px;
     background-color: var(--sub-color-1);
     color: #fff;
     font-size: 25px;
@@ -153,7 +154,7 @@ section article button.more {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 75px;
+    margin-bottom: 120px;
 }
 
 .con1 article ul li {
@@ -161,7 +162,19 @@ section article button.more {
     height: 542px;
     border-radius: 15px;
     background-color: var(--txt-w-color);
-    box-shadow: 0 0 0 5px var(--sub-color-1) inset; 
+    box-shadow: 0 0 0 5px var(--sub-color-1) inset;
+}
+
+section article .more_wrap {
+    position: relative;
+}
+
+section article .more_wrap img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -120px;
+    pointer-events: none;
 }
 
 .con1 article ul li h3 {}
@@ -176,6 +189,10 @@ section article button.more {
     padding-top: 140px;
 }
 
+.con2 .txt h2 {
+    margin-bottom: 50px;
+}
+
 .con2 .txt h2,
 .con2 .txt p {
     color: #fff;
@@ -187,18 +204,18 @@ section article button.more {
     gap: 110px;
 }
 
-.con2 article .l_img {
+.con2 article .img_wrap {
     position: relative;
 }
 
-.con2 article .l_img .img {
+.con2 article .img_wrap .img {
     width: 780px;
     height: 800px;
     border-radius: 0 50px 50px 0;
     background: #fff;
 }
 
-.con2 article .l_img strong {
+.con2 article .img_wrap strong {
     font-size: 170px;
     font-weight: 700;
     -webkit-text-stroke: 2px #000;
@@ -208,51 +225,59 @@ section article button.more {
     top: 40%;
 }
 
-.con2 article .r_con {
+.con2 article .con_wrap {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    padding-right: 250px;
 }
 
-.con2 article .r_con h3 {
-    font-size: 40px;
+.con2 article .con_wrap h3 {
+    font-size: 80px;
+    font-family: var(--eng-font);
+    margin-bottom: 40px;
+}
+
+.con2 article .con_wrap strong {
+    margin-bottom: 20px;
+    font-size: 35px;
     font-weight: 600;
 }
 
-.con2 article .r_con b {
-    font-size: 23px;
-    line-height: 40px;
+.con2 article .con_wrap b {
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 50px;
 }
 
-.con2 article .r_con ul {
+.con2 article .con_wrap ul {
     display: flex;
-    gap: 34px;
+    justify-content: space-between;
 }
 
-.con2 article .r_con ul li {
-    width: 350px;
-    height: 370px;
+.con2 article .con_wrap ul li {
+    width: 220px;
+    height: 220px;
     border-radius: 10px;
     background: #fff;
 }
 
-.con2 article .r_con .lr_btn {
-    display: flex;
-    gap: 20px;
-}
-
-.con2 article .r_con .lr_btn div {
+.con2 article .img_wrap .sw_btn {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: #fff;
+    background: #ccc;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%);
 }
 
-.con2 article .r_con .lr_btn .left_btn {}
+.con2 article .con_wrap .lr_btn .left_btn {}
 
-.con2 article .r_con .lr_btn .right_btn {}
+.con2 article .con_wrap .lr_btn .right_btn {}
 
-.con2 article .r_con .button {}
+.con2 article .con_wrap .button {}
 
 /* char2 */
 .line_2_wrap {
@@ -283,22 +308,11 @@ section article button.more {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
+    margin-top: -100px;
 }
 
-.con3 .lr_btn {
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 130px;
-}
-
-.con3 .lr_btn div {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background: #565656;
+.con3 .txt p {
+    color: #ccc;
 }
 
 .con3 article {
@@ -309,9 +323,28 @@ section article button.more {
 
 .con3 article .video {
     width: 1000px;
-    height: 550px;
+    height: 465px;
+    border-radius: 20px;
     background: #707070;
     margin-bottom: 200px;
+    position: relative;
+}
+
+.con3 .lr_btn {
+    position: absolute;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 50%);
+}
+
+.con3 .lr_btn div {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #565656;
 }
 
 .con3 article ul {
@@ -320,8 +353,8 @@ section article button.more {
 }
 
 .con3 article ul li {
-    width: 700px;
-    height: 420px;
+    width: 490px;
+    height: 310px;
     background: #eaeaea;
     border-radius: 30px;
     position: relative;
@@ -338,7 +371,7 @@ section article button.more {
 }
 
 .con3 article ul li .img_wrap {
-    width: 360px;
+    width: 230px;
     position: absolute;
     right: 40px;
     top: -90px;
@@ -374,8 +407,8 @@ section article button.more {
 }
 
 .con3 article ul li button.buy {
-    width: 170px;
-    height: 60px;
+    width: 130px;
+    height: 45px;
     border-radius: 10px;
     border: 0;
     background-color: #333;
@@ -384,30 +417,49 @@ section article button.more {
     font-weight: 600;
     cursor: pointer;
     position: absolute;
-    right: 20%;
-    bottom: -5%;
+    right: 10%;
+    bottom: 0;
+    transform: translateY(50%);
 }
 
 /* con4 */
 .con4 {}
 
+.con4 .txt p {
+    color: #ccc;
+}
+
 .con4 ul {
     display: flex;
-    justify-content: space-between;
+    column-gap: 50px;
+    row-gap: 70px;
+    flex-wrap: wrap;
 }
 
 .con4 ul li {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 380px;
+    width: 385px;
+    height: 655px;
+    background: #555;
+    border-radius: 20px;
+    padding-inline: 25px;
+    flex-shrink: 0;
+}
+
+.con4 ul li:nth-child(2),
+.con4 ul li:nth-child(5) {
+    margin-top: 200px;
 }
 
 .con4 ul li .img {
     width: 100%;
-    height: 410px;
+    height: 385px;
     background: #ccc;
     border-radius: 10px;
+    align-self: center;
+    margin-top: 25px;
 }
 
 .con4 ul li .info {
@@ -417,7 +469,9 @@ section article button.more {
     flex-direction: column;
     justify-content: space-between;
 }
-
+.con4 ul li .info img {
+    width: 45px;
+}
 .con4 ul li .info p {
     font-size: 30px;
     font-weight: 600;
@@ -430,15 +484,19 @@ section article button.more {
     justify-content: space-between;
 }
 
-.con4 ul li .info button {
+.con4 ul li .info b {
     border: 0;
-    width: 200px;
+    width: 220px;
     height: 45px;
-    border-radius: 40px;
+    border-radius: 0 50px 0 20px;
     background: #ccc;
     color: #fff;
     font-weight: 700;
     font-size: 23px;
+    margin-left: -25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .con4 ul li .info span {
