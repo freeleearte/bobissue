@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/new.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="js/common.js"></script>
+    <script src="js/new.js"></script>
 </head>
 
 <body>
@@ -64,32 +65,32 @@
             <ul class="top">
                 <li>
                     <strong class="must">아이디</strong>
-                    <input type="text" placeholder="아이디를 입력해 주세요">
+                    <input type="text" placeholder="아이디를 입력해 주세요" id="id">
                 </li>
                 <li>
                     <strong class="must">비밀번호</strong>
-                    <input type="password" placeholder="비밀번호를 입력해 주세요">
+                    <input type="password" placeholder="비밀번호를 입력해 주세요" id="pw">
                 </li>
                 <li>
                     <strong class="must">비밀번호확인</strong>
-                    <input type="password" placeholder="비밀번호를 한번 더 입력해 주세요">
+                    <input type="password" placeholder="비밀번호를 한번 더 입력해 주세요" id="pw2">
                 </li>
                 <li>
                     <strong class="must">이름</strong>
-                    <input type="text" placeholder="이름을 입력해 주세요">
+                    <input type="text" placeholder="이름을 입력해 주세요" id="name">
                 </li>
                 <li>
                     <strong>이메일</strong>
-                    <input type="email" placeholder="">
+                    <input type="email" placeholder="" id="email">
                 </li>
                 <li>
                     <strong class="must">휴대폰</strong>
-                    <input type="tel" placeholder="숫자만 입력해 주세요">
+                    <input type="text" placeholder="숫자만 입력해 주세요" id="phone">
                 </li>
                 <li class="address">
                     <strong class="must">주소</strong>
                     <div class="address_wrap">
-                        <input type="text" placeholder="">
+                        <input type="text" placeholder="" id="address">
                         <p>배송지에 따라 상품 정보가 달라질 수 있습니다.</p>
                     </div>
                 </li>
@@ -121,12 +122,12 @@
                         </div>
                     </div>
                     <div class="use_agree_wrap">
-                        <input type="checkbox" id="use_agree" name="agreement" value="use_agree">
+                        <input type="checkbox" id="use_agree" name="agreement" value="use_agree" required>
                         <label for="use_agree">이용약관 동의 (필수)</label>
                         <em>약관보기</em>
                     </div>
                     <div class="per_agree_wrap">
-                        <input type="checkbox" id="per_agree" name="agreement" value="per_agree">
+                        <input type="checkbox" id="per_agree" name="agreement" value="per_agree" required>
                         <label for="per_agree">개인정보 수집/이용 동의 (필수)</label>
                         <em>약관보기</em>
                     </div>
@@ -143,15 +144,15 @@
                         </div>
                     </div>
                     <div class="age_agree_wrap">
-                        <input type="checkbox" id="age_agree" name="agreement" value="age_agree">
+                        <input type="checkbox" id="age_agree" name="agreement" value="age_agree" required>
                         <label for="age_agree">본인은 만 14세 이상입니다 (필수)</label>
                     </div>
                 </div> <!-- //.agreement_wrap -->
             </div> <!-- //.bot -->
-            <button>취향정보 입력하기</button>
+            <button class="submit_btn">취향정보 입력하기</button>
         </div> <!-- //.new_wrap -->
 
-        <div class="modal_test_wrap ">
+        <div class="modal_test_wrap">
             <div class="start on">
                 <div class="img"></div>
                 <h3>음식 취향 테스트</h3>
@@ -163,23 +164,26 @@
                 <div class="progress_bar">
                     <div class="done"></div>
                 </div>
-                <div class="first question on">
+                <div class="first question ">
                     <div class="top">
+                        <h4>Q1.</h4>
                         <div class="num">
-                            <h4>Q1.</h4>
+                            <img src="asset/quiz_next.png" alt="다음" class="next">
                         </div>
                         <p>어떤 컨텐츠의 음식을 먹고 싶나요?</p>
                     </div> <!-- //.top -->
                     <ul class="bot">
-                        <li class="check">드라마,영화,예능 등 다양한 스토리가 담긴 음식</li>
+                        <li class="">드라마,영화,예능 등 다양한 스토리가 담긴 음식</li>
                         <li>한국의 다양한 문화와 이야기를 담은 음식 </li>
                         <li>캠핑, 홈파티등 상황을 고려하여 준비 된 음식</li>
                     </ul> <!-- //.bot -->
                 </div> <!-- //.first -->
                 <div class="second question">
                     <div class="top">
+                        <h4>Q2.</h4>
                         <div class="num">
-                            <h4>Q2.</h4>
+                            <img src="asset/quiz_prev.png" alt="이전" class="prev">
+                            <img src="asset/quiz_next.png" alt="다음" class="next">
                         </div>
                         <p>어떤 종류의 음식을 선호하시나요?</p>
                     </div> <!-- //.top -->
@@ -193,8 +197,10 @@
                 </div> <!-- //.second -->
                 <div class="third question">
                     <div class="top">
+                        <h4>Q3.</h4>
                         <div class="num">
-                            <h4>Q3.</h4>
+                            <img src="asset/quiz_prev.png" alt="이전" class="prev">
+                            <img src="asset/quiz_next.png" alt="다음" class="next">
                         </div>
                         <p>어느정도의 매운맛을 즐기시나요?</p>
                     </div> <!-- //.top -->
@@ -206,8 +212,10 @@
                 </div> <!-- //.third -->
                 <div class="fourth question">
                     <div class="top">
+                        <h4>Q4.</h4>
                         <div class="num">
-                            <h4>Q4.</h4>
+                            <img src="asset/quiz_prev.png" alt="이전" class="prev">
+                            <img src="asset/quiz_next.png" alt="다음" class="next">
                         </div>
                         <p>알레르기나 피하고싶은 식재료가 있으신가요?</p>
                     </div> <!-- //.top -->
@@ -221,8 +229,10 @@
                 </div> <!-- //.fourth -->
                 <div class="fifth question">
                     <div class="top">
+                        <h4>Q5.</h4>
                         <div class="num">
-                            <h4>Q5.</h4>
+                            <img src="asset/quiz_prev.png" alt="이전" class="prev">
+                            <img src="asset/quiz_next.png" alt="다음" class="next">
                         </div>
                         <p>선호하는 조리방식은 무엇인가요?</p>
                     </div> <!-- //.top -->
