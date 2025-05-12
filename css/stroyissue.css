@@ -10,14 +10,268 @@ body {
     background: #ccc;
 }
 
-.test {
+
+
+/* 기본 테스트 섹션 wrapper */
+.test-section {
     width: 100%;
     height: 700px;
-    background: #aaa;
+    box-sizing: border-box;
+    background: yellow;
 }
+
+/* 전체 wrap */
+.modal_test_wrap {
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* 시작 / 퀴즈 / 결과 영역 */
+/* .modal_test_wrap .quiz,
+.modal_test_wrap .result-modal,
+.modal_test_wrap .result {
+    display: none;
+}
+
+
+.modal_test_wrap .quiz.on,
+.modal_test_wrap .result-modal.on,
+.modal_test_wrap .result.on {
+    display: block;
+} */
+
+/* 시작 화면 */
+.modal_test_wrap .start {
+    display: none;
+}
+
+.modal_test_wrap .start img {
+    width: 437px;
+    height: 265px;
+}
+
+.modal_test_wrap .start .txt {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    padding-bottom: 40px;
+}
+
+.modal_test_wrap .start .txt p {
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.modal_test_wrap .start button {
+    width: 330px;
+    height: 60px;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 15px;
+}
+
+/* 공통 타이틀 */
+.modal_test_wrap h3 {
+    font-size: 50px;
+    font-weight: 700;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #333;
+    text-align: center;
+}
+
+/* .modal_test_wrap p {
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+    color: #666;
+    margin-top: 10px;
+} */
+/* 진행률 */
+.bar {
+    width: 100%;
+    height: 120px;
+    background: #ccc;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.progress_bar {
+    width: 550px;
+    height: 30px;
+    background: #eee;
+    border-radius: 100px;
+    overflow: hidden;
+}
+
+.progress_bar .done {
+    height: 100%;
+    width: 0%;
+    background: var(--sub-color-1);
+    transition: width 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* 질문 박스 */
+.modal_test_wrap .quiz {
+    width: 100%;
+    height: 100%;
+    background: blue;
+}
+
+.modal_test_wrap .question {
+    width: 100%;
+    height: 530px;
+    background: #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    animation: fadeIn 0.3s ease-in-out;
+    display: none;
+}
+
+
+.modal_test_wrap .top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.modal_test_wrap .top h4 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--sub-color-1);
+}
+
+.modal_test_wrap p {
+    font-size: 30px;
+    font-weight: 600;
+    color: #333;
+    padding-top: 30px;
+    padding-bottom: 125px;
+}
+
+.modal_test_wrap .question img {
+    width: 40px;
+    height: 40px;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+/* 항목 리스트 */
+.modal_test_wrap .bot {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.modal_test_wrap .bot li {
+    display: flex;
+    width: 700px;
+    height: 65px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: var(--txt-dark-w-color);
+    border-radius: 60px;
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--txt-dark-gray);
+}
+
+.modal_test_wrap .bot li:hover {
+    background: #ffe7d8;
+}
+
+.modal_test_wrap .bot li.check {
+    background: #ff7750;
+    color: white;
+}
+
+/* 모달창 */
+.modal_test_wrap .result-modal {
+    width: 700px;
+    height: 650px;
+    max-width: 95%;
+    max-height: 95vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    text-align: center;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* 배경 */
+.modal-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 998;
+}
+.modal_test_wrap .result-modal h3{
+    font-size: 35px;
+    font-weight: 600;
+}
+.modal_test_wrap .result-modal p{
+    font-size: 25px;
+    font-weight: 500;
+}
+.modal_test_wrap .result-modal img{
+    width: 530px;
+    height: 275px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .story {
     width: 100%;
+    padding: 150px 0 300px 0;
 }
 
 
@@ -26,6 +280,7 @@ body {
 
 .story .gnb {
     width: 100%;
+    padding-bottom: 70px;
 }
 
 .story .gnb ul {
@@ -118,6 +373,7 @@ body {
 .story .content-section {
     width: 100%;
     display: none;
+
 }
 
 .content-section.active {
@@ -138,6 +394,7 @@ body {
     display: flex;
     gap: 50px;
     align-items: center;
+    padding-left: 40px;
 }
 
 .story .content-section .con1 img {
@@ -182,7 +439,7 @@ body {
     font-weight: 400;
     line-height: 43px;
     color: var(--txt-gray);
-        padding-bottom: 40px;
+    padding-bottom: 40px;
 }
 
 .story .content-section .con1 .txt .button {
@@ -209,6 +466,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+    padding-top: 90px;
 }
 
 .story .content-section .story-all li {
@@ -223,29 +481,7 @@ body {
     align-items: flex-end;
 }
 
-.story .content-section .story-all li:nth-child(1) {
-    background-image: linear-gradient(180deg, rgba(51, 51, 51, 0.00) 21.46%, rgba(16, 16, 16, 0.68) 61.33%, #000 99.74%), url(../stroy.img/card1.jpg);
-}
 
-.story .content-section .story-all li:nth-child(2) {
-    background-image: linear-gradient(180deg, rgba(51, 51, 51, 0.00) 21.46%, rgba(16, 16, 16, 0.68) 61.33%, #000 99.74%), url(../stroy.img/card1.jpg);
-}
-
-.story .content-section .story-all li:nth-child(3) {
-    background-image: linear-gradient(180deg, rgba(51, 51, 51, 0.00) 21.46%, rgba(16, 16, 16, 0.68) 61.33%, #000 99.74%), url(../stroy.img/card1.jpg);
-}
-
-.story .content-section .story-all li:nth-child(4) {
-    background-image: linear-gradient(180deg, rgba(51, 51, 51, 0.00) 21.46%, rgba(16, 16, 16, 0.68) 61.33%, #000 99.74%), url(../stroy.img/card1.jpg);
-}
-
-.story .content-section .story-all li:nth-child(5) {
-    background-image: linear-gradient(180deg, rgba(51, 51, 51, 0.00) 21.46%, rgba(16, 16, 16, 0.68) 61.33%, #000 99.74%), url(../stroy.img/card1.jpg);
-}
-
-.story .content-section .story-all li:nth-child(6) {
-    background-image: linear-gradient(180deg, rgba(51, 51, 51, 0.00) 21.46%, rgba(16, 16, 16, 0.68) 61.33%, #000 99.74%), url(../stroy.img/card1.jpg);
-}
 
 .story .content-section .story-all li a {
     width: 100%;
@@ -306,4 +542,85 @@ body {
 .story .content-section .story-all li .txt .under .right img {
     width: 12px;
     height: 20px;
+}
+
+
+/* 스토리 이미지 */
+.story #section-story .story-all li:nth-child(1) {
+    background-image: linear-gradient(180deg, rgba(51, 51, 51, 0.00) 21.46%, rgba(16, 16, 16, 0.68) 61.33%, #000 99.74%), url(../stroy.img/card1.jpg);
+}
+
+.story #section-story .story-all li:nth-child(2) {
+    background-image: linear-gradient(180deg, rgba(51, 51, 51, 0.00) 21.46%, rgba(16, 16, 16, 0.68) 61.33%, #000 99.74%), url(../stroy.img/card1.jpg);
+}
+
+.story #section-story .story-all li:nth-child(3) {
+    background-image: linear-gradient(180deg, rgba(51, 51, 51, 0.00) 21.46%, rgba(16, 16, 16, 0.68) 61.33%, #000 99.74%), url(../stroy.img/card1.jpg);
+}
+
+.story #section-story .story-all li:nth-child(4) {
+    background-image: linear-gradient(180deg, rgba(51, 51, 51, 0.00) 21.46%, rgba(16, 16, 16, 0.68) 61.33%, #000 99.74%), url(../stroy.img/card1.jpg);
+}
+
+.story #section-story .story-all li:nth-child(5) {
+    background-image: linear-gradient(180deg, rgba(51, 51, 51, 0.00) 21.46%, rgba(16, 16, 16, 0.68) 61.33%, #000 99.74%), url(../stroy.img/card1.jpg);
+}
+
+.story #section-story .story-all li:nth-child(6) {
+    background-image: linear-gradient(180deg, rgba(51, 51, 51, 0.00) 21.46%, rgba(16, 16, 16, 0.68) 61.33%, #000 99.74%), url(../stroy.img/card1.jpg);
+}
+
+
+
+/* 상황이미지 */
+
+.story #section-situation .story-all li:nth-child(1) {
+    background-image: linear-gradient(180deg, rgba(51, 51, 51, 0.00) 21.46%, rgba(16, 16, 16, 0.68) 61.33%, #000 99.74%), url(../stroy.img/card1.jpg);
+}
+
+.story #section-situation .story-all li:nth-child(2) {
+    background-image: linear-gradient(180deg, rgba(51, 51, 51, 0.00) 21.46%, rgba(16, 16, 16, 0.68) 61.33%, #000 99.74%), url(../stroy.img/card1.jpg);
+}
+
+.story #section-situation .story-all li:nth-child(3) {
+    background-image: linear-gradient(180deg, rgba(51, 51, 51, 0.00) 21.46%, rgba(16, 16, 16, 0.68) 61.33%, #000 99.74%), url(../stroy.img/card1.jpg);
+}
+
+.story #section-situation .story-all li:nth-child(4) {
+    background-image: linear-gradient(180deg, rgba(51, 51, 51, 0.00) 21.46%, rgba(16, 16, 16, 0.68) 61.33%, #000 99.74%), url(../stroy.img/card1.jpg);
+}
+
+.story #section-situation .story-all li:nth-child(5) {
+    background-image: linear-gradient(180deg, rgba(51, 51, 51, 0.00) 21.46%, rgba(16, 16, 16, 0.68) 61.33%, #000 99.74%), url(../stroy.img/card1.jpg);
+}
+
+.story #section-situation .story-all li:nth-child(6) {
+    background-image: linear-gradient(180deg, rgba(51, 51, 51, 0.00) 21.46%, rgba(16, 16, 16, 0.68) 61.33%, #000 99.74%), url(../stroy.img/card1.jpg);
+}
+
+
+
+/* 문화 이미지 */
+.story #section-culture .story-all li:nth-child(1) {
+    background-image: linear-gradient(180deg, rgba(51, 51, 51, 0.00) 21.46%, rgba(16, 16, 16, 0.68) 61.33%, #000 99.74%), url(../stroy.img/card1.jpg);
+}
+
+.story #section-culture .story-all li:nth-child(2) {
+    background-image: linear-gradient(180deg, rgba(51, 51, 51, 0.00) 21.46%, rgba(16, 16, 16, 0.68) 61.33%, #000 99.74%), url(../stroy.img/card1.jpg);
+}
+
+.story #section-culture .story-all li:nth-child(3) {
+    background-image: linear-gradient(180deg, rgba(51, 51, 51, 0.00) 21.46%, rgba(16, 16, 16, 0.68) 61.33%, #000 99.74%), url(../stroy.img/card1.jpg);
+}
+
+.story #section-culture .story-all li:nth-child(4) {
+    background-image: linear-gradient(180deg, rgba(51, 51, 51, 0.00) 21.46%, rgba(16, 16, 16, 0.68) 61.33%, #000 99.74%), url(../stroy.img/card1.jpg);
+}
+
+.story #section-culture .story-all li:nth-child(5) {
+    background-image: linear-gradient(180deg, rgba(51, 51, 51, 0.00) 21.46%, rgba(16, 16, 16, 0.68) 61.33%, #000 99.74%), url(../stroy.img/card1.jpg);
+}
+
+.story #section-culture .story-all li:nth-child(6) {
+    background-image: linear-gradient(180deg, rgba(51, 51, 51, 0.00) 21.46%, rgba(16, 16, 16, 0.68) 61.33%, #000 99.74%), url(../stroy.img/card1.jpg);
 }
