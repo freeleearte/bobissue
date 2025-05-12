@@ -1,0 +1,217 @@
+@charset "utf-8";
+
+section {
+    font-family: var(--main-font);
+}
+
+.banner {
+    width: 100%;
+    height: 252px;
+    background: #ccc;
+    margin-bottom: 80px;
+}
+.con_wrap {}
+.title {
+    display: flex;
+    justify-content: center;
+}
+.title h2 {
+    font-size: 50px;
+    font-weight: 700;
+}
+
+/* sort */
+.sort {
+    margin-top: 50px;
+    display: flex;
+    justify-content: flex-end;
+}
+.sort ul {
+    display: flex;
+}
+.sort ul li {
+    font-size: 15px;
+    color: var(--txt-medium-gray);
+    padding-inline: 15px;
+    border-right: 0.8px solid var(--txt-medium-gray);
+}
+.sort ul li span {
+    cursor: pointer;
+}
+.sort ul li.on {
+    color: var(--txt-gray);
+}
+
+.sort ul li:last-child {
+    border-right: 0;
+    padding-right: 0;
+}
+.con {
+    width: 100%;
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+}
+
+/* filter */
+.con .filter {
+    width: 220px;
+    height: 775px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 200px;
+}
+.con .filter .filter_sec {
+    border-bottom: 1px solid var(--txt-light-gray);
+    padding-block: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.con .filter .filter_sec:last-child {
+    border-bottom: 0;
+}
+.con .filter .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 15px;
+    flex-direction: row;
+    gap: 0;
+}
+.con .filter .filter_sec strong {
+    font-size: 25px;
+    font-weight: 700;
+}
+.con .filter .filter_sec p {
+    font-size: 18px;
+    color: var(--txt-light-gray);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.con .filter .filter_sec p img {
+    margin-right: 3px;
+}
+.con .filter .filter_sec em {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--txt-dark-gray);
+}
+.con .filter .filter_sec ul {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+.con .filter .filter_sec ul li {
+    font-size: 18px;
+    color: var(--txt-medium-gray);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: max-content;
+}
+.con .filter .filter_sec ul li::before {
+    background-image: url(../asset/check_bob.png);
+    left: 0;
+    content: '';
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 7px;
+}
+
+/* menu */
+.menu_list {
+    display: flex;
+    column-gap: 20px;
+    row-gap: 40px;
+    flex-wrap: wrap;
+    width: 1100px;
+}
+
+.menu {
+    width: 260px;
+    height: 420px;
+}
+.menu a {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.menu .img {
+    width: 260px;
+    height: 260px;
+    background: #ccc;
+}
+.menu .info {
+    padding: 5px 10px 14px 6px;
+    display: flex;
+    flex-direction: column;
+}
+.menu .info .top_txt {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 22px;
+}
+.menu .info .top_txt strong {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--txt-dark-gray);
+    /* letter-spacing: -1px; */
+    line-height: 24px;
+}
+.fresheasy .info .top_txt strong::before {
+    content: '[프레시지]';
+    font-size: 15px;
+    color: var(--txt-medium-m-gray);
+    display: block;
+    margin-bottom: 4px;
+}
+.menu .info .bottom_txt {
+    display: flex;
+    flex-direction: column;
+}
+.menu .info .bottom_txt span {
+    font-size: 14px;
+    font-weight: 500;
+    color: #aaaaaa;
+    text-decoration: line-through;
+    margin-bottom: 4px;
+}
+.menu .info .bottom_txt p {
+    font-size: 23px;
+    font-weight: 600;
+    color: var(--sub-color-1);
+}
+.menu .info .bottom_txt p em {
+    font-weight: 700;
+    color: var(--txt-dark-gray);
+    margin-left: 8px;
+}
+
+.pagination {
+    margin-top: 122px;
+    margin-bottom: 88px;
+    display: flex;
+    justify-self: center;
+    gap: 5px;
+}
+
+.pagination li {
+    width: 34px;
+    height: 34px;
+    border: 1px solid var(--txt-light-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--txt-medium-m-gray);
+}
+
+.pagination li.on {
+    border-color: var(--sub-color-1);
+    color: var(--sub-color-1);
+}

@@ -1,0 +1,229 @@
+@charset "utf-8";
+@import url('https://cdn.jsdelivr.net/gh/fonts-archive/Pretendard/Pretendard.css');
+@import url('https://fonts.cdnfonts.com/css/impact');
+
+:root {
+    --main-font: "Pretendard", sans-serif;
+    --eng-font: 'Impact', sans-serif;
+    --main-color: #05361D;
+    --sub-color-1: #FF6B00;
+    --sub-color-2: #F5B642;
+    --dark-green: #80A55C;
+    --light-green: #A5C08D;
+    --bg-w-color: #ffffff;
+    --bg-be-color: #F6F1E9;
+    --txt-w-color: #ffffff;
+    --txt-dark-w-color: #E5E5E5;
+    --txt-light-gray: #C2C2C2;
+    --txt-medium-gray: #999999;
+    --txt-medium-m-gray: #777777;
+    --txt-gray: #444444;
+    --txt-dark-gray: #1F1F1F;
+}
+
+.inner {
+    width: 1440px;
+    margin-inline: auto;
+}
+
+.header-placeholder {
+    height: 172px;
+}
+
+header {
+    width: 100%;
+    font-family: var(--main-font);
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: var(--bg-w-color);
+    box-shadow: 0 4px 10px #00000010;
+    z-index: 999;
+}
+
+header .top {
+    width: 100%;
+    height: 36px;
+    background: var(--main-color);
+}
+
+header .top .inner {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header .top ul {
+    display: flex;
+}
+
+header .top ul li {
+    color: var(--txt-w-color);
+    padding-inline: 15px;
+    border-right: 0.8px solid var(--txt-w-color);
+}
+
+header .top ul li:first-child {
+    color: var(--sub-color-2);
+}
+
+header .top ul li:last-child {
+    border-right: 0;
+    padding-right: 0;
+}
+
+header .top ul li a {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+header .mid {
+    height: 70px;
+    border-bottom: 1px solid var(--txt-dark-w-color);
+}
+
+header .mid .inner {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .mid h1 {}
+
+header .mid h1 a {
+    display: block;
+    width: 265px;
+    height: 64px;
+    background: #ccc;
+}
+
+header .mid .left {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+
+header .mid .left ul {
+    display: flex;
+}
+
+header .mid .left ul li {}
+
+header .mid .left ul li {
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--txt-gray);
+    padding-inline: 15px;
+    border-right: 1.5px solid var(--txt-medium-gray);
+}
+
+header .mid .left ul li:last-child {
+    border-right: 0;
+}
+
+header .mid .left ul li.on {
+    color: var(--sub-color-1);
+    font-weight: 700;
+}
+
+header .bot {
+    width: 100%;
+    height: 65px;
+}
+
+header .bot .inner {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .bot nav {}
+
+header .bot nav ul {
+    display: flex;
+    gap: 111px;
+}
+
+header .bot nav ul li {}
+
+header .bot nav ul li a {
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--txt-gray);
+}
+
+/* .scroll */
+header.scroll .mid {
+    display: none;
+}
+
+header.scroll .bot .inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+header.scroll .bot ul.s_right {
+    display: flex;
+    gap: 20px;
+}
+
+header .bot ul.s_right li {}
+
+header .bot ul.s_right li a {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-content: center;
+}
+
+header ul.right-menu {
+    display: flex;
+    gap: 40px;
+}
+
+header ul.right-menu li a {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-content: center;
+}
+
+.search_container {
+    position: relative;
+    display: flex;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.search_container img {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.search_input {
+    width: 0;
+    opacity: 0;
+    border: none;
+    outline: none;
+    transition: width 0.4s ease, opacity 0.4s ease;
+    font-size: 15px;
+    margin-left: 8px;
+    background: transparent;
+}
+
+/* 활성화 시 */
+.search_container.active {
+    border-color: #444444;
+    /* 밑줄 나타남 */
+}
+
+.search_container.active .search_input {
+    width: 200px;
+    opacity: 1;
+}
