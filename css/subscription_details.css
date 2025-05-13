@@ -2,6 +2,7 @@
 
 body {
     font-family: var(--main-font-family);
+    color: var(--txt-dark-gray);
 }
 
 div.scroll {
@@ -239,19 +240,104 @@ div.scroll {
     cursor: pointer;
 }
 
-.check .right .btn a {}
 
-
-
-
-
-
+/* txt */
 
 
 .txt {
-    height: 677px;
-    background: #aaa;
+    height: 477px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
 }
+
+.txt h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--sub-color-1);
+    padding-bottom: 15px;
+}
+
+.txt p {
+    font-size: 25px;
+    line-height: 43px;
+    color: var(--txt-gray);
+}
+
+.txt .all {
+    display: flex;
+    width: 1044px;
+    height: 251px;
+    font-size: 40px;
+    font-weight: 700;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding-top: 120px;
+}
+
+.txt .all .con1 {
+    width: 245px;
+    height: 100%;
+    background-image: url(../subscription_details.img/txtsection_1.png);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.txt .all .con1 p,
+.txt .all .con2 p {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 45px;
+    text-align: center;
+    color: var(--txt-w-color);
+}
+
+.txt .all .con2 {
+    width: 251px;
+    height: 100%;
+    background-color: var(--main-color);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.txt .all .con3 {
+    position: relative;
+    flex: 1;
+}
+
+.txt .all .con3 p {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 60px;
+    color: var(--txt-gray);
+
+}
+
+.txt .all .con3 p span {
+    color: var(--main-color);
+}
+
+.txt .all .con3 img {
+    position: absolute;
+    left: -40px;
+    top: 60px;
+    width: 148px;
+    height: 84px;
+}
+
+
+
+
+
+
 
 .con_all {
     display: flex;
@@ -259,9 +345,7 @@ div.scroll {
     gap: 200px;
 }
 
-.con {
-    background: #bbb;
-}
+
 
 .con .banner {
     height: 300px;
@@ -274,19 +358,309 @@ div.scroll {
 
 .con .banner button {
     border: none;
-    width: 500px;
-    height: 75px;
+    width: 250px;
+    height: 55px;
     margin-bottom: 50px;
+    border-radius: 10px;
+    background-color: var(--main-color);
+    font-size: 19px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: var(--txt-w-color);
+    font-family: var(--main-font-family);
 }
 
 .con .hidden {
     display: none;
-    background: palevioletred;
 }
 
 .con .hidden_wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.con .hidden_wrap .containner {
     padding: 100px 0;
-    background-size: cover;
     display: flex;
     height: 1800px;
+    width: 1000px;
+    flex-direction: column;
+    gap: 80px;
+    align-items: center;
+}
+
+.containner>.top {
+    width: 100%;
+    height: 570px;
+    position: relative;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.containner .top>img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 553px;
+}
+
+.containner .top h3 {
+    font-family: var(--title-font-family);
+    font-size: 40px;
+    color: var(--sub-color-1);
+    padding-bottom: 10px;
+}
+
+.containner .top p {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.containner .top p span {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.containner .top ul {
+    display: flex;
+    gap: 35px;
+    padding-top: 48px;
+}
+
+.containner .top ul li {
+    width: 240px;
+    height: 385px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--txt-dark-w-color);
+    border-radius: 10px;
+}
+
+.containner .top ul li .img {
+    position: relative;
+    width: 100%;
+    height: 235px;
+}
+
+.containner .top ul li .img .check_icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 35px;
+    height: 35px;
+}
+
+.containner .top ul li .img .food {
+    width: 100%;
+    height: 235px;
+    border-radius: 5px 5px 0 0;
+}
+
+.containner .top ul li .txt {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-left: 8px;
+    gap: 20px;
+}
+
+.containner .top ul li .txt .top {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding-top: 8px;
+}
+
+.containner .top ul li .txt .top span {
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--txt-medium-m-gray);
+    padding-bottom: 3px;
+}
+
+.containner .top ul li .txt .top p {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--txt-dark-gray);
+    line-height: 1.2;
+}
+
+
+
+.containner .top ul li .txt .bottom {
+    display: flex;
+    flex-direction: column;
+}
+
+.containner .top ul li .txt .bottom span {
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration-line: line-through;
+    color: #aaa;
+}
+
+.containner .top ul li .txt .bottom .b_t {
+    display: flex;
+    align-items: center;
+}
+
+.containner .top ul li .txt .bottom .b_t strong {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--sub-color-1);
+    display: block;
+    line-height: 1;
+}
+
+.containner .top ul li .txt .bottom .b_t p {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--txt-dark-gray);
+    line-height: 1.5;
+
+}
+
+.containner .plus {
+    width: 56px;
+    height: 56px;
+}
+.containner > .bottom{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.containner > .bottom .txt2{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.containner > .bottom h3 {
+    font-family: var(--title-font-family);
+    font-size: 40px;
+    color: var(--sub-color-1);
+    padding-bottom: 10px;
+}
+
+.containner>.bottom p {
+    font-size: 24px;
+    font-weight: 400;
+}
+.containner>.bottom p span{
+    font-size: 26px;
+    font-weight: 600;
+}
+
+
+.containner>.bottom ul {
+    display: flex;
+    gap: 35px;
+    padding-top: 48px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.containner>.bottom ul li {
+    width: 240px;
+    height: 385px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--txt-dark-w-color);
+    border-radius: 10px;
+}
+
+.containner>.bottom ul li .img {
+    position: relative;
+    width: 100%;
+    height: 235px;
+}
+
+.containner>.bottom ul li .img .check_icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 35px;
+    height: 35px;
+}
+
+.containner>.bottom ul li .img .food {
+    width: 100%;
+    height: 235px;
+    border-radius: 5px 5px 0 0;
+}
+
+.containner>.bottom ul li .txt {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-left: 8px;
+    gap: 20px;
+}
+
+.containner>.bottom ul li .txt .top {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding-top: 8px;
+}
+
+.containner>.bottom ul li .txt .top span {
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--txt-medium-m-gray);
+    padding-bottom: 3px;
+}
+
+.containner>.bottom ul li .txt .top p {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--txt-dark-gray);
+    line-height: 1.2;
+}
+
+
+
+.containner>.bottom ul li .txt .bottom {
+    display: flex;
+    flex-direction: column;
+}
+
+.containner>.bottom ul li .txt .bottom span {
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration-line: line-through;
+    color: #aaa;
+}
+
+.containner>.bottom ul li .txt .bottom .b_t {
+    display: flex;
+    align-items: center;
+}
+
+.containner>.bottom ul li .txt .bottom .b_t strong {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--sub-color-1);
+    display: block;
+    line-height: 1;
+}
+
+.containner>.bottom ul li .txt .bottom .b_t p {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--txt-dark-gray);
+    line-height: 1.5;
+
 }
