@@ -1,1 +1,292 @@
 @charset "utf-8";
+
+body {
+    font-family: var(--main-font-family);
+}
+
+div.scroll {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 300px;
+}
+
+/* 상단 */
+.checked {
+    height: 768px;
+    margin-top: 60px;
+}
+
+.checked .inner {
+    display: flex;
+    gap: 52px;
+
+}
+
+.checked img {
+    width: 680px;
+    height: 647px;
+}
+
+.checked .right {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 20px;
+}
+
+.checked .right .tit {
+    display: flex;
+    flex-direction: column;
+    color: var(--txt-dark-gray);
+}
+
+.checked .right .tit span {
+    font: var(--pre-20-m);
+    color: var(--txt-medium-gray);
+    line-height: 0.8;
+}
+
+.checked .right .tit h2 {
+    font: var(--pre-50-b);
+}
+
+.checked .right .tit .under {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.checked .right .tit .under p {
+    font: var(--pre-35-sb);
+    line-height: 1;
+}
+
+.checked .right .tit .under span {
+    font-size: 22px;
+    font-weight: 400;
+    text-decoration-line: line-through;
+    color: #aaa;
+}
+
+.checked .right .small_tit {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding-bottom: 45px;
+}
+
+.checked .right .small_tit .frame {
+    width: 185px;
+    height: 35px;
+    border: 2px solid var(--sub-color-2);
+    border-radius: 8px;
+    background-color: #FFF8ED;
+    color: var(--sub-color-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.checked .right .small_tit>p {
+    font: var(--pre-18-r);
+    line-height: 25px;
+}
+
+.select {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-bottom: 45px;
+}
+
+.custom_select {
+    position: relative;
+}
+
+.custom_select .select_btn {
+    width: 600px;
+    height: 55px;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--txt-gray);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    background-color: transparent;
+    cursor: pointer;
+    transition: .3s;
+}
+
+/* 버튼을 클릭했을때  */
+.custom_select.on .select_btn {
+    border-color: var(--sub-color-1);
+    border-radius: 5px 5px 0 0;
+    color: var(--sub-color-1);
+}
+
+.custom_select .select_btn img {
+    width: 25px;
+    height: 25px;
+    transition: .6s;
+}
+
+.custom_select.on .select_btn img {
+    transform: rotate(180deg);
+}
+
+.custom_select .select_options {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 598px;
+    background-color: var(--bg-w-color);
+    max-height: calc(55px * 5);
+    overflow-y: auto;
+    z-index: 100;
+    cursor: pointer;
+    border-radius: 0 0 5px 5px;
+    border: 1px solid var(--txt-light-gray);
+    border-top: 0;
+    display: none;
+    transition: .6s;
+}
+
+.custom_select.on .select_options {
+    display: block;
+}
+
+
+.custom_select .select_options li {
+    height: 55px !important;
+    line-height: normal;
+    align-items: center;
+    font: var(--pre-15-m);
+    color: var(--txt-medium-m-gray);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--txt-light-gray);
+    width: 100%;
+    /* ✅ 고정값 대신 100% */
+    box-sizing: border-box;
+    /* ✅ 패딩 포함한 너비 계산 */
+    overflow: hidden;
+    /* ✅ 넘침 방지 */
+    text-overflow: ellipsis;
+    /* ✅ 말줄임 처리 */
+    white-space: nowrap;
+    transition: .3s;
+}
+
+.custom_select .select_options li:hover {
+    color: var(--sub-color-1);
+}
+
+.custom_select .select_options li:last-child {
+    border-bottom: 0;
+    border-radius: 0 0 5px 5px;
+}
+
+.custom_select .check .left {
+    display: flex;
+    gap: 10px;
+}
+
+.custom_select .check li img {
+    width: 20px;
+    height: 20px;
+}
+
+.custom_select .check li .check_on {
+    display: none;
+}
+
+.custom_select .check li.on .check_on {
+    display: inline;
+}
+
+.custom_select .check li.on .check_off {
+    display: none;
+}
+
+/* 경우의 수  */
+.custom_select.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+
+.checked .right .btn {
+    width: 600px;
+    height: 65px;
+    background-color: var(--main-color);
+    font-size: 23px;
+    font-weight: 600;
+    color: var(--txt-w-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.check .right .btn a {}
+
+
+
+
+
+
+
+
+.txt {
+    height: 677px;
+    background: #aaa;
+}
+
+.con_all {
+    display: flex;
+    flex-direction: column;
+    gap: 200px;
+}
+
+.con {
+    background: #bbb;
+}
+
+.con .banner {
+    height: 300px;
+    background: powderblue;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-size: cover;
+}
+
+.con .banner button {
+    border: none;
+    width: 500px;
+    height: 75px;
+    margin-bottom: 50px;
+}
+
+.con .hidden {
+    display: none;
+    background: palevioletred;
+}
+
+.con .hidden_wrap {
+    padding: 100px 0;
+    background-size: cover;
+    display: flex;
+    height: 1800px;
+}

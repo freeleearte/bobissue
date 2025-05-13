@@ -83,6 +83,7 @@ body {
     border: none;
     background-color: var(--sub-color-1);
     color: var(--txt-w-color);
+    cursor: pointer;
 }
 
 
@@ -208,6 +209,7 @@ body {
     border-radius: 60px;
     font: var(--pre-20-m);
     color: var(--txt-dark-gray);
+    cursor: pointer;
 }
 
 .modal_test_wrap .bot li:hover {
@@ -297,6 +299,7 @@ body {
     justify-content: center;
     background-color: var(--main-color);
     font-family: var(--main-font);
+    cursor: pointer;
 }
 
 .modal_test_wrap .result-modal button.share {
@@ -312,7 +315,7 @@ body {
     width: 100%;
     height: 100%;
     display: none;
-/*     display: flex; */
+    /*     display: flex; */
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -358,6 +361,7 @@ body {
     background-repeat: no-repeat;
     display: flex;
     align-items: flex-end;
+    cursor: pointer;
 }
 
 .modal_test_wrap .result ul li a {
@@ -449,6 +453,7 @@ body {
     background-color: #333;
     color: var(--txt-w-color);
     border-radius: 60px;
+    cursor: pointer;
 }
 
 .modal_test_wrap .result .btn button.like {
@@ -507,11 +512,13 @@ body {
     gap: 20px;
     color: var(--sub-color-1);
     text-decoration: none;
+    cursor: pointer;
 }
 
 .story .gnb ul li.dropdown a.menu-toggle p {
     position: relative;
     padding-bottom: 10px;
+
 }
 
 .story .gnb ul li.dropdown a.menu-toggle p::after {
@@ -561,6 +568,9 @@ body {
     pointer-events: auto;
 }
 
+.story .gnb ul li.dropdown .dropdown-menu li {
+    cursor: pointer;
+}
 
 .story .gnb ul li.dropdown .dropdown-menu li:hover {
     color: var(--sub-color-1);
@@ -640,6 +650,7 @@ body {
     width: 100%;
     display: flex;
     align-items: flex-end;
+    cursor: pointer;
 }
 
 .story .content-section .con1 .txt .button a {
@@ -672,6 +683,7 @@ body {
     background-repeat: no-repeat;
     display: flex;
     align-items: flex-end;
+    cursor: pointer;
 }
 
 

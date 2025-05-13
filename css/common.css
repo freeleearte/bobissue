@@ -93,7 +93,7 @@
 
 header {
     width: 100%;
-    font-family: var(--main-font);
+    font-family: var(--main-font-family);
     position: fixed;
     left: 0;
     top: 0;
