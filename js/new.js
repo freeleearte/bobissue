@@ -10,11 +10,11 @@ $(function () {
         const allRequiredChecked = $('.terms input[required]').length === $('.terms input[required]:checked').length;
 
         if (
-            id === 'admin1' &&
-            pw === 'admin1' &&
-            pw2 === 'admin1' &&
-            name === '밥' &&
-            phone === '01012345678' &&
+            id === '.' &&
+            pw === '.' &&
+            pw2 === '.' &&
+            name === '.' &&
+            phone === '.' &&
             address === '.' &&
             allRequiredChecked
         ) {
