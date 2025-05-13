@@ -1,4 +1,6 @@
 $(function () {
+
+
   // 메뉴 토글 (클릭 시 열고 닫기)
   $('.gnb').on('click', '.menu-toggle', function (e) {
     e.preventDefault();
@@ -23,10 +25,6 @@ $(function () {
     $('.dropdown-menu').removeClass('active');
   });
 
-  // 바깥 클릭 시 드롭다운 닫기
-  $(document).on('click', function (e) {
-    if (!$(e.target).closest('.dropdown, .menu-toggle').length) {
-      $('.dropdown-menu').removeClass('active');
-    }
-  });
 });
+
+

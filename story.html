@@ -71,318 +71,97 @@
                         <p>나의 스토리는 어떤 타입일까 ?<br>
                             나의 스토리 취향 찾기 !</p>
                     </div>
-
                     <button class="start-btn">테스트하기</button>
-                </div>
-
+                </div><!-- start -->
                 <!-- 퀴즈 영역 -->
-                <div class="quiz on">
+                <div class="quiz ">
                     <div class="bar">
                         <div class="progress_bar">
                             <div class="done"></div>
                         </div>
                     </div>
-                    <div class="question first on">
-                        <div class="top">
-                            <div class="num"><img src="stroy.img/quiz-pre.png" alt="이전" class="prev"></div>
-                            <h4>Q1.</h4>
-                        </div>
-                        <p>어떤 이야기에 더 끌리시나요?</p>
-                        <ul class="bot">
-                            <li>위기를 극복하고 성장하는 이야기 </li>
-                            <li>따뜻한 감정이 흐르는 일상 이야기</li>
-                        </ul>
-                    </div>
+                    <div class="qs">
+                        <article class="question first ">
+                            <div class="top_txt">
+                                <div class="top">
+                                    <div class="num"><img src="stroy.img/quiz-pre.png" alt="이전" class="prev"></div>
+                                    <h4>Q1.</h4>
+                                </div>
+                                <p>어떤 이야기에 더 끌리시나요?</p>
+                            </div>
 
-                    <div class="question second">
-                        <div class="top">
-                            <h4>Q2.</h4>
-                            <div class="num"><img src="stroy.img/quiz-pre.png" alt="이전" class="prev"></div>
-                            <p>당신의 하루, 더 공감되는 순간은 ?</p>
-                        </div>
-                        <ul class="bot">
-                            <li>치열하게 일하고 지친 저녁, 한 그릇의 위로</li>
-                            <li>나만의 루틴에 맞춰 계획적인 한 상 차림</li>
-                        </ul>
-                    </div>
+                            <ul class="bot">
+                                <li>위기를 극복하고 성장하는 이야기 </li>
+                                <li>따뜻한 감정이 흐르는 일상 이야기</li>
+                            </ul>
+                        </article>
 
-                    <div class="question third">
-                        <div class="top">
-                            <h4>Q3.</h4>
-                            <div class="num"><img src="stroy.img/quiz-pre.png" alt="이전" class="prev"></div>
-                            <p>한국 문화를 접할 때 어떤 콘텐츠를 선호하나요?</p>
-                        </div>
-                        <ul class="bot">
-                            <li>K-드라마, 길거리 음식, 핫플 체험</li>
-                            <li>전통 음식과 의례가 담긴 문화 체험</li>
-                        </ul>
-                    </div>
+                        <article class="question second">
+                            <div class="top_txt">
+                                <div class="top">
+                                    <h4>Q2.</h4>
+                                    <div class="num"><img src="stroy.img/quiz-pre.png" alt="이전" class="prev"></div>
+                                    <p>당신의 하루, 더 공감되는 순간은 ?</p>
+                                </div>
+                            </div>
+                            <ul class="bot">
+                                <li>치열하게 일하고 지친 저녁, 한 그릇의 위로</li>
+                                <li>나만의 루틴에 맞춰 계획적인 한 상 차림</li>
+                            </ul>
+                        </article>
 
-                    <div class="question fourth">
-                        <div class="top">
-                            <h4>Q4.</h4>
-                            <div class="num"><img src="stroy.img/quiz-pre.png" alt="이전" class="prev"></div>
-                            <p>당신은 어떤 타입에 속하시나요?</p>
-                        </div>
-                        <ul class="bot">
-                            <li>열정 넘치고 솔직하게 감정을 표현하는 타입</li>
-                            <li>공감력 있고 따뜻한 분위기를 주는 타입</li>
-                        </ul>
-                    </div>
+                        <article class="question third">
+                            <div class="top_txt">
+                                <div class="top">
+                                    <h4>Q3.</h4>
+                                    <div class="num"><img src="stroy.img/quiz-pre.png" alt="이전" class="prev"></div>
+                                    <p>한국 문화를 접할 때 어떤 콘텐츠를 선호하나요?</p>
+                                </div>
+                            </div>
+                            <ul class="bot">
+                                <li>K-드라마, 길거리 음식, 핫플 체험</li>
+                                <li>전통 음식과 의례가 담긴 문화 체험</li>
+                            </ul>
+                        </article>
 
-                    <!-- 결과 화면 -->
+                        <article class="question fourth">
+                            <div class="top_txt">
+                                <div class="top">
+                                    <h4>Q4.</h4>
+                                    <div class="num"><img src="stroy.img/quiz-pre.png" alt="이전" class="prev"></div>
+                                    <p>당신은 어떤 타입에 속하시나요?</p>
+                                </div>
+                            </div>
+                            <ul class="bot">
+                                <li>열정 넘치고 솔직하게 감정을 표현하는 타입</li>
+                                <li>공감력 있고 따뜻한 분위기를 주는 타입</li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+                <!-- 모달 -->
+                <div class="modal-bg">
                     <div class="result-modal">
-                        <h3>당신의 성향은 매운맛 밥이슈입니다.</h3>
+                        <h3>당신의 성향은 <span>매운맛 밥이슈</span>입니다.</h3>
                         <p>핫한 당신에게 맞춤 스토리를 추천해드릴게요.</p>
                         <img src="stroy.img/modal.jpg" alt="매운맛 밥이슈 이미지">
                         <div class="btn">
-                            <button class="re">테스트 다시하기</button>
+                            <button class="re">스토리 추천 보러가기</button>
                             <button class="share">내 성향 공유하기</button>
                         </div>
                     </div>
-                    <div class="modal-bg"></div>
-                    <div class="result">
-                        <div class="img"></div>
+                </div>
+                <!-- 결과 화면 -->
+                <div class="result">
+                    <div class="txt">
                         <h3>당신에게 맞춤 스토리</h3>
                         <p>원하는 스토리를 저장하고, 구매해보세요!</p>
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    <div class="txt">
-                                        <p>오징어 게임을<br>먹어볼슈?</p>
-                                        <div class="under">
-                                            <div class="left">
-                                                <img src="stroy.img/star.png" alt="star">
-                                                <span>4.8</span>
-                                            </div>
-                                            <div class="right">
-                                                <span>밀키트 3 +</span>
-                                                <img src="stroy.img/밀키트더보기.png" alt="moreview">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div class="txt">
-                                        <p>오늘도 고생햇수다 <br> 제주 드셔봣슈</p>
-                                        <div class="under">
-                                            <div class="left">
-                                                <img src="stroy.img/star.png" alt="star">
-                                                <span>4.8</span>
-                                            </div>
-                                            <div class="right">
-                                                <span>밀키트 3 +</span>
-                                                <img src="stroy.img/밀키트더보기.png" alt="moreview">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div class="txt">
-                                        <p>우리 모두가 흑백 요리사! <br>전문적인 잇슈</p>
-                                        <div class="under">
-                                            <div class="left">
-                                                <img src="stroy.img/star.png" alt="star">
-                                                <span>4.8</span>
-                                            </div>
-                                            <div class="right">
-                                                <span>밀키트 3 +</span>
-                                                <img src="stroy.img/밀키트더보기.png" alt="moreview">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="btn">
-                            <button>테스트 다시하기</button>
-                            <button>스토리 찜햇슈 바로가기</button>
-                        </div>
-
-
                     </div>
-                </div>
-        </section>
-        <section class="story">
-            <div class="inner">
-                <div class="gnb">
                     <ul>
                         <li>
-                            <p>밥상에</p>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="menu-toggle">
-                                <p>스토리</p>
-                                <img src="stroy.img/Vector.png" alt="화살표" class="arrow-icon">
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="#" data-target="section-story" data-base="스토리"><span>스토리</span>를 먹다</a>
-                                </li>
-                                <li>
-                                    <a href="#" data-target="section-situation" data-base="상황"><span>상황</span>을 먹다</a>
-                                </li>
-                                <li>
-                                    <a href="#" data-target="section-culture" data-base="문화"><span>문화</span>를 먹다</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <p>한스푼, 어때?</p>
-                        </li>
-                    </ul>
-                </div><!-- gnb -->
-                <section id="section-story" class="content-section active">
-                    <div class="con1">
-                        <img src="stroy.img/con1-img.jpg" alt="스토리 구독 BOX">
-                        <div class="txt">
-                            <div class="top">
-                                <span class="first">
-                                    [PREMIUM / GLOBAL]
-                                </span>
-                                <p>스토리 <span>구독 BOX</span></p>
-                            </div>
-                            <div class="bottom">
-                                <span>원하는 콘텐츠를 선택해 나만의 박스를 만들거나, <br> 랜덤구성으로 추천받아 정기배송을 받아보세요 !</span>
-                            </div>
-                            <div class="button">
-                                <a href="#">스토리 구독 박스 보러가기</a>
-                            </div>
-                        </div>
-                    </div>
-                    <ul class="story-all">
-                        <li>
                             <a href="#">
                                 <div class="txt">
-                                    <p>오징어 게임을<br>먹어볼슈?</p>
-                                    <div class="under">
-                                        <div class="left">
-                                            <img src="stroy.img/star.png" alt="star">
-                                            <span>4.8</span>
-                                        </div>
-                                        <div class="right">
-                                            <span>밀키트 3 +</span>
-                                            <img src="stroy.img/밀키트더보기.png" alt="moreview">
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div class="txt">
-                                    <p>오늘도 고생햇수다 <br> 제주 드셔봣슈</p>
-                                    <div class="under">
-                                        <div class="left">
-                                            <img src="stroy.img/star.png" alt="star">
-                                            <span>4.8</span>
-                                        </div>
-                                        <div class="right">
-                                            <span>밀키트 3 +</span>
-                                            <img src="stroy.img/밀키트더보기.png" alt="moreview">
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div class="txt">
-                                    <p>우리 모두가 흑백 요리사! <br>전문적인 잇슈</p>
-                                    <div class="under">
-                                        <div class="left">
-                                            <img src="stroy.img/star.png" alt="star">
-                                            <span>4.8</span>
-                                        </div>
-                                        <div class="right">
-                                            <span>밀키트 3 +</span>
-                                            <img src="stroy.img/밀키트더보기.png" alt="moreview">
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div class="txt">
-                                    <p>대환장, 기안장<br>우리함께 대환장이슈</p>
-                                    <div class="under">
-                                        <div class="left">
-                                            <img src="stroy.img/star.png" alt="star">
-                                            <span>4.8</span>
-                                        </div>
-                                        <div class="right">
-                                            <span>밀키트 3 +</span>
-                                            <img src="stroy.img/밀키트더보기.png" alt="moreview">
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div class="txt">
-                                    <p>화제 잇슈를<br>먹어 볼 누구 없슈 ?</p>
-                                    <div class="under">
-                                        <div class="left">
-                                            <img src="stroy.img/star.png" alt="star">
-                                            <span>4.8</span>
-                                        </div>
-                                        <div class="right">
-                                            <span>밀키트 3 +</span>
-                                            <img src="stroy.img/밀키트더보기.png" alt="moreview">
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div class="txt">
-                                    <p>연예인의 스타 레시피, <br>집에서 스타잇슈</p>
-                                    <div class="under">
-                                        <div class="left">
-                                            <img src="stroy.img/star.png" alt="star">
-                                            <span>4.8</span>
-                                        </div>
-                                        <div class="right">
-                                            <span>밀키트 3 +</span>
-                                            <img src="stroy.img/밀키트더보기.png" alt="moreview">
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-
-                    </ul>
-                </section>
-                <section id="section-situation" class="content-section">
-                    <div class="con1">
-                        <img src="stroy.img/con1-img.jpg" alt="스토리 구독 BOX">
-                        <div class="txt">
-                            <div class="top">
-                                <span class="first">
-                                    [PREMIUM / GLOBAL]
-                                </span>
-                                <p>상황 <span>구독 BOX</span></p>
-                            </div>
-                            <div class="bottom">
-                                <span>원하는 콘텐츠를 선택해 나만의 박스를 만들거나, <br> 랜덤구성으로 추천받아 정기배송을 받아보세요 !</span>
-                            </div>
-                            <div class="button">
-                                <a href="#">상황 구독 박스 보러가기</a>
-                            </div>
-                        </div>
-                    </div>
-                    <ul class="story-all">
-                        <li>
-                            <a href="#">
-                                <div class="txt">
-                                    <p>찝찝한 비오는 날,<br>즐겁게 보내자 ! </p>
+                                    <p>찝찝한 비오는 날 !<br>즐겁게 보내자</p>
                                     <div class="under">
                                         <div class="left">
                                             <img src="stroy.img/star.png" alt="star">
@@ -416,7 +195,7 @@
                         <li>
                             <a href="#">
                                 <div class="txt">
-                                    <p>오늘도 야근하셨나요 ?<br> 밥 차리기 귀찮을 땐 </p>
+                                    <p>오늘도 야근하셨나요 ? <Br> 밥차리기 귀찮을때</p>
                                     <div class="under">
                                         <div class="left">
                                             <img src="stroy.img/star.png" alt="star">
@@ -430,186 +209,420 @@
                                 </div>
                             </a>
                         </li>
-                        <li>
-                            <a href="#">
-                                <div class="txt">
-                                    <p>몸이 무거울 땐,<br>가벼운 밥이슈</p>
-                                    <div class="under">
-                                        <div class="left">
-                                            <img src="stroy.img/star.png" alt="star">
-                                            <span>4.8</span>
-                                        </div>
-                                        <div class="right">
-                                            <span>밀키트 3 +</span>
-                                            <img src="stroy.img/밀키트더보기.png" alt="moreview">
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div class="txt">
-                                    <p>입 맛이 없을 때,<br>집에서 입 맛 잇슈 </p>
-                                    <div class="under">
-                                        <div class="left">
-                                            <img src="stroy.img/star.png" alt="star">
-                                            <span>4.8</span>
-                                        </div>
-                                        <div class="right">
-                                            <span>밀키트 3 +</span>
-                                            <img src="stroy.img/밀키트더보기.png" alt="moreview">
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div class="txt">
-                                    <p>오늘은 집콕 하는 날 !<br>뭐 먹지 잇슈</p>
-                                    <div class="under">
-                                        <div class="left">
-                                            <img src="stroy.img/star.png" alt="star">
-                                            <span>4.8</span>
-                                        </div>
-                                        <div class="right">
-                                            <span>밀키트 3 +</span>
-                                            <img src="stroy.img/밀키트더보기.png" alt="moreview">
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-
                     </ul>
-                </section>
-                <section id="section-culture" class="content-section">
-                    <div class="con1">
-                        <img src="stroy.img/con1-img.jpg" alt="스토리 구독 BOX">
-                        <div class="txt">
-                            <div class="top">
-                                <span class="first">
-                                    [PREMIUM / GLOBAL]
-                                </span>
-                                <p>문화 <span>구독 BOX</span></p>
-                            </div>
-                            <div class="bottom">
-                                <span>원하는 콘텐츠를 선택해 나만의 박스를 만들거나, <br> 랜덤구성으로 추천받아 정기배송을 받아보세요 !</span>
-                            </div>
-                            <div class="button">
-                                <a href="#">문화 구독 박스 보러가기</a>
-                            </div>
+                    <div class="btn">
+                        <button class="re-test">테스트 다시하기</button>
+                        <button class="like">스토리 찜햇슈 바로가기</button>
+                    </div>
+
+
+                </div>
+            </div>
+    </div>
+    </section>
+    <section class="story">
+        <div class="inner">
+            <div class="gnb">
+                <ul>
+                    <li>
+                        <p>밥상에</p>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="menu-toggle">
+                            <p>스토리</p>
+                            <img src="stroy.img/Vector.png" alt="화살표" class="arrow-icon">
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#" data-target="section-story" data-base="스토리">스토리</a>
+                            </li>
+                            <li>
+                                <a href="#" data-target="section-situation" data-base="상황">상황</a>
+                            </li>
+                            <li>
+                                <a href="#" data-target="section-culture" data-base="문화">문화</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>한스푼, 어때?</p>
+                    </li>
+                </ul>
+            </div><!-- gnb -->
+            <section id="section-story" class="content-section active">
+                <div class="con1">
+                    <img src="stroy.img/con1-img.jpg" alt="스토리 구독 BOX">
+                    <div class="txt">
+                        <div class="top">
+                            <span class="first">
+                                [PREMIUM / GLOBAL]
+                            </span>
+                            <p>스토리 <span>구독BOX</span></p>
+                        </div>
+                        <div class="bottom">
+                            <span>원하는 콘텐츠를 선택해 나만의 박스를 만들거나, <br> 랜덤구성으로 추천받아 정기배송을 받아보세요 !</span>
+                        </div>
+                        <div class="button">
+                            <a href="#">구독 박스 보러가기</a>
                         </div>
                     </div>
-                    <ul class="story-all">
-                        <li>
-                            <a href="#">
-                                <div class="txt">
-                                    <p>된장을 사용한<br>한국 음식 !</p>
-                                    <div class="under">
-                                        <div class="left">
-                                            <img src="stroy.img/star.png" alt="star">
-                                            <span>4.8</span>
-                                        </div>
-                                        <div class="right">
-                                            <span>밀키트 3 +</span>
-                                            <img src="stroy.img/밀키트더보기.png" alt="moreview">
-                                        </div>
+                </div>
+                <ul class="story-all">
+                    <li>
+                        <a href="#">
+                            <div class="txt">
+                                <p>오징어 게임을<br>먹어볼슈?</p>
+                                <div class="under">
+                                    <div class="left">
+                                        <img src="stroy.img/star.png" alt="star">
+                                        <span>4.8</span>
+                                    </div>
+                                    <div class="right">
+                                        <span>밀키트 3 +</span>
+                                        <img src="stroy.img/밀키트더보기.png" alt="moreview">
                                     </div>
                                 </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div class="txt">
-                                    <p>달콤하고 짭짤한,<br>한국의 음식 갈비찜 잇슈</p>
-                                    <div class="under">
-                                        <div class="left">
-                                            <img src="stroy.img/star.png" alt="star">
-                                            <span>4.8</span>
-                                        </div>
-                                        <div class="right">
-                                            <span>밀키트 3 +</span>
-                                            <img src="stroy.img/밀키트더보기.png" alt="moreview">
-                                        </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="txt">
+                                <p>오늘도 고생햇수다 <br> 제주 드셔봣슈</p>
+                                <div class="under">
+                                    <div class="left">
+                                        <img src="stroy.img/star.png" alt="star">
+                                        <span>4.8</span>
+                                    </div>
+                                    <div class="right">
+                                        <span>밀키트 3 +</span>
+                                        <img src="stroy.img/밀키트더보기.png" alt="moreview">
                                     </div>
                                 </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div class="txt">
-                                    <p>한국인의 추억의 음식,<br>바로 그 떡볶이 </p>
-                                    <div class="under">
-                                        <div class="left">
-                                            <img src="stroy.img/star.png" alt="star">
-                                            <span>4.8</span>
-                                        </div>
-                                        <div class="right">
-                                            <span>밀키트 3 +</span>
-                                            <img src="stroy.img/밀키트더보기.png" alt="moreview">
-                                        </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="txt">
+                                <p>우리 모두가 흑백 요리사! <br>전문적인 잇슈</p>
+                                <div class="under">
+                                    <div class="left">
+                                        <img src="stroy.img/star.png" alt="star">
+                                        <span>4.8</span>
+                                    </div>
+                                    <div class="right">
+                                        <span>밀키트 3 +</span>
+                                        <img src="stroy.img/밀키트더보기.png" alt="moreview">
                                     </div>
                                 </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div class="txt">
-                                    <p>외국인도 반하는 <br>한국의 토종 불고기 잇슈</p>
-                                    <div class="under">
-                                        <div class="left">
-                                            <img src="stroy.img/star.png" alt="star">
-                                            <span>4.8</span>
-                                        </div>
-                                        <div class="right">
-                                            <span>밀키트 3 +</span>
-                                            <img src="stroy.img/밀키트더보기.png" alt="moreview">
-                                        </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="txt">
+                                <p>대환장, 기안장<br>우리함께 대환장이슈</p>
+                                <div class="under">
+                                    <div class="left">
+                                        <img src="stroy.img/star.png" alt="star">
+                                        <span>4.8</span>
+                                    </div>
+                                    <div class="right">
+                                        <span>밀키트 3 +</span>
+                                        <img src="stroy.img/밀키트더보기.png" alt="moreview">
                                     </div>
                                 </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div class="txt">
-                                    <p>한국의 전통 음식,<br>비벼 비벼 비빔밥 </p>
-                                    <div class="under">
-                                        <div class="left">
-                                            <img src="stroy.img/star.png" alt="star">
-                                            <span>4.8</span>
-                                        </div>
-                                        <div class="right">
-                                            <span>밀키트 3 +</span>
-                                            <img src="stroy.img/밀키트더보기.png" alt="moreview">
-                                        </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="txt">
+                                <p>화제 잇슈를<br>먹어 볼 누구 없슈 ?</p>
+                                <div class="under">
+                                    <div class="left">
+                                        <img src="stroy.img/star.png" alt="star">
+                                        <span>4.8</span>
+                                    </div>
+                                    <div class="right">
+                                        <span>밀키트 3 +</span>
+                                        <img src="stroy.img/밀키트더보기.png" alt="moreview">
                                     </div>
                                 </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div class="txt">
-                                    <p>한국 하면 ?<br>김치 잇슈</p>
-                                    <div class="under">
-                                        <div class="left">
-                                            <img src="stroy.img/star.png" alt="star">
-                                            <span>4.8</span>
-                                        </div>
-                                        <div class="right">
-                                            <span>밀키트 3 +</span>
-                                            <img src="stroy.img/밀키트더보기.png" alt="moreview">
-                                        </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="txt">
+                                <p>연예인의 스타 레시피, <br>집에서 스타잇슈</p>
+                                <div class="under">
+                                    <div class="left">
+                                        <img src="stroy.img/star.png" alt="star">
+                                        <span>4.8</span>
+                                    </div>
+                                    <div class="right">
+                                        <span>밀키트 3 +</span>
+                                        <img src="stroy.img/밀키트더보기.png" alt="moreview">
                                     </div>
                                 </div>
-                            </a>
-                        </li>
+                            </div>
+                        </a>
+                    </li>
 
-                    </ul>
-                </section>
-            </div><!-- //.inner -->
-        </section>
+                </ul>
+            </section>
+            <section id="section-situation" class="content-section">
+                <div class="con1">
+                    <img src="stroy.img/con1-img.jpg" alt="스토리 구독 BOX">
+                    <div class="txt">
+                        <div class="top">
+                            <span class="first">
+                                [PREMIUM / GLOBAL]
+                            </span>
+                            <p>상황 <span>구독 BOX</span></p>
+                        </div>
+                        <div class="bottom">
+                            <span>원하는 콘텐츠를 선택해 나만의 박스를 만들거나, <br> 랜덤구성으로 추천받아 정기배송을 받아보세요 !</span>
+                        </div>
+                        <div class="button">
+                            <a href="#">구독 박스 보러가기</a>
+                        </div>
+                    </div>
+                </div>
+                <ul class="story-all">
+                    <li>
+                        <a href="#">
+                            <div class="txt">
+                                <p>찝찝한 비오는 날,<br>즐겁게 보내자 ! </p>
+                                <div class="under">
+                                    <div class="left">
+                                        <img src="stroy.img/star.png" alt="star">
+                                        <span>4.8</span>
+                                    </div>
+                                    <div class="right">
+                                        <span>밀키트 3 +</span>
+                                        <img src="stroy.img/밀키트더보기.png" alt="moreview">
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="txt">
+                                <p>캠핑가서 <br>뭐 먹지 ?</p>
+                                <div class="under">
+                                    <div class="left">
+                                        <img src="stroy.img/star.png" alt="star">
+                                        <span>4.8</span>
+                                    </div>
+                                    <div class="right">
+                                        <span>밀키트 3 +</span>
+                                        <img src="stroy.img/밀키트더보기.png" alt="moreview">
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="txt">
+                                <p>오늘도 야근하셨나요 ?<br> 밥 차리기 귀찮을 땐 </p>
+                                <div class="under">
+                                    <div class="left">
+                                        <img src="stroy.img/star.png" alt="star">
+                                        <span>4.8</span>
+                                    </div>
+                                    <div class="right">
+                                        <span>밀키트 3 +</span>
+                                        <img src="stroy.img/밀키트더보기.png" alt="moreview">
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="txt">
+                                <p>몸이 무거울 땐,<br>가벼운 밥이슈</p>
+                                <div class="under">
+                                    <div class="left">
+                                        <img src="stroy.img/star.png" alt="star">
+                                        <span>4.8</span>
+                                    </div>
+                                    <div class="right">
+                                        <span>밀키트 3 +</span>
+                                        <img src="stroy.img/밀키트더보기.png" alt="moreview">
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="txt">
+                                <p>입 맛이 없을 때,<br>집에서 입 맛 잇슈 </p>
+                                <div class="under">
+                                    <div class="left">
+                                        <img src="stroy.img/star.png" alt="star">
+                                        <span>4.8</span>
+                                    </div>
+                                    <div class="right">
+                                        <span>밀키트 3 +</span>
+                                        <img src="stroy.img/밀키트더보기.png" alt="moreview">
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="txt">
+                                <p>오늘은 집콕 하는 날 !<br>뭐 먹지 잇슈</p>
+                                <div class="under">
+                                    <div class="left">
+                                        <img src="stroy.img/star.png" alt="star">
+                                        <span>4.8</span>
+                                    </div>
+                                    <div class="right">
+                                        <span>밀키트 3 +</span>
+                                        <img src="stroy.img/밀키트더보기.png" alt="moreview">
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
+            </section>
+            <section id="section-culture" class="content-section">
+                <div class="con1">
+                    <img src="stroy.img/con1-img.jpg" alt="스토리 구독 BOX">
+                    <div class="txt">
+                        <div class="top">
+                            <span class="first">
+                                [PREMIUM / GLOBAL]
+                            </span>
+                            <p>문화 <span>구독 BOX</span></p>
+                        </div>
+                        <div class="bottom">
+                            <span>원하는 콘텐츠를 선택해 나만의 박스를 만들거나, <br> 랜덤구성으로 추천받아 정기배송을 받아보세요 !</span>
+                        </div>
+                        <div class="button">
+                            <a href="#">구독 박스 보러가기</a>
+                        </div>
+                    </div>
+                </div>
+                <ul class="story-all">
+                    <li>
+                        <a href="#">
+                            <div class="txt">
+                                <p>된장을 사용한<br>한국 음식 !</p>
+                                <div class="under">
+                                    <div class="left">
+                                        <img src="stroy.img/star.png" alt="star">
+                                        <span>4.8</span>
+                                    </div>
+                                    <div class="right">
+                                        <span>밀키트 3 +</span>
+                                        <img src="stroy.img/밀키트더보기.png" alt="moreview">
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="txt">
+                                <p>달콤하고 짭짤한,<br>한국의 음식 갈비찜 잇슈</p>
+                                <div class="under">
+                                    <div class="left">
+                                        <img src="stroy.img/star.png" alt="star">
+                                        <span>4.8</span>
+                                    </div>
+                                    <div class="right">
+                                        <span>밀키트 3 +</span>
+                                        <img src="stroy.img/밀키트더보기.png" alt="moreview">
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="txt">
+                                <p>한국인의 추억의 음식,<br>바로 그 떡볶이 </p>
+                                <div class="under">
+                                    <div class="left">
+                                        <img src="stroy.img/star.png" alt="star">
+                                        <span>4.8</span>
+                                    </div>
+                                    <div class="right">
+                                        <span>밀키트 3 +</span>
+                                        <img src="stroy.img/밀키트더보기.png" alt="moreview">
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="txt">
+                                <p>외국인도 반하는 <br>한국의 토종 불고기 잇슈</p>
+                                <div class="under">
+                                    <div class="left">
+                                        <img src="stroy.img/star.png" alt="star">
+                                        <span>4.8</span>
+                                    </div>
+                                    <div class="right">
+                                        <span>밀키트 3 +</span>
+                                        <img src="stroy.img/밀키트더보기.png" alt="moreview">
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="txt">
+                                <p>한국의 전통 음식,<br>비벼 비벼 비빔밥 </p>
+                                <div class="under">
+                                    <div class="left">
+                                        <img src="stroy.img/star.png" alt="star">
+                                        <span>4.8</span>
+                                    </div>
+                                    <div class="right">
+                                        <span>밀키트 3 +</span>
+                                        <img src="stroy.img/밀키트더보기.png" alt="moreview">
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="txt">
+                                <p>한국 하면 ?<br>김치 잇슈</p>
+                                <div class="under">
+                                    <div class="left">
+                                        <img src="stroy.img/star.png" alt="star">
+                                        <span>4.8</span>
+                                    </div>
+                                    <div class="right">
+                                        <span>밀키트 3 +</span>
+                                        <img src="stroy.img/밀키트더보기.png" alt="moreview">
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
+            </section>
+        </div><!-- //.inner -->
+    </section>
 
     </div>
 </body>
