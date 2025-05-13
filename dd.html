@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- ✅ FLEX 쿠폰 구조 전체 예시 -->
+  <div class="coupon-wrapper">
+    <!-- 쿠폰 카드 1개 -->
+    <div class="coupon">
+      <svg class="coupon-bg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 523 231" fill="none">
+        <path d="M12.505 2.56218H102.049C103.649...Z" stroke="black" stroke-width="3.48571" stroke-miterlimit="10" />
+      </svg>
+
+      <div class="coupon_left">
+        <span>
+          C<br>O<br>U<br>P<br>O<br>N
+        </span>
+      </div>
+
+      <div class="coupon_right">
+        <h3>일인분 잇슈 FLEX 6</h3>
+        <p>1인용 밀키트 6팩 선택하슈!</p>
+        <strong>48,000원</strong>
+      </div>
+    </div>
+
+    <!-- ...다른 쿠폰도 같은 구조로 반복 -->
+  </div>
+
+  <!-- ✅ CSS 예시 -->
+  <style>
+    .coupon-wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .coupon {
+      position: relative;
+      width: 100%;
+      height: 231px;
+      display: flex;
+      overflow: hidden;
+      align-items: center;
+      padding-left: 20px;
+      box-sizing: border-box;
+    }
+
+    .coupon-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    .coupon_left {
+      position: relative;
+      z-index: 1;
+      width: 120px;
+      height: 100%;
+      background: #f9c65c;
+      color: white;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-right: 2px dashed black;
+    }
+
+    .coupon_left span {
+      font-size: 18px;
+      line-height: 1.4;
+      text-align: center;
+    }
+
+    .coupon_right {
+      position: relative;
+      z-index: 1;
+      flex: 1;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .coupon_right h3 {
+      font-size: 18px;
+      margin-bottom: 6px;
+    }
+
+    .coupon_right p {
+      font-size: 14px;
+      margin-bottom: 10px;
+      color: #555;
+    }
+
+    .coupon_right strong {
+      font-size: 20px;
+      font-weight: 700;
+      color: #000;
+    }
+  </style>
+</body>
+
+</html>
