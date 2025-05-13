@@ -10,9 +10,25 @@
 }
 
 :root {
-    --main-font: "Pretendard", sans-serif;
-    --eng-font: 'Impact', sans-serif;
-    --title-font: 'Cafe24Ohsquare', sans-serif;
+    --main-font-family: "Pretendard", sans-serif;
+    --eng-font-family: 'Impact', sans-serif;
+    --title-font-family: 'Cafe24Ohsquare', sans-serif;
+    --mp-title-font: 400 80px 'Cafe24Ohsquare', sans-serif;
+    --sp-title-font: 400 50px 'Cafe24Ohsquare', sans-serif;
+    --pre-15-m: 500 15px "Pretendard", sans-serif;
+    --pre-18-r: 400 18px "Pretendard", sans-serif;
+    --pre-20-r: 400 20px/30px "Pretendard", sans-serif;
+    --pre-20-m: 500 20px "Pretendard", sans-serif;
+    --pre-25-sb: 600 25px "Pretendard", sans-serif;
+    --pre-25-m: 500 25px "Pretendard", sans-serif;
+    --pre-25-b: 700 25px "Pretendard", sans-serif;
+    --pre-28-r: 400 28px/43px "Pretendard", sans-serif;
+    --pre-30-sb: 600 30px "Pretendard", sans-serif;
+    --pre-35-sb: 600 35px "Pretendard", sans-serif;
+    --pre-35-l: 300 35px "Pretendard", sans-serif;
+    --pre-50-b: 700 50px "Pretendard", sans-serif;
+    --pre-80-eb: 800 80px "Pretendard", sans-serif;
+    --pre-80-r: 400 80px "Pretendard", sans-serif;
     --main-color: #005731;
     --sub-color-1: #FF6B00;
     --sub-color-2: #F5B642;
@@ -34,13 +50,40 @@
     margin-inline: auto;
 }
 
+.sec-pad {
+    margin-bottom: 300px;
+    font: 400 80px 'Cafe24Ohsquare', sans-serif;
+    font: 500 20px/1.7 "Times New Roman", Times, serif;
+}
+
+.con-pad {
+    margin-bottom: 200px;
+}
+
+.ht-pad {
+    margin-bottom: 180px;
+}
+
+.bt-pad {
+    margin-bottom: 100px;
+}
+
+.tit-pad {
+    margin-bottom: 120px;
+}
+
+.fc-pad {
+    margin-bottom: 200px;
+}
+
+/* header */
 .header-placeholder {
     height: 172px;
 }
 
 header {
     width: 100%;
-    font-family: var(--main-font);
+    font-family: var(--main-font-family);
     position: fixed;
     left: 0;
     top: 0;
@@ -240,6 +283,7 @@ header ul.right-menu li a {
     opacity: 1;
 }
 
+/* footer */
 footer {
     width: 100%;
     height: 420px;
@@ -248,44 +292,54 @@ footer {
     display: flex;
     flex-direction: column;
 }
+
 footer .inner {
     height: 100%;
 }
+
 footer .f_top {
     display: flex;
     width: 100%;
     justify-content: space-between;
     margin-block: 50px;
 }
+
 footer .f_left {
     display: flex;
     flex-direction: column;
 }
+
 footer .logo {
     width: 265px;
     margin-bottom: 50px;
 }
+
 footer .logo img {
     width: 100%;
 }
+
 footer .f_left .f_nav {
     display: flex;
     margin-bottom: 30px;
 }
+
 footer .f_left .f_nav li {
     padding-right: 15px;
     border-right: 1px solid var(--txt-medium-gray);
     margin-right: 15px;
 }
+
 footer .f_left .f_nav li:last-child {
     padding-right: 0;
     border-right: 0;
     margin-right: 0;
 }
+
 footer .f_left .f_nav li a {
     color: var(--txt-w-color);
     font-size: 20px;
 }
+
 footer .f_left .info {
     width: 900px;
     display: flex;
@@ -293,24 +347,29 @@ footer .f_left .info {
     row-gap: 10px;
     column-gap: 20px;
 }
+
 footer .f_left .info li {
     font-size: 23px;
     color: var(--txt-light-gray);
 }
+
 footer .f_right {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
+
 footer .f_right strong {
     font-size: 25px;
     font-weight: 500;
     color: var(--txt-w-color);
 }
+
 footer .f_right p {
     font-size: 18px;
     color: var(--txt-light-gray);
 }
+
 footer span {
     display: block;
     text-align: right;
