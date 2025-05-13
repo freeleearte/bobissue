@@ -2,6 +2,7 @@
 
 body {
     font-family: var(--main-font);
+    overflow-x: hidden;
 }
 
 /* main visual */
@@ -12,24 +13,72 @@ body {
     /* margin-bottom: 300px; */
 }
 
-.main_visual .l_video {
+.main_visual .l_slide_wrap {
     flex: 1;
+    height: 100%;
     background: #aaa;
+    flex-shrink: 0;
+}
+
+.main_visual .l_slide {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.main_visual .l_slide li {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.main_visual .l_slide img {
+    width: 100%;
+    height: 100%;
 }
 
 .main_visual .r_text {
     flex: 1;
-    background: #FFF1DA;
+    /* background: #FFF1DA; */
+    height: 100%;
+}
+
+.main_visual .r_text .txtAniBox {
+    display: flex;
+    height: 100%;
+    overflow: hidden;
+}
+
+.txtAniBox .simply-scroll .simply-scroll-clip {
+    /* display: flex; */
+    overflow: hidden;
+}
+
+.txtAniBox .simply-scroll .simply-scroll-clip .simply-scroll-list {
+    /* display: flex; */
+    height: 100%;
+}
+
+.txtAniBox ul {
+    /* display: flex; */
+    height: auto;
+    white-space: nowrap;
+    /* transform-origin: left top; */
+    /* flex-direction: column; */
+
+}
+
+.txtAniBox ul li {
+    margin-bottom: 15px;
 }
 
 .con_wrap {
     position: relative;
-    overflow: hidden;
 }
 
 .con_bg {
     position: absolute;
-    z-index: -1;
+    z-index: 1;
     top: 0;
 }
 
@@ -46,26 +95,8 @@ body {
     position: absolute;
     right: 240px;
     top: 750px;
+    z-index: 3;
 }
-
-.char1_wrap .txt_wrap {
-    position: absolute;
-    width: fit-content;
-    right: 320px;
-    bottom: 200px;
-}
-
-.char1_wrap .txt_wrap img {}
-
-.char1_wrap .txt_wrap p {
-    position: absolute;
-    width: 305px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.char1_wrap .txt_wrap p {}
 
 .char1_wrap img.char1 {
     width: 450px;
@@ -73,6 +104,9 @@ body {
 
 .vector1 {
     padding-top: 1000px;
+    position: relative;
+    z-index: 2;
+    background-color: #C6E992;
 }
 
 /* section common */
@@ -84,38 +118,38 @@ section .txt {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5px;
+    gap: 15px;
     margin-bottom: 135px;
 }
 
 section .txt h2 {
+    font: var(--mp-title-font);
     font-size: 80px;
     font-weight: 800;
-    color: var(--sub-color-2);
+    color: var(--main-color);
     line-height: 98px;
 }
 
 section .txt h2 strong {
-    font-family: var(--eng-font);
+    /* font-family: var(--eng-font); */
 }
 
 section .txt h2 span {
-    font-weight: 400;
-    color: var(--txt-w-color);
+    /* font-weight: 400;
+    color: var(--txt-w-color); */
 }
 
 section .txt p {
-    font-size: 35px;
-    font-weight: 300;
-    color: var(--txt-w-color);
-    line-height: 42px;
+    font: var(--pre-35-l);
+    color: var(--txt-gray);
+    /* line-height: 42px; */
 }
 
-section article button.more {
+section button.more {
     width: 330px;
     height: 60px;
     border: 0;
-    border-radius: 50px;
+    border-radius: 15px;
     background-color: var(--sub-color-1);
     color: #fff;
     font-size: 25px;
@@ -125,7 +159,7 @@ section article button.more {
 
 /* con1 */
 .con1 {
-    background: var(--main-color);
+    background: #C6E992;
 }
 
 .con1 .inner {
@@ -153,7 +187,7 @@ section article button.more {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 75px;
+    margin-bottom: 120px;
 }
 
 .con1 article ul li {
@@ -161,98 +195,231 @@ section article button.more {
     height: 542px;
     border-radius: 15px;
     background-color: var(--txt-w-color);
-    box-shadow: 0 0 0 5px var(--sub-color-1) inset; 
+    box-shadow: 0 0 0 5px var(--sub-color-1) inset;
+}
+
+section article .more_wrap {
+    position: relative;
+}
+
+section article .more_wrap img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -120px;
+    pointer-events: none;
 }
 
 .con1 article ul li h3 {}
 
 /* con2 */
 .con2 {
-    background: #818181;
-    color: #fff;
+    /* background: #818181; */
+    color: var(--main-color);
+    position: relative;
+}
+
+.con2 .vector3 {
+    position: absolute;
+    transform: translateY(-100%);
 }
 
 .con2 .txt {
     padding-top: 140px;
 }
 
+.con2 .txt h2 {
+    margin-bottom: 50px;
+}
+
 .con2 .txt h2,
 .con2 .txt p {
-    color: #fff;
+    /* color: #fff; */
 }
 
 .con2 article {
     width: 100%;
-    display: flex;
-    gap: 110px;
-}
-
-.con2 article .l_img {
+    height: 800px;
     position: relative;
 }
 
-.con2 article .l_img .img {
-    width: 780px;
-    height: 800px;
-    border-radius: 0 50px 50px 0;
-    background: #fff;
-}
-
-.con2 article .l_img strong {
-    font-size: 170px;
-    font-weight: 700;
-    -webkit-text-stroke: 2px #000;
-    rotate: -90deg;
+.con2 article .img_container {
     position: absolute;
-    right: -30%;
-    top: 40%;
+    left: -50px;
+    top: 0;
+    width: 800px;
+    height: 800px;
+    z-index: 10;
 }
 
-.con2 article .r_con {
-    display: flex;
+.con2 article .img_container.move {
+    left: 1200px;
+}
+
+.con2 article .img_wrap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.con2 article .img_wrap img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    background: #ccc;
+}
+
+.con2 article .img_container .sw_btn {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    /* background: #000; */
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%);
+    transition: transform 0.5s ease;
+}
+
+.con2 article .img_container .sw_btn:hover {
+    transform: translate(50%, -50%) rotate(360deg) scale(1.4);
+}
+
+.con2 article .img_container .sw_btn img {
+    width: 100%;
+    height: 100%;
+}
+
+.con2 article .img_container.move .sw_btn {
+    right: 800px;
+}
+
+.con2 article .con_container {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 800px;
+}
+
+.con2 article .con_container.move {
+    right: 850px;
+}
+
+.con2 article .con_wrap {
     flex-direction: column;
+    justify-content: center;
+    padding-right: 200px;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.con2 article .con_wrap h3 {
+    font-size: 80px;
+    font-family: var(--eng-font-family);
+    margin-bottom: 40px;
+}
+
+.con2 article .con_wrap strong {
+    margin-bottom: 20px;
+    font: var(--pre-35-sb);
+    color: var(--txt-dark-gray);
+}
+
+.con2 article .con_wrap b {
+    font: var(--pre-20-r);
+    margin-bottom: 50px;
+    color: var(--txt-medium-gray);
+}
+
+.con2 article .con_wrap ul {
+    display: flex;
     justify-content: space-between;
 }
 
-.con2 article .r_con h3 {
-    font-size: 40px;
-    font-weight: 600;
-}
-
-.con2 article .r_con b {
-    font-size: 23px;
-    line-height: 40px;
-}
-
-.con2 article .r_con ul {
-    display: flex;
-    gap: 34px;
-}
-
-.con2 article .r_con ul li {
-    width: 350px;
-    height: 370px;
+.con2 article .con_wrap ul li {
+    width: 250px;
+    height: 250px;
     border-radius: 10px;
-    background: #fff;
+    background: none;
+    overflow: hidden;
 }
 
-.con2 article .r_con .lr_btn {
+.con2 article .con_wrap ul li:hover img {
+    opacity: 0;
+}
+
+.con2 article .box1 ul li:nth-child(1):hover {
+    background: url(../asset/boxhover1.png) center/contain;
+}
+
+.con2 article .box1 ul li:nth-child(2):hover {
+    background: url(../asset/boxhover2.png) center/contain;
+}
+
+.con2 article .box1 ul li:nth-child(3):hover {
+    background: url(../asset/boxhover3.png) center/contain;
+}
+
+.con2 article .box2 ul li:nth-child(1):hover {
+    background: url(../asset/couponhover1.png) center/contain;
+}
+.con2 article .box2 ul li:nth-child(2):hover {
+    background: url(../asset/couponhover2.png) center/contain;
+}
+.con2 article .box2 ul li:nth-child(3):hover {
+    background: url(../asset/couponhover3.png) center/contain;
+}
+
+.con2 article .con_wrap ul li img {
+    width: 100%;
+    height: 100%;
+    transition: .3s;
+}
+
+.con2 article .img_container,
+.con2 article .con_container {
+    transition: top 0.8s ease, left 0.8s ease, right 0.8s ease;
+    /* 위치 변화에 transition 적용 */
+}
+
+.img_container .img1,
+.con_container .box1 {
+    opacity: 1;
+    transition: opacity 0.5s ease;
     display: flex;
-    gap: 20px;
 }
 
-.con2 article .r_con .lr_btn div {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: #fff;
+.img_container .img2,
+.con_container .box2 {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    top: 0;
+    left: 0;
+    display: none;
 }
 
-.con2 article .r_con .lr_btn .left_btn {}
+/* move 클래스가 있을 때: 반대로 전환 */
+.img_container.move .img1,
+.con_container.move .box1 {
+    opacity: 0;
+    display: none;
+}
 
-.con2 article .r_con .lr_btn .right_btn {}
+.img_container.move .img2,
+.con_container.move .box2 {
+    opacity: 1;
+    display: flex;
+}
 
-.con2 article .r_con .button {}
+.con2 article .con_wrap .lr_btn .left_btn {}
+
+.con2 article .con_wrap .lr_btn .right_btn {}
+
+.con2 article .con_wrap .button {}
 
 /* char2 */
 .line_2_wrap {
@@ -264,7 +431,8 @@ section article button.more {
 
 .char2_wrap {
     position: absolute;
-    left: 30%;
+    left: -300px;
+    top: -100px;
 }
 
 .char2_wrap img.char2 {
@@ -283,22 +451,11 @@ section article button.more {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
+    margin-top: -100px;
 }
 
-.con3 .lr_btn {
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 130px;
-}
-
-.con3 .lr_btn div {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background: #565656;
+.con3 .txt p {
+    color: #ccc;
 }
 
 .con3 article {
@@ -309,9 +466,28 @@ section article button.more {
 
 .con3 article .video {
     width: 1000px;
-    height: 550px;
+    height: 465px;
+    border-radius: 20px;
     background: #707070;
     margin-bottom: 200px;
+    position: relative;
+}
+
+.con3 .lr_btn {
+    position: absolute;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 50%);
+}
+
+.con3 .lr_btn div {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #565656;
 }
 
 .con3 article ul {
@@ -320,8 +496,8 @@ section article button.more {
 }
 
 .con3 article ul li {
-    width: 700px;
-    height: 420px;
+    width: 490px;
+    height: 310px;
     background: #eaeaea;
     border-radius: 30px;
     position: relative;
@@ -338,7 +514,7 @@ section article button.more {
 }
 
 .con3 article ul li .img_wrap {
-    width: 360px;
+    width: 230px;
     position: absolute;
     right: 40px;
     top: -90px;
@@ -374,8 +550,8 @@ section article button.more {
 }
 
 .con3 article ul li button.buy {
-    width: 170px;
-    height: 60px;
+    width: 130px;
+    height: 45px;
     border-radius: 10px;
     border: 0;
     background-color: #333;
@@ -384,30 +560,49 @@ section article button.more {
     font-weight: 600;
     cursor: pointer;
     position: absolute;
-    right: 20%;
-    bottom: -5%;
+    right: 10%;
+    bottom: 0;
+    transform: translateY(50%);
 }
 
 /* con4 */
 .con4 {}
 
+.con4 .txt p {
+    color: #ccc;
+}
+
 .con4 ul {
     display: flex;
-    justify-content: space-between;
+    column-gap: 50px;
+    row-gap: 70px;
+    flex-wrap: wrap;
 }
 
 .con4 ul li {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 380px;
+    width: 385px;
+    height: 655px;
+    background: #555;
+    border-radius: 20px;
+    padding-inline: 25px;
+    flex-shrink: 0;
+}
+
+.con4 ul li:nth-child(2),
+.con4 ul li:nth-child(5) {
+    margin-top: 200px;
 }
 
 .con4 ul li .img {
     width: 100%;
-    height: 410px;
+    height: 385px;
     background: #ccc;
     border-radius: 10px;
+    align-self: center;
+    margin-top: 25px;
 }
 
 .con4 ul li .info {
@@ -416,6 +611,10 @@ section article button.more {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.con4 ul li .info img {
+    width: 45px;
 }
 
 .con4 ul li .info p {
@@ -430,15 +629,19 @@ section article button.more {
     justify-content: space-between;
 }
 
-.con4 ul li .info button {
+.con4 ul li .info b {
     border: 0;
-    width: 200px;
+    width: 220px;
     height: 45px;
-    border-radius: 40px;
+    border-radius: 0 50px 0 20px;
     background: #ccc;
     color: #fff;
     font-weight: 700;
     font-size: 23px;
+    margin-left: -25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .con4 ul li .info span {
