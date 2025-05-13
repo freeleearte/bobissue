@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     gap: 50px;
-    width: 600px;
+    width: 465px;
     justify-self: center;
     align-items: center;
     margin-top: 120px;
@@ -32,8 +32,8 @@
 }
 .logIn .input_sec li input {
     width: 100%;
-    height: 100px;
-    border-radius: 20px;
+    height: 60px;
+    border-radius: 15px;
     font-size: 24px;
     padding-left: 23px;
     box-sizing: border-box;
@@ -50,6 +50,9 @@
     border-right: 0;
     padding-right: 0;
 }
+.logIn .find li a {
+    font-size: 15px;
+}
 .logIn .bot {
     display: flex;
     flex-direction: column;
@@ -58,13 +61,13 @@
 }
 .logIn .bot li {
     width: 100%;
-    height: 100px;
+    height: 60px;
     border: 1px solid #000;
     border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 700;
 }
 

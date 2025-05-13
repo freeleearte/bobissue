@@ -58,16 +58,8 @@
     font: 500 20px/1.7 "Times New Roman", Times, serif;
 }
 
-.sec-pad:last-child {
-    margin-bottom: 0;
-}
-
 .con-pad {
     margin-bottom: 200px;
-}
-
-.con-pad:last-child {
-    margin-bottom: 0;
 }
 
 .ht-pad {
