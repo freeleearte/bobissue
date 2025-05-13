@@ -2,6 +2,7 @@
 
 body {
     font-family: var(--main-font);
+    overflow-x: hidden;
 }
 
 /* main visual */
@@ -12,24 +13,72 @@ body {
     /* margin-bottom: 300px; */
 }
 
-.main_visual .l_video {
+.main_visual .l_slide_wrap {
     flex: 1;
+    height: 100%;
     background: #aaa;
+    flex-shrink: 0;
+}
+
+.main_visual .l_slide {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.main_visual .l_slide li {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.main_visual .l_slide img {
+    width: 100%;
+    height: 100%;
 }
 
 .main_visual .r_text {
     flex: 1;
-    background: #FFF1DA;
+    /* background: #FFF1DA; */
+    height: 100%;
+}
+
+.main_visual .r_text .txtAniBox {
+    display: flex;
+    height: 100%;
+    overflow: hidden;
+}
+
+.txtAniBox .simply-scroll .simply-scroll-clip {
+    /* display: flex; */
+    overflow: hidden;
+}
+
+.txtAniBox .simply-scroll .simply-scroll-clip .simply-scroll-list {
+    /* display: flex; */
+    height: 100%;
+}
+
+.txtAniBox ul {
+    /* display: flex; */
+    height: auto;
+    white-space: nowrap;
+    /* transform-origin: left top; */
+    /* flex-direction: column; */
+
+}
+
+.txtAniBox ul li {
+    margin-bottom: 15px;
 }
 
 .con_wrap {
     position: relative;
-    overflow: hidden;
 }
 
 .con_bg {
     position: absolute;
-    z-index: -1;
+    z-index: 1;
     top: 0;
 }
 
@@ -46,26 +95,8 @@ body {
     position: absolute;
     right: 240px;
     top: 750px;
+    z-index: 3;
 }
-
-.char1_wrap .txt_wrap {
-    position: absolute;
-    width: fit-content;
-    right: 320px;
-    bottom: 200px;
-}
-
-.char1_wrap .txt_wrap img {}
-
-.char1_wrap .txt_wrap p {
-    position: absolute;
-    width: 305px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.char1_wrap .txt_wrap p {}
 
 .char1_wrap img.char1 {
     width: 450px;
@@ -73,6 +104,9 @@ body {
 
 .vector1 {
     padding-top: 1000px;
+    position: relative;
+    z-index: 2;
+    background-color: #C6E992;
 }
 
 /* section common */
@@ -84,15 +118,15 @@ section .txt {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5px;
+    gap: 15px;
     margin-bottom: 135px;
 }
 
 section .txt h2 {
-    font-family: var(--title-font);
+    font: var(--mp-title-font);
     font-size: 80px;
     font-weight: 800;
-    color: var(--sub-color-2);
+    color: var(--main-color);
     line-height: 98px;
 }
 
@@ -101,15 +135,14 @@ section .txt h2 strong {
 }
 
 section .txt h2 span {
-    font-weight: 400;
-    color: var(--txt-w-color);
+    /* font-weight: 400;
+    color: var(--txt-w-color); */
 }
 
 section .txt p {
-    font-size: 35px;
-    font-weight: 300;
-    color: var(--txt-w-color);
-    line-height: 42px;
+    font: var(--pre-35-l);
+    color: var(--txt-gray);
+    /* line-height: 42px; */
 }
 
 section button.more {
@@ -126,7 +159,7 @@ section button.more {
 
 /* con1 */
 .con1 {
-    background: var(--main-color);
+    background: #C6E992;
 }
 
 .con1 .inner {
@@ -181,8 +214,14 @@ section article .more_wrap img {
 
 /* con2 */
 .con2 {
-    background: #818181;
-    color: #fff;
+    /* background: #818181; */
+    color: var(--main-color);
+    position: relative;
+}
+
+.con2 .vector3 {
+    position: absolute;
+    transform: translateY(-100%);
 }
 
 .con2 .txt {
@@ -195,59 +234,105 @@ section article .more_wrap img {
 
 .con2 .txt h2,
 .con2 .txt p {
-    color: #fff;
+    /* color: #fff; */
 }
 
 .con2 article {
     width: 100%;
-    display: flex;
-    gap: 110px;
-}
-
-.con2 article .img_wrap {
+    height: 800px;
     position: relative;
 }
 
-.con2 article .img_wrap .img {
-    width: 780px;
+.con2 article .img_container {
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 800px;
     height: 800px;
-    border-radius: 0 50px 50px 0;
-    background: #fff;
+    z-index: 10;
 }
 
-.con2 article .img_wrap strong {
-    font-size: 170px;
-    font-weight: 700;
-    -webkit-text-stroke: 2px #000;
-    rotate: -90deg;
+.con2 article .img_container.move {
+    left: 1200px;
+}
+
+.con2 article .img_wrap {
     position: absolute;
-    right: -30%;
-    top: 40%;
+    width: 100%;
+    height: 100%;
+}
+
+.con2 article .img_wrap img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    background: #ccc;
+}
+
+.con2 article .img_container .sw_btn {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    /* background: #000; */
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%);
+    transition: transform 0.5s ease;
+}
+
+.con2 article .img_container .sw_btn:hover {
+    transform: translate(50%, -50%) rotate(360deg) scale(1.4);
+}
+
+.con2 article .img_container .sw_btn img {
+    width: 100%;
+    height: 100%;
+}
+
+.con2 article .img_container.move .sw_btn {
+    right: 800px;
+}
+
+.con2 article .con_container {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 800px;
+}
+
+.con2 article .con_container.move {
+    right: 850px;
 }
 
 .con2 article .con_wrap {
-    display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-right: 250px;
+    padding-right: 200px;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .con2 article .con_wrap h3 {
     font-size: 80px;
-    font-family: var(--eng-font);
+    font-family: var(--eng-font-family);
     margin-bottom: 40px;
 }
 
 .con2 article .con_wrap strong {
     margin-bottom: 20px;
-    font-size: 35px;
-    font-weight: 600;
+    font: var(--pre-35-sb);
+    color: var(--txt-dark-gray);
 }
 
 .con2 article .con_wrap b {
-    font-size: 20px;
-    line-height: 1.2;
+    font: var(--pre-20-r);
     margin-bottom: 50px;
+    color: var(--txt-medium-gray);
 }
 
 .con2 article .con_wrap ul {
@@ -256,21 +341,78 @@ section article .more_wrap img {
 }
 
 .con2 article .con_wrap ul li {
-    width: 220px;
-    height: 220px;
+    width: 250px;
+    height: 250px;
     border-radius: 10px;
-    background: #fff;
+    background: none;
+    overflow: hidden;
 }
 
-.con2 article .img_wrap .sw_btn {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: #ccc;
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translate(50%, -50%);
+.con2 article .con_wrap ul li:hover img {
+    opacity: 0;
+}
+
+.con2 article .box1 ul li:nth-child(1):hover {
+    background: url(../asset/boxhover1.png) center/contain;
+}
+
+.con2 article .box1 ul li:nth-child(2):hover {
+    background: url(../asset/boxhover2.png) center/contain;
+}
+
+.con2 article .box1 ul li:nth-child(3):hover {
+    background: url(../asset/boxhover3.png) center/contain;
+}
+
+.con2 article .box2 ul li:nth-child(1):hover {
+    background: url(../asset/couponhover1.png) center/contain;
+}
+.con2 article .box2 ul li:nth-child(2):hover {
+    background: url(../asset/couponhover2.png) center/contain;
+}
+.con2 article .box2 ul li:nth-child(3):hover {
+    background: url(../asset/couponhover3.png) center/contain;
+}
+
+.con2 article .con_wrap ul li img {
+    width: 100%;
+    height: 100%;
+    transition: .3s;
+}
+
+.con2 article .img_container,
+.con2 article .con_container {
+    transition: top 0.8s ease, left 0.8s ease, right 0.8s ease;
+    /* 위치 변화에 transition 적용 */
+}
+
+.img_container .img1,
+.con_container .box1 {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    display: flex;
+}
+
+.img_container .img2,
+.con_container .box2 {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+/* move 클래스가 있을 때: 반대로 전환 */
+.img_container.move .img1,
+.con_container.move .box1 {
+    opacity: 0;
+    display: none;
+}
+
+.img_container.move .img2,
+.con_container.move .box2 {
+    opacity: 1;
+    display: flex;
 }
 
 .con2 article .con_wrap .lr_btn .left_btn {}
@@ -289,7 +431,8 @@ section article .more_wrap img {
 
 .char2_wrap {
     position: absolute;
-    left: 30%;
+    left: -300px;
+    top: -100px;
 }
 
 .char2_wrap img.char2 {
@@ -469,9 +612,11 @@ section article .more_wrap img {
     flex-direction: column;
     justify-content: space-between;
 }
+
 .con4 ul li .info img {
     width: 45px;
 }
+
 .con4 ul li .info p {
     font-size: 30px;
     font-weight: 600;
