@@ -56,16 +56,8 @@
     font: 500 20px/1.7 "Times New Roman", Times, serif;
 }
 
-.sec-pad:last-child {
-    margin-bottom: 0;
-}
-
 .con-pad {
     margin-bottom: 200px;
-}
-
-.con-pad:last-child {
-    margin-bottom: 0;
 }
 
 .ht-pad {
@@ -91,7 +83,7 @@
 
 header {
     width: 100%;
-    font-family: var(--main-font);
+    font-family: var(--main-font-family);
     position: fixed;
     left: 0;
     top: 0;
