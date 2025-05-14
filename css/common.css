@@ -10,9 +10,12 @@
 }
 
 :root {
+    /* font family */
     --main-font-family: "Pretendard", sans-serif;
     --eng-font-family: 'Impact', sans-serif;
     --title-font-family: 'Cafe24Ohsquare', sans-serif;
+
+    /* font */
     --mp-title-font: 400 80px 'Cafe24Ohsquare', sans-serif;
     --sp-title-font: 400 50px 'Cafe24Ohsquare', sans-serif;
     --pre-15-m: 500 15px "Pretendard", sans-serif;
@@ -31,6 +34,8 @@
     --pre-50-b: 700 50px "Pretendard", sans-serif;
     --pre-80-eb: 800 80px "Pretendard", sans-serif;
     --pre-80-r: 400 80px "Pretendard", sans-serif;
+
+    /* color */
     --main-color: #005731;
     --sub-color-1: #FF6B00;
     --sub-color-2: #F5B642;
@@ -46,37 +51,19 @@
     --txt-medium-m-gray: #777777;
     --txt-gray: #444444;
     --txt-dark-gray: #1F1F1F;
+
+    /* margin */
+    --sec-pad: 300px;
+    --con-pad: 200px;
+    --ht-pad: 180px;
+    --bt-pad: 100px;
+    --tit-pad: 120px;
+    --fc-pad: 200px;
 }
 
 .inner {
     width: 1440px;
     margin-inline: auto;
-}
-
-.sec-pad {
-    margin-bottom: 300px;
-    font: 400 80px 'Cafe24Ohsquare', sans-serif;
-    font: 500 20px/1.7 "Times New Roman", Times, serif;
-}
-
-.con-pad {
-    margin-bottom: 200px;
-}
-
-.ht-pad {
-    margin-bottom: 180px;
-}
-
-.bt-pad {
-    margin-bottom: 100px;
-}
-
-.tit-pad {
-    margin-bottom: 120px;
-}
-
-.fc-pad {
-    margin-bottom: 200px;
 }
 
 /* header */
