@@ -189,22 +189,22 @@ header .mid .left ul li.on {
 header .mid .left .sub_ad {
     width: 120px;
     margin-left: -50px;
-    animation: blink 1.5s infinite;
+    animation: moveAd 1.5s infinite;
 }
 
 header .mid .left .sub_ad img {
     width: 100%;
 }
 
-@keyframes blink {
+@keyframes moveAd {
 
     0%,
     100% {
-        opacity: 1;
+        margin-left: -50px;
     }
 
     50% {
-        opacity: 0;
+        margin-left: 0;
     }
 }
 
