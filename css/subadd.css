@@ -58,53 +58,12 @@ p {
     border: none;
 }
 
-.info {
-    display: flex;
-    flex-direction: column;
-    gap: 150px;
-    flex: 1;
-}
+/* 상단 탭바 메뉴 */
+.tab_bar {}
 
-.info .top_visual {
-    width: 100%;
-    height: 320px;
-    background: #ddd;
-}
 
-.info .sec2 {
-    padding-top: 90px;
-}
-
-.info .sec3 .sec3_box {
-    width: 350px;
-    height: 350px;
-    border: 1px solid var(--txt-gray);
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 30px;
-    gap: 25px;
-}
-
-.info .sec3 .sec3_box .tit {
-    width: 100%;
-    font: var(--pre-30-sb);
-    color: var(--sub-color-1);
-    border-bottom: 1px solid var(--txt-gray);
-    text-align: center;
-    padding-bottom: 10px;
-}
-
-.info .sec3 .sec3_box .img {
-    width: 100%;
-    height: 240px;
-    background: url(../img/card.png) no-repeat center/cover;
-    border-radius: 20px;
-}
-
-.sec4_box {
+/* 배송지 */
+.sec1_box {
     width: 100%;
     border: 1px solid var(--txt-dark-gray);
     border-radius: 10px;
@@ -113,49 +72,50 @@ p {
     padding: 30px;
 }
 
-.sec4_left .sec4_t {
+.sec1_left .sec4_t {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
-.sec4_left {
+.sec1_left {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.sec4_left .sec4_t em {
+.sec1_left .sec4_t em {
     font: var(--pre-30-sb);
     color: var(--txt-dark-gray);
 }
 
-.sec4_left .sec4_t span {
+.sec1_left .sec4_t span {
     font: var(--pre-25-m);
     color: var(--txt-dark-gray);
 }
 
-.sec4_left .sec4_b p {
+.sec1_left .sec4_b p {
     font: var(--pre-20-r);
     color: var(--txt-medium-m-gray);
 }
 
-.sec4_right {
+.sec1_right {
     width: 120px;
     height: 35px;
     background: var(--sub-color-1);
     border-radius: 5px;
 }
 
-.sec4_right p {
+.sec1_right a {
     font: var(--pre-20-m);
     color: var(--txt-w-color);
-    text-align: center;
+    display: flex;
+    justify-content: center;
     line-height: 35px;
 }
 
 /* 결제수단 */
-.sec6_card {
+.sec2_card {
     width: 100%;
     height: 80px;
     display: flex;
@@ -163,46 +123,18 @@ p {
     gap: 30px;
 }
 
-.sec6_card .sec6_le {
+.sec2_card .sec6_le {
     width: 100px;
     height: 100%;
     background: url(../img/nori.png) no-repeat center/contain;
 }
 
-.sec6_card .sec6_ri h5 {
+.sec2_card .sec6_ri h5 {
     font: var(--pre-28-r);
     color: var(--txt-gray);
 }
 
-.sec6_card .sec6_ri p {
+.sec2_card .sec6_ri p {
     font: var(--pre-20-r);
     color: var(--txt-medium-gray);
-}
-
-.button ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 35px;
-    color: var(--txt-w-color);
-    font: var(--pre-25-sb);
-    padding-bottom: 200px;
-    cursor: pointer;
-}
-
-.button ul li {
-    width: 330px;
-    height: 60px;
-    background: var(--txt-dark-gray);
-    text-align: center;
-    line-height: 60px;
-    border-radius: 15px;
-}
-
-.button ul li:nth-child(2) {
-    background: var(--sub-color-1);
-}
-
-.button ul li a {
-    display: block;
 }
