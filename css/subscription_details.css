@@ -11,6 +11,7 @@ div.scroll {
     display: flex;
     flex-direction: column;
     gap: 300px;
+    padding-bottom: 300px;
 }
 
 /* 상단 */
@@ -349,20 +350,35 @@ div.scroll {
 
 .con .banner {
     height: 300px;
-    background: powderblue;
     display: flex;
     align-items: flex-end;
     justify-content: center;
     background-size: cover;
+}
+.con .banner.one{
+    background-image: url(../subscription_details.img/banner1.jpg);
+}.con .banner.two{
+    background-image: url(../subscription_details.img/banner2.jpg);
+}
+.con .banner.three{
+    background-image: url(../subscription_details.img/banner3.jpg);
+}
+.con .banner.four{
+    background-image: url(../subscription_details.img/banner4.jpg);
+}
+.con .banner.five{
+    background-image: url(../subscription_details.img/banner5.png);
+}
+.con .banner.six{
+    background-image: url(../subscription_details.img/banner6.png);
 }
 
 .con .banner button {
     border: none;
     width: 250px;
     height: 55px;
-    margin-bottom: 50px;
-    border-radius: 10px;
-    background-color: var(--main-color);
+    border-radius: 10px 10px 0 0;
+    background-color: var(--sub-color-1);
     font-size: 19px;
     letter-spacing: 1px;
     font-weight: 500;
@@ -429,7 +445,7 @@ div.scroll {
 .containner .top ul {
     display: flex;
     gap: 35px;
-    padding-top: 48px;
+    padding-top: 60px;
 }
 
 .containner .top ul li {
@@ -450,8 +466,8 @@ div.scroll {
 
 .containner .top ul li .img .check_icon {
     position: absolute;
-    left: 0;
-    top: 0;
+    left: 20px;
+    top: -20px;
     width: 35px;
     height: 35px;
 }
