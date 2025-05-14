@@ -5,6 +5,19 @@ body {
     overflow-x: hidden;
 }
 
+.goto_top {
+    position: fixed;
+    width: 85px;
+    right: 50px;
+    bottom: 20px;
+    z-index: 200;
+    cursor: pointer;
+}
+
+.goto_top img {
+    width: 100%;
+}
+
 /* main visual */
 .main_visual {
     width: 100%;
@@ -106,7 +119,7 @@ body {
     padding-top: 1000px;
     position: relative;
     z-index: 2;
-    background-color: #C6E992;
+    background-color: var(--main-color);
 }
 
 /* section common */
@@ -159,7 +172,7 @@ section button.more {
 
 /* con1 */
 .con1 {
-    background: #C6E992;
+    background: var(--main-color);
 }
 
 .con1 .inner {
@@ -196,6 +209,46 @@ section button.more {
     border-radius: 15px;
     background-color: var(--txt-w-color);
     box-shadow: 0 0 0 5px var(--sub-color-1) inset;
+    border: 5px solid var(--sub-color-1);
+    position: relative;
+    overflow: hidden;
+}
+
+.con1 article ul li h3 {
+    display: none;
+}
+
+.con1 article ul li img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    animation: slideUp 5s ease-in-out infinite;
+}
+
+.con1 article ul li:nth-child(1) img {
+    animation-delay: 0s;
+}
+
+.con1 article ul li:nth-child(2) img {
+    animation-delay: 0.5s;
+}
+
+.con1 article ul li:nth-child(3) img {
+    animation-delay: 1s;
+}
+
+@keyframes slideUp {
+    0% {
+        top: 0;
+    }
+
+    50% {
+        top: -200%;
+    }
+
+    100% {
+        top: 0;
+    }
 }
 
 section article .more_wrap {
@@ -279,6 +332,7 @@ section article .more_wrap img {
     right: 0;
     transform: translate(50%, -50%);
     transition: transform 0.5s ease;
+    cursor: pointer;
 }
 
 .con2 article .img_container .sw_btn:hover {
@@ -367,9 +421,11 @@ section article .more_wrap img {
 .con2 article .box2 ul li:nth-child(1):hover {
     background: url(../asset/couponhover1.png) center/contain;
 }
+
 .con2 article .box2 ul li:nth-child(2):hover {
     background: url(../asset/couponhover2.png) center/contain;
 }
+
 .con2 article .box2 ul li:nth-child(3):hover {
     background: url(../asset/couponhover3.png) center/contain;
 }
@@ -462,15 +518,32 @@ section article .more_wrap img {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 
-.con3 article .video {
+.con3 article .con3_top {
     width: 1000px;
     height: 465px;
-    border-radius: 20px;
-    background: #707070;
+    /* background: #707070; */
     margin-bottom: 200px;
-    position: relative;
+}
+
+.con3 article .con3_top ul.slide {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.con3 article .con3_top ul.slide li {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.con3 article .con3_top ul.slide li img {
+    width: 100%;
+    height: 100%;
 }
 
 .con3 .lr_btn {
@@ -479,27 +552,40 @@ section article .more_wrap img {
     gap: 30px;
     align-items: center;
     left: 50%;
-    bottom: 0;
+    top: 405px;
     transform: translate(-50%, 50%);
+    z-index: 20;
 }
 
 .con3 .lr_btn div {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
-    background: #565656;
+    cursor: pointer;
+    /* background: #565656; */
 }
 
-.con3 article ul {
+.con3 .lr_btn div img {
+    width: 100%;
+    height: 100%;
+}
+
+.con3 article .con3_bot {
+    width: 1600px;
+}
+
+.con3 article .con3_bot ul.slide {
+    width: 100%;
     display: flex;
-    gap: 55px;
+    /* gap: 55px; */
 }
 
-.con3 article ul li {
-    width: 490px;
-    height: 310px;
-    background: #eaeaea;
-    border-radius: 30px;
+.con3 article .con3_bot ul.slide li {
+    width: 430px !important;
+    height: 250px;
+    background-color: var(--bg-w-color);
+    border: 2px solid var(--main-color);
+    border-radius: 15px;
     position: relative;
     padding: 30px;
     display: flex;
@@ -507,102 +593,150 @@ section article .more_wrap img {
     justify-content: space-between;
 }
 
-.con3 article ul li .star {
-    width: 170px;
-    height: 40px;
-    background: #ccc;
+.con3_bot.swiper,
+.con3_bot .swiper-wrapper,
+.con3_bot .swiper-slide {
+    overflow: visible !important;
 }
 
-.con3 article ul li .img_wrap {
+.con3 article .con3_bot ul.slide li.active {
+    background-color: var(--main-color);
+}
+
+.con3 article .con3_bot ul.slide li .star {
+    width: 170px;
+    height: 40px;
+    /* background: #ccc; */
+}
+
+.con3 article .con3_bot ul.slide li .star img {
+    width: 100%;
+    height: 100%;
+}
+
+.con3 article .con3_bot ul.slide li .img_wrap {
     width: 230px;
     position: absolute;
     right: 40px;
     top: -90px;
 }
 
-.con3 article ul li .img_wrap img {
+.con3 article .con3_bot ul.slide li .img_wrap img {
     width: 100%;
 }
 
-.con3 article ul li .info {
+.con3 article .con3_bot ul.slide li .info {
     display: flex;
     flex-direction: column;
-    gap: 17px;
 }
 
-.con3 article ul li .info p {
-    font-size: 30px;
-    font-weight: 500;
-    color: #6b6b6b;
+.con3 article .con3_bot ul.slide li .info p {
+    font: var(--pre-28-r);
+    color: var(--txt-medium-gray);
+    margin-bottom: -6px;
 }
 
-.con3 article ul li .info h3 {
-    font-size: 45px;
-    font-weight: 600;
-    color: #333;
+.con3 article .con3_bot ul.slide li.active .info p {
+    color: var(--bg-be-color);
 }
 
-.con3 article ul li .info b {
-    font-size: 23px;
-    font-weight: 500;
-    line-height: 40px;
-    color: #828282;
+.con3 article .con3_bot ul.slide li .info h3 {
+    font: var(--pre-35-sb);
+    color: var(--main-color);
+    margin-bottom: 15px;
 }
 
-.con3 article ul li button.buy {
+.con3 article .con3_bot ul.slide li.active .info h3 {
+    color: var(--txt-w-color);
+}
+
+.con3 article .con3_bot ul.slide li .info b {
+    font: var(--pre-20-r);
+    color: var(--txt-gray);
+    margin-bottom: 10px;
+}
+
+.con3 article .con3_bot ul.slide li.active .info b {
+    color: var(--txt-light-gray);
+}
+
+.con3 article .con3_bot ul.slide li button.buy {
     width: 130px;
-    height: 45px;
+    height: 40px;
     border-radius: 10px;
     border: 0;
-    background-color: #333;
+    background-color: var(--main-color);
     color: #fff;
-    font-size: 25px;
-    font-weight: 600;
+    font: var(--pre-25-sb);
     cursor: pointer;
     position: absolute;
     right: 10%;
     bottom: 0;
     transform: translateY(50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.con3 article .con3_bot ul.slide li.active button.buy {
+    background-color: var(--sub-color-1);
 }
 
 /* con4 */
-.con4 {}
+.con4 {
+    padding-bottom: 0;
+    margin-bottom: -200px;
+    padding-top: 200px;
+    background-image: url(../asset/review_bg.png);
+    background-size: cover;
+}
 
 .con4 .txt p {
-    color: #ccc;
+    color: var(--txt-dark-gray);
 }
 
 .con4 ul {
     display: flex;
-    column-gap: 50px;
-    row-gap: 70px;
+    justify-content: center;
+    column-gap: 120px;
+    row-gap: 0;
     flex-wrap: wrap;
 }
 
-.con4 ul li {
+.con4 ul li a {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 385px;
+    width: 345px;
     height: 655px;
-    background: #555;
+    background: var(--bg-w-color);
     border-radius: 20px;
     padding-inline: 25px;
     flex-shrink: 0;
 }
 
-.con4 ul li:nth-child(2),
-.con4 ul li:nth-child(5) {
+.con4 ul li:nth-child(2) {
     margin-top: 200px;
+    margin-bottom: -100px;
+}
+
+.con4 ul li:nth-child(5) {
+    margin-top: 100px;
 }
 
 .con4 ul li .img {
-    width: 100%;
+    width: 335px;
     height: 385px;
     background: #ccc;
     border-radius: 10px;
     align-self: center;
     margin-top: 25px;
+    overflow: hidden;
+}
+
+.con4 ul li .img img {
+    width: 100%;
+    height: 100%;
 }
 
 .con4 ul li .info {
@@ -615,12 +749,12 @@ section article .more_wrap img {
 
 .con4 ul li .info img {
     width: 45px;
+    padding-top: 20px;
 }
 
 .con4 ul li .info p {
-    font-size: 30px;
-    font-weight: 600;
-    line-height: 40px;
+    font: var(--pre-25-sb);
+    /* line-height: 40px; */
 }
 
 .con4 ul li .info .btn {
@@ -634,17 +768,17 @@ section article .more_wrap img {
     width: 220px;
     height: 45px;
     border-radius: 0 50px 0 20px;
-    background: #ccc;
-    color: #fff;
-    font-weight: 700;
-    font-size: 23px;
+    background: var(--main-color);
+    color: var(--txt-w-color);
+    font: var(--pre-20-m);
     margin-left: -25px;
     display: flex;
-    justify-content: center;
+    padding-left: 20px;
     align-items: center;
 }
 
 .con4 ul li .info span {
     font-size: 23px;
     font-weight: 600;
+    color: var(--sub-color-1);
 }

@@ -1,3 +1,8 @@
+$('.goto_top').click(function (e) {
+    e.preventDefault(); // a 태그일 경우 기본 이벤트 방지 (여기서는 필요 없지만 습관처럼 넣기도 합니다)
+    $('html, body').animate({ scrollTop: 0 }, 500); // 500ms 동안 상단으로 스크롤
+});
+
 let slideI = 0;
 $('.main_visual .l_slide li').eq(0).siblings().hide();
 setInterval(function () {
@@ -113,9 +118,58 @@ gsap.timeline({
         scale: 0.6,
         ease: "power1.out",
     })
-        .to(".char2_wrap", {
+    .to(".char2_wrap", {
         left: 1900 + 'px',
         top: 2300 + 'px',
         scale: 0.3,
         ease: "power1.out",
-    })
+    });
+
+let topSwiper = new Swiper(".con3_top", {
+    loop: true,
+    navigation: {
+        nextEl: ".con3 .lr_btn .right_btn",
+        prevEl: ".con3 .lr_btn .left_btn",
+    },
+});
+
+let botSwiper = new Swiper(".con3_bot", {
+    loop: true,
+    slidesPerView: 3,
+    spaceBetween: 55,
+    centeredSlides: true,
+    on: {
+        init: updateActiveSlide,
+        slideChangeTransitionEnd: updateActiveSlide, // 애니메이션 끝난 후 호출
+    },
+});
+
+function updateActiveSlide() {
+    // 기존 active 클래스 제거
+    $('.con3 .con3_bot ul.slide li').removeClass('active');
+
+    // 모든 star 이미지 기본 이미지로 초기화
+    $('.con3 .con3_bot ul.slide li .star img').attr('src', 'asset/star.png');
+
+    // 현재 활성 슬라이드에 active 클래스 부여
+    const $activeSlide = $('.con3 .con3_bot ul.slide li.swiper-slide-active');
+    $activeSlide.addClass('active');
+
+    // active 상태일 때 star 이미지 변경
+    $activeSlide.find('.star img').attr('src', 'asset/star_active.png');
+}
+
+document.querySelectorAll('.parallax').forEach(el => {
+    const speed = parseFloat(el.dataset.speed);
+
+    gsap.to(el, {
+        y: () => window.innerHeight * speed,
+        ease: 'power1.out',
+        scrollTrigger: {
+            trigger: el,
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: 1 // 부드럽게
+        }
+    });
+});
