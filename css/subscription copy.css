@@ -1,0 +1,361 @@
+@charset "utf-8";
+
+body {
+    font-family: var(--main-font);
+}
+
+.main_visual {
+    width: 100%;
+    height: 400px;
+    background: var(--light-green);
+}
+
+
+/* 폰트 일괄 지정 */
+h2 {
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 4rem;
+    color: var(--txt-gray);
+}
+
+h4 {
+    width: 230px;
+    height: 50px;
+    font: var(--pre-20-r);
+    font-weight: 500;
+    background: #FFF8ED;
+    border: 1px solid var(--sub-color-1);
+    color: var(--sub-color-1);
+    text-align: center;
+    line-height: 50px;
+    border-radius: 10px;
+}
+
+b {
+    font-size: 50px;
+    font-weight: 600;
+    color: var(--sub-color-1);
+}
+
+p {
+    font: var(--pre-28-r);
+    line-height: 2.4rem;
+    color: var(--txt-medium-m-gray);
+}
+
+span {
+    font-weight: 600;
+    color: var(--main-color);
+}
+
+.con1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}
+
+.con1 .banner {
+    width: 1440px;
+    height: 450px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+.con1 .banner_left h3 {
+    font: var(--pre-50-b);
+    line-height: 4rem;
+    color: var(--main-color);
+    padding-bottom: 30px;
+}
+
+.con1 .banner_right {
+    width: 550px;
+    height: 100%;
+    background: url(../img/bobhi.png);
+}
+
+
+/* con2 */
+.con2 {
+    width: 100%;
+    padding-top: 200px;
+    overflow: hidden;
+}
+
+.con2 .tit {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding-bottom: 50px;
+}
+
+.con2 .contents {
+    width: 100%;
+    height: 700px;
+    background: var(--light-green);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+}
+
+.con2 .contents .con_top,
+.con2 .contents .con_bottom {
+    width: 100%;
+    height: 250px;
+}
+
+.con2 .contents .con_top ul,
+.con2 .contents .con_bottom ul {
+    display: flex;
+    gap: 30px;
+}
+
+.con2 .contents .con_top ul li,
+.con2 .contents .con_bottom ul li {
+    width: 250px;
+    height: 250px;
+    flex-shrink: 0;
+    background: #ccc;
+    border-radius: 10px;
+}
+
+.con3 {
+    width: 100%;
+    padding: 200px 0;
+}
+
+.con3 .story {
+    display: flex;
+    padding-top: 50px;
+}
+
+.con3 .story .st_left {
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.con3 .story .st_right {
+    width: 675px;
+    height: 340px;
+    background: #ccc;
+    border-radius: 30px;
+}
+
+
+/* con4 */
+.con4 {
+    width: 100%;
+    background: #FFFCE6;
+    padding: 200px 0;
+}
+
+.con4 .choice_all {
+    width: 100%;
+    height: 100%;
+}
+
+.con4 .choice_all .tit {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.con4 .choice_all .tit .num {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 40px;
+    background: var(--main-color);
+    color: var(--txt-w-color);
+    text-align: center;
+    line-height: 40px;
+}
+
+.con4 .choice_all .tit .txt {
+    color: var(--main-color);
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.con4 .choice {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+
+.con4 .choice .ch_left {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.con4 .choice .ch_right {
+    width: 675px;
+    height: 340px;
+    background: #ccc;
+    border-radius: 30px;
+}
+
+.con4 .option_all {
+    padding-top: 120px;
+}
+
+.con4 .option_all .tit {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.con4 .option_all .tit .num {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 40px;
+    background: var(--main-color);
+    color: var(--txt-w-color);
+    text-align: center;
+    line-height: 40px;
+}
+
+.con4 .option_all .tit .txt {
+    color: var(--main-color);
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.con4 .option {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+
+.con4 .option .op_left {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.con4 .option .op_right {
+    width: 675px;
+    height: 340px;
+    background: #ccc;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 30px;
+}
+
+.con4 .premium_all {
+    padding-top: 120px;
+}
+
+.con4 .premium_all .tit {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.con4 .premium_all .tit .num {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 40px;
+    background: var(--main-color);
+    color: var(--txt-w-color);
+    text-align: center;
+    line-height: 40px;
+}
+
+.con4 .premium_all .tit .txt {
+    color: var(--main-color);
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.con4 .premium {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+
+.con4 .premium .pre_left {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.con4 .premium .pre_left p {
+    width: 215px;
+    height: 40px;
+    font-size: 15px;
+    background: var(--main-color);
+    color: var(--txt-w-color);
+    text-align: center;
+    border-radius: 40px;
+}
+
+.con4 .premium .pre_left a {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.con4 .premium .pre_right {
+    width: 670px;
+    height: 350px;
+    background: #ccc;
+    border-radius: 30px;
+}
+
+/* con5 */
+.con5 {
+    width: 100%;
+    text-align: center;
+    padding: 200px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.con5 .text_all {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-bottom: 180px;
+}
+
+.con5 .button {
+    width: 330px;
+    height: 60px;
+    background: var(--sub-color-1);
+    color: var(--txt-w-color);
+    text-align: center;
+    line-height: 60px;
+    border-radius: 15px;
+    margin: 0 auto;
+    
+}
+
+.con5 .button a {
+    width: 100%;
+    height: 100%;
+}
+
+.con5 .button .button_icon {
+    width: 220px;
+    height: 150px;
+    background: url(../img/bottonicon.png);
+    position: absolute;
+    top: 54%;
+    left: 50%;
+    transform: translateX(-50%);
+}

@@ -1,0 +1,656 @@
+@charset "utf-8";
+
+body {
+    font-family: var(--main-font);
+}
+
+.main_visual {
+    width: 100%;
+    height: 400px;
+    background: var(--light-green);
+}
+
+
+/* 폰트 일괄 지정 */
+h2 {
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 4rem;
+    color: var(--txt-gray);
+}
+
+h4 {
+    width: 230px;
+    height: 50px;
+    font: var(--pre-20-r);
+    font-weight: 500;
+    background: #FFF8ED;
+    border: 1px solid var(--sub-color-1);
+    color: var(--sub-color-1);
+    text-align: center;
+    line-height: 50px;
+    border-radius: 10px;
+}
+
+b {
+    font: var(--pre-50-b);
+    color: var(--sub-color-1);
+}
+
+p {
+    font: var(--pre-28-r);
+    line-height: 2.4rem;
+    color: var(--txt-medium-m-gray);
+}
+
+span {
+    font-weight: 600;
+    color: var(--main-color);
+}
+
+.con1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}
+
+.con1 .banner {
+    width: 1440px;
+    height: 450px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+.con1 .banner_left h3 {
+    font: var(--pre-50-b);
+    line-height: 4rem;
+    color: var(--main-color);
+    padding-bottom: 30px;
+}
+
+.con1 .banner_right {
+    width: 550px;
+    height: 100%;
+    background: url(../img/bobhi.png);
+}
+
+
+/* con2 */
+.con2 {
+    width: 100%;
+    padding: 200px 0;
+    overflow: hidden;
+}
+
+.con2 .tit {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding-bottom: 80px;
+}
+
+.con2 .contents {
+    width: 100%;
+    height: 785px;
+    background: var(--light-green);
+    background: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 60px;
+}
+
+.con2 .contents .con_top,
+.con2 .contents .con_bottom {
+    width: 100%;
+    height: 300px;
+}
+
+.con2 .contents .con_top ul,
+.con2 .contents .con_bottom ul {
+    display: flex;
+    gap: 35px;
+}
+
+.con2 .contents .con_top ul li,
+.con2 .contents .con_bottom ul li {
+    width: 300px;
+    height: 300px;
+    flex-shrink: 0;
+    background: #ccc;
+    border-radius: 10px;
+}
+
+/* 큐레이션 이미지들 */
+.con2 .contents .con_top ul li:nth-child(1) {
+    background: url(../img/subslist01.jpg) no-repeat center/cover;
+}
+
+.con2 .contents .con_top ul li:nth-child(2) {
+    background: url(../img/subslist01-2.png) no-repeat center/cover;
+}
+
+.con2 .contents .con_top ul li:nth-child(3) {
+    background: url(../img/subslist01-3.jpg) no-repeat center/cover;
+}
+
+.con2 .contents .con_top ul li:nth-child(4) {
+    background: url(../img/subslist01-4.png) no-repeat center/cover;
+}
+
+.con2 .contents .con_top ul li:nth-child(5) {
+    background: url(../img/subslist01-5.jpg) no-repeat center/cover;
+}
+
+.con2 .contents .con_top ul li:nth-child(6) {
+    background: url(../img/subslist01-6.png) no-repeat center/cover;
+}
+
+.con2 .contents .con_top ul li:nth-child(7) {
+    background: url(../img/subslist01-7.png) no-repeat center/cover;
+}
+
+.con2 .contents .con_top ul li:nth-child(8) {
+    background: url(../img/subslist01-8.png) no-repeat center/cover;
+}
+
+.con2 .contents .con_top ul li:nth-child(9) {
+    background: url(../img/subslist01-9.png) no-repeat center/cover;
+}
+
+.con2 .contents .con_top ul li:nth-child(10) {
+    background: url(../img/subslist01-10.png) no-repeat center/cover;
+}
+
+.con2 .contents .con_bottom ul li:nth-child(1) {
+    background: url(../img/subslist02.png) no-repeat center/cover;
+}
+
+.con2 .contents .con_bottom ul li:nth-child(2) {
+    background: url(../img/subslist02-2.png) no-repeat center/cover;
+}
+
+.con2 .contents .con_bottom ul li:nth-child(3) {
+    background: url(../img/subslist02-3.png) no-repeat center/cover;
+}
+
+.con2 .contents .con_bottom ul li:nth-child(4) {
+    background: url(../img/subslist02-4.png) no-repeat center/cover;
+}
+
+.con2 .contents .con_bottom ul li:nth-child(5) {
+    background: url(../img/subslist02-5.png) no-repeat center/cover;
+}
+
+.con2 .contents .con_bottom ul li:nth-child(6) {
+    background: url(../img/subslist02-6.png) no-repeat center/cover;
+}
+
+.con2 .contents .con_bottom ul li:nth-child(7) {
+    background: url(../img/subslist02-7.png) no-repeat center/cover;
+}
+
+.con2 .contents .con_bottom ul li:nth-child(8) {
+    background: url(../img/subslist02-8.png) no-repeat center/cover;
+}
+
+.con2 .contents .con_bottom ul li:nth-child(9) {
+    background: url(../img/subslist02-9.png) no-repeat center/cover;
+}
+
+.con2 .contents .con_bottom ul li:nth-child(10) {
+    background: url(../img/subslist02-10.png) no-repeat center/cover;
+}
+
+
+/* con3 */
+.con3 {
+    width: 100%;
+    background: #FFFCE6;
+    padding: 100px 0;
+}
+
+.con3 .choice_all {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.con3 .choice_all .tit {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 40px;
+}
+
+.con3 .choice_all .tit .num {
+    width: 40px;
+    height: 40px;
+    font: var(--pre-20-m);
+    border-radius: 40px;
+    background: var(--main-color);
+    color: var(--txt-w-color);
+    text-align: center;
+    line-height: 40px;
+}
+
+.con3 .choice_all .tit .txt {
+    color: var(--main-color);
+    font: var(--pre-30-sb);
+}
+
+.con3 .choice_all h2 {
+    padding-bottom: 20px;
+}
+
+.con3 .ch_right {
+    width: 675px;
+    height: 340px;
+    background: url(../img/banner01.png) no-repeat center/cover;
+    border-radius: 30px;
+}
+
+.con3 .option_all {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 200px;
+}
+
+.con3 .option_all .tit {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 40px;
+}
+
+.con3 .option_all .tit .num {
+    width: 40px;
+    height: 40px;
+    font: var(--pre-20-m);
+    border-radius: 40px;
+    background: var(--main-color);
+    color: var(--txt-w-color);
+    text-align: center;
+    line-height: 40px;
+}
+
+.con3 .option_all .tit .txt {
+    color: var(--main-color);
+    font: var(--pre-30-sb);
+}
+
+.con3 .option_all h2 {
+    padding-bottom: 20px;
+}
+
+.con3 .op_right {
+    width: 675px;
+    height: 340px;
+    background: url(../img/banner02.png) no-repeat center/cover;
+    border-radius: 30px;
+}
+
+.con3 .premium_all {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 200px;
+}
+
+.con3 .premium_all .tit {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 40px;
+}
+
+.con3 .premium_all .tit .num {
+    width: 40px;
+    height: 40px;
+    font: var(--pre-20-m);
+    border-radius: 40px;
+    background: var(--main-color);
+    color: var(--txt-w-color);
+    text-align: center;
+    line-height: 40px;
+}
+
+.con3 .premium_all .tit .txt {
+    color: var(--main-color);
+    font: var(--pre-30-sb);
+}
+
+.con3 .premium_all h2 {
+    padding-bottom: 20px;
+}
+
+.con3 .pre_left p {
+    width: 215px;
+    height: 40px;
+    font-size: 15px;
+    background: var(--main-color);
+    color: var(--txt-w-color);
+    text-align: center;
+    border-radius: 40px;
+}
+
+.con3 .pre_right {
+    width: 675px;
+    height: 340px;
+    background: url(../img/banner03.png) no-repeat center/cover;
+    border-radius: 30px;
+}
+
+
+/* con4 */
+.con4 {
+    width: 100%;
+    height: 100%;
+    padding-top: 300px;
+}
+
+.con4 .all {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.con4 .tab_menu {
+    width: 1020px;
+    height: 75px;
+}
+
+.con4 .tab_menu ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--txt-w-color);
+    font: var(--pre-25-sb);
+}
+
+.con4 .tab_menu ul li {
+    width: 50%;
+    height: 100%;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+    line-height: 75px;
+    background: var(--txt-gray);
+    cursor: pointer;
+}
+
+.con4 .tab_menu ul li.on {
+    background: var(--sub-color-1);
+}
+
+/* 쿠폰형 */
+.con4 .item .num {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background: var(--main-color);
+    color: var(--txt-w-color);
+    line-height: 75px;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.con4 .box .item .num {
+    background: var(--sub-color-1);
+}
+
+.coupon_box {
+    text-align: center;
+}
+
+.coupon_box .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 130px;
+}
+
+.coupon_box .item h3 {
+    font: var(--pre-50-b);
+    color: var(--main-color);
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+.coupon_box .item h2 {
+    font: var(--pre-50-b);
+    padding-bottom: 10px;
+}
+
+.coupon_box .item p {
+    font: var(--pre-25-m);
+}
+
+.coupon_wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    padding-top: 110px;
+}
+
+.coupon_wrapper .coupon {
+    width: 525px;
+    height: 230px;
+    background: url(../img/coupon.png);
+    display: flex;
+
+}
+
+.coupon .coupon_left {
+    width: 120px;
+    height: 100%;
+    text-align: center;
+    font: var(--pre-35-sb);
+    color: var(--txt-w-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.coupon .coupon_left span {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    letter-spacing: -6px;
+    color: var(--txt-w-color);
+}
+
+.coupon .coupon_right {
+    width: 405px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.coupon .coupon_right h3 {
+    font: var(--pre-35-sb);
+    padding-bottom: 20px;
+}
+
+.coupon .coupon_right strong {
+    font: var(--pre-35-sb);
+}
+
+.coupon .coupon_right p {
+    font: var(--pre-20-r);
+    color: var(--txt-light-gray);
+}
+
+.coupon .coupon_right span {
+    font: var(--pre-25-m);
+    color: var(--txt-gray);
+}
+
+/* 박스형 */
+.box {
+    text-align: center;
+}
+
+.box .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 200px;
+}
+
+.box .item h3 {
+    font: var(--pre-50-b);
+    color: var(--sub-color-1);
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+.box .item h2 {
+    font: var(--pre-50-b);
+    padding-bottom: 10px;
+}
+
+.box .item p {
+    font: var(--pre-25-m);
+}
+
+.plan_section {
+    width: 100%;
+    text-align: center;
+    padding-top: 110px;
+}
+
+.plan {
+    display: flex;
+    justify-content: space-between;
+    gap: 55px;
+    flex-wrap: no-wrap;
+}
+
+.plan_card {
+    width: 440px;
+    height: 580px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.plan_top .plan_num {
+    color: var(--sub-color-1);
+    font: var(--pre-35-l);
+    display: block;
+    padding-bottom: 20px;
+}
+
+.plan_top p {
+    font: var(--pre-35-sb);
+    color: var(--txt-dark-gray);
+}
+
+.plan_box {
+    width: 100%;
+    height: 350px;
+    border: 1px solid var(--sub-color-1);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.plan_box h3 {
+    font: var(--pre-35-sb);
+    color: var(--sub-color-1);
+    padding-bottom: 25px;
+}
+
+.plan_box .price {
+    width: 300px;
+    height: 70px;
+    background: var(--sub-color-1);
+    color: var(--txt-w-color);
+    font: var(--pre-20-r);
+    border-radius: 15px;
+    display: inline-block;
+    line-height: 70px;
+}
+
+.plan_box .price span {
+    font: var(--pre-30-sb);
+    color: var(--txt-w-color);
+}
+
+.plan_box .desc {
+    font: var(--pre-28-r);
+    color: var(--txt-gray);
+    line-height: 1.5;
+    padding-top: 30px;
+}
+
+
+
+/* con5 */
+.con5 {
+    width: 100%;
+    text-align: center;
+    padding: 300px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.con5 .text_all {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-bottom: 180px;
+}
+
+.con5 .button {
+    width: 330px;
+    height: 60px;
+    background: var(--sub-color-1);
+    color: var(--txt-w-color);
+    text-align: center;
+    line-height: 60px;
+    border-radius: 15px;
+    margin: 0 auto;
+
+}
+
+.con5 .button a {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.con5 .button_icon {
+    width: 220px;
+    height: 150px;
+    background: url(../img/bottonicon.png);
+    position: absolute;
+    top: 54%;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+}

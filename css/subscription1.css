@@ -1,0 +1,193 @@
+@charset "utf-8";
+
+body {
+    font-family: var(--main-font);
+}
+
+.main_visual {
+    width: 100%;
+    height: 400px;
+    background: var(--light-green);
+}
+
+.con1 {
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+}
+
+.con1 .tit {
+    width: 100%;
+    height: 170px;
+    border-bottom: 1px solid var(--bg-be-color);
+}
+
+.con1 .tit ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+}
+
+.con1 .icon {
+    width: 400px;
+    height: 280px;
+    background: url(../img/subscticon.png) no-repeat center/contain;
+    margin: 0 auto;
+}
+
+
+/* con2 */
+.con2 {
+    width: 100%;
+}
+
+.con2 .inner {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+    /* 반응형 고려 */
+}
+
+.con2 .box {
+    display: block;
+}
+
+.con2 .item {
+    flex: 1 1 45%;
+    /* 2개 나란히, 줄어들거나 넘치면 줄바꿈 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.con2 .num {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background: var(--main-color);
+    color: var(--txt-w-color);
+    line-height: 75px;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.con2 .item:nth-child(2) .num {
+  background: var(--sub-color-1);
+}
+
+.con2 h4 {
+    font-size: 50px;
+    font-weight: 600;
+    color: var(--main-color);
+    padding: 10px 0 20px 0;
+}
+
+.con2 .item:nth-child(2) h4 {
+    color: var(--sub-color-1);
+}
+
+.con2 p {
+    font-size: 30px;
+    padding-bottom: 35px;
+}
+
+.con2 .txt {
+    width: 560px;
+    height: 150px;
+    background: var(--main-color);
+    color: var(--txt-w-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    line-height: 2.6rem;
+    padding-bottom: 0;
+}
+
+.con2 .item:nth-child(2) .txt {
+    background: var(--sub-color-1);
+}
+
+
+/* con3 */
+.con3 {
+    width: 100%;
+    padding-top: 170px;
+    text-align: center;
+}
+
+.con3 h2 {
+    font-size: 50px;
+    font-weight: 600;
+    padding-bottom: 10px;
+}
+
+.con3 p {
+    font-size: 25px;
+    color: var(--txt-medium-m-gray);
+}
+
+.con3 .coupon_wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    padding-top: 90px;
+}
+
+.con3 .coupon {
+    width: 525px;
+    height: 230px;
+    flex-shrink: 0;
+    background: url(../img/cupon.png);
+}
+
+.con3 .coupon_left {
+    width: 120px;
+    height: 100%;
+    position: relative;
+}
+
+
+
+.coupon_left span {
+    text-orientation: upright;
+}
+
+
+.coupon_right h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.coupon_right p {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.coupon_right strong {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.con3 .button {
+    width: 400px;
+    height: 70px;
+    background: var(--sub-color-1);
+    color: var(--txt-w-color);
+    text-align: center;
+    border-radius: 70px;
+    line-height: 70px;
+    margin: 0 auto;
+    display: block;
+}
