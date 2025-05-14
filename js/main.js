@@ -52,7 +52,7 @@ gsap.timeline({
         start: "top 20%",
         end: "bottom -20%",
         scrub: true,
-        markers: true,
+        // markers: true,
 
     }
 })
@@ -68,7 +68,7 @@ gsap.timeline({
         start: "top 20%",
         end: "bottom -20%",
         scrub: true,
-        markers: true,
+        // markers: true,
 
     }
 })
@@ -98,7 +98,7 @@ gsap.timeline({
         start: "top 40%",
         end: "bottom -160%",
         scrub: true,
-        markers: true,
+        // markers: true,
 
     }
 })

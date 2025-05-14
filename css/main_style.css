@@ -1,15 +1,19 @@
 @charset "utf-8";
 
 body {
-    font-family: var(--main-font);
+    font-family: var(--main-font-family);
     overflow-x: hidden;
+}
+
+button {
+    font-family: var(--main-font-family);
 }
 
 .goto_top {
     position: fixed;
-    width: 85px;
+    width: 90px;
     right: 50px;
-    bottom: 20px;
+    bottom: 50px;
     z-index: 200;
     cursor: pointer;
 }
@@ -175,6 +179,14 @@ section button.more {
     background: var(--main-color);
 }
 
+.con1 .txt h2 {
+    color: var(--light-yellow);
+}
+
+.con1 .txt p {
+    color: var(--txt-w-color);
+}
+
 .con1 .inner {
     display: flex;
     flex-direction: column;
@@ -253,6 +265,7 @@ section button.more {
 
 section article .more_wrap {
     position: relative;
+    margin-top: 50px;
 }
 
 section article .more_wrap img {
@@ -374,18 +387,18 @@ section article .more_wrap img {
 .con2 article .con_wrap h3 {
     font-size: 80px;
     font-family: var(--eng-font-family);
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .con2 article .con_wrap strong {
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     font: var(--pre-35-sb);
     color: var(--txt-dark-gray);
 }
 
 .con2 article .con_wrap b {
     font: var(--pre-20-r);
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     color: var(--txt-medium-gray);
 }
 
