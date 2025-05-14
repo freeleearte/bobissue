@@ -31,6 +31,8 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
+    /* border: 3px solid var(--sub-color-2);
+    border-radius: 50px; */
 }
 
 
@@ -38,11 +40,15 @@ body {
 /* 시작 화면 */
 
 .modal_test_wrap .start {
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* display: none; */
+    display: none;
+}
+
+.modal_test_wrap .start.on {
+    display: flex;
 }
 
 .modal_test_wrap .start img {
@@ -135,17 +141,21 @@ body {
     width: 100%;
     height: 100%;
     display: none;
-    background: powderblue;
+    /* background: powderblue; */
+}
+
+.modal_test_wrap .quiz.on {
+    display: block;
 }
 
 .modal_test_wrap .qs {
-    display: none;
+    /* display: none; */
 }
 
 .modal_test_wrap .qs .question {
     width: 100%;
     height: auto;
-    border: 1px solid #aaa;
+    /* border: 1px solid #aaa; */
     display: none;
     flex-direction: column;
     align-items: center;
@@ -168,6 +178,27 @@ body {
     align-items: center;
     justify-content: center;
     gap: 20px;
+    position: relative;
+    flex-direction: column;
+}
+
+.modal_test_wrap .top .num {
+    position: absolute;
+    width: 250px;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.modal_test_wrap .top .num img {
+    position: absolute;
+}
+.modal_test_wrap .top .num .prev {
+    left: 0;
+}
+
+.modal_test_wrap .top .num .next {
+    right: 0;
 }
 
 .modal_test_wrap .top h4 {
@@ -192,7 +223,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 40px;
-    background: #ccc;
+    /* background: #ccc; */
     align-items: center;
     padding-bottom: 87px;
     padding-top: 94px;
@@ -235,6 +266,10 @@ body {
 
 }
 
+.modal-bg.on {
+    display: block;
+}
+
 .result-modal {
     width: 650px;
     height: 550px;
@@ -254,7 +289,6 @@ body {
     align-items: center;
     justify-content: center;
     padding: 20px 50px;
-
 }
 
 .modal_test_wrap .result-modal h3 {
@@ -321,7 +355,9 @@ body {
     justify-content: center;
 }
 
-.modal_test_wrap .result.on {}
+.modal_test_wrap .result.on {
+    display: flex;
+}
 
 .modal_test_wrap .result>.txt {
     display: flex;
