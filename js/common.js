@@ -1,5 +1,6 @@
 $(function () {
-    const headerHtml = `
+  /* Header */
+  const headerHtml = `
         <div class="top">
           <div class="inner">
             <ul>
@@ -44,38 +45,80 @@ $(function () {
         </ul>
       `;
 
-    $("#mainHeader").html(headerHtml);
+  $("#mainHeader").html(headerHtml);
 
-    let lastScrollTop = 0;
-    const $rightMenu = $('.right-menu');
+  let lastScrollTop = 0;
+  const $rightMenu = $('.right-menu');
 
-    function moveMenu(to) {
-        if (to === 'bot') {
-            $('.bot .right-placeholder').append($rightMenu);
-        } else {
-            $('.mid .right-placeholder').append($rightMenu);
-        }
+  function moveMenu(to) {
+    if (to === 'bot') {
+      $('.bot .right-placeholder').append($rightMenu);
+    } else {
+      $('.mid .right-placeholder').append($rightMenu);
+    }
+  }
+
+  $(window).on('scroll', function () {
+    let currentScroll = $(this).scrollTop();
+
+    if (currentScroll > lastScrollTop) {
+      $('header').addClass('scroll');
+      moveMenu('bot');
+    } else {
+      $('header').removeClass('scroll');
+      moveMenu('mid');
     }
 
-    $(window).on('scroll', function () {
-        let currentScroll = $(this).scrollTop();
+    lastScrollTop = currentScroll;
+  });
 
-        if (currentScroll > lastScrollTop) {
-            $('header').addClass('scroll');
-            moveMenu('bot');
-        } else {
-            $('header').removeClass('scroll');
-            moveMenu('mid');
-        }
+  $('.search_container img').on('click', function () {
+    $('.search_container').toggleClass('active');
+    $('.search_input').focus();
+  });
 
-        lastScrollTop = currentScroll;
-    });
+  // 초기 위치 설정
+  moveMenu('mid');
 
-    $('.search_container img').on('click', function () {
-        $('.search_container').toggleClass('active');
-        $('.search_input').focus();
-    });
+  /* Footer */
+  const footerHtml = `
+  <div class="inner">
+    <div class="f_top">
+      <div class="f_left">
+        <div class="logo"><img src="asset/f_logo.png" alt="밥잇슈"></div>
+        <div class="info">
+          <div class="qr_txt">
+            <strong>APP</strong>
+            <p>밥잇슈 앱을 설치하고<br>
+              더 편리하게 이용하세요.</p>
+          </div>
+          <img src="asset/footer_qr.png" alt="App QR">
+            <div class="time_num">
+              <strong>0000-0000</strong>
+              <i>평일<span>09:00~18:00</span></i>
+              <i>점심시간<span>12:00~13:00</span></i>
+            </div>
+            <ul class="f_nav">
+              <li><a href="#">이용약관</a></li>
+              <li><a href="#">개인정보처리방침</a></li>
+              <li><a href="#">사업자정보</a></li>
+              <li><a href="#">공지사항</a></li>
+              <li><a href="#">oem/odm 1:1상담</a></li>
+            </ul>
+        </div> <!-- //.info -->
+      </div>
+      <div class="f_right">
+        <ul class="sns">
+          <li><a href="#"><img src="asset/instagram.png" alt="인스타그램"></a></li>
+          <li><a href="#"><img src="asset/facebook.png" alt="페이스북"></a></li>
+          <li><a href="#"><img src="asset/youtube.png" alt="유튜브"></a></li>
+          <li><a href="#"><img src="asset/send.png" alt=""></a></li>
+        </ul>
+      </div>
+    </div>
+    <span>BOBISSUE @ 2025. All rights reserved.</span>
+  </div>
+  `;
 
-    // 초기 위치 설정
-    moveMenu('mid');
+  $("#mainFooter").html(footerHtml);
 });
