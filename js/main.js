@@ -14,24 +14,6 @@ setInterval(function () {
     $('.main_visual .l_slide li').eq(slideI).fadeIn().siblings().fadeOut();
 }, 3000);
 
-$('.txtAni1').simplyScroll({
-    orientation: 'vertical',
-    speed: 2,
-    // pauseOnHover: false,
-    // pauseOnTouch: false,
-    direction: 'forwards',
-    continuous: true
-});
-
-$('.txtAni2').simplyScroll({
-    orientation: 'vertical',
-    speed: 2,
-    // pauseOnHover: false,
-    // pauseOnTouch: false,
-    direction: 'forwards',
-    continuous: true
-});
-
 gsap.registerPlugin(ScrollTrigger);
 
 // ScrollTrigger 기본 설정
@@ -83,6 +65,135 @@ gsap.timeline({
         ease: "power1.out",
     });
 
+$("#stopBtn").on("click", function () {
+    // 모든 이미지의 애니메이션을 멈추고 top: 0으로 고정
+
+    $(".con1 article ul li img").each(function () {
+        $(this).addClass("slide-down");
+    });
+    setTimeout(function () {
+        $(".con1 article ul li img").each(function () {
+            $(this).addClass("stop-animation");
+        });
+
+        // 팝업 보이기
+        $('.modal_test_wrap').addClass('on');
+        $('body').addClass('no-scroll');
+    }, 1500);
+});
+
+//모달
+let answeredQuestions = {};
+let isAnimating = false; // 중복 방지 플래그
+
+// 테스트 시작
+$('.modal_test_wrap .start button').on('click', function () {
+    $('.modal_test_wrap .start').removeClass('on');
+    $('.modal_test_wrap .quiz').addClass('on');
+    showQuestion($('.first'));
+});
+
+// 항목 클릭 시 자동 다음 이동
+$('.quiz .question .bot li').on('click', function () {
+    if (isAnimating) return;
+    isAnimating = true;
+
+    const $this = $(this);
+    const $current = $this.closest('.question');
+    const currentIndex = $current.index();
+
+    // 답 저장
+    $current.find('li').removeClass('check');
+    $this.addClass('check');
+
+    // 저장 (index → 몇 번째 li인지)
+    answeredQuestions[currentIndex] = $this.index();
+
+    // 처음 답한 경우만 딜레이 후 check 제거하고 넘어감
+    setTimeout(function () {
+        const $next = $current.nextAll('.question').first();
+
+        if ($next.length > 0) {
+            $current.removeClass('on');
+            showQuestion($next);
+        } else {
+            $current.removeClass('on');
+            $('.modal_test_wrap .quiz').removeClass('on');
+            $('.modal_test_wrap .result').addClass('on');
+        }
+
+        isAnimating = false;
+    }, 400);
+});
+
+// 이전 버튼
+$('.quiz .prev').on('click', function () {
+    const $current = $(this).closest('.question');
+    const $prev = $current.prevAll('.question').first();
+
+    if ($prev.length > 0) {
+        $current.removeClass('on');
+        showQuestion($prev);
+    }
+});
+
+// 다음 버튼
+$('.quiz .next').on('click', function () {
+    const $current = $(this).closest('.question');
+    const $next = $current.nextAll('.question').first();
+
+    if ($next.length > 0) {
+        $current.removeClass('on');
+        showQuestion($next);
+    } else {
+        $current.removeClass('on');
+        $('.modal_test_wrap .quiz').removeClass('on');
+        $('.modal_test_wrap .result').addClass('on');
+        $('body').removeClass('no-scroll');
+    }
+});
+
+$('.modal_test_wrap>div>span').on('click', function () {
+    $('.modal_test_wrap').removeClass('on');
+    $(".con1 article ul li img").each(function () {
+        $(this).removeClass("stop-animation").removeClass("slide-down");
+    });
+    $('body').removeClass('no-scroll');
+});
+
+// 질문 표시 함수
+function showQuestion($question) {
+    $question.addClass('on').siblings('.question').removeClass('on');
+
+    const index = $question.index();
+
+    // 답변 복원
+    const savedIndex = answeredQuestions[index];
+    if (savedIndex !== undefined) {
+        const $items = $question.find('.bot li');
+        $items.removeClass('check');
+        $items.eq(savedIndex).addClass('check');
+    }
+
+    // 이전 버튼 표시
+    if ($question.hasClass('first')) {
+        $question.find('.prev').hide();
+    } else {
+        $question.find('.prev').show();
+    }
+
+    // 다음 버튼은 이미 답한 질문일 때만 표시
+    if (answeredQuestions[index] !== undefined) {
+        $question.find('.next').show();
+    } else {
+        $question.find('.next').hide();
+    }
+}
+
+
+// $("#closePopup").on("click", function () {
+//     $("#popup").fadeOut();
+// });
 
 /* con2 */
 $('.sw_btn').click(function () {
@@ -138,26 +249,56 @@ let botSwiper = new Swiper(".con3_bot", {
     slidesPerView: 3,
     spaceBetween: 55,
     centeredSlides: true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
     on: {
-        init: updateActiveSlide,
-        slideChangeTransitionEnd: updateActiveSlide, // 애니메이션 끝난 후 호출
+        init: function () {
+            setTimeout(updateActiveSlide, 50);
+        },
+        slideChangeTransitionEnd: function () {
+            updateActiveSlide();
+        },
     },
 });
 
 function updateActiveSlide() {
-    // 기존 active 클래스 제거
+    // 기존 active 제거
     $('.con3 .con3_bot ul.slide li').removeClass('active');
-
-    // 모든 star 이미지 기본 이미지로 초기화
     $('.con3 .con3_bot ul.slide li .star img').attr('src', 'asset/star.png');
 
-    // 현재 활성 슬라이드에 active 클래스 부여
-    const $activeSlide = $('.con3 .con3_bot ul.slide li.swiper-slide-active');
-    $activeSlide.addClass('active');
-
-    // active 상태일 때 star 이미지 변경
-    $activeSlide.find('.star img').attr('src', 'asset/star_active.png');
+    // 가운데 슬라이드에 active 부여
+    const $centerSlide = $('.con3 .con3_bot ul.slide li.swiper-slide-active');
+    $centerSlide.addClass('active');
+    $centerSlide.find('.star img').attr('src', 'asset/star_active.png');
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const wrapper = document.querySelector(".con3_bot .swiper-wrapper");
+    wrapper.innerHTML = document.querySelector(".ver1").innerHTML;
+    botSwiper.update();
+
+    setTimeout(updateActiveSlide, 50);
+});
+
+topSwiper.on("slideChange", function () {
+    const index = topSwiper.realIndex;
+    const wrapper = document.querySelector(".con3_bot .swiper-wrapper");
+
+    if (index === 0) {
+        wrapper.innerHTML = document.querySelector(".ver1").innerHTML;
+    } else if (index === 1) {
+        wrapper.innerHTML = document.querySelector(".ver2").innerHTML;
+    } else if (index === 2) {
+        wrapper.innerHTML = document.querySelector(".ver3").innerHTML;
+    }
+
+    botSwiper.update();
+
+    setTimeout(updateActiveSlide, 50);
+});
+
 
 document.querySelectorAll('.parallax').forEach(el => {
     const speed = parseFloat(el.dataset.speed);
