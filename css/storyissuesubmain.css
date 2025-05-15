@@ -34,7 +34,6 @@
 
 .main {
     width: 1005;
-    height: 700px;
     margin-bottom: var(--sec-pad);
     padding: 0 32px;
     display: flex;
@@ -53,6 +52,7 @@
     align-items: flex-end;
     justify-content: center;
     height: auto;
+    gap: 70px;
 }
 
 .main .bottom .gnb {
@@ -91,15 +91,18 @@
     width: 15px;
     height: 25px;
 }
-.main .bottom .gnb li button .gnb_off{
+
+.main .bottom .gnb li button .gnb_off {
     display: block;
 }
+
 .main .bottom .gnb li button .gnb_on {
     display: none;
 }
 
 .main .bottom .gnb li .gnb_content {
-  display: none; /* 처음에는 안 보이게 */
+    display: none;
+    /* 처음에는 안 보이게 */
 }
 
 
@@ -115,11 +118,12 @@
 
 /* li on */
 
-.main .bottom .gnb li.on button{
+.main .bottom .gnb li.on button {
     background-color: var(--sub-color-2);
     color: var(--txt-w-color);
     border-radius: 5px 0px 40px 5px;
 }
+
 .main .bottom .gnb li.on button .gnb_on {
     display: block;
 }
@@ -131,9 +135,123 @@
 .main .bottom .gnb li.on .gnb_content {
     display: block;
 }
+
 /*  */
 
 .main .bottom .right {
-    background: #aaa;
     flex: 1;
+    font-family: var(--main-font-family);
+}
+
+.main .bottom .right .first {
+    position: relative;
+
+}
+
+.main .bottom .right .first>img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 172px;
+    height: 120px;
+}
+
+.main .bottom .right ul {
+    display: flex;
+    gap: 20px;
+    padding-top: 60px;
+}
+
+.main .bottom .right ul li {
+    width: 275px;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--txt-dark-w-color);
+    border-radius: 10px;
+}
+
+
+.main .bottom .right ul li .food {
+    width: 100%;
+    height: 260px;
+    border-radius: 5px 5px 0 0;
+}
+
+.main .bottom .right ul li .bottom_tit {
+    width: 100%;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-left: 8px;
+    justify-content: space-between;
+}
+
+.main .bottom .right ul li .bottom_tit .top_txt {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-top: 13px;
+}
+
+.main .bottom .right ul li .bottom_tit .top_txt span {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--txt-medium-m-gray);
+    padding-bottom: 3px;
+}
+
+.main .bottom .right ul li .bottom_tit .top_txt p {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--txt-dark-gray);
+    line-height: 1.2;
+}
+
+
+
+.main .bottom .right ul li .bottom_tit .bottom_txt {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 6px;
+}
+
+.main .bottom .right ul li .bottom_tit .bottom_txt span {
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration-line: line-through;
+    color: #aaa;
+}
+
+.main .bottom .right ul li .bottom_tit .bottom_txt .b_t {
+    display: flex;
+    align-items: center;
+    font-size: 23px;
+    font-weight: 600;
+    gap: 5px;
+}
+
+.main .bottom .right ul li .bottom_tit .bottom_txt .b_t strong {
+    color: var(--sub-color-1);
+    display: block;
+    line-height: 1;
+}
+
+.main .bottom .right ul li .bottom_tit .bottom_txt .b_t p {
+    color: var(--txt-dark-gray);
+    line-height: 1.5;
+
+}
+
+.main .bottom .right .first {
+   /*  display: none; */
+}
+
+.main .bottom .right .second {
+     display: none;
+}
+
+.main .bottom .right .three {
+    display: none;
 }
