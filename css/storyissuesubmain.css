@@ -1,0 +1,257 @@
+@charset "utf-8";
+
+.banner {
+    width: 100%;
+    height: 400px;
+    background-image: url(../asset/storyissuesubmain_img/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.txt {
+    height: auto;
+    padding: 100px 0;
+    margin-bottom: var(--con-pad);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 120px;
+}
+
+
+.txt h2 {
+    font: var(--pre-40-b);
+    color: var(--txt-dark-gray);
+}
+
+.txt h2 span {
+    color: var(--sub-color-1);
+}
+
+.txt img {
+    width: 702px;
+}
+
+.main {
+    width: 1005;
+    margin-bottom: var(--sec-pad);
+    padding: 0 32px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main h2 {
+    font: var(--pre-50-b);
+    color: var(--txt-dark-gray);
+    text-align: center;
+    padding-bottom: var(--tit-pad);
+}
+
+.main .bottom {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: auto;
+    gap: 70px;
+}
+
+.main .bottom .gnb {
+    width: 441px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+
+
+
+.main .bottom .gnb li {
+    /* display: none; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.main .bottom .gnb li button {
+    border: 0;
+    height: 70px;
+    width: 440px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    color: var(--txt-gray);
+    font: var(--pre-28-sb);
+    background: transparent;
+}
+
+.main .bottom .gnb li button img {
+    width: 15px;
+    height: 25px;
+}
+
+.main .bottom .gnb li button .gnb_off {
+    display: block;
+}
+
+.main .bottom .gnb li button .gnb_on {
+    display: none;
+}
+
+.main .bottom .gnb li .gnb_content {
+    display: none;
+    /* 처음에는 안 보이게 */
+}
+
+
+
+
+.main .bottom .gnb li .gnb_content img {
+    width: 441px;
+    height: auto;
+    border-radius: 15px;
+    border: 6px solid var(--sub-color-2);
+
+}
+
+/* li on */
+
+.main .bottom .gnb li.on button {
+    background-color: var(--sub-color-2);
+    color: var(--txt-w-color);
+    border-radius: 5px 0px 40px 5px;
+}
+
+.main .bottom .gnb li.on button .gnb_on {
+    display: block;
+}
+
+.main .bottom .gnb li.on button .gnb_off {
+    display: none;
+}
+
+.main .bottom .gnb li.on .gnb_content {
+    display: block;
+}
+
+/*  */
+
+.main .bottom .right {
+    flex: 1;
+    font-family: var(--main-font-family);
+}
+
+.main .bottom .right .first {
+    position: relative;
+
+}
+
+.main .bottom .right .first>img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 172px;
+    height: 120px;
+}
+
+.main .bottom .right ul {
+    display: flex;
+    gap: 20px;
+    padding-top: 60px;
+}
+
+.main .bottom .right ul li {
+    width: 275px;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--txt-dark-w-color);
+    border-radius: 10px;
+}
+
+
+.main .bottom .right ul li .food {
+    width: 100%;
+    height: 260px;
+    border-radius: 5px 5px 0 0;
+}
+
+.main .bottom .right ul li .bottom_tit {
+    width: 100%;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-left: 8px;
+    justify-content: space-between;
+}
+
+.main .bottom .right ul li .bottom_tit .top_txt {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-top: 13px;
+}
+
+.main .bottom .right ul li .bottom_tit .top_txt span {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--txt-medium-m-gray);
+    padding-bottom: 3px;
+}
+
+.main .bottom .right ul li .bottom_tit .top_txt p {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--txt-dark-gray);
+    line-height: 1.2;
+}
+
+
+
+.main .bottom .right ul li .bottom_tit .bottom_txt {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 6px;
+}
+
+.main .bottom .right ul li .bottom_tit .bottom_txt span {
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration-line: line-through;
+    color: #aaa;
+}
+
+.main .bottom .right ul li .bottom_tit .bottom_txt .b_t {
+    display: flex;
+    align-items: center;
+    font-size: 23px;
+    font-weight: 600;
+    gap: 5px;
+}
+
+.main .bottom .right ul li .bottom_tit .bottom_txt .b_t strong {
+    color: var(--sub-color-1);
+    display: block;
+    line-height: 1;
+}
+
+.main .bottom .right ul li .bottom_tit .bottom_txt .b_t p {
+    color: var(--txt-dark-gray);
+    line-height: 1.5;
+
+}
+
+.main .bottom .right .first {
+   /*  display: none; */
+}
+
+.main .bottom .right .second {
+     display: none;
+}
+
+.main .bottom .right .three {
+    display: none;
+}
