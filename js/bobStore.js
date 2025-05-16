@@ -596,7 +596,12 @@ $(function () {
                 $menuList.append(`
                 <li class="menu ${p.brand}">
                     <a href="#">
-                        <div class="img"><img src="${p.img}" alt="${p.name}"></div>
+                        <div class="img">
+                        <img src="${p.img}" alt="${p.name}">
+                        <button class="heart-btn">
+                        <img src="./asset/heart_item.png" alt="찜하기">
+                        </button>
+                        </div>
                         <div class="info">
                             <div class="top_txt">
                                 <i></i>
@@ -624,6 +629,36 @@ $(function () {
                 .insertBefore(".right_btn");
         }
     }
+
+    $(document).on('click', '.heart-btn', function (e) {
+        e.preventDefault(); // a 태그로 감싸져 있어서 기본 동작 방지
+        const $img = $(this).find('img');
+        const src = $img.attr('src');
+
+        if (src.includes('heart_item_on.png')) {
+            alert("찜을 취소 하셨습니다!");
+            $img.attr('src', './asset/heart_item.png');
+        } else {
+            alert("찜을 하셨습니다!");
+            $img.attr('src', './asset/heart_item_on.png');
+        }
+    });
+
+    $(document).on('mouseenter', '.menu a', function () {
+        $(this).addClass('menu-hover');
+    });
+
+    $(document).on('mouseleave', '.menu a', function () {
+        $(this).removeClass('menu-hover');
+    });
+
+    $(document).on('mouseenter', '.menu .img button', function () {
+        $(this).closest('.menu a').removeClass('menu-hover').addClass('menu-heart-hover');
+    });
+
+    $(document).on('mouseleave', '.menu .img button', function () {
+        $(this).closest('.menu a').removeClass('menu-heart-hover').addClass('menu-hover');
+    });
 
     // 페이지 이동
     $pagination.on("click", ".page-btn", function () {
