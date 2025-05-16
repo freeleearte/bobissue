@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배송지추가</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/mypage_deliveryadd.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/common.js"></script>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="header-placeholder"></div>
+    <header id="mainHeader"></header>
+    <div class="main_visual">
+    </div><!-- //.main_visual -->
+
+    <div class="inner">
+      <!-- 상단 오른쪽 미니 탭 -->
+      <div class="tap">
+        <div class="inner">
+          <div class="one">
+            <span>마이잇슈</span>
+            <img src="asset/mypage/to g_arrow.png" alt="arrow">
+          </div>
+          <div class="one">
+            <span>배송지관리</span>
+            <img src="asset/mypage/to g_arrow.png" alt="arrow">
+          </div>
+          <div class="one">
+            <span class="on">배송지추가</span>
+            <img src="asset/mypage/to p_arrow.png" alt="arrow">
+          </div>
+        </div>
+      </div><!-- //.tap -->
+      <section class="con1">
+        <!-- 왼쪽 탭메뉴바 고정 -->
+        <div class="tab_wrapper">
+          <img src="asset/mypage/tap_bar_icon.png" alt="">
+          <div class="left_tab">
+            <div class="sticky_box">
+              <div class="tab_sec">
+                <em>쇼핑</em>
+                <ul>
+                  <li class="on"><a href="" target="_blank">주문내역잇슈</a></li>
+                  <li><a href="" target="_blank">찜햇슈</a></li>
+                  <li><a href="" target="_blank">취소 및 반품내역</a></li>
+                  <li><a href="" target="_blank">문의햇슈</a></li>
+                </ul>
+              </div><!-- //.tab_sec -->
+              <div class="tab_sec">
+                <em>정보관리</em>
+                <ul>
+                  <li><a href="" target="_blank">회원정보</a></li>
+                  <li><a href="" target="_blank">배송지관리</a></li>
+                  <li><a href="" target="_blank">결제수단</a></li>
+                </ul>
+              </div><!-- //.tab_sec -->
+              <div class="tab_sec list">
+                <em>구독관리</em>
+                <ul>
+                  <li><a href="./subinfo.html" target="_blank">구독정보</a></li>
+                  <li><a href="" target="_blank">구독신청</a></li>
+                </ul>
+              </div><!-- //.tab_sec -->
+            </div>
+          </div><!-- //.left_tab -->
+        </div><!-- //.wrapper -->
+
+        <div class="form">
+          <form class="delivery_form">
+            <div class="form_row">
+              <label for="zipcode">우편번호</label>
+              <input type="text" id="zipcode" placeholder="우편번호를 입력해주세요" />
+            </div>
+            <div class="form_row">
+              <label for="address">주소지</label>
+              <input type="text" id="address" placeholder="주소를 입력해주세요" />
+            </div>
+            <div class="form_row">
+              <label for="detail">상세주소</label>
+              <input type="text" id="detail" placeholder="상세 주소를 입력해주세요" />
+            </div>
+            <div class="form_row">
+              <label for="label">배송지명</label>
+              <input type="text" id="label" placeholder="배송지명을 입력해주세요" />
+            </div>
+            <div class="form_row">
+              <label for="name">수령인</label>
+              <input type="text" id="name" placeholder="이름을 입력해주세요" />
+            </div>
+            <div class="form_row">
+              <label for="phone">핸드폰</label>
+              <input type="text" id="phone" placeholder="핸드폰 번호를 입력해주세요" />
+            </div>
+
+            <!-- 배송지 설정 -->
+            <label class="basic_wrap">
+              <input type="radio" name="basic" value="receive" />
+              <span class="custom_radio"></span>
+              <span class="label_text">기본 배송지로 설정</span>
+            </label>
+          </form>
+
+          <div class="button">
+            <button><a href="#">완료하기</a></button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>

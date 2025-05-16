@@ -1,0 +1,142 @@
+@charset "utf-8";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--main-font-family);
+}
+
+.detailpage_bob {
+    display: flex;
+    justify-content: space-between;
+    padding-top: var(--tit-pad);
+}
+
+.detailpage_bob .left {
+    width: 100%;
+    height: 3500px;
+    background: cadetblue;
+}
+
+
+/* ↓↓↓↓↓ 오른쪽 고정 옵션바 박스 ↓↓↓↓↓ */
+.sticky_box {
+    position: sticky;
+    top: 200px;
+    width: 350px;
+    border: 2px solid var(--main-color);
+    border-radius: 20px;
+    padding: 35px 22px;
+    background: #fff;
+    z-index: 100;
+}
+
+.character {
+    display: block;
+    margin: -102px auto 10px;
+    width: 120px;
+}
+
+.option_wrap,
+.qty_wrap,
+.price_wrap {
+    padding-bottom: 20px;
+}
+
+label {
+    display: block;
+    font: var(--pre-20-m);
+    padding-bottom: 15px;
+}
+
+select,
+input[type="text"] {
+    width: 100%;
+    padding: 8px 15px;
+    font: var(--pre-18-r);
+    border: 1px solid var(--dark-green);
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+select:focus {
+    border: 1px solid var(--dark-green)
+}
+
+
+/* 갯수 */
+.qty_controls {
+  display: flex;
+  border: 1px solid var(--dark-green);
+  border-radius: 5px;
+  overflow: hidden;
+  width: 100%;
+  height: 40px;
+}
+
+.qty_controls button,
+.qty_controls input {
+  border: none;
+  background: white;
+  font: var(--pre-25-m);
+  text-align: center;
+  height: 100%;
+}
+
+.qty_controls button {
+  width: 60px;
+  cursor: pointer;
+}
+
+.qty_controls input {
+  flex: 1;
+  pointer-events: none;
+  font: var(--pre-20-m);
+  height: 100%;
+  line-height: 40px;
+  padding: 0;
+  vertical-align: middle;
+}
+
+.qty_controls button:not(:last-child) {
+  border-right: 1px solid var(--dark-green);
+}
+
+.qty_controls input + button {
+  border-left: 1px solid var(--dark-green);
+}
+
+.price_wrap input {
+    text-align: center;
+    font: var(--pre-20-m);
+    color: var(--txt-dark-gray);
+}
+
+.btn_wrap {
+    display: flex;
+    gap: 20px;
+}
+
+.wishlist {
+    background: white;
+    border: 1px solid var(--dark-green);
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.add_cart {
+    flex-grow: 1;
+    background: var(--main-color);
+    color: var(--txt-w-color);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font: var(--pre-20-m);
+    cursor: pointer;
+}
+/* ↑↑↑↑↑ 오른쪽 고정 옵션바 박스 끝 ↑↑↑↑↑ */

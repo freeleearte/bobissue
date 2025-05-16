@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>회원정보수정</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/mypage_memberinfo.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/common.js"></script>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="header-placeholder"></div>
+    <header id="mainHeader"></header>
+    <div class="main_visual">
+    </div><!-- //.main_visual -->
+
+    <div class="inner">
+      <!-- 상단 오른쪽 미니 탭 -->
+      <div class="tap">
+        <div class="inner">
+          <div class="one">
+            <span>마이잇슈</span>
+            <img src="asset/mypage/to g_arrow.png" alt="arrow">
+          </div>
+          <div class="one">
+            <span>회원정보</span>
+            <img src="asset/mypage/to g_arrow.png" alt="arrow">
+          </div>
+          <div class="one">
+            <span class="on">회원정보수정</span>
+            <img src="asset/mypage/to p_arrow.png" alt="arrow">
+          </div>
+        </div>
+      </div><!-- //.tap -->
+      <section class="con1">
+        <!-- 왼쪽 탭메뉴바 고정 -->
+        <div class="tab_wrapper">
+          <img src="asset/mypage/tap_bar_icon.png" alt="">
+          <div class="left_tab">
+            <div class="sticky_box">
+              <div class="tab_sec">
+                <em>쇼핑</em>
+                <ul>
+                  <li class="on"><a href="" target="_blank">주문내역잇슈</a></li>
+                  <li><a href="" target="_blank">찜햇슈</a></li>
+                  <li><a href="" target="_blank">취소 및 반품내역</a></li>
+                  <li><a href="" target="_blank">문의햇슈</a></li>
+                </ul>
+              </div><!-- //.tab_sec -->
+              <div class="tab_sec">
+                <em>정보관리</em>
+                <ul>
+                  <li><a href="" target="_blank">회원정보</a></li>
+                  <li><a href="" target="_blank">배송지관리</a></li>
+                  <li><a href="" target="_blank">결제수단</a></li>
+                </ul>
+              </div><!-- //.tab_sec -->
+              <div class="tab_sec list">
+                <em>구독관리</em>
+                <ul>
+                  <li><a href="./subinfo.html" target="_blank">구독정보</a></li>
+                  <li><a href="" target="_blank">구독신청</a></li>
+                </ul>
+              </div><!-- //.tab_sec -->
+            </div>
+          </div><!-- //.left_tab -->
+        </div><!-- //.wrapper -->
+
+        <div class="form">
+          <form class="memberinfo_form">
+            <div class="form_row">
+              <label for="userid">아이디</label>
+              <input type="text" id="userid" placeholder="아이디를 입력해 주세요" />
+            </div>
+            <div class="form_row">
+              <label for="password">비밀번호</label>
+              <input type="password" id="password" placeholder="비밀번호를 입력해 주세요." />
+            </div>
+            <div class="form_row email_row">
+              <label for="email">이메일</label>
+              <input type="text" id="email" placeholder="" />
+              <select>
+                <option>@선택하기</option>
+                <option>@naver.com</option>
+                <option>@gmail.com</option>
+              </select>
+            </div>
+            <div class="form_row address_row">
+              <label for="address">주소*</label>
+              <div class="add_right">
+                <input type="text" id="address" placeholder="주소 입력" />
+                <p>배송지에 따라 상품 정보가 달라질 수 있습니다.</p>
+              </div>
+            </div>
+            <div class="form_row">
+              <label for="phone">핸드폰</label>
+              <input type="text" id="phone" placeholder="핸드폰 번호를 입력해주세요" />
+            </div>
+            <div class="form_row gender_row">
+              <label>성별</label>
+              <div class="gender_options">
+                <label>
+                  <input type="radio" name="gender" value="male" />
+                  <span class="custom_radio"></span>
+                  남자
+                </label>
+                <label>
+                  <input type="radio" name="gender" value="female" />
+                  <span class="custom_radio"></span>
+                  여자
+                </label>
+                <label>
+                  <input type="radio" name="gender" value="none" />
+                  <span class="custom_radio"></span>
+                  없음
+                </label>
+              </div>
+            </div>
+            <div class="form_row birth_row">
+              <label>생년월일</label>
+              <div class="birth_inputs">
+                <input type="text" placeholder="YYYY" />
+                <span>/</span>
+                <input type="text" placeholder="MM" />
+                <span>/</span>
+                <input type="text" placeholder="DD" />
+              </div>
+            </div>
+          </form>
+
+          <div class="button">
+            <button><a href="#">완료하기</a></button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>

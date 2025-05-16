@@ -16,6 +16,7 @@
     --title-font-family: 'Cafe24Ohsquare', sans-serif;
 
     /* font */
+
     --mp-title-font: 400 60px 'Cafe24Ohsquare', sans-serif;
     --sp-title-font: 400 45px 'Cafe24Ohsquare', sans-serif;
     --pre-15-m: 500 15px "Pretendard", sans-serif;
@@ -51,6 +52,7 @@
     --light-green: #A5C08D;
     --bg-w-color: #ffffff;
     --bg-be-color: #F6F1E9;
+    --bg-con-color: #F6F6F6;
     --txt-w-color: #ffffff;
     --txt-dark-w-color: #E5E5E5;
     --txt-light-gray: #C2C2C2;
@@ -58,6 +60,7 @@
     --txt-medium-m-gray: #777777;
     --txt-gray: #444444;
     --txt-dark-gray: #1F1F1F;
+    --more-light-yellow: #FEFCF2;
 
     /* margin */
     --sec-pad: 300px;

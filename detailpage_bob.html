@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>밥잇슈 제품상세페이지</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/detailpage_bob.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/common.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header-placeholder"></div>
+        <header id="mainHeader"></header>
+
+        <div class="inner">
+            <div class="detailpage_bob">
+                <div class="left">
+
+                </div>
+                <div class="right">
+                    <div class="sticky_box">
+                        <div class="sticky_inner">
+                            <img src="./asset/detailpage_bob/icon.png" alt="귀여운 캐릭터" class="character" />
+
+                            <div class="option_wrap">
+                                <label for="option">옵션</label>
+                                <select id="option">
+                                    <option>[채선당] 샤브샤브 밀키트</option>
+                                    <option>[채선당] 버섯전골 밀키트</option>
+                                    <option>[홍유단] 해물짬뽕 밀키트</option>
+                                    <option>[이연복] 사천짜장 밀키트</option>
+                                    <option>[최현석] 스테이크 밀키트</option>
+                                    <!-- 추가 옵션 가능 -->
+                                </select>
+                            </div>
+
+                            <div class="qty_wrap">
+                                <label>갯수</label>
+                                <div class="qty_controls">
+                                    <button class="minus">−</button>
+                                    <input type="text" value="1" readonly />
+                                    <button class="plus">+</button>
+                                </div>
+                            </div>
+
+                            <div class="price_wrap">
+                                <label>총 상품 금액</label>
+                                <input type="text" value="16,980원" readonly />
+                            </div>
+
+                            <div class="btn_wrap">
+                                <button class="wishlist">❤️</button>
+                                <button class="add_cart">장바구니</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- //.wrap -->
+</body>
+
+</html>
