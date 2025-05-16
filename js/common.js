@@ -3,7 +3,7 @@ $(function () {
   const headerHtml = `
         <div class="top">
           <div class="inner">
-            <ul>
+            <ul class="user_menu">
               <li><a href="./new.html">회원가입</a></li>
               <li><a href="./login.html">로그인</a></li>
             </ul>
@@ -32,7 +32,7 @@ $(function () {
                 <li><a href="./storyissue.html">스토리잇슈</a></li>
                 <li><a href="./bobStore.html">밥도잇슈</a></li>
                 <li><a href="https://www.figma.com/proto/Hbi0RZMjxnfJkaKX9yRAug/3%EC%A1%B0?page-id=1117%3A40662&node-id=1173-14385&viewport=-2664%2C-107%2C0.31&t=CDBOkWN5F84eSZGZ-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1173%3A14385&show-proto-sidebar=1" target="_blank">뭔일잇슈</a></li>
-                <li><a href="https://www.figma.com/proto/Hbi0RZMjxnfJkaKX9yRAug/3%EC%A1%B0?page-id=1117%3A40662&node-id=1117-51200&viewport=-2664%2C-107%2C0.31&t=CDBOkWN5F84eSZGZ-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1117%3A51200&show-proto-sidebar=1" target="_blank">MY잇슈</a></li>
+                <li><a href="">MY잇슈</a></li>
               </ul>
             </nav>
             <div class="right-placeholder"></div>
@@ -46,6 +46,53 @@ $(function () {
       `;
 
   $("#mainHeader").html(headerHtml);
+
+  // 로그인 상태 체크 및 메뉴 변경
+  function updateUserMenu() {
+    const isLoggedIn = localStorage.getItem('isLoggedIn');
+    const userName = localStorage.getItem('userName');
+
+    const $userMenu = $('.user_menu');
+
+    if (isLoggedIn === 'true' && userName) {
+      // userName별로 다른 MY잇슈 페이지 경로 설정
+      let myIssueHref = './mypage_main.html'; // 기본 경로
+
+      if (userName === 'raphael') {
+        myIssueHref = './mypage_raphael.html';
+      } else if (userName === 'jane') {
+        myIssueHref = './mypage_jane.html';
+      } else if (userName === 'tom') {
+        myIssueHref = './mypage_tom.html';
+      }
+
+      $userMenu.html(`
+      <li><span><em>${userName}님</em> 환영합니다</span></li>
+      <li><button id="logoutBtn">로그아웃</button></li>
+    `);
+
+      // 상단 네비 MY잇슈 메뉴 링크 변경
+      $('.bot nav ul li').last().replaceWith(`<li><a href="${myIssueHref}">MY잇슈</a></li>`);
+
+    } else {
+      // 비회원인 경우 기본 메뉴 + MY잇슈는 로그인 링크로
+      $userMenu.html(`
+      <li><a href="./new.html">회원가입</a></li>
+      <li><a href="./login.html">로그인</a></li>
+    `);
+
+      $('.bot nav ul li').last().replaceWith('<li><a href="./login.html">MY잇슈</a></li>');
+    }
+  }
+
+  updateUserMenu();
+
+  // 로그아웃 버튼 클릭 이벤트
+  $(document).on('click', '#logoutBtn', function () {
+    localStorage.clear();
+    updateUserMenu();
+    location.href = 'index.html'; // 로그아웃 후 이동 페이지
+  });
 
   // 현재 URL 경로 얻기
   const path = window.location.pathname;
