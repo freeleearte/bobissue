@@ -32,7 +32,7 @@ h4 {
 }
 
 b {
-    font: var(--pre-50-b);
+    font: var(--pre-40-b);
     color: var(--sub-color-1);
 }
 
@@ -72,6 +72,11 @@ p {
     padding-bottom: 30px;
 }
 
+.con1 .banner_left p {
+    font: var(--pre-28-r);
+    color: var(--txt-medium-m-gray);
+}
+
 .con1 .banner_right {
     width: 550px;
     height: 100%;
@@ -90,7 +95,16 @@ p {
     display: flex;
     flex-direction: column;
     gap: 50px;
-    padding-bottom: 80px;
+    padding-bottom: 50px;
+}
+
+.con2 .tit h2 {
+    font: var(--pre-40-m);
+    line-height: 1;
+}
+
+.con2 .tit b {
+    font: var(--pre-40-b);
 }
 
 .con2 .contents {
@@ -255,7 +269,12 @@ p {
 }
 
 .con3 .choice_all h2 {
+    line-height: 1.3;
     padding-bottom: 20px;
+}
+
+.con3 .choice_all span {
+    font: var(--pre-40-b);
 }
 
 .con3 .choice_all p,
@@ -277,7 +296,7 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 200px;
+    padding-top: var(--bt-pad);
 }
 
 .con3 .option_all .tit {
@@ -304,7 +323,12 @@ p {
 }
 
 .con3 .option_all h2 {
+    line-height: 1.3;
     padding-bottom: 20px;
+}
+
+.con3 .option_all span {
+    font: var(--pre-40-b);
 }
 
 .con3 .op_right {
@@ -320,7 +344,7 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 200px;
+    padding-top: var(--bt-pad);
 }
 
 .con3 .premium_all .tit {
@@ -348,6 +372,7 @@ p {
 
 .con3 .premium_all h2 {
     padding-bottom: 20px;
+    line-height: 1.3;
 }
 
 .con3 .premium_all .button {
@@ -392,7 +417,7 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 200px;
+    padding-top: var(--bt-pad);
 }
 
 .con3 .discount .tit {
@@ -419,11 +444,17 @@ p {
 }
 
 .con3 .discount h2 {
+    line-height: 1.3;
     padding-bottom: 20px;
+}
+
+.con3 .choice_all span {
+    font: var(--pre-40-b);
 }
 
 .con3 .discount p {
     font: var(--pre-20-r);
+    color: var(--txt-medium-m-gray);
 }
 
 .con3 .di_right {
@@ -544,6 +575,7 @@ p {
 
 .coupon_box .item p {
     font: var(--pre-20-r);
+    color: var(--txt-medium-m-gray);
 }
 
 .coupon_wrapper {
@@ -636,6 +668,7 @@ p {
 
 .box .item p {
     font: var(--pre-20-m);
+    color: var(--txt-medium-m-gray);
 }
 
 .plan_section {
@@ -668,7 +701,7 @@ p {
 
 .plan_top p {
     font: var(--pre-28-sb);
-    color: var(--txt-dark-gray);
+    color: var(--txt-gray);
     line-height: 1.4;
 }
 
@@ -729,8 +762,8 @@ p {
 .con5 .text_all {
     display: flex;
     flex-direction: column;
-    gap: 40px;
-    padding-bottom: 180px;
+    gap: 20px;
+    padding-bottom: 160px;
 }
 
 .con5 .text_all .tit {
@@ -739,6 +772,7 @@ p {
 
 .con5 .text_all p {
     font: var(--pre-25-m);
+    color: var(--txt-medium-m-gray);
 }
 
 .con5 .button {
@@ -768,7 +802,7 @@ p {
     height: 100px;
     background: url(../asset/subscription/bottonicon.png) no-repeat;
     position: absolute;
-    top: 57%;
+    top: 55%;
     left: 50%;
     transform: translateX(-50%);
     pointer-events: none;
