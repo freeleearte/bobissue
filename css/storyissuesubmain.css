@@ -85,6 +85,7 @@
     color: var(--txt-gray);
     font: var(--pre-28-sb);
     background: transparent;
+    cursor: pointer;
 }
 
 .main .bottom .gnb li button img {
@@ -143,17 +144,18 @@
     font-family: var(--main-font-family);
 }
 
-.main .bottom .right .first {
+.main .bottom .right div {
     position: relative;
 
 }
 
-.main .bottom .right .first>img {
+.main .bottom .right div>img {
     position: absolute;
-    left: 0;
-    top: 0;
+    left: 5%;
+    top: -7%;
     width: 172px;
     height: 120px;
+    z-index: -1;
 }
 
 .main .bottom .right ul {
@@ -169,6 +171,7 @@
     flex-direction: column;
     border: 1px solid var(--txt-dark-w-color);
     border-radius: 10px;
+    border-top: 0;
 }
 
 
