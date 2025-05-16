@@ -2,6 +2,7 @@
 
 body {
     font-family: var(--main-font);
+    overflow-x: hidden;
 }
 
 .main_visual {
@@ -31,14 +32,8 @@ h4 {
 }
 
 b {
-    font: var(--pre-50-b);
+    font: var(--pre-40-b);
     color: var(--sub-color-1);
-}
-
-p {
-    font: var(--pre-28-r);
-    line-height: 2.4rem;
-    color: var(--txt-medium-m-gray);
 }
 
 span {
@@ -126,6 +121,11 @@ span {
     padding-bottom: 30px;
 }
 
+.con1 .banner_left p {
+    font: var(--pre-28-r);
+    color: var(--txt-medium-m-gray);
+}
+
 .con1 .banner_right {
     width: 550px;
     height: 100%;
@@ -144,7 +144,16 @@ span {
     display: flex;
     flex-direction: column;
     gap: 50px;
-    padding-bottom: 80px;
+    padding-bottom: 50px;
+}
+
+.con2 .tit h2 {
+    font: var(--pre-40-m);
+    line-height: 1;
+}
+
+.con2 .tit b {
+    font: var(--pre-40-b);
 }
 
 .con2 .contents {
@@ -309,7 +318,12 @@ span {
 }
 
 .con3 .choice_all h2 {
+    line-height: 1.3;
     padding-bottom: 20px;
+}
+
+.con3 .choice_all span {
+    font: var(--pre-40-b);
 }
 
 .con3 .choice_all p,
@@ -331,7 +345,7 @@ span {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 200px;
+    padding-top: var(--bt-pad);
 }
 
 .con3 .option_all .tit {
@@ -358,7 +372,12 @@ span {
 }
 
 .con3 .option_all h2 {
+    line-height: 1.3;
     padding-bottom: 20px;
+}
+
+.con3 .option_all span {
+    font: var(--pre-40-b);
 }
 
 .con3 .op_right {
@@ -374,7 +393,7 @@ span {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 200px;
+    padding-top: var(--bt-pad);
 }
 
 .con3 .premium_all .tit {
@@ -402,6 +421,7 @@ span {
 
 .con3 .premium_all h2 {
     padding-bottom: 20px;
+    line-height: 1.3;
 }
 
 .con3 .premium_all .button {
@@ -446,7 +466,7 @@ span {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 200px;
+    padding-top: var(--bt-pad);
 }
 
 .con3 .discount .tit {
@@ -473,11 +493,17 @@ span {
 }
 
 .con3 .discount h2 {
+    line-height: 1.3;
     padding-bottom: 20px;
+}
+
+.con3 .choice_all span {
+    font: var(--pre-40-b);
 }
 
 .con3 .discount p {
     font: var(--pre-20-r);
+    color: var(--txt-medium-m-gray);
 }
 
 .con3 .di_right {
@@ -545,6 +571,7 @@ span {
 
 .coupon_box .item p {
     font: var(--pre-20-r);
+    color: var(--txt-medium-m-gray);
 }
 
 .coupon_wrapper {
@@ -637,6 +664,7 @@ span {
 
 .box .item p {
     font: var(--pre-20-m);
+    color: var(--txt-medium-m-gray);
 }
 
 .plan_section {
@@ -669,7 +697,7 @@ span {
 
 .plan_top p {
     font: var(--pre-28-sb);
-    color: var(--txt-dark-gray);
+    color: var(--txt-gray);
     line-height: 1.4;
 }
 
@@ -730,8 +758,8 @@ span {
 .con5 .text_all {
     display: flex;
     flex-direction: column;
-    gap: 40px;
-    padding-bottom: 180px;
+    gap: 20px;
+    padding-bottom: 160px;
 }
 
 .con5 .text_all .tit {
@@ -740,6 +768,7 @@ span {
 
 .con5 .text_all p {
     font: var(--pre-25-m);
+    color: var(--txt-medium-m-gray);
 }
 
 .con5 .button {
@@ -769,7 +798,7 @@ span {
     height: 100px;
     background: url(../asset/subscription/bottonicon.png) no-repeat;
     position: absolute;
-    top: 57%;
+    top: 55%;
     left: 50%;
     transform: translateX(-50%);
     pointer-events: none;
