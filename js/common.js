@@ -14,7 +14,7 @@ $(function () {
             <div class="left">
               <h1><a href="./index.html"><img src="asset/logo.png" alt="밥잇슈"></a></h1>
               <ul>
-                <li class="on"><a href="#">잇슈존</a></li>
+                <li class=""><a href="./index.html">잇슈존</a></li>
                 <li><a href="./subscription.html">구독잇슈</a></li>
               </ul>
               <div class="sub_ad">
@@ -46,6 +46,16 @@ $(function () {
       `;
 
   $("#mainHeader").html(headerHtml);
+
+  // 현재 URL 경로 얻기
+  const path = window.location.pathname;
+
+  // 해당 경로에 따라 on 클래스 설정
+  if (path.includes("subscription.html")) {
+    $('.mid .left ul li').eq(1).addClass('on');
+  } else {
+    $('.mid .left ul li').eq(0).addClass('on');
+  }
 
   let lastScrollTop = 0;
   const $rightMenu = $('.right-menu');
