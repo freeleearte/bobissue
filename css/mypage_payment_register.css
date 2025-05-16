@@ -1,0 +1,264 @@
+@charset "utf-8";
+
+body {
+  font-family: var(--main-font-family);
+}
+
+h4 {
+  font: var(--pre-35-sb);
+  padding-bottom: 30px;
+}
+
+.main_visual {
+  width: 100%;
+  height: 400px;
+  background: var(--light-yellow);
+}
+
+input {
+  border: 0;
+  background: transparent;
+  border-bottom: 2px solid var(--main-color);
+  gap: 10px;
+}
+
+
+/* 상단 탭 */
+.tap {
+  width: 100%;
+  height: 50px;
+}
+
+.tap .inner {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.tap .one {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.tap .one .on {
+  color: var(--main-color);
+}
+
+.tap .one span {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--txt-medium-m-gray);
+  display: inline;
+}
+
+.tap .one img {
+  width: 8px;
+  height: 14px;
+  display: inline;
+}
+
+
+.con1 {
+  width: 100%;
+  display: flex;
+  gap: 120px;
+  padding-top: var(--bt-pad);
+  overflow: visible;
+  margin-bottom: var(--fc-pad);
+}
+
+/* 왼쪽 고정 탭바 */
+.left_tab {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.tab_wrapper {
+  width: 230px;
+  height: 644px;
+  position: sticky;
+  top: 200px;
+  border: 4px solid var(--main-color);
+  display: flex;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: var(--more-light-yellow);
+}
+
+.tab_wrapper img {
+  width: 150px;
+  height: 90px;
+  position: absolute;
+  top: -78px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tab_wrapper .tab_sec {
+  border-bottom: 2px solid var(--main-color);
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.tab_wrapper .list {
+  margin-bottom: 0;
+}
+
+
+.left_tab .sticky_box .tab_sec em {
+  font: var(--pre-25-b);
+  color: var(--main-color);
+}
+
+.left_tab .sticky_box .tab_sec ul {
+  padding: 20px 0;
+}
+
+.left_tab .sticky_box .tab_sec ul li {
+  font: var(--pre-20-r);
+  color: var(--txt-medium-m-gray);
+  padding-bottom: 15px;
+}
+
+.left_tab .sticky_box .tab_sec ul li.on {
+  font: var(--pre-20-b);
+  color: var(--sub-color-1);
+}
+
+.left_tab .sticky_box .tab_sec ul li:last-child {
+  padding-bottom: 0;
+}
+
+.left_tab .sticky_box .tab_sec.list {
+  border: none;
+}
+
+.left_tab .sticky_box .tab_sec.list ul {
+  padding-bottom: 0;
+}
+
+.left_tab .sticky_box .tab_sec.list li:last-child {
+  padding-bottom: 0;
+}
+
+/* 오른쪽 파트 */
+.con1_right {
+  width: 100%;
+}
+
+.form_wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--more-light-yellow);
+  border-radius: 15px;
+  padding: 40px;
+}
+
+.form_wrapper label {
+  font: var(--pre-28-r);
+}
+
+.form_group {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 90px;
+}
+
+.form_left {
+  width: 30%;
+}
+
+.form_right {
+  width: 70%;
+  display: flex;
+  gap: 15px;
+}
+
+.form_wrapper input[type="text"]:focus,
+.form_wrapper input[type="password"]:focus {
+  outline: none;
+}
+
+.form_right input[type="text"] {
+  border: none;
+  border-bottom: 1px solid var(--main-color);
+  padding: 8px 20px;
+  text-align: left;
+  font-size: 16px;
+  width: 100px;
+}
+
+.form_right input::placeholder {
+  text-align: right;
+  direction: rtl;    /* ← 이걸 넣어줘야 브라우저가 오른쪽부터 placeholder 배치함 */
+}
+
+.form_right input[type="password"] {
+  border: none;
+  border-bottom: 1px solid var(--main-color);
+  padding: 8px 20px;
+  font-size: 16px;
+  width: 100px;
+}
+
+
+/* 기본 결제 수단 설정 */
+.basic_wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+.basic_wrap input[type="radio"] {
+  display: none;
+}
+
+.custom_radio {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--txt-light-gray);
+  border-radius: 50%;
+  position: relative;
+}
+
+.basic_wrap input[type="radio"]:checked+.custom_radio::after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background-color: var(--sub-color-1);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+.button {
+  display: flex;
+  justify-content: center;
+  padding-top: var(--bt-pad);
+}
+
+button {
+  width: 250px;
+  height: 50px;
+  font: var(--pre-25-b);
+  border: 0;
+  border-radius: 5px;
+  background: var(--sub-color-1);
+  color: var(--txt-w-color);
+  cursor: pointer;
+}

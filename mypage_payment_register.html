@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>결제수단 등록</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/mypage_payment_register.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/common.js"></script>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="header-placeholder"></div>
+    <header id="mainHeader"></header>
+    <div class="main_visual">
+    </div><!-- //.main_visual -->
+
+    <div class="inner">
+      <!-- 상단 오른쪽 미니 탭 -->
+      <div class="tap">
+        <div class="inner">
+          <div class="one">
+            <span>마이잇슈</span>
+            <img src="asset/mypage/to g_arrow.png" alt="arrow">
+          </div><!-- //.one -->
+          <div class="one">
+            <span>결제수단</span>
+            <img src="asset/mypage/to g_arrow.png" alt="arrow">
+          </div><!-- //.one -->
+          <div class="one">
+            <span class="on">결제수단등록</span>
+            <img src="asset/mypage/to p_arrow.png" alt="arrow">
+          </div><!-- //.one -->
+        </div>
+      </div><!-- //.tap -->
+      <section class="con1">
+        <!-- 왼쪽 탭메뉴바 고정 -->
+        <div class="tab_wrapper">
+          <img src="asset/mypage/tap_bar_icon.png" alt="">
+          <div class="left_tab">
+            <div class="sticky_box">
+              <div class="tab_sec">
+                <em>쇼핑</em>
+                <ul>
+                  <li><a href="" target="_blank">주문내역잇슈</a></li>
+                  <li><a href="" target="_blank">찜햇슈</a></li>
+                  <li><a href="" target="_blank">취소 및 반품내역</a></li>
+                  <li><a href="" target="_blank">문의햇슈</a></li>
+                </ul>
+              </div><!-- //.tab_sec -->
+              <div class="tab_sec">
+                <em>정보관리</em>
+                <ul>
+                  <li><a href="" target="_blank">회원정보</a></li>
+                  <li><a href="" target="_blank">배송지관리</a></li>
+                  <li><a href="" target="_blank">결제수단</a></li>
+                </ul>
+              </div><!-- //.tab_sec -->
+              <div class="tab_sec list">
+                <em>구독관리</em>
+                <ul>
+                  <li><a href="./subinfo.html" target="_blank">구독정보</a></li>
+                  <li><a href="" target="_blank">구독신청</a></li>
+                </ul>
+              </div><!-- //.tab_sec -->
+            </div>
+          </div><!-- //.left_tab -->
+        </div><!-- //.wrapper -->
+
+        <div class="con1_right">
+          <div class="form_wrapper">
+            <div class="form_group card_number">
+              <div class="form_left">
+                <label>카드번호</label>
+              </div>
+              <div class="form_right">
+                <input type="text" maxlength="4">
+                <input type="text" maxlength="4">
+                <input type="text" maxlength="4">
+                <input type="text" maxlength="4">
+              </div>
+            </div>
+
+            <div class="form_group expiry">
+              <div class="form_left">
+                <label>카드유효기간 <span style="color: var(--txt-medium-gray);">(MM/YY)</span></label>
+              </div>
+              <div class="form_right">
+                <input type="text" maxlength="2" placeholder="월">
+                <input type="text" maxlength="2" placeholder="년">
+              </div>
+            </div>
+
+            <div class="form_group birth">
+              <div class="form_left">
+                <label>생년월일 <span style="color: var(--txt-medium-gray);">(6자리)</span></label>
+              </div>
+              <div class="form_right">
+                <input type="text" maxlength="6">
+              </div>
+            </div>
+
+            <div class="form_group pw">
+              <div class="form_left">
+                <label>카드 앞 비밀번호 두 자리</label>
+              </div>
+              <div class="form_right">
+                <input type="password" maxlength="2" placeholder="**">
+              </div>
+            </div>
+
+            <label class="basic_wrap">
+              <input type="radio" name="basic" value="receive" />
+              <span class="custom_radio"></span>
+              기본 결제수단으로 설정
+            </label>
+
+          </div><!-- //.form_wrapper -->
+
+          <div class="button">
+            <button><a href="">등록완료</a></button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>
