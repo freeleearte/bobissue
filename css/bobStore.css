@@ -199,11 +199,11 @@ section {
 }
 
 .menu-hover {
-    box-shadow: 0px 0px 5px 5px var(--sub-color-1);
+    box-shadow: 0px 0px 5px 1px var(--sub-color-1);
 }
 
 .menu-heart-hover {
-    box-shadow: 0px 0px 5px 5px red;
+    box-shadow: 0px 0px 5px 1px red;
 }
 
 .menu .img img {
@@ -212,7 +212,7 @@ section {
 }
 
 .menu .info {
-    padding: 5px 10px 14px 6px;
+    padding: 5px 10px 14px 15px;
     display: flex;
     height: 150px;
     flex-direction: column;
@@ -261,6 +261,7 @@ section {
 .menu .info .bottom_txt {
     display: flex;
     flex-direction: column;
+    padding-bottom: 8px;
 }
 
 .menu .info .bottom_txt span {

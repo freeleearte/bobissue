@@ -116,6 +116,8 @@ p {
     flex-direction: column;
     justify-content: center;
     gap: 60px;
+    overflow: hidden;
+    position: relative;
 }
 
 .con2 .contents .con_top,
@@ -130,7 +132,39 @@ p {
 .con2 .contents .con_bottom ul {
     display: flex;
     gap: 35px;
+    width: max-content;
+    animation-iteration-count: infinite;
     /* overflow: hidden; */
+}
+
+.con2 .con_top ul {
+    animation: scroll-left 40s linear infinite;
+}
+
+.con2 .con_bottom ul {
+    animation: scroll-right 40s linear infinite;
+}
+
+/* 왼쪽으로 흐름 */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* 오른쪽으로 흐름 */
+@keyframes scroll-right {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
 .con2 .contents .con_top ul li,
@@ -143,83 +177,103 @@ p {
 }
 
 /* 큐레이션 이미지들 */
-.con2 .contents .con_top ul li:nth-child(1) {
+.con2 .contents .con_top ul li:nth-child(1),
+.con2 .contents .con_top ul li:nth-child(11) {
     background: url(../img/subslist01.jpg) no-repeat center/cover;
 }
 
-.con2 .contents .con_top ul li:nth-child(2) {
+.con2 .contents .con_top ul li:nth-child(2),
+.con2 .contents .con_top ul li:nth-child(12) {
     background: url(../img/subslist01-2.png) no-repeat center/cover;
 }
 
-.con2 .contents .con_top ul li:nth-child(3) {
+.con2 .contents .con_top ul li:nth-child(3),
+.con2 .contents .con_top ul li:nth-child(13) {
     background: url(../img/subslist01-3.jpg) no-repeat center/cover;
 }
 
-.con2 .contents .con_top ul li:nth-child(4) {
+.con2 .contents .con_top ul li:nth-child(4),
+.con2 .contents .con_top ul li:nth-child(14) {
     background: url(../img/subslist01-4.png) no-repeat center/cover;
 }
 
-.con2 .contents .con_top ul li:nth-child(5) {
+.con2 .contents .con_top ul li:nth-child(5),
+.con2 .contents .con_top ul li:nth-child(15) {
     background: url(../img/subslist01-5.jpg) no-repeat center/cover;
 }
 
-.con2 .contents .con_top ul li:nth-child(6) {
+.con2 .contents .con_top ul li:nth-child(6),
+.con2 .contents .con_top ul li:nth-child(16) {
     background: url(../img/subslist01-6.png) no-repeat center/cover;
 }
 
-.con2 .contents .con_top ul li:nth-child(7) {
+.con2 .contents .con_top ul li:nth-child(7),
+.con2 .contents .con_top ul li:nth-child(17) {
     background: url(../img/subslist01-7.png) no-repeat center/cover;
 }
 
-.con2 .contents .con_top ul li:nth-child(8) {
+.con2 .contents .con_top ul li:nth-child(8),
+.con2 .contents .con_top ul li:nth-child(18) {
     background: url(../img/subslist01-8.png) no-repeat center/cover;
 }
 
-.con2 .contents .con_top ul li:nth-child(9) {
+.con2 .contents .con_top ul li:nth-child(9),
+.con2 .contents .con_top ul li:nth-child(19) {
     background: url(../img/subslist01-9.png) no-repeat center/cover;
 }
 
-.con2 .contents .con_top ul li:nth-child(10) {
+.con2 .contents .con_top ul li:nth-child(10),
+.con2 .contents .con_top ul li:nth-child(20) {
     background: url(../img/subslist01-10.png) no-repeat center/cover;
 }
 
-.con2 .contents .con_bottom ul li:nth-child(1) {
+.con2 .contents .con_bottom ul li:nth-child(1),
+.con2 .contents .con_bottom ul li:nth-child(11) {
     background: url(../img/subslist02.png) no-repeat center/cover;
 }
 
-.con2 .contents .con_bottom ul li:nth-child(2) {
+.con2 .contents .con_bottom ul li:nth-child(2),
+.con2 .contents .con_bottom ul li:nth-child(12) {
     background: url(../img/subslist02-2.png) no-repeat center/cover;
 }
 
-.con2 .contents .con_bottom ul li:nth-child(3) {
+.con2 .contents .con_bottom ul li:nth-child(3),
+.con2 .contents .con_bottom ul li:nth-child(13) {
     background: url(../img/subslist02-3.png) no-repeat center/cover;
 }
 
-.con2 .contents .con_bottom ul li:nth-child(4) {
+.con2 .contents .con_bottom ul li:nth-child(4),
+.con2 .contents .con_bottom ul li:nth-child(14) {
     background: url(../img/subslist02-4.png) no-repeat center/cover;
 }
 
-.con2 .contents .con_bottom ul li:nth-child(5) {
+.con2 .contents .con_bottom ul li:nth-child(5),
+.con2 .contents .con_bottom ul li:nth-child(15) {
     background: url(../img/subslist02-5.png) no-repeat center/cover;
 }
 
-.con2 .contents .con_bottom ul li:nth-child(6) {
+.con2 .contents .con_bottom ul li:nth-child(6),
+.con2 .contents .con_bottom ul li:nth-child(16) {
     background: url(../img/subslist02-6.png) no-repeat center/cover;
 }
 
-.con2 .contents .con_bottom ul li:nth-child(7) {
+.con2 .contents .con_bottom ul li:nth-child(7),
+.con2 .contents .con_bottom ul li:nth-child(17) {
     background: url(../img/subslist02-7.png) no-repeat center/cover;
 }
 
-.con2 .contents .con_bottom ul li:nth-child(8) {
+.con2 .contents .con_bottom ul li:nth-child(8),
+.con2 .contents .con_bottom ul li:nth-child(18) {
     background: url(../img/subslist02-8.png) no-repeat center/cover;
 }
 
-.con2 .contents .con_bottom ul li:nth-child(9) {
+.con2 .contents .con_bottom ul li:nth-child(9),
+.con2 .contents .con_bottom ul li:nth-child(19) {
     background: url(../img/subslist02-9.png) no-repeat center/cover;
 }
 
-.con2 .contents .con_bottom ul li:nth-child(10) {
+.con2 .contents .con_bottom ul li:nth-child(10),
+.con2 .contents .con_bottom ul li:nth-child(20) {
     background: url(../img/subslist02-10.png) no-repeat center/cover;
 }
 
