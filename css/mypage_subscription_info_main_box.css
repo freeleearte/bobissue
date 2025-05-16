@@ -333,7 +333,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    font: var( --pre-18-r);
+    font: var(--pre-18-r);
     color: var(--txt-gray);
 }
 
@@ -344,20 +344,19 @@ p {
     align-items: center;
     gap: 35px;
     color: var(--txt-w-color);
-    font: var(--pre-25-sb);
-    padding-bottom: 200px;
+    padding-bottom: 300px;
     cursor: pointer;
+    font: var(--pre-20-m);
 }
 
 .button ul li {
     width: 250px;
-    height: 50px;
-    font: var(--pre-20-m);
-    background: var(--txt-dark-gray);
+    height: 55px;
+    background: var(--txt-gray);
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 5px;
+    border-radius: 15px;
 }
 
 .button ul li:nth-child(2) {

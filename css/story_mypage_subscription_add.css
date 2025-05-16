@@ -615,8 +615,8 @@ color: var(--txt-light-gray);
 }
 
 .button p {
-    width: 330px;
-    height: 60px;
+    width: 250px;
+    height: 55px;
     border: 0;
     background: var(--sub-color-1);
     color: var(--txt-w-color);

@@ -803,13 +803,13 @@ h4 {
 }
 
 .button p {
-    width: 330px;
-    height: 60px;
+    width: 250px;
+    height: 55px;
     border: 0;
     background: var(--sub-color-1);
     color: var(--txt-w-color);
     cursor: pointer;
-   font: var(--pre-20-r);
+   font: var(--pre-20-m);
     border-radius: 15px;
     display: flex;
     align-items: center;
