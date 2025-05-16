@@ -2,6 +2,7 @@
 
 body {
     font-family: var(--main-font);
+    overflow-x: hidden;
 }
 
 .main_visual {
@@ -41,65 +42,10 @@ p {
     color: var(--txt-medium-m-gray);
 }
 
-span {
+.inner span {
     font-weight: 600;
     color: var(--main-color);
 }
-
-
-/* 오른쪽 탭 바 */
-.side_all {
-    position: relative;
-}
-
-.side_tab {
-    position: fixed;
-    top: 600px;
-    right: 0;
-    z-index: 999;
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-}
-
-.side_tab span {
-    color: var(--txt-w-color);
-}
-
-.side_tab .box span {
-    color: var(--sub-color-2);
-}
-
-.tab {
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    background-color: white;
-    border: 2px solid var(--sub-color-2);
-    border-radius: 15px 0 0 15px;
-    color: var(--sub-color-2);
-    font-weight: bold;
-    font-size: 20px;
-    padding: 20px 10px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.tab.active {
-    background-color: var(--sub-color-2);
-    color: var(--txt-w-color);
-}
-
-.side_character {
-    position: fixed;
-    top: 610px;
-    right: 30px;
-    width: 70px;
-    z-index: 1000;
-}
-
 
 .con1 {
     width: 100%;
@@ -487,11 +433,64 @@ span {
     border-radius: 30px;
 }
 
+/* 오른쪽 탭 바 */
+.side_all {
+    position: sticky;
+    height: auto;
+    top: 60%;
+    width: fit-content;
+    left: 100%;
+}
+
+.side_tab {
+    position: relative;
+    /* top: 0;
+    right: 0; */
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.tab {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    background-color: white;
+    border: 2px solid var(--sub-color-2);
+    border-radius: 15px 0 0 15px;
+    color: var(--sub-color-2);
+    font-weight: bold;
+    font-size: 20px;
+    padding: 40px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tab.active {
+    background-color: var(--sub-color-2);
+    color: var(--txt-w-color);
+}
+
+.side_character {
+    position: absolute;
+    top: 10%;
+    right: 50px;
+    width: 70px;
+    z-index: 2;
+}
+
+.side_character.on {
+    top: 60%;
+}
 
 /* con4 */
 .con4 {
     width: 100%;
     height: 100%;
+    position: relative;
 }
 
 .con4 .all {
