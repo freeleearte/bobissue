@@ -58,13 +58,13 @@ $(function () {
       // userName별로 다른 MY잇슈 페이지 경로 설정
       let myIssueHref = './mypage_main.html'; // 기본 경로
 
-      if (userName === 'raphael') {
-        myIssueHref = './mypage_raphael.html';
-      } else if (userName === 'jane') {
-        myIssueHref = './mypage_jane.html';
-      } else if (userName === 'tom') {
-        myIssueHref = './mypage_tom.html';
-      }
+      // if (userName === '김말숙') {
+      //   myIssueHref = './mypage_main.html?김말숙';
+      // } else if (userName === '이국밥') {
+      //   myIssueHref = './mypage_main.html?이국밥';
+      // } else if (userName === '박키트') {
+      //   myIssueHref = './mypage_main.html?박키트';
+      // }
 
       $userMenu.html(`
       <li><span><em>${userName}님</em> 환영합니다</span></li>
