@@ -1,9 +1,10 @@
 $(function () {
     // 회원 리스트: 아이디, 비밀번호, 이름
     const members = [
-        { id: '1', pw: '1', name: '홍길동' },
-        { id: '2', pw: '2', name: '김철수' },
-        { id: '3', pw: '3', name: '이영희' }
+        { id: '1', pw: '1', name: '김말숙' },
+        { id: '2', pw: '2', name: '이국밥' },
+        { id: '3', pw: '3', name: '박키트' },
+        { id: '4', pw: '4', name: '...' }
     ];
 
     $('#loginBtn').on('click', function () {

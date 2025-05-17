@@ -10,89 +10,22 @@
     <link rel="stylesheet" href="css/mypage_subscription_info_main.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="js/common.js"></script>
+    <script src="js/mypage_common.js"></script>
 </head>
 
 <body>
     <div class="wrap">
         <div class="header-placeholder"></div>
-        <header class="">
-            <div class="top">
-                <div class="inner">
-                    <ul>
-                        <li><a href="./new.html">회원가입</a></li>
-                        <li><a href="./login.html">로그인</a></li>
-                    </ul>
-                </div> <!-- //.inner -->
-            </div> <!-- //.top -->
-            <div class="mid">
-                <div class="inner">
-                    <div class="left">
-                        <h1><a href="./index.html"><img src="asset/logo.png" alt="밥잇슈"></a></h1>
-                        <ul>
-                            <li class="on"><a href="#">잇슈존</a></li>
-                            <li><a href="#">구독잇슈</a></li>
-                        </ul>
-                    </div> <!-- //.left -->
-                    <div class="right-placeholder"></div>
-                </div> <!-- //.inner -->
-            </div> <!-- //.mid -->
-            <div class="bot">
-                <div class="inner">
-                    <nav>
-                        <ul>
-                            <li><a href="#">브랜드</a></li>
-                            <li><a href="#">스토리잇슈</a></li>
-                            <li><a href="./bobStore.html">밥도잇슈</a></li>
-                            <li><a href="#">뭔일잇슈</a></li>
-                            <li><a href="#">MY잇슈</a></li>
-                        </ul>
-                    </nav>
-                    <div class="right-placeholder"></div>
-                </div> <!-- //.inner -->
-            </div> <!-- //.bot -->
-            <ul class="right-menu">
-                <li class="search_container"><input type="search" class="search_input" placeholder="검색어를 입력해주세요." /><img
-                        src="asset/search.png" alt="search"></li>
-                <li><a href="#"><img src="asset/heart.png" alt="heart"></a></li>
-                <li><a href="#"><img src="asset/bag.png" alt="bag"></a></li>
-            </ul> <!-- //.right-menu -->
-        </header>
+        <header id="mainHeader"></header>
+
         <div class="main_visual">
             <h2>구독정보</h2>
         </div><!-- //.main_visual -->
 
         <div class="inner">
             <section class="con1">
-                <div class="tab_wrapper">
-                    <div class="left_tab">
-                        <div class="sticky_box">
-                            <div class="tab_sec">
-                                <em>쇼핑</em>
-                                <ul>
-                                    <li><a href="" target="_blank">주문내역</a></li>
-                                    <li><a href="" target="_blank">찜햇슈</a></li>
-                                    <li><a href="" target="_blank">취소 및 반품내역</a></li>
-                                    <li><a href="" target="_blank">문의햇슈</a></li>
-                                </ul>
-                            </div><!-- //.tab_sec -->
-                            <div class="tab_sec">
-                                <em>정보관리</em>
-                                <ul>
-                                    <li><a href="" target="_blank">회원정보</a></li>
-                                    <li><a href="" target="_blank">배송지관리</a></li>
-                                    <li><a href="" target="_blank">결제수단</a></li>
-                                </ul>
-                            </div><!-- //.tab_sec -->
-                            <div class="tab_sec list">
-                                <em>구독관리</em>
-                                <ul>
-                                    <li><a href="./subinfo.html" target="_blank">구독정보</a></li>
-                                    <li><a href="" target="_blank">구독신청</a></li>
-                                </ul>
-                            </div><!-- //.tab_sec -->
-                        </div>
-                    </div><!-- //.left_tab -->
-                </div><!-- //.wrapper -->
+                <div class="tab_wrapper" id="myTab"></div>
+
                 <div class="info">
                     <div class="top_visual">
 
