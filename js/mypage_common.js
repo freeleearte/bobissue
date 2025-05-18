@@ -34,6 +34,30 @@ $(function () {
 
   $("#myTab").html(tabMenuHtml);
 
+  function addOnClassStyles() {
+    const style = `
+    .left_tab .sticky_box .tab_sec ul li.on {
+      font: var(--pre-20-b);
+      color: var(--sub-color-1);
+    }
+  `;
+    const styleTag = document.createElement('style');
+    styleTag.innerHTML = style;
+    document.head.appendChild(styleTag);
+  }
+
+  function highlightCurrentMenu() {
+    const currentPath = window.location.pathname.split("/").pop();
+
+    $('#myTab .tab_sec ul li a').each(function () {
+      const linkPath = $(this).attr('href').replace('./', '');
+
+      if (linkPath === currentPath) {
+        $(this).parent('li').addClass('on');
+      }
+    });
+  }
+
   function updateUserMenu() {
     const isLoggedIn = localStorage.getItem('isLoggedIn');
     const userName = localStorage.getItem('userName');
@@ -53,12 +77,35 @@ $(function () {
       // 상단 네비 MY잇슈 메뉴 링크 변경
       $('.list ul li').first().replaceWith(`<li> <a href="${mySubInfoHref}">구독정보</a></li> `);
 
+      // $('.con1 .tit .profile-name').replaceWith(`<strong>${userName}</strong>`);
     } else {
       // 비회원인 경우 기본 메뉴 + MY잇슈는 로그인 링크로
       $('.list ul li').first().replaceWith(`<li> <a href="./mypage_subscription_add.html">구독정보</a></li> `);
     }
   }
 
-  updateUserMenu();
+  function updateProfileSection() {
+    const isLoggedIn = localStorage.getItem('isLoggedIn');
+    const userName = localStorage.getItem('userName');
+    const $nameEl = $('.con1 .tit .profile-name');
+    const $gradeEl = $('.con1 .tit .profile-grade');
 
+    if (isLoggedIn === 'true' && userName) {
+      // 프로필 이름 설정
+      $nameEl.text(`${userName}님`);
+
+      // (선택) userName별로 등급을 다르게 지정하고 싶으면 매핑하세요
+      const gradeMap = {
+        '김말숙': 'VIP',
+        '이국밥': 'Gold',
+        '박키트': 'Platinum'
+      };
+      const grade = gradeMap[userName] || 'Basic';
+      $gradeEl.text(grade);
+    }
+  }
+  updateUserMenu();
+  updateProfileSection();
+  highlightCurrentMenu();
+  addOnClassStyles();
 });
