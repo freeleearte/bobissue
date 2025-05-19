@@ -114,9 +114,61 @@
         width: 80px;
     }
 
+
+    /* 공지사항 */
+    .con3 {
+        padding: 50px 0;
+    }
+
+    .notice_header {
+        height: 80px;
+    }
+
+    .notice_header h2 {
+        font-size: 30px;
+    }
+
+    .notice_list {
+        height: 290px;
+        overflow: hidden;
+        padding: 0 20px;
+    }
+
+    .question {
+        padding: 15px;
+    }
+
+    .qnum {
+        width: 25px;
+        height: 25px;
+        font-size: 13px;
+    }
+
+    .qtext {
+        font: var(--pre-15-m);
+        padding-left: 15px;
+    }
+
+    .notice_item.on span.qtext {
+        font: var(--pre-15-b);
+    }
+
+    .arrow img {
+        width: 15px;
+    }
+
+    .notice_answer {
+        display: none;
+        padding: 0 0 10px 70px;
+        font: var(--pre-15-m);
+        color: var(--txt-dark-gray);
+    }
+
+
     .bobissue {
         width: 100%;
         padding: 25px 0;
+        overflow: hidden;
     }
 
     .bobissue ul {
@@ -147,7 +199,7 @@
     }
 
     .faq_left .faq_icons button {
-        width: 10px;
+        display: none;
     }
 
 
@@ -168,6 +220,7 @@
     .faq_question {
         height: 45px;
         gap: 10px;
+        font: var(--pre-16-m);
     }
 
     .faq_question img {
@@ -179,6 +232,10 @@
         height: 86px;
     }
 
+    .faq_item.on .faq_answer {
+        opacity: 1;
+    }
+
     .faq_item.on span {
         font: var(--pre-16-m);
         color: var(--sub-color-1);
@@ -186,14 +243,31 @@
 
     .faq_answer {
         font: var(--pre-16-m);
-        padding-left: 40px;
+        padding-left: 28px;
+        opacity: 0;
         transition: height 0.3s ease;
         box-sizing: border-box;
         display: block;
         text-align: left;
+        overflow: hidden;
+        transition: opacity 0.3s ease, max-height 0.3s ease;
     }
 
-    .faq_item.on .faq_answer {
-        height: 130px;
+    .faq_answer p {
+        font: var(--pre-15-m);
     }
+}
+
+
+@media screen and (max-width: 375px) {
+    .inner {
+        width: 335px;
+    }
+
+    .main_visual {
+        height: 150px;
+        background: orange;
+    }
+
+    
 }

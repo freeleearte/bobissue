@@ -19,13 +19,19 @@
     --mp-title-font: 400 80px 'Cafe24Ohsquare', sans-serif;
     --sp-title-font: 400 45px 'Cafe24Ohsquare', sans-serif;
     --pre-15-m: 500 15px "Pretendard", sans-serif;
+<<<<<<< HEAD
     --pre-15-b: 700 15px "Pretendard", sans-serif;
     --pre-16-m: 500 16px "Pretendard", sans-serif;
+=======
+    --pre-15-sb: 600 15px "Pretendard", sans-serif;
+    --pre-15-r: 400 15px "Pretendard", sans-serif;
+>>>>>>> 21623a1f20e137c3f878623487ba59af8d7a6895
     --pre-18-r: 400 18px "Pretendard", sans-serif;
     --pre-18-sb: 600 18px "Pretendard", sans-serif;
     --pre-20-r: 400 20px/30px "Pretendard", sans-serif;
     --pre-20-m: 500 20px "Pretendard", sans-serif;
     --pre-20-b: 700 20px "Pretendard", sans-serif;
+    --pre-22-b: 700 22px "Pretendard", sans-serif;
     --pre-25-sb: 600 25px "Pretendard", sans-serif;
     --pre-25-r: 400 25px "Pretendard", sans-serif;
     --pre-25-m: 500 25px "Pretendard", sans-serif;
@@ -49,6 +55,7 @@
     --sub-color-1: #FF6B00;
     --sub-color-2: #F5B642;
     --light-yellow: #FFF49E;
+    --more-light-yellow: #FEFCF2;
     --dark-green: #80A55C;
     --light-green: #A5C08D;
     --bg-w-color: #ffffff;
@@ -108,6 +115,7 @@ header .top .inner {
 
 header .top ul {
     display: flex;
+    align-items: center;
 }
 
 header .top ul li {
@@ -128,6 +136,26 @@ header .top ul li:last-child {
 header .top ul li a {
     font-size: 15px;
     font-weight: 500;
+}
+
+header .top ul li span {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+header .top ul li span em {
+    color: var(--sub-color-1);
+    font-size: 17px;
+    font-weight: 700;
+}
+
+header .top ul li button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font: var(--pre-15-r);
 }
 
 header .mid {

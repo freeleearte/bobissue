@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/mypage_delivery.css">
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="js/common.js"></script>
+  <script src="js/mypage_common.js"></script>
 </head>
 
 <body>
@@ -29,97 +30,73 @@
           </div>
           <div class="one">
             <span class="on">배송지관리</span>
-            <img src="asset/mypage/to p_arrow.png" alt="arrow">
           </div>
         </div>
       </div><!-- //.tap -->
       <section class="con1">
         <!-- 왼쪽 탭메뉴바 고정 -->
-        <div class="tab_wrapper">
-          <img src="asset/mypage/tap_bar_icon.png" alt="">
-          <div class="left_tab">
-            <div class="sticky_box">
-              <div class="tab_sec">
-                <em>쇼핑</em>
-                <ul>
-                  <li class="on"><a href="" target="_blank">주문내역잇슈</a></li>
-                  <li><a href="" target="_blank">찜햇슈</a></li>
-                  <li><a href="" target="_blank">취소 및 반품내역</a></li>
-                  <li><a href="" target="_blank">문의햇슈</a></li>
-                </ul>
-              </div><!-- //.tab_sec -->
-              <div class="tab_sec">
-                <em>정보관리</em>
-                <ul>
-                  <li><a href="" target="_blank">회원정보</a></li>
-                  <li><a href="" target="_blank">배송지관리</a></li>
-                  <li><a href="" target="_blank">결제수단</a></li>
-                </ul>
-              </div><!-- //.tab_sec -->
-              <div class="tab_sec list">
-                <em>구독관리</em>
-                <ul>
-                  <li><a href="./subinfo.html" target="_blank">구독정보</a></li>
-                  <li><a href="" target="_blank">구독신청</a></li>
-                </ul>
-              </div><!-- //.tab_sec -->
-            </div>
-          </div><!-- //.left_tab -->
-        </div><!-- //.wrapper -->
+        <div class="tab_wrapper" id="myTab"></div>
 
         <!-- 오른쪽 -->
-        <div class="inner">
-          <div class="delivery_box">
-            <div class="delivery_left">
-              <div class="delivery_t">
-                <em>집</em>
-                <span>김말자 010-1004-8282</span>
+        <div class="main">
+          <div class="sec4 one">
+            <div class="sec4_box">
+              <div class="sec4_left">
+                <div class="sec4_t">
+                  <em>우리집</em>
+                  <span>김말자 010-1004-8282</span>
+                </div>
+                <div class="sec4_b">
+                  <p>서울 서대문구 디지털로 10길, 밥잇슈오피스텔 1004호<br>[100400]</p>
+                </div>
               </div>
-              <div class="delivery_b">
-                <p>서울 서대문구 디지털로 10길, 밥잇슈오피스텔 1004호<br>[100400]</p>
-              </div>
-            </div>
-            <div class="delivery_right">
-              <div class="basic">기본배송지</div>
-              <div class="delivery_actions">
-                <a href="#" class="edit">수정</a>
-                <a href="#" class="delete">삭제</a>
-              </div>
-            </div>
-          </div>
-          <div class="delivery_box">
-            <div class="delivery_left">
-              <div class="delivery_t">
-                <em>집</em>
-                <span>김말자 010-1004-8282</span>
-              </div>
-              <div class="delivery_b">
-                <p>서울 서대문구 디지털로 10길, 밥잇슈오피스텔 1004호<br>[100400]</p>
-              </div>
-            </div>
-            <div class="delivery_right">
-              <div class="basic none"></div>
-              <div class="delivery_actions">
-                <a href="#" class="edit">수정</a>
-                <a href="#" class="delete">삭제</a>
+              <div class="sec4_right">
+                <p class="txt"><a href="#">기본배송지</a></p>
+                <div class="btn">
+                  <p><a href="#">수정</a></p>
+                  <div class="line"></div>
+                  <button><p>삭제</p></button>
+                </div>
               </div>
             </div>
           </div>
-          <div class="delivery_box">
-            <div class="delivery_left">
-              <div class="delivery_t">
-                <em>집</em>
-                <span>김말자 010-1004-8282</span>
+          <div class="sec4">
+            <div class="sec4_box">
+              <div class="sec4_left">
+                <div class="sec4_t">
+                  <em>우리집</em>
+                  <span>김말자 010-1004-8282</span>
+                </div>
+                <div class="sec4_b">
+                  <p>서울 서대문구 디지털로 10길, 밥잇슈오피스텔 1004호<br>[100400]</p>
+                </div>
               </div>
-              <div class="delivery_b">
-                <p>서울 서대문구 디지털로 10길, 밥잇슈오피스텔 1004호<br>[100400]</p>
+              <div class="sec4_right">
+                <div class="btn">
+                  <p><a href="#">수정</a></p>
+                  <div class="line"></div>
+                  <button><p>삭제</p></button>
+                </div>
               </div>
             </div>
-            <div class="delivery_right">
-              <div class="basic none"></div>
-              <div class="delivery_actions">
-                <a href="#" class="edit">수정</a>
-                <a href="#" class="delete">삭제</a>
+          </div>
+          <div class="sec4">
+            <div class="sec4_box">
+              <div class="sec4_left">
+                <div class="sec4_t">
+                  <em>우리집</em>
+                  <span>김말자 010-1004-8282</span>
+                </div>
+                <div class="sec4_b">
+                  <p>서울 서대문구 디지털로 10길, 밥잇슈오피스텔 1004호<br>[100400]</p>
+                </div>
+              </div>
+              <div class="sec4_right">
+                <div class="btn">
+                  <p><a href="#">수정</a></p>
+                  <div class="line"></div>
+                  <button><p>삭제</p></button>
+                </div>
               </div>
             </div>
           </div>

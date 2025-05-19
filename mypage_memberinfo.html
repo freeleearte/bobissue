@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/mypage_memberinfo.css">
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="js/common.js"></script>
+  <script src="js/mypage_common.js"></script>
 </head>
 
 <body>
@@ -33,43 +34,12 @@
           </div>
           <div class="one">
             <span class="on">회원정보수정</span>
-            <img src="asset/mypage/to p_arrow.png" alt="arrow">
           </div>
         </div>
       </div><!-- //.tap -->
       <section class="con1">
         <!-- 왼쪽 탭메뉴바 고정 -->
-        <div class="tab_wrapper">
-          <img src="asset/mypage/tap_bar_icon.png" alt="">
-          <div class="left_tab">
-            <div class="sticky_box">
-              <div class="tab_sec">
-                <em>쇼핑</em>
-                <ul>
-                  <li class="on"><a href="" target="_blank">주문내역잇슈</a></li>
-                  <li><a href="" target="_blank">찜햇슈</a></li>
-                  <li><a href="" target="_blank">취소 및 반품내역</a></li>
-                  <li><a href="" target="_blank">문의햇슈</a></li>
-                </ul>
-              </div><!-- //.tab_sec -->
-              <div class="tab_sec">
-                <em>정보관리</em>
-                <ul>
-                  <li><a href="" target="_blank">회원정보</a></li>
-                  <li><a href="" target="_blank">배송지관리</a></li>
-                  <li><a href="" target="_blank">결제수단</a></li>
-                </ul>
-              </div><!-- //.tab_sec -->
-              <div class="tab_sec list">
-                <em>구독관리</em>
-                <ul>
-                  <li><a href="./subinfo.html" target="_blank">구독정보</a></li>
-                  <li><a href="" target="_blank">구독신청</a></li>
-                </ul>
-              </div><!-- //.tab_sec -->
-            </div>
-          </div><!-- //.left_tab -->
-        </div><!-- //.wrapper -->
+        <div class="tab_wrapper" id="myTab"></div>
 
         <div class="form">
           <form class="memberinfo_form">
@@ -91,10 +61,12 @@
               </select>
             </div>
             <div class="form_row address_row">
-              <label for="address">주소*</label>
-              <div class="add_right">
-                <input type="text" id="address" placeholder="주소 입력" />
-                <p>배송지에 따라 상품 정보가 달라질 수 있습니다.</p>
+              <div class="form_inner">
+                <label for="address">주소*</label>
+                <div class="form_content">
+                  <input type="text" id="address" placeholder="주소 입력" />
+                  <p class="desc">배송지에 따라 상품 정보가 달라질 수 있습니다.</p>
+                </div>
               </div>
             </div>
             <div class="form_row">
@@ -107,17 +79,17 @@
                 <label>
                   <input type="radio" name="gender" value="male" />
                   <span class="custom_radio"></span>
-                  남자
+                  <p>남자</p>
                 </label>
                 <label>
                   <input type="radio" name="gender" value="female" />
                   <span class="custom_radio"></span>
-                  여자
+                  <p>여자</p>
                 </label>
                 <label>
                   <input type="radio" name="gender" value="none" />
                   <span class="custom_radio"></span>
-                  없음
+                  <p>없음</p>
                 </label>
               </div>
             </div>
@@ -134,8 +106,9 @@
           </form>
 
           <div class="button">
-            <button><a href="#">완료하기</a></button>
-          </div>
+            <p><a href="#"></a>완료하기</p>
+        </div>
+
         </div>
       </section>
     </div>

@@ -556,7 +556,8 @@ body {
 .story .gnb ul li.dropdown a.menu-toggle p {
     position: relative;
     padding-bottom: 10px;
-
+    width: 130px;
+    text-align: center;
 }
 
 .story .gnb ul li.dropdown a.menu-toggle p::after {

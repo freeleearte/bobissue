@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mypage_like</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/mypage_orderlist.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/mypage_common.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header-placeholder"></div>
+        <header id="mainHeader"></header>
+
+        <div class="main_visual">
+        </div><!-- //.main_visual -->
+        <div class="inner">
+            <div class="tap">
+                <div class="inner">
+                    <div class=" list one">
+                        <span>마이잇슈</span>
+                        <img src="asset/마이페이지/top_no_arrow.png" alt="arrow">
+                    </div>
+                    <div class="list two">
+                        <span>주문내역잇슈</span>
+                    </div>
+                </div>
+            </div>
+            <section class="con1">
+                <div class="tab_wrapper" id="myTab"></div>
+
+                <div class="main">
+                    <div class="one">
+                        <strong>주문배송현황</strong>
+                        <div class="content">
+                            <ul>
+                                <li>
+                                    <div class="txt">
+                                        <p>0</p>
+                                        <span>주문접수</span>
+                                    </div>
+                                    <img src="asset/마이페이지/orderlive.png" alt="arrow">
+                                </li>
+                                <li>
+                                    <div class="txt">
+                                        <p>0</p>
+                                        <span>결제완료</span>
+                                    </div>
+                                    <img src="asset/마이페이지/orderlive.png" alt="arrow">
+                                </li>
+                                <li>
+                                    <div class="txt">
+                                        <p>0</p>
+                                        <span>상품준비</span>
+                                    </div>
+                                    <img src="asset/마이페이지/orderlive.png" alt="arrow">
+                                </li>
+                                <li>
+                                    <div class="txt">
+                                        <p>0</p>
+                                        <span>배송중</span>
+                                    </div>
+                                    <img src="asset/마이페이지/orderlive.png" alt="arrow">
+                                </li>
+                                <li>
+                                    <div class="txt">
+                                        <p>0</p>
+                                        <span>배송완료</span>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="two">
+                        <div class="top_txt">
+                            <strong>최근 주문 내역</strong>
+                            <div class="option">
+                                <button class="">
+                                    <span class="selected-text">최신순</span>
+                                    <img src="asset/마이페이지/option.png" alt="arrow">
+                                </button>
+                                <ul class="dropdown">
+                                    <li data-value="최신순">최신순</li>
+                                    <li data-value="오래된순">오래된순</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                        <div class="content">
+                            <ul class="main_con page1 on">
+                                <li>
+                                    <div class="top">
+                                        <div class="left">2023.12.24 <span>0011568710015</span></div>
+                                        <div class="right">
+                                            <a href="./mypage_orderlist_detail.html">주문상세보기</a>
+                                        </div>
+                                    </div>
+                                    <div class="bottom">
+                                        <a href="#">
+                                            <div class="left">
+                                                <img src="asset/마이페이지/order_img1.jpg" alt="제품페이지">
+                                            </div>
+                                            <div class="center">
+                                                <span>[프레시지]</span>
+                                                <p>캠핑포차 김치어묵 우동전골 2인분 1,080g</p>
+                                                <div class="bottom_txt">
+                                                    <p>27%
+                                                        <span>16,980원</span>
+                                                    </p>
+                                                    <span>수량 1</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="top">
+                                        <div class="left">2023.12.24 <span>0011568710015</span></div>
+                                        <div class="right">
+                                            <a href="#">주문상세보기</a>
+                                        </div>
+                                    </div>
+                                    <div class="bottom">
+                                        <a href="#">
+                                            <div class="left">
+                                                <img src="asset/마이페이지/order_img1.jpg" alt="제품페이지">
+                                            </div>
+                                            <div class="center">
+                                                <span>[프레시지]</span>
+                                                <p>캠핑포차 김치어묵 우동전골 2인분 1,080g</p>
+                                                <div class="bottom_txt">
+                                                    <p>27%
+                                                        <span>16,980원</span>
+                                                    </p>
+                                                    <span>수량 1</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="top">
+                                        <div class="left">2023.12.24 <span>0011568710015</span></div>
+                                        <div class="right">
+                                            <a href="#">주문상세보기</a>
+                                        </div>
+                                    </div>
+                                    <div class="bottom">
+                                        <a href="#">
+                                            <div class="left">
+                                                <img src="asset/마이페이지/order_img1.jpg" alt="제품페이지">
+                                            </div>
+                                            <div class="center">
+                                                <span>[프레시지]</span>
+                                                <p>캠핑포차 김치어묵 우동전골 2인분 1,080g</p>
+                                                <div class="bottom_txt">
+                                                    <p>27%
+                                                        <span>16,980원</span>
+                                                    </p>
+                                                    <span>수량 1</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+
+                            </ul>
+                            <ul class="main_con page2">
+                                <li>
+                                    <div class="top">
+                                        <div class="left">2023.12.24 <span>0011568710015</span></div>
+                                        <div class="right">
+                                            <a href="#">주문상세보기</a>
+                                        </div>
+                                    </div>
+                                    <div class="bottom">
+                                        <a href="#">
+                                            <div class="left">
+                                                <img src="asset/마이페이지/order_img1.jpg" alt="제품페이지">
+                                            </div>
+                                            <div class="center">
+                                                <span>[프레시지]</span>
+                                                <p>캠핑포차 김치어묵 우동전골 2인분 1,080g</p>
+                                                <div class="bottom_txt">
+                                                    <p>27%
+                                                        <span>16,980원</span>
+                                                    </p>
+                                                    <span>수량 1</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="top">
+                                        <div class="left">2023.12.24 <span>0011568710015</span></div>
+                                        <div class="right">
+                                            <a href="#">주문상세보기</a>
+                                        </div>
+                                    </div>
+                                    <div class="bottom">
+                                        <a href="#">
+                                            <div class="left">
+                                                <img src="asset/마이페이지/order_img1.jpg" alt="제품페이지">
+                                            </div>
+                                            <div class="center">
+                                                <span>[프레시지]</span>
+                                                <p>캠핑포차 김치어묵 우동전골 2인분 1,080g</p>
+                                                <div class="bottom_txt">
+                                                    <p>27%
+                                                        <span>16,980원</span>
+                                                    </p>
+                                                    <span>수량 1</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="top">
+                                        <div class="left">2023.12.24 <span>0011568710015</span></div>
+                                        <div class="right">
+                                            <a href="#">주문상세보기</a>
+                                        </div>
+                                    </div>
+                                    <div class="bottom">
+                                        <a href="#">
+                                            <div class="left">
+                                                <img src="asset/마이페이지/order_img1.jpg" alt="제품페이지">
+                                            </div>
+                                            <div class="center">
+                                                <span>[프레시지]</span>
+                                                <p>캠핑포차 김치어묵 우동전골 2인분 1,080g</p>
+                                                <div class="bottom_txt">
+                                                    <p>27%
+                                                        <span>16,980원</span>
+                                                    </p>
+                                                    <span>수량 1</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+
+                            </ul>
+                            <ul class="main_con page3">
+                                <li>
+                                    <div class="top">
+                                        <div class="left">2023.12.24 <span>0011568710015</span></div>
+                                        <div class="right">
+                                            <a href="#">주문상세보기</a>
+                                        </div>
+                                    </div>
+                                    <div class="bottom">
+                                        <a href="#">
+                                            <div class="left">
+                                                <img src="asset/마이페이지/order_img1.jpg" alt="제품페이지">
+                                            </div>
+                                            <div class="center">
+                                                <span>[프레시지]</span>
+                                                <p>캠핑포차 김치어묵 우동전골 2인분 1,080g</p>
+                                                <div class="bottom_txt">
+                                                    <p>27%
+                                                        <span>16,980원</span>
+                                                    </p>
+                                                    <span>수량 1</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="top">
+                                        <div class="left">2023.12.24 <span>0011568710015</span></div>
+                                        <div class="right">
+                                            <a href="#">주문상세보기</a>
+                                        </div>
+                                    </div>
+                                    <div class="bottom">
+                                        <a href="#">
+                                            <div class="left">
+                                                <img src="asset/마이페이지/order_img1.jpg" alt="제품페이지">
+                                            </div>
+                                            <div class="center">
+                                                <span>[프레시지]</span>
+                                                <p>캠핑포차 김치어묵 우동전골 2인분 1,080g</p>
+                                                <div class="bottom_txt">
+                                                    <p>27%
+                                                        <span>16,980원</span>
+                                                    </p>
+                                                    <span>수량 1</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="top">
+                                        <div class="left">2023.12.24 <span>0011568710015</span></div>
+                                        <div class="right">
+                                            <a href="#">주문상세보기</a>
+                                        </div>
+                                    </div>
+                                    <div class="bottom">
+                                        <a href="#">
+                                            <div class="left">
+                                                <img src="asset/마이페이지/order_img1.jpg" alt="제품페이지">
+                                            </div>
+                                            <div class="center">
+                                                <span>[프레시지]</span>
+                                                <p>캠핑포차 김치어묵 우동전골 2인분 1,080g</p>
+                                                <div class="bottom_txt">
+                                                    <p>27%
+                                                        <span>16,980원</span>
+                                                    </p>
+                                                    <span>수량 1</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+
+                            </ul>
+                            <ul class="pagination">
+                                <li class="left_btn"><img src="asset/left_bob.png" alt="왼쪽 버튼"></li>
+                                <li class="page-btn on" data-page="1">1</li>
+                                <li class="page-btn" data-page="2">2</li>
+                                <li class="page-btn" data-page="3">3</li>
+                                <li class="right_btn"><img src="asset/right_bob.png" alt="오른쪽 버튼"></li>
+                            </ul> <!-- //.pagination -->
+                        </div><!-- content -->
+                    </div><!-- two -->
+                </div><!-- main -->
+            </section>
+        </div>
+
+
+        <script>
+            $(function () {
+                const $option = $('.option');
+                const $dropdown = $option.find('.dropdown');
+                const $selected = $option.find('.selected-text');
+
+                $option.find('button').on('click', function (e) {
+                    e.stopPropagation();
+                    $dropdown.stop().slideToggle(200).css('opacity', 1);
+                });
+
+                $dropdown.find('li').on('click', function () {
+                    $selected.text($(this).data('value'));
+                    $dropdown.stop().slideUp(200).css('opacity', 0);
+                });
+
+                $(document).on('click', function () {
+                    $dropdown.stop().slideUp(200).css('opacity', 0);
+                });
+            });
+
+
+        </script>
+
+
+
+
+</body>
+
+</html>
