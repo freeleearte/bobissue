@@ -62,7 +62,7 @@ p {
     gap: 120px;
     padding-top: var(--bt-pad);
     overflow: visible;
-    margin-bottom: var(--fc-pad);
+    margin-bottom: var(--sec-pad);
 }
 
 .left_tab {
@@ -187,37 +187,76 @@ p {
 }
 
 
-.info .sec3 .sec3_box {
-    width: 330px;
-    height: 330px;
-    border: 1px solid var(--sub-color-1);
+.info .sec3 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.info .sec3 .coupon {
+    width: 420px;
+    height: 150px;
+    border: 1px solid var(--txt-gray);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px 30px;
-    gap: 25px;
+    box-sizing: border-box;
+    position: relative;
+    padding: 0 30px;
+    transition: .6s;
 }
 
-.info .sec3 .sec3_box .tit {
-    width: 100%;
-    font: var(--pre-30-sb);
+
+
+.info .sec3 .coupon img {
+    width: 35px;
+    position: absolute;
+    left: 15px;
+    top: -20px;
+    display: none;
+}
+
+.info .sec3 .coupon h3 {
+    font: var(--pre-20-b);
     color: var(--sub-color-1);
-    border-bottom: 1px solid var(--sub-color-1);
-    text-align: center;
-    padding-bottom: 10px;
 }
 
-.info .sec3 .sec3_box .img {
-    width: 100%;
-    height: 240px;
-    background: url(../img/card.png) no-repeat center/cover;
-    border-radius: 20px;
+
+
+.info .sec3 .coupon strong {
+    font: var(--pre-25-b);
+    color: var(--txt-dark-gray);
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
 }
+
+.info .sec3 .coupon p {
+    width: 100%;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    font: var(--pre-18-r);
+    color: var(--txt-gray);
+    border-bottom: 1px solid var(--txt-medium-m-gray);
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .sec4_box {
-    width: 100%;
     background-color: var(--bg-con-color);
     border-radius: 10px;
     display: flex;
@@ -238,8 +277,9 @@ p {
 }
 
 .sec4_left .sec4_t em {
-    font: var(--pre-20-b);
+    font: var(--pre-22-b);
     color: var(--txt-dark-gray);
+    padding-bottom: 5px;
 }
 
 .sec4_left .sec4_t span {
@@ -267,9 +307,9 @@ p {
     line-height: 35px;
 }
 
+
 /* 결제수단 */
 .sec5_card {
-    width: 100%;
     display: flex;
     align-items: center;
     background-color: var(--bg-con-color);
@@ -297,44 +337,18 @@ p {
     color: var(--txt-medium-gray);
 }
 
-.sec5_card button {
-    border: none;
-    background-color: var(--sub-color-1);
-    color: var(--txt-w-color);
-    font: var(--pre-18-r);
-    border-radius: 5px;
-    text-align: center;
+.sec5_card>p {
     width: 120px;
     height: 35px;
+    background: var(--sub-color-1);
+    border-radius: 5px;
+    font: var(--pre-18-r);
+    color: var(--txt-w-color);
+    text-align: center;
+    line-height: 35px;
 }
 
-.sec6 {
-    width: 100%;
-}
 
-.sec6 ul {
-    width: 100%;
-    display: flex;
-    gap: 30px;
-}
-
-.sec6 ul li {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.sec6 ul li .tit {
-    width: 330px;
-    height: 70px;
-    background-color: var(--bg-con-color);
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font: var( --pre-18-r);
-    color: var(--txt-gray);
-}
 
 
 .button ul {
@@ -344,19 +358,20 @@ p {
     gap: 35px;
     color: var(--txt-w-color);
     font: var(--pre-25-sb);
-    padding-bottom: 200px;
     cursor: pointer;
+    padding-top: var(--bt-pad);
+
 }
 
 .button ul li {
     width: 250px;
-    height: 50px;
+    height: 55px;
     font: var(--pre-20-m);
-    background: var(--txt-dark-gray);
+    background: var(--txt-gray);
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 5px;
+    border-radius: 15px;
 }
 
 .button ul li:nth-child(2) {

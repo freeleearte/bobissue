@@ -50,11 +50,12 @@ body {
 
 .con1 {
     width: 100%;
+    height: auto;
     display: flex;
     gap: 120px;
     padding-top: var(--bt-pad);
     overflow: visible;
-    margin-bottom: var(--fc-pad);
+    margin-bottom: var(--sec-pad);
 }
 
 .left_tab {
@@ -142,8 +143,6 @@ body {
     flex-direction: column;
     gap: 100px;
     flex: 1;
-    height: 1080px;
-    padding: 25px;
     border-radius: 20px;
 }
 
@@ -223,40 +222,92 @@ body {
 }
 
 
-/* 개월수 옵션 버튼 */
-.main .two .top_txt .click {
+
+
+.option {
+
     position: relative;
+    display: inline-block;
+    width: auto;
 }
 
-.main .two .top_txt .click button {
-    border: none;
-    background: transparent;
-    color: #888888;
-    font-family: var(--main-font-family);
-    display: flex;
-    justify-content: flex-end;
+.option button {
+
+    display: inline-flex;
     align-items: center;
+     justify-content: space-between;
+    gap: 10px;
+    padding: 10px 20px;
+    width: 130px;
+    background-color: #56b6a9;
+    color: var(--txt-w-color);
+    font: var(--pre-18-sb);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
 }
 
-.main .two .top_txt .click button img {
-    width: 26px;
-    height: 14px;
+.option img {
+    width: 12px;
+    height: 7px;
+    transition: .3s;
 }
 
-.main .two .top_txt .click .option {
+.option button.on img {
+    transform: rotate(180deg);
+}
+
+.option .dropdown {
+    width: 100%;
     position: absolute;
-    left: 10px;
-    top: 60%;
-    background: #ccc;
-    height: 0;
+    top: 60px;
+    left: 0;
+    background: #fff08a;
+    flex-direction: column;
+    z-index: 10;
+    border-radius: 8px;
+    cursor: pointer;
+    display: none;
     opacity: 0;
+    transition: opacity 0.3s ease;
+
 }
 
-.main .two .top_txt .click.on .option {
-    height: 100px;
-    opacity: 1;
+.option .dropdown li {
+    color: #777;
+    font-weight: 600;
+    cursor: pointer;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font: var(--pre-18-sb);
+    color: var(--txt-gray);
+    transition: .3s;
+    border-radius: 8px 8px 0 0;
 }
 
+.option .dropdown li:last-child {
+    border-radius: 0 0 8px 8px;
+}
+
+
+.option .dropdown li:hover {
+    background-color: #56b6a9;
+    color: var(--txt-w-color);
+}
+
+.option.on .dropdown {
+    display: flex;
+}
+
+
+
+
+
+
+/* 메인 */
 .main .two .content {
     width: 100%;
 }
@@ -277,6 +328,7 @@ body {
     font: var(--pre-15-m);
     display: flex;
     justify-content: space-between;
+    padding: 0 5px;
 }
 
 .main .two .content .main_con li .top .left span {
@@ -364,10 +416,11 @@ body {
 
 .pagination {
     margin-top: 100px;
-    margin-bottom: 88px;
     display: flex;
     justify-self: center;
     gap: 5px;
+    padding-top: var(--con-pad);
+    margin: 0;
 }
 
 .pagination li {

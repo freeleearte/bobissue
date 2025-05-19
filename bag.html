@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>장바구니</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/bag.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/common.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header-placeholder"></div>
+        <header id="mainHeader"></header>
+        <div class="inner">
+            <div class="tit">
+                <p>장바구니</p>
+            </div>
+            <div class="con1">
+                <div class="con1_left">
+                    <!-- 상단 전체 선택 영역 -->
+                    <div class="select_all">
+                        <div class="left_wrap">
+                            <label class="custom-check" >
+                                <input type="checkbox" id="selectAll">
+                                <span class="checkmark"></span>
+                                <span class="text">전체선택</span>
+                            </label>
+                            <span class="count">4/4</span>
+                        </div>
+                        <button id="deleteSelected">선택삭제</button> 
+                    </div>
+
+                    <!-- 장바구니 아이템 리스트 -->
+                    <div class="cart_list">
+                        <div class="cart_item" data-price="16980">
+                            <label class="custom-check">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <div class="center">
+                                <img src="asset/product10.png" alt="상품 이미지" />
+                                <div class="txt">
+                                    <span>[프레시지]</span>
+                                    <p>캠핑포차 김치어묵 <br>우동전골 2인분 1,080g</p>
+                                    <strong>27% <span class="price">16,980원</span></strong>
+                                </div>
+                            </div>
+                            <div class="card_right">
+                                <button class="btn-delete" aria-label="삭제">✕</button>
+                                <div class="qty_controls">
+                                    <button class="minus">-</button>
+                                    <input type="text" class="qty" value="1" readonly />
+                                    <button class="plus">+</button>
+                                </div>
+
+                            </div>
+
+                            <!-- cart-item 반복 -->
+                        </div>
+                        <div class="cart_item" data-price="16980">
+                            <label class="custom-check">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <div class="center">
+                                <img src="asset/product10.png" alt="상품 이미지" />
+                                <div class="txt">
+                                    <span>[프레시지]</span>
+                                    <p>캠핑포차 김치어묵 <br>우동전골 2인분 1,080g</p>
+                                    <strong>27% <span class="price">16,980원</span></strong>
+                                </div>
+                            </div>
+                            <div class="card_right">
+                                <button class="btn-delete" aria-label="삭제">✕</button>
+                                <div class="qty_controls">
+                                    <button class="minus">-</button>
+                                    <input type="text" class="qty" value="1" readonly />
+                                    <button class="plus">+</button>
+                                </div>
+
+                            </div>
+
+                            <!-- cart-item 반복 -->
+                        </div>
+                        <div class="cart_item" data-price="16980">
+                            <label class="custom-check">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <div class="center">
+                                <img src="asset/product10.png" alt="상품 이미지" />
+                                <div class="txt">
+                                    <span>[프레시지]</span>
+                                    <p>캠핑포차 김치어묵 <br>우동전골 2인분 1,080g</p>
+                                    <strong>27% <span class="price">16,980원</span></strong>
+                                </div>
+                            </div>
+                            <div class="card_right">
+                                <button class="btn-delete" aria-label="삭제">✕</button>
+                                <div class="qty_controls">
+                                    <button class="minus">-</button>
+                                    <input type="text" class="qty" value="1" readonly />
+                                    <button class="plus">+</button>
+                                </div>
+
+                            </div>
+
+                            <!-- cart-item 반복 -->
+                        </div>
+                        <div class="cart_item" data-price="16980">
+                            <label class="custom-check">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <div class="center">
+                                <img src="asset/product10.png" alt="상품 이미지" />
+                                <div class="txt">
+                                    <span>[프레시지]</span>
+                                    <p>캠핑포차 김치어묵 <br>우동전골 2인분 1,080g</p>
+                                    <strong>27% <span class="price">16,980원</span></strong>
+                                </div>
+                            </div>
+                            <div class="card_right">
+                                <button class="btn-delete" aria-label="삭제">✕</button>
+                                <div class="qty_controls">
+                                    <button class="minus">-</button>
+                                    <input type="text" class="qty" value="1" readonly />
+                                    <button class="plus">+</button>
+                                </div>
+
+                            </div>
+
+                            <!-- cart-item 반복 -->
+                        </div>
+                    </div>
+
+                </div>
+                <div class="right">
+                    <div class="sticky_box">
+                        <img src="asset/bag_icon.png" alt="귀여운 캐릭터" class="character" />
+                        <div class="top">
+
+                            <div class="txt">
+                                <p>결제금액</p>
+                            </div>
+                            <div class="center">
+                                <ul>
+                                    <li>
+                                        <p>총 상품 금액
+                                        </p>
+                                        <span>41,800원</span>
+                                    </li>
+                                    <li>
+                                        <p>총 상품 금액
+                                        </p>
+                                        <span>-2,490원</span>
+                                    </li>
+                                    <li>
+                                        <p>총 배송비
+                                        </p>
+                                        <span>0원</span>
+                                    </li>
+                                </ul>
+                            </div><!-- center -->
+                            <div class="bottom">
+                                <p>결제 예정 금액
+                                </p>
+                                <strong>39,310원</strong>
+                            </div><!-- bottom -->
+                        </div> <!-- top -->
+                        <div class="btn_wrap">
+                            <p><a href="#">결제하기</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- con1 -->
+
+        </div>
+    </div>
+
+
+    <script>
+        $(function () {
+            function updateSummary() {
+                const $items = $('.cart_item');
+                const $checkedItems = $items.find('input[type="checkbox"]:checked');
+                const totalCount = $items.length;
+                const selectedCount = $checkedItems.length;
+
+                // 전체 선택 숫자 갱신
+                $('.left_wrap .count').text(`${selectedCount}/${totalCount}`);
+
+                // 금액 계산
+                let totalPrice = 0;
+                $checkedItems.each(function () {
+                    const $item = $(this).closest('.cart_item');
+                    const price = parseInt($item.data('price'), 10);
+                    const qty = parseInt($item.find('.qty').val(), 10);
+                    totalPrice += price * qty;
+                });
+
+                const discount = 2490;
+                const finalPrice = Math.max(0, totalPrice - discount);
+
+                $('.sticky_box .center ul li:nth-child(1) span').text(`${totalPrice.toLocaleString()}원`);
+                $('.sticky_box .center ul li:nth-child(2) span').text(`-${discount.toLocaleString()}원`);
+                $('.sticky_box .bottom strong').text(`${finalPrice.toLocaleString()}원`);
+
+                // 전체 선택 체크 상태 동기화
+                $('#selectAll').prop('checked', selectedCount === totalCount);
+            }
+
+            // 전체 선택 체크박스 기능
+            $('#selectAll').on('change', function () {
+                const checked = $(this).is(':checked');
+                $('.cart_item input[type="checkbox"]').prop('checked', checked);
+                updateSummary();
+            });
+
+            // 개별 체크박스 기능
+            $('.cart_list').on('change', 'input[type="checkbox"]', function () {
+                updateSummary();
+            });
+
+            // 수량 조절
+            $('.cart_list').on('click', '.plus, .minus', function () {
+                const $item = $(this).closest('.cart_item');
+                const $qty = $item.find('.qty');
+                let qty = parseInt($qty.val(), 10);
+
+                if ($(this).hasClass('plus')) qty++;
+                if ($(this).hasClass('minus') && qty > 1) qty--;
+
+                $qty.val(qty);
+
+                $item.find('input[type="checkbox"]').prop('checked', true);
+                updateSummary();
+            });
+
+            // ✕ 삭제 버튼 기능
+            $('.cart_list').on('click', '.btn-delete', function () {
+                $(this).closest('.cart_item').slideUp(200, function () {
+                    $(this).remove();
+                    updateSummary();
+                });
+            });
+
+            // 선택삭제 버튼
+            $('#deleteSelected').on('click', function () {
+                $('.cart_item input[type="checkbox"]:checked').each(function () {
+                    $(this).closest('.cart_item').slideUp(200, function () {
+                        $(this).remove();
+                        updateSummary();
+                    });
+                });
+            });
+
+            // 최초 실행 시 요약 계산
+            updateSummary();
+        });
+    </script>
+
+</body>
+
+</html>

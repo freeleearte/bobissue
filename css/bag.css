@@ -1,0 +1,351 @@
+@charset "utf-8";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--main-font-family);
+    color: var(--txt-dark-gray);
+}
+
+.tit {
+    width: 100%;
+    height: 275px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tit>p {
+    font: var(--pre-45-b);
+    font-family: var(--title-font-family);
+}
+
+.con1 {
+    width: 100%;
+    display: flex;
+    gap: 120px;
+    padding-top: var(--bt-pad);
+    overflow: visible;
+    margin-bottom: var(--sec-pad);
+}
+
+/* 왼쪾 */
+
+.con1_left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+
+
+
+.con1_left .select_all {
+    height: 80px;
+    display: flex;
+    padding: 0  0 0 20px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.con1_left .select_all .left_wrap{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* 체크박스 */
+.custom-check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+/* 기본 박스 디자인 */
+.custom-check input[type="checkbox"] {
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border: 2px solid var(--txt-dark-gray);
+    border-radius: 4px;
+    background: #fff;
+    cursor: pointer;
+    position: relative;
+}
+
+/* 체크 표시 가짜로 만들기 */
+.custom-check input[type="checkbox"]::after {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 0px;
+    width: 5px;
+    height: 15px;
+    border: solid var(--txt-dark-gray);
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    opacity: 1;
+    transition: 0.2s;
+}
+
+/* 체크됐을 때만 보이게 */
+.custom-check input[type="checkbox"]:checked {
+    background-color: var(--txt-dark-gray);
+}
+
+.custom-check input[type="checkbox"]:checked::after {
+    border-color: var(--txt-w-color);
+}
+
+.con1_left .select_all button {
+    border: none;
+    background-color: var(--main-color);
+    font: var(--pre-20-r);
+    font-family: var(--main-font-family);
+    color: var(--txt-w-color);
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+}
+/* 아래 카드 */
+
+.cart_list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.cart_item {
+    display: flex;
+    padding: 25px 20px;
+    background-color: var(--bg-con-color);
+    border-radius: 10px;
+    align-items: center;
+}
+
+.cart_item label {
+    padding-right: 10px;
+}
+
+.cart_item .center {
+    display: flex;
+    gap: 25px;
+}
+
+.cart_item .center img {
+    width: 120px;
+    border-radius: 10px;
+}
+
+.cart_item .center .txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cart_item .center .txt>span {
+    font-size: var(--pre-15-r);
+    color: var(--txt-medium-m-gray);
+    padding-bottom: 5px;
+}
+
+.cart_item .center .txt p {
+    font: var(--pre-20-r);
+    padding-bottom: 20px;
+}
+
+.cart_item .center .txt strong {
+    font: var(--pre-25-sb);
+    color: var(--sub-color-1);
+    line-height: 1.2;
+}
+
+.cart_item .center .txt strong span {
+    color: var(--txt-dark-gray);
+}
+
+.cart_item .card_right {
+    display: flex;
+    flex-direction: column;
+    padding-left: 300px;
+    gap: 80px;
+    align-items: flex-end;
+}
+
+.cart_item .card_right .qty_controls {
+    height: 35px;
+    display: flex;
+    border: 1px solid var(--dark-green);
+    border-radius: 4px;
+}
+
+.cart_item .card_right .qty_controls input {
+    border: none;
+    text-align: center;
+    font: var(--pre-20-m);
+    width: 80px;
+
+}
+
+.cart_item .card_right .qty_controls button {
+    width: 50px;
+    height: 100%;
+    border: none;
+    border-right: 1px solid var(--dark-green);
+    font: var(--pre-25-sb);
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart_item .card_right .qty_controls button.plus {
+    border: none;
+    border-left: 1px solid var(--dark-green);
+}
+
+.cart_item .card_right>button {
+    border: none;
+    background: transparent;
+    font: var(--pre-20-b);
+    width: 25px;
+    height: 25px;
+    color: var(--txt-dark-gray);
+}
+
+
+
+
+
+
+
+.right {
+    width: 400px;
+    flex-shrink: 0;
+
+}
+
+
+/* 오른쪾 */
+
+/* ↓↓↓↓↓ 오른쪽 고정 옵션바 박스 ↓↓↓↓↓ */
+.sticky_box {
+    position: sticky;
+    width: 400px;
+    top: 300px;
+    /* ✅ 스크롤 시 상단 여백 */
+    background: #fff;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sticky_box img {
+    width: 156px;
+    position: absolute;
+    top: -75px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.sticky_box .top {
+    width: 100%;
+    height: auto;
+    border: 4px solid var(--main-color);
+    border-radius: 20px;
+    padding: 25px 20px;
+    padding-bottom: 0;
+}
+
+.sticky_box .txt p {
+    font: var(--pre-25-b);
+    color: var(--main-color);
+    padding-bottom: 30px;
+}
+
+.sticky_box .center ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sticky_box .center ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sticky_box .center ul li p {
+    font: var(--pre-20-m);
+}
+
+.sticky_box .center ul li span {
+    font: var(--pre-20-b);
+}
+
+.sticky_box .center ul li:nth-child(2) span {
+    color: var(--sub-color-1);
+}
+
+.sticky_box .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px 0;
+    border-top: 3px solid var(--main-color);
+}
+
+.sticky_box .bottom p {
+    font: var(--pre-20-b);
+
+}
+
+.sticky_box .bottom strong {
+    font: var(--pre-25-b);
+    color: var(--main-color);
+
+}
+
+.btn_wrap {
+    width: 100%;
+    height: 60px;
+    border-radius: 8px;
+    background-color: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.btn_wrap a {
+    display: block;
+    color: var(--txt-w-color);
+    font: var(--pre-20-b);
+}
+
+.wishlist {
+    background: white;
+    border: 1px solid var(--dark-green);
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.add_cart {
+    flex-grow: 1;
+    background: var(--main-color);
+    color: var(--txt-w-color);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font: var(--pre-20-m);
+    cursor: pointer;
+}
+
+/* ↑↑↑↑↑ 오른쪽 고정 옵션바 박스 끝 ↑↑↑↑↑ */

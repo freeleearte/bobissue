@@ -81,17 +81,17 @@
                     <div class="two">
                         <div class="top_txt">
                             <strong>최근 주문 내역</strong>
-                            <div class="click">
-                                <div class="btn">
-                                    <button>
-                                        3개월
-                                        <img src="asset/마이페이지/dayoption.png" alt="주문내역 옵션">
-                                    </button>
-                                </div>
-                                <div class="option">
-                                    예시
-                                </div>
-                            </div><!-- click -->
+                            <div class="option">
+                                <button class="">
+                                    <span class="selected-text">최신순</span>
+                                    <img src="asset/마이페이지/option.png" alt="arrow">
+                                </button>
+                                <ul class="dropdown">
+                                    <li data-value="최신순">최신순</li>
+                                    <li data-value="오래된순">오래된순</li>
+                                </ul>
+                            </div>
+
                         </div>
 
                         <div class="content">
@@ -341,6 +341,34 @@
                 </div><!-- main -->
             </section>
         </div>
+
+
+        <script>
+            $(function () {
+                const $option = $('.option');
+                const $dropdown = $option.find('.dropdown');
+                const $selected = $option.find('.selected-text');
+
+                $option.find('button').on('click', function (e) {
+                    e.stopPropagation();
+                    $dropdown.stop().slideToggle(200).css('opacity', 1);
+                });
+
+                $dropdown.find('li').on('click', function () {
+                    $selected.text($(this).data('value'));
+                    $dropdown.stop().slideUp(200).css('opacity', 0);
+                });
+
+                $(document).on('click', function () {
+                    $dropdown.stop().slideUp(200).css('opacity', 0);
+                });
+            });
+
+
+        </script>
+
+
+
 
 </body>
 

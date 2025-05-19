@@ -54,6 +54,7 @@ body {
     gap: 120px;
     padding-top: var(--bt-pad);
     overflow: visible;
+    margin-bottom: var(--sec-pad);
 }
 
 .left_tab {
@@ -146,6 +147,7 @@ h4 {
     flex-direction: column;
     gap: 100px;
     flex: 1;
+ 
 }
 
 #cupon_type,
@@ -467,7 +469,7 @@ color: var(--txt-light-gray);
 
 /* 배송지 */
 .box_type .sec5_box {
-    width: 100%;
+
     background-color: var(--bg-con-color);
     border-radius: 10px;
     display: flex;
@@ -488,8 +490,9 @@ color: var(--txt-light-gray);
 }
 
 .box_type .sec5_left .sec5_t em {
-    font: var(--pre-20-b);
+    font: var(--pre-22-b);
     color: var(--txt-dark-gray);
+    padding-bottom: 5px;
 }
 
 .box_type .sec5_left .sec5_t span {
@@ -522,7 +525,6 @@ color: var(--txt-light-gray);
 
 /* 결제수단 */
 .box_type .sec6_card {
-    width: 100%;
     display: flex;
     align-items: center;
     background-color: var(--bg-con-color);
@@ -610,13 +612,12 @@ color: var(--txt-light-gray);
     width: 100%;
     display: flex;
     justify-content: center;
-    padding-bottom: var(--con-pad);
-    padding-top: var(--bt-pad);
+    padding-top: var(--fc-pad);
 }
 
 .button p {
-    width: 330px;
-    height: 60px;
+    width: 250px;
+    height: 55px;
     border: 0;
     background: var(--sub-color-1);
     color: var(--txt-w-color);
