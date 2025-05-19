@@ -31,7 +31,7 @@ $(function () {
                 <li><a href="#">브랜드</a></li>
                 <li><a href="./storyissue.html">스토리잇슈</a></li>
                 <li><a href="./bobStore.html">밥도잇슈</a></li>
-                <li><a href="https://www.figma.com/proto/Hbi0RZMjxnfJkaKX9yRAug/3%EC%A1%B0?page-id=1117%3A40662&node-id=1173-14385&viewport=-2664%2C-107%2C0.31&t=CDBOkWN5F84eSZGZ-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1173%3A14385&show-proto-sidebar=1" target="_blank">뭔일잇슈</a></li>
+                <li><a href="./mounillssue.html">뭔일잇슈</a></li>
                 <li><a href="">MY잇슈</a></li>
               </ul>
             </nav>
@@ -40,8 +40,8 @@ $(function () {
         </div>
         <ul class="right-menu">
           <li class="search_container"><input type="search" class="search_input" placeholder="검색어를 입력해주세요." /><img src="asset/search.png" alt="search"></li>
-          <li><a href="#"><img src="asset/heart.png" alt="heart"></a></li>
-          <li><a href="#"><img src="asset/bag.png" alt="bag"></a></li>
+          <li class="heart_icon"><a href="./mypage_like.html"><img src="asset/heart.png" alt="heart"></a></li>
+          <li><a href="./bag.html"><img src="asset/bag.png" alt="bag"></a></li>
         </ul>
       `;
 
@@ -57,6 +57,7 @@ $(function () {
     if (isLoggedIn === 'true' && userName) {
       // userName별로 다른 MY잇슈 페이지 경로 설정
       let myIssueHref = './mypage_main.html'; // 기본 경로
+      let myLikeHref = './mypage_like.html';
 
       // if (userName === '김말숙') {
       //   myIssueHref = './mypage_main.html?김말숙';
@@ -73,6 +74,7 @@ $(function () {
 
       // 상단 네비 MY잇슈 메뉴 링크 변경
       $('.bot nav ul li').last().replaceWith(`<li><a href="${myIssueHref}">MY잇슈</a></li>`);
+      $('.right-menu li').eq(1).replaceWith(`<li class="heart_icon"><a href="${myLikeHref}"><img src="asset/heart.png" alt="heart"></a></li>`);
 
     } else {
       // 비회원인 경우 기본 메뉴 + MY잇슈는 로그인 링크로
@@ -82,6 +84,7 @@ $(function () {
     `);
 
       $('.bot nav ul li').last().replaceWith('<li><a href="./login.html">MY잇슈</a></li>');
+      $('.right-menu li').eq(1).replaceWith(`<li class="heart_icon"><a href="./login.html"><img src="asset/heart.png" alt="heart"></a></li>`);
     }
   }
 
@@ -129,13 +132,55 @@ $(function () {
     lastScrollTop = currentScroll;
   });
 
+  function highlightText(searchTerm) {
+    $('.menu_list .menu strong').each(function () {
+      const $this = $(this);
+      const text = $this.text();
+      const regex = new RegExp(`(${searchTerm})`, 'gi');
+
+      if (searchTerm) {
+        const newHtml = text.replace(regex, '<span class="highlight">$1</span>');
+        $this.html(newHtml);
+      } else {
+        // 검색어 없으면 원래대로
+        $this.html(text);
+      }
+    });
+  }
+
   $('.search_container img').on('click', function () {
-    $('.search_container').toggleClass('active');
-    $('.search_input').focus();
+    const $container = $('.search_container');
+    const $input = $('.search_input');
+    const inputVal = $input.val().trim();
+
+    if (!$container.hasClass('active')) {
+      $container.addClass('active');
+      $input.focus();
+    } else {
+      if (inputVal !== '') {
+        window.location.href = `./bobStore.html`;
+        highlightText(inputVal); // 하이라이트 실행
+      } else {
+        $container.removeClass('active');
+        highlightText(""); // 하이라이트 제거
+      }
+    }
   });
+
 
   // 초기 위치 설정
   moveMenu('mid');
+
+  $('.heart_icon a img').hover(
+    function () {
+      // 마우스를 올렸을 때
+      $(this).attr('src', 'asset/heart_item_on.png').css('padding', '10%');
+    },
+    function () {
+      // 마우스를 뗐을 때
+      $(this).attr('src', 'asset/heart.png').css('padding', '0%');
+    }
+  );
 
   /* Footer */
   const footerHtml = `

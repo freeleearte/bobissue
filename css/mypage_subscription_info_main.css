@@ -305,7 +305,7 @@ p {
     border-radius: 15px;
 }
 
-.button ul li:nth-child(2) {
+.button ul li:nth-child(1) {
     background: var(--sub-color-1);
 }
 

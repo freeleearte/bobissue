@@ -866,7 +866,7 @@ p {
 
 /* 의견작성하기 팝업 */
 .opinion_modal {
-    /* display: none; */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -876,6 +876,10 @@ p {
     z-index: 1000;
     justify-content: center;
     align-items: center;
+}
+
+.opinion_modal.on {
+    display: block;
 }
 
 /* 모달 박스 */
