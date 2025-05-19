@@ -162,33 +162,14 @@ body {
 
 
 .option {
-    /*     position: relative;
-    background-color: #56b6a9;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 30px;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    width: 100px; */
+
     position: relative;
     display: inline-block;
     width: auto;
 }
 
 .option button {
-    /*     border: none;
-    font: var(--pre-18-sb);
-    display: flex;
-    gap: 0px;
-    align-items: center;
-    justify-content: center;
-    color: var(--txt-w-color);
-    background: transparent;
-    min-width: 100px */
+
     display: inline-flex;
     align-items: center;
      justify-content: space-between;
@@ -355,8 +336,7 @@ body {
 /* 버튼 */
 
 .main .one .pagination {
-    margin-top: 100px;
-    margin-bottom: 88px;
+    margin-top: var(--con-pad);
     display: flex;
     justify-self: center;
     flex-direction:row;

@@ -54,6 +54,7 @@ body {
     gap: 120px;
     padding-top: var(--bt-pad);
     overflow: visible;
+    margin-bottom: var(--sec-pad);
 }
 
 .left_tab {
@@ -146,6 +147,7 @@ h4 {
     flex-direction: column;
     gap: 100px;
     flex: 1;
+
 }
 
 #cupon_type,
@@ -427,7 +429,7 @@ h4 {
     transition: .6s;
 }
 
-*/ .calendar_table td .day-text {
+.calendar_table td .day-text {
     position: relative;
     z-index: 2;
     display: inline-block;
@@ -478,8 +480,9 @@ h4 {
 }
 
 .box_type .sec5_left .sec5_t em {
-    font: var(--pre-20-b);
+    font: var(--pre-22-b);
     color: var(--txt-dark-gray);
+    padding-bottom: 5px;
 }
 
 .box_type .sec5_left .sec5_t span {
@@ -798,8 +801,8 @@ h4 {
     width: 100%;
     display: flex;
     justify-content: center;
-    padding-bottom: var(--con-pad);
     gap: 35px;
+    padding-top: var(--bt-pad);
 }
 
 .button p {

@@ -5,8 +5,8 @@ body {
 }
 
 h4 {
-  font: var(--pre-35-sb);
-  padding-bottom: 30px;
+  font: var(--pre-25-sb);
+  margin-bottom: 30px;
 }
 
 .main_visual {
@@ -66,7 +66,7 @@ input {
   gap: 120px;
   padding-top: var(--bt-pad);
   overflow: visible;
-  margin-bottom: var(--fc-pad);
+  margin-bottom: var(--sec-pad);
 }
 
 /* 왼쪽 고정 탭바 */
@@ -151,7 +151,6 @@ input {
 }
 
 .form_wrapper {
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -161,9 +160,12 @@ input {
 }
 
 .form_wrapper label {
-  font: var(--pre-28-r);
+  font: var(--pre-20-m);
 }
+.form_wrapper label span{
+  font: var(--pre-20-r);
 
+}
 .form_group {
   width: 100%;
   display: flex;
@@ -189,7 +191,7 @@ input {
 
 .form_right input[type="text"] {
   border: none;
-  border-bottom: 1px solid var(--main-color);
+  border-bottom: 3px solid var(--main-color);
   padding: 8px 20px;
   text-align: left;
   font-size: 16px;
@@ -203,7 +205,7 @@ input {
 
 .form_right input[type="password"] {
   border: none;
-  border-bottom: 1px solid var(--main-color);
+  border-bottom: 3px solid var(--main-color);
   padding: 8px 20px;
   font-size: 16px;
   width: 100px;
@@ -246,19 +248,27 @@ input {
 
 
 
+
+
+/* 하단 버튼 */
 .button {
+  width: 100%;
   display: flex;
   justify-content: center;
-  padding-top: var(--bt-pad);
+  gap: 35px;
+  padding-top: var(--con-pad);
 }
 
-button {
+.button p {
   width: 250px;
-  height: 50px;
-  font: var(--pre-25-b);
+  height: 55px;
   border: 0;
-  border-radius: 5px;
   background: var(--sub-color-1);
   color: var(--txt-w-color);
   cursor: pointer;
+ font: var(--pre-20-m);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

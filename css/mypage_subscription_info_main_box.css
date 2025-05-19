@@ -62,7 +62,7 @@ p {
     gap: 120px;
     padding-top: var(--bt-pad);
     overflow: visible;
-    margin-bottom: var(--fc-pad);
+    margin-bottom: var(--sec-pad);
 }
 
 .left_tab {
@@ -218,8 +218,7 @@ p {
 }
 
 .sec4_box {
-    width: 100%;
-    background-color: var(--bg-con-color);
+     background-color: var(--bg-con-color);
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
@@ -239,8 +238,9 @@ p {
 }
 
 .sec4_left .sec4_t em {
-    font: var(--pre-20-b);
-    color: var(--txt-dark-gray);
+    font: var(--pre-22-b);
+  color: var(--txt-dark-gray);
+  padding-bottom: 5px;
 }
 
 .sec4_left .sec4_t span {
@@ -270,7 +270,6 @@ p {
 
 /* 결제수단 */
 .sec5_card {
-    width: 100%;
     display: flex;
     align-items: center;
     background-color: var(--bg-con-color);
@@ -344,9 +343,9 @@ p {
     align-items: center;
     gap: 35px;
     color: var(--txt-w-color);
-    padding-bottom: 300px;
     cursor: pointer;
     font: var(--pre-20-m);
+    padding-top: var(--bt-pad);
 }
 
 .button ul li {

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>장바구니</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/bag_none.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/common.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header-placeholder"></div>
+        <header id="mainHeader"></header>
+        <div class="inner">
+            <div class="tit">
+                <p>장바구니</p>
+            </div>
+            <div class="con1">
+                <div class="con1_left">
+                    <!-- 상단 전체 선택 영역 -->
+                    <div class="select_all">
+                        <div class="left_wrap">
+                            <label class="custom-check" >
+                                <input type="checkbox" checked>
+                                <span class="checkmark"></span>
+                                <span class="text">전체선택</span>
+                            </label>
+                            <span class="count">0/0</span>
+                        </div>
+                        <button id="deleteSelected">선택삭제</button> 
+                    </div>
+
+                    <!-- 장바구니 아이템 리스트 -->
+                    <div class="cart_list">
+                        <div class="content">
+                            <div class="img_txt">
+                                <img src="asset/bag_none.png" alt="장바구니 비었어요">
+                            </div>
+                            
+                            <p>장바구니에 담긴 상품이 없습니다.</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="right">
+                    <div class="sticky_box">
+                        <img src="asset/bag_icon.png" alt="귀여운 캐릭터" class="character" />
+                        <div class="top">
+
+                            <div class="txt">
+                                <p>결제금액</p>
+                            </div>
+                            <div class="center">
+                                <ul>
+                                    <li>
+                                        <p>총 상품 금액
+                                        </p>
+                                        <span>0원</span>
+                                    </li>
+                                    <li>
+                                        <p>총 상품 금액
+                                        </p>
+                                        <span>0원</span>
+                                    </li>
+                                    <li>
+                                        <p>총 배송비
+                                        </p>
+                                        <span>0원</span>
+                                    </li>
+                                </ul>
+                            </div><!-- center -->
+                            <div class="bottom">
+                                <p>결제 예정 금액
+                                </p>
+                                <strong>0원</strong>
+                            </div><!-- bottom -->
+                        </div> <!-- top -->
+                        <div class="btn_wrap">
+                            <p><a href="#">상품을 담아주세요</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- con1 -->
+
+        </div>
+    </div>
+
+
+   
+
+</body>
+
+</html>
