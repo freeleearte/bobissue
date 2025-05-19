@@ -45,13 +45,13 @@ body {
 .con1_left .select_all {
     height: 80px;
     display: flex;
-    padding: 0  0 0 20px;
+    padding: 0 0 0 20px;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 30px;
 }
 
-.con1_left .select_all .left_wrap{
+.con1_left .select_all .left_wrap {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -64,6 +64,7 @@ body {
     justify-content: center;
     gap: 8px;
 }
+
 /* 기본 박스 디자인 */
 .custom-check input[type="checkbox"] {
     appearance: none;
@@ -109,7 +110,9 @@ body {
     width: 120px;
     height: 40px;
     border-radius: 5px;
+    cursor: pointer;
 }
+
 /* 아래 카드 */
 
 .cart_list {
@@ -316,14 +319,19 @@ body {
     height: 60px;
     border-radius: 8px;
     background-color: var(--main-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
 
 }
 
-.btn_wrap a {
-    display: block;
+.btn_wrap p {
+    height: 100%;
+}
+
+.btn_wrap p a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
     color: var(--txt-w-color);
     font: var(--pre-20-b);
 }

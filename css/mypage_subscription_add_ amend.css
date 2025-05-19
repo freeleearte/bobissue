@@ -860,6 +860,4 @@ h4 {
 .button p.ex {
     background: var(--txt-gray);
     color: var(--txt-w-color);
-    cursor: pointer;
-
 }
