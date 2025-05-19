@@ -45,7 +45,10 @@ p {
     font-weight: 700;
     color: var(--main-color);
 }
-
+.tap .list span a{
+    display: block;
+    cursor: pointer;
+}
 .tap .list img {
     width: 8px;
     height: 14px;
@@ -371,7 +374,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 .button ul li:nth-child(2) {

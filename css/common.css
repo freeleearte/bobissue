@@ -19,14 +19,19 @@
 
     --mp-title-font: 400 60px 'Cafe24Ohsquare', sans-serif;
     --sp-title-font: 400 45px 'Cafe24Ohsquare', sans-serif;
+    --pre-13-r: 400 13px "Pretendard", sans-serif;
+    --pre-13-sb: 600 13px "Pretendard", sans-serif;
+    --pre-13-m: 500 13px "Pretendard", sans-serif;
     --pre-15-m: 500 15px "Pretendard", sans-serif;
     --pre-15-r: 400 15px "Pretendard", sans-serif;
     --pre-18-r: 400 18px "Pretendard", sans-serif;
+    --pre-18-m: 500 18px "Pretendard", sans-serif;
     --pre-18-sb: 600 18px "Pretendard", sans-serif;
     --pre-20-r: 400 20px/30px "Pretendard", sans-serif;
     --pre-20-m: 500 20px "Pretendard", sans-serif;
     --pre-20-b: 700 20px "Pretendard", sans-serif;
     --pre-22-b: 700 22px "Pretendard", sans-serif;
+    --pre-22-sb: 600 22px "Pretendard", sans-serif;
     --pre-25-sb: 600 25px "Pretendard", sans-serif;
     --pre-25-r: 400 25px "Pretendard", sans-serif;
     --pre-25-m: 500 25px "Pretendard", sans-serif;
@@ -36,6 +41,7 @@
     --pre-30-sb: 600 30px "Pretendard", sans-serif;
     --pre-30-b: 700 30px "Pretendard", sans-serif;
     --pre-35-sb: 600 35px "Pretendard", sans-serif;
+    --pre-35-b: 700 35px "Pretendard", sans-serif;
     --pre-35-l: 300 35px "Pretendard", sans-serif;
     --pre-40-m: 400 40px "Pretendard", sans-serif;
     --pre-40-b: 700 40px "Pretendard", sans-serif;

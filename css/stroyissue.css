@@ -2,6 +2,11 @@
 
 body {
     font-family: var(--main-font-family);
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 .title {
@@ -55,7 +60,6 @@ body {
 
 .modal_test_wrap .start img {
     width: 437px;
-    height: 265px;
     padding-bottom: 25px;
     padding-top: 50px;
 }
@@ -64,6 +68,7 @@ body {
     display: flex;
     flex-direction: column;
     padding-bottom: 60px;
+
 }
 
 .modal_test_wrap .start .txt h3 {
@@ -87,11 +92,12 @@ body {
     font: var(--pre-25-sb);
     font-family: var(--main-font);
     text-align: center;
-    border-radius: 15px;
+    border-radius: 10px;
     border: none;
     background-color: var(--sub-color-1);
     color: var(--txt-w-color);
     cursor: pointer;
+    
 }
 
 
@@ -161,6 +167,7 @@ body {
     display: none;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     animation: fadeIn 0.3s ease-in-out;
 }
 
@@ -194,7 +201,13 @@ body {
 
 .modal_test_wrap .top .num img {
     position: absolute;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    top : 0;
 }
+
 .modal_test_wrap .top .num .prev {
     left: 0;
 }
@@ -214,12 +227,7 @@ body {
     text-align: center;
 }
 
-.modal_test_wrap .question img {
-    width: 40px;
-    height: 40px;
-    padding-bottom: 10px;
-    cursor: pointer;
-}
+
 
 .modal_test_wrap .bot {
     display: flex;
@@ -314,12 +322,12 @@ body {
 .modal_test_wrap .result-modal img {
     width: 420px;
     height: 250px;
-    padding-bottom: 60px;
 }
 
 .modal_test_wrap .result-modal .btn {
     display: flex;
     gap: 30px;
+    padding-top: 60px;
 }
 
 .modal_test_wrap .result-modal button {
@@ -328,7 +336,7 @@ body {
     font-size: 18px;
     font-weight: 500;
     color: var(--txt-w-color);
-    border-radius: 40px;
+    border-radius: 15px;
     border: none;
     display: flex;
     align-items: center;
@@ -490,28 +498,13 @@ body {
     height: 65px;
     background-color: #333;
     color: var(--txt-w-color);
-    border-radius: 60px;
+    border-radius: 15px;
     cursor: pointer;
 }
 
 .modal_test_wrap .result .btn button.like {
     background-color: var(--main-color);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -556,7 +549,8 @@ body {
 .story .gnb ul li.dropdown a.menu-toggle p {
     position: relative;
     padding-bottom: 10px;
-
+    width: 130px;
+    text-align: center;
 }
 
 .story .gnb ul li.dropdown a.menu-toggle p::after {
@@ -627,17 +621,11 @@ body {
 }
 
 .story .inner .content-section .con1 {
-    width: 100%;
     height: 410px;
     background: #F2F2F2;
     border-radius: 15px;
-}
-
-.story .content-section .con1 {
-    width: 100%;
-    height: 410px;
     display: flex;
-    gap: 50px;
+    gap: 2vw;
     align-items: center;
     padding-left: 40px;
 }
@@ -708,12 +696,16 @@ body {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
-    padding-top: 50px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 50px 0;
 }
 
 .story .content-section .story-all li {
-    width: 460px;
+    width: calc((100% - 50px) / 3);
+    /* 3개씩, gap 합 = 20*2=40 */
+/*     max-width: 460px; */
     height: 320px;
     border-radius: 30px;
     background-size: cover;
@@ -722,6 +714,7 @@ body {
     display: flex;
     align-items: flex-end;
     cursor: pointer;
+    margin-bottom: 2vh;
 }
 
 
@@ -834,7 +827,7 @@ body {
 }
 
 .story #section-situation .story-all li:nth-child(5) {
-    background-image: linear-gradient(180deg, rgba(51, 51, 51, 0.00) 21.46%, rgba(16, 16, 16, 0.68) 61.33%, #000 99.74%),url(../stroy.img/story-situation-5.jpg);
+    background-image: linear-gradient(180deg, rgba(51, 51, 51, 0.00) 21.46%, rgba(16, 16, 16, 0.68) 61.33%, #000 99.74%), url(../stroy.img/story-situation-5.jpg);
 }
 
 .story #section-situation .story-all li:nth-child(6) {
@@ -853,7 +846,7 @@ body {
 }
 
 .story #section-culture .story-all li:nth-child(3) {
-    background-image: linear-gradient(180deg, rgba(51, 51, 51, 0.00) 21.46%, rgba(16, 16, 16, 0.68) 61.33%, #000 99.74%),  url(../stroy.img/story-curture-3.jpg);
+    background-image: linear-gradient(180deg, rgba(51, 51, 51, 0.00) 21.46%, rgba(16, 16, 16, 0.68) 61.33%, #000 99.74%), url(../stroy.img/story-curture-3.jpg);
 }
 
 .story #section-culture .story-all li:nth-child(4) {
@@ -861,7 +854,7 @@ body {
 }
 
 .story #section-culture .story-all li:nth-child(5) {
-    background-image: linear-gradient(180deg, rgba(51, 51, 51, 0.00) 21.46%, rgba(16, 16, 16, 0.68) 61.33%, #000 99.74%),  url(../stroy.img/story-curture-5.jpg);
+    background-image: linear-gradient(180deg, rgba(51, 51, 51, 0.00) 21.46%, rgba(16, 16, 16, 0.68) 61.33%, #000 99.74%), url(../stroy.img/story-curture-5.jpg);
 }
 
 .story #section-culture .story-all li:nth-child(6) {

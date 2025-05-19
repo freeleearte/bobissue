@@ -37,7 +37,10 @@ body {
     font-weight: 700;
     color: var(--main-color);
 }
-
+.tap .list span a{
+    display: block;
+    cursor: pointer;
+}
 .tap .list img {
     width: 8px;
     height: 14px;
@@ -235,8 +238,11 @@ h4 {
     box-sizing: border-box;
     position: relative;
     transition: .3s;
+    cursor: pointer;
 }
-
+.box_type .type .type_all .type_box a{
+    display: block;
+}
 .box_type .type .type_all .type_box img {
     width: 35px;
     position: absolute;
@@ -518,6 +524,7 @@ color: var(--txt-light-gray);
     color: var(--txt-w-color);
     text-align: center;
     line-height: 35px;
+    cursor: pointer;
 }
 
 
@@ -563,6 +570,7 @@ color: var(--txt-light-gray);
     border-radius: 5px;
     width: 120px;
     height: 35px;
+    cursor: pointer;
 }
 
 
@@ -613,6 +621,7 @@ color: var(--txt-light-gray);
     display: flex;
     justify-content: center;
     padding-top: var(--fc-pad);
+    cursor: pointer;
 }
 
 .button p {
@@ -623,7 +632,7 @@ color: var(--txt-light-gray);
     color: var(--txt-w-color);
     cursor: pointer;
     font: var(--pre-20-m);
-    border-radius: 15px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
