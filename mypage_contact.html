@@ -24,11 +24,11 @@
             <div class="tap">
                 <div class="inner">
                     <div class=" list one">
-                        <span>마이잇슈</span>
+                        <span><a href="">마이잇슈</a></span>
                         <img src="asset/마이페이지/top_no_arrow.png" alt="arrow">
                     </div>
                     <div class="list two">
-                        <span>문의햇슈</span>
+                        <span><a href="">문의햇슈</a></span>
                     </div>
                 </div>
             </div>
@@ -124,29 +124,46 @@
                 </div><!-- main -->
             </section>
         </div>
-        <script>
+         <script>
             $(function () {
                 const $option = $('.option');
                 const $dropdown = $option.find('.dropdown');
                 const $selected = $option.find('.selected-text');
+                const $button = $option.find('button');
 
-                $option.find('button').on('click', function (e) {
+                // 버튼 클릭 시 드롭다운 토글 + 화살표 회전 토글
+                $button.on('click', function (e) {
                     e.stopPropagation();
-                    $dropdown.stop().slideToggle(200).css('opacity', 1);
+
+                    const isOpen = $(this).hasClass('on');
+
+                    // 모든 드롭다운 닫고 버튼 초기화
+                    $('.option button').removeClass('on');
+                    $('.option .dropdown').slideUp(200).css('opacity', 0);
+
+                    // 현재 버튼이 열려있지 않으면 열기
+                    if (!isOpen) {
+                        $(this).addClass('on');
+                        $(this).siblings('.dropdown').stop().slideDown(200).css('opacity', 1);
+                    }
                 });
 
+                // 옵션 항목 선택 시
                 $dropdown.find('li').on('click', function () {
                     $selected.text($(this).data('value'));
                     $dropdown.stop().slideUp(200).css('opacity', 0);
+                    $button.removeClass('on'); // ✅ 화살표 원래대로
                 });
 
+                // 바깥 클릭 시 닫기 + 화살표 원복
                 $(document).on('click', function () {
                     $dropdown.stop().slideUp(200).css('opacity', 0);
+                    $button.removeClass('on'); // ✅ 이 부분이 빠졌던 핵심!
                 });
             });
 
-
         </script>
+
 </body>
 
 </html>

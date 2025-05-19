@@ -37,7 +37,10 @@ body {
     font-weight: 700;
     color: var(--main-color);
 }
-
+.tap .list span a{
+    display: block;
+    cursor: pointer;
+}
 .tap .list img {
     width: 8px;
     height: 14px;
@@ -187,6 +190,7 @@ h4 {
     align-items: center;
     justify-content: center;
     transition: .6s;
+    cursor: pointer;
 }
 
 .top_tap ul .item.on {
@@ -235,6 +239,7 @@ h4 {
     box-sizing: border-box;
     position: relative;
     transition: .3s;
+    cursor: pointer;
 }
 
 .box_type .type .type_all .type_box img {
@@ -302,21 +307,28 @@ h4 {
 }
 
 .box_type .theme .box_all .theme_box {
-    width: 330px;
+     width: 330px;
     height: 285px;
     border: 1px solid var(--txt-gray);
     border-radius: 10px;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-    padding: 15px;
     gap: 25px;
     box-sizing: border-box;
     position: relative;
     transition: .6s;
+     padding: 15px;
+     cursor: pointer;
 }
-
+.box_type .theme .box_all .theme_box  a{
+        display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    width: 100%;
+    height: 100%;
+}
 .box_type .theme .box_all .theme_box img {
     width: 35px;
     position: absolute;
@@ -508,8 +520,13 @@ h4 {
     color: var(--txt-w-color);
     text-align: center;
     line-height: 35px;
+    cursor: pointer;
 }
-
+.box_type .sec5_right p a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
 
 
 
@@ -518,7 +535,7 @@ h4 {
     display: flex;
     align-items: center;
     background-color: var(--bg-con-color);
-    padding: 30px 25px;
+    padding: 30px;
     border-radius: 10px;
     justify-content: space-between;
 }
@@ -553,8 +570,11 @@ h4 {
     border-radius: 5px;
     width: 120px;
     height: 35px;
+    cursor: pointer;
 }
-
+.box_type .sec6_card > p a{
+    display: block;
+}
 
 /* SNS 알람 설정 */
 .box_type .sns_button {
@@ -663,8 +683,11 @@ h4 {
     color: var(--txt-w-color);
     text-align: center;
     line-height: 35px;
+    cursor: pointer;
 }
-
+.cupon_type .sec1_right p a{
+    display: block;
+}
 
 /* 결제수단 */
 .cupon_type .sec2_card {
@@ -695,15 +718,22 @@ h4 {
     color: var(--txt-medium-gray);
 }
 
-.cupon_type .sec2_card button {
-    border: none;
-    background-color: var(--sub-color-1);
-    color: var(--txt-w-color);
-    font: var(--pre-18-r);
-    border-radius: 5px;
-    text-align: center;
+.cupon_type .sec2_right {
     width: 120px;
     height: 35px;
+    background: var(--sub-color-1);
+    border-radius: 5px;
+}
+
+.cupon_type .sec2_right p {
+    font: var(--pre-18-r);
+    color: var(--txt-w-color);
+    text-align: center;
+    line-height: 35px;
+    cursor: pointer;
+}
+.cupon_type .sec2_right p a{
+    display: block;
 }
 
 /* 쿠폰선택 */
@@ -730,6 +760,7 @@ h4 {
     position: relative;
     padding: 0 30px;
     transition: .6s;
+    cursor: pointer;
 }
 
 
@@ -809,7 +840,12 @@ h4 {
     color: var(--txt-w-color);
     cursor: pointer;
     font: var(--pre-20-m);
-    border-radius: 15px;
+    border-radius: 10px;
+
+}
+.button p a{
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;

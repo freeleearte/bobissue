@@ -37,10 +37,12 @@ body {
     font-weight: 700;
     color: var(--main-color);
 }
-.tap .list span a{
+
+.tap .list span a {
     display: block;
     cursor: pointer;
 }
+
 .tap .list img {
     width: 8px;
     height: 14px;
@@ -150,7 +152,7 @@ h4 {
     flex-direction: column;
     gap: 100px;
     flex: 1;
- 
+
 }
 
 #cupon_type,
@@ -177,6 +179,7 @@ h4 {
     gap: 30px;
     align-items: center;
     justify-content: center;
+
 }
 
 .top_tap ul .item {
@@ -190,6 +193,7 @@ h4 {
     align-items: center;
     justify-content: center;
     transition: .6s;
+    cursor: pointer;
 }
 
 .top_tap ul .item.on {
@@ -240,9 +244,11 @@ h4 {
     transition: .3s;
     cursor: pointer;
 }
-.box_type .type .type_all .type_box a{
+
+.box_type .type .type_all .type_box a {
     display: block;
 }
+
 .box_type .type .type_all .type_box img {
     width: 35px;
     position: absolute;
@@ -304,7 +310,7 @@ h4 {
 /* 박스형 구독 유형 */
 .box_type .type .type_all .type_box.basic h3,
 .box_type .type .type_all .type_box.basic .price span {
-color: var(--txt-light-gray);
+    color: var(--txt-light-gray);
 }
 
 
@@ -633,6 +639,10 @@ color: var(--txt-light-gray);
     cursor: pointer;
     font: var(--pre-20-m);
     border-radius: 10px;
+}
+.button p a{
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
