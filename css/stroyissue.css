@@ -86,21 +86,34 @@ body {
     line-height: 35px
 }
 
-.modal_test_wrap .start button {
-    width: 330px;
-    height: 60px;
-    font: var(--pre-25-sb);
-    font-family: var(--main-font);
-    text-align: center;
-    border-radius: 10px;
-    border: none;
-    background-color: var(--sub-color-1);
-    color: var(--txt-w-color);
+
+/* 하단 버튼 */
+.modal_test_wrap .start .button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
     cursor: pointer;
-    
 }
 
+.modal_test_wrap .start .button p {
+    width: 330px;
+    height: 60px;
+    border: 0;
+    background: var(--sub-color-1);
+    color: var(--txt-w-color);
+    cursor: pointer;
+    font: var(--pre-25-m);
+    border-radius: 10px;
 
+}
+
+.modal_test_wrap .start .button p a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 
 
@@ -205,7 +218,7 @@ body {
     height: 40px;
     margin-bottom: 10px;
     cursor: pointer;
-    top : 0;
+    top: 0;
 }
 
 .modal_test_wrap .top .num .prev {
@@ -321,7 +334,7 @@ body {
 
 .modal_test_wrap .result-modal img {
     width: 420px;
-    height: 250px;
+    border-radius: 30px;
 }
 
 .modal_test_wrap .result-modal .btn {
@@ -395,7 +408,6 @@ body {
     gap: 30px;
     /*     padding-top: 90px; */
     justify-content: center;
-    padding-bottom: 60px;
 }
 
 .modal_test_wrap .result ul li {
@@ -483,24 +495,43 @@ body {
     background-image: linear-gradient(180deg, rgba(51, 51, 51, 0.00) 21.46%, rgba(16, 16, 16, 0.68) 61.33%, #000 99.74%), url(../stroy.img/card1.jpg);
 }
 
-.modal_test_wrap .result .btn {
+
+/* 하단 버튼 */
+.modal_test_wrap .result .button {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    padding-top: var(--bt-pad);
+}
+
+.modal_test_wrap .result .button p {
+    width: 250px;
+    height: 55px;
+    border: 0;
+    background: var(--sub-color-1);
+    color: var(--txt-w-color);
+    cursor: pointer;
+    font: var(--pre-20-m);
+    border-radius: 10px;
+}
+
+.modal_test_wrap .result .button p a {
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 30px;
 }
 
-.modal_test_wrap .result .btn button {
-    border: none;
-    font: var(--pre-25-sb);
-    width: 330px;
-    height: 65px;
-    background-color: #333;
+.modal_test_wrap .result .button p.ex {
+    background: var(--txt-gray);
     color: var(--txt-w-color);
-    border-radius: 15px;
-    cursor: pointer;
 }
+
+
+
+
 
 .modal_test_wrap .result .btn button.like {
     background-color: var(--main-color);
@@ -680,16 +711,15 @@ body {
 }
 
 .story .content-section .con1 .txt .button a {
-    width: 165px;
-    height: 38px;
+    width: 210px;
+    height: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: var(--sub-color-1);
     border-radius: 5px;
     color: var(--txt-w-color);
-    font-size: 15px;
-    font-weight: 600;
+    font: var(--pre-18-m);
 }
 
 .story .content-section .story-all {
@@ -705,7 +735,7 @@ body {
 .story .content-section .story-all li {
     width: calc((100% - 50px) / 3);
     /* 3개씩, gap 합 = 20*2=40 */
-/*     max-width: 460px; */
+    /*     max-width: 460px; */
     height: 320px;
     border-radius: 30px;
     background-size: cover;

@@ -121,17 +121,17 @@ $(function () {
     if (a > 3) {
       resultType = "불밥이";
       resultText = "불같이 뜨거운 당신을 위한 매운 스토리!";
-      resultImg = "./story.img/modal_spicy.jpg";
+      resultImg = "../stroy.img/modal_spicy.jpg";
       resultAlt = "불밥이 이미지";
     } else if (b > 3) {
       resultType = "꿀밥이";
       resultText = "달콤한 당신을 위한 꿀 같은 스토리!";
-      resultImg = "story.img/modal_sweet.jpg";
+      resultImg = "../stroy.img/modal_sweet.jpg";
       resultAlt = "꿀밥이 이미지";
     } else {
       resultType = "담밥이";
       resultText = "균형 잡힌 취향의 당신에게 어울리는 담백한 이야기!";
-      resultImg = "story.img/modal_plain.jpg";
+      resultImg = "../stroy.img/modal_normal.jpg";
       resultAlt = "담밥이 이미지";
     }
 
