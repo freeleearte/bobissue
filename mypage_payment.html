@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/mypage_payment.css">
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="js/common.js"></script>
+  <script src="js/mypage_common.js"></script>
 </head>
 
 <body>
@@ -29,98 +30,74 @@
           </div>
           <div class="one">
             <span class="on">결제수단</span>
-            <img src="asset/mypage/to p_arrow.png" alt="arrow">
           </div>
         </div>
       </div><!-- //.tap -->
       <section class="con1">
         <!-- 왼쪽 탭메뉴바 고정 -->
-        <div class="tab_wrapper">
-          <img src="asset/mypage/tap_bar_icon.png" alt="">
-          <div class="left_tab">
-            <div class="sticky_box">
-              <div class="tab_sec">
-                <em>쇼핑</em>
-                <ul>
-                  <li class="on"><a href="" target="_blank">주문내역잇슈</a></li>
-                  <li><a href="" target="_blank">찜햇슈</a></li>
-                  <li><a href="" target="_blank">취소 및 반품내역</a></li>
-                  <li><a href="" target="_blank">문의햇슈</a></li>
-                </ul>
-              </div><!-- //.tab_sec -->
-              <div class="tab_sec">
-                <em>정보관리</em>
-                <ul>
-                  <li><a href="" target="_blank">회원정보</a></li>
-                  <li><a href="" target="_blank">배송지관리</a></li>
-                  <li><a href="" target="_blank">결제수단</a></li>
-                </ul>
-              </div><!-- //.tab_sec -->
-              <div class="tab_sec list">
-                <em>구독관리</em>
-                <ul>
-                  <li><a href="./subinfo.html" target="_blank">구독정보</a></li>
-                  <li><a href="" target="_blank">구독신청</a></li>
-                </ul>
-              </div><!-- //.tab_sec -->
-            </div>
-          </div><!-- //.left_tab -->
-        </div><!-- //.wrapper -->
+        <div class="tab_wrapper" id="myTab"></div>
 
         <div class="pay_all">
           <div class="pay_con1">
             <h4>기본 결제 수단</h4>
-            <div class="card_box">
-              <div class="card_info">
-                <img src="./img/nori.png" alt="카드 이미지" class="card_img" />
-                <div class="card_text">
-                  <p class="card_name">KB국민 nori 체크카드</p>
-                  <p class="card_number">1004 8282 5959 1004</p>
+            <div class="sec6_card">
+              <div class="left">
+                <img src="asset/마이페이지/card.png" alt="당신의 카드">
+                <div class="sec6_ri">
+                  <h5>KB국민 nori 체크카드</h5>
+                  <p>1004 1234 1004 1234</p>
                 </div>
-              </div><!-- //.card_info -->
-              <div class="card_actions">
-                <a href="#" class="edit">수정</a>
-                <a href="#" class="delete">삭제</a>
               </div>
-            </div><!-- //.card_box -->
+              <div class="btn">
+                <p><a href="#">수정</a></p>
+                <div class="line"></div>
+                <button><p>삭제</p></button>
+              </div>
+            </div><!-- sec6_card -->
           </div><!-- //.pay_con1 -->
           <div class="pay_con2">
             <h4>등록 결제 수단</h4>
             <div class="con2_boxall">
-              <div class="card_box">
-                <div class="card_info">
-                  <img src="./img/nori.png" alt="카드 이미지" class="card_img" />
-                  <div class="card_text">
-                    <p class="card_name">KB국민 nori 체크카드</p>
-                    <p class="card_number">1004 8282 5959 1004</p>
+              <div class="sec6_card">
+                <div class="left">
+                  <img src="asset/마이페이지/card.png" alt="당신의 카드">
+                  <div class="sec6_ri">
+                    <h5>KB국민 nori 체크카드</h5>
+                    <p>1004 1234 1004 1234</p>
                   </div>
-                </div><!-- //.card_info -->
-                <div class="card_actions">
-                  <a href="#" class="edit">수정</a>
-                  <a href="#" class="delete">삭제</a>
                 </div>
-              </div><!-- //.card_box -->
-              <div class="card_box">
-                <div class="card_info">
-                  <img src="./img/nori.png" alt="카드 이미지" class="card_img" />
-                  <div class="card_text">
-                    <p class="card_name">KB국민 nori 체크카드</p>
-                    <p class="card_number">1004 8282 5959 1004</p>
-                  </div>
-                </div><!-- //.card_info -->
-                <div class="card_actions">
-                  <a href="#" class="edit">수정</a>
-                  <a href="#" class="delete">삭제</a>
+                <div class="btn">
+                  <p><a href="#">수정</a></p>
+                  <div class="line"></div>
+                  <button><p>삭제</p></button>
                 </div>
-              </div><!-- //.card_box -->
-            </div>
-            <div class="button">
-              <button><a href="#">결제수단 추가</a></button>
-            </div>
-          </div><!-- //.pay_con2 -->
-        </div><!-- //.pay_all -->
-      </section>
-    </div>
+              </div>
+              <div class="sec6_card">
+                <div class="left">
+                  <img src="asset/마이페이지/card.png" alt="당신의 카드">
+                  <div class="sec6_ri">
+                    <h5>KB국민 nori 체크카드</h5>
+                    <p>1004 1234 1004 1234</p>
+                  </div>=
+                </div>
+                <div class="btn">
+                  <p><a href="#">수정</a></p>
+                  <div class="line"></div>
+                  <button><p>삭제</p></button>
+                </div>
+              </div>
+            </div><!-- sec6 결제수단 -->
+
+
+
+          </div>
+          <div class="button">
+            <p><a href="./mypage_payment_register.html"></a>결제수단 추가</p>
+          </div>
+        </div><!-- //.pay_con2 -->
+    </div><!-- //.pay_all -->
+    </section>
+  </div>
   </div>
 </body>
 

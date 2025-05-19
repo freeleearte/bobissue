@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mypage에서구독수정</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/mypage_subscription_add_ amend.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/mypage_common.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header-placeholder"></div>
+        <header id="mainHeader"></header>
+
+        <div class="main_visual">
+        </div><!-- //.main_visual -->
+        <div class="inner">
+            <div class="tap">
+                <div class="inner">
+                    <div class=" list one">
+                        <span>마이잇슈</span>
+                        <img src="asset/마이페이지/top_no_arrow.png" alt="arrow">
+                    </div>
+                    <div class=" list one">
+                        <span>구독정보</span>
+                        <img src="asset/마이페이지/top_no_arrow.png" alt="arrow">
+                    </div>
+                    <div class="list two">
+                        <span>구독수정</span>
+                    </div>
+                </div>
+            </div>
+            <section class="con1">
+                <div class="tab_wrapper" id="myTab"></div>
+
+                <!-- 오른쪽 내용 -->
+                <div class="add box-mode">
+                    <div class="top_tap">
+                        <h4>구독 방식</h4>
+                        <ul class="subscription-types">
+                            <li class="item on" data-type="box">
+                                <img src="asset/마이페이지/check_icon.png" alt="check" class="icon">
+                                <span class="text">박스형 구독</span>
+                            </li>
+                            <li class="item" data-type="cupon">
+                                <img src="asset/마이페이지/check_icon.png" alt="check" class="icon">
+                                <span class="text">쿠폰형 구독</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="box_type" class="box_type">
+                        <div class="type">
+                            <h4>구독유형</h4>
+                            <div class="type_all">
+                                <div class="type_box basic on">
+                                    <img src="asset/마이페이지/check_icon.png" alt="check" class="icon">
+                                    <h3>BASIC</h3>
+                                    <p class="desc">무료배송</p>
+                                    <div class="price"><span>₩ 5,000</span> | Month</div>
+                                </div>
+                                <div class="type_box premium">
+                                    <img src="asset/마이페이지/check_icon.png" alt="check" class="icon">
+                                    <h3>PREMIUM</h3>
+                                    <p class="desc">이달의 스토리 컨텐츠 3종</p>
+                                    <div class="price"><span>₩ 39,900</span> | Month</div>
+                                </div>
+                                <div class="type_box GLOBAL">
+                                    <img src="asset/마이페이지/check_icon.png" alt="check" class="icon">
+                                    <h3>GLOBAL</h3>
+                                    <p class="desc">PREMIUM + 굿즈/선물</p>
+                                    <div class="price"><span>₩ 49,900</span> | Month</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="basic_detail_frame" class="detail_frame ">
+                            <div class="sec5">
+                                <h4>배송지</h4>
+                                <div class="sec5_box">
+                                    <div class="sec5_left">
+                                        <div class="sec5_t">
+                                            <em>집</em>
+                                            <span>김말자 010-1004-8282</span>
+                                        </div>
+                                        <div class="sec5_b">
+                                            <p>서울 서대문구 디지털로 10길, 밥잇슈오피스텔 1004호<br>[100400]</p>
+                                        </div>
+                                    </div>
+                                    <div class="sec5_right">
+                                        <p><a href="#"></a>수정하기</p>
+                                    </div>
+                                </div>
+                            </div><!-- sec5 배송지 -->
+                            <div class="sec6">
+                                <h4>결제수단</h4>
+                                <div class="sec6_card">
+                                    <div class="left">
+                                        <img src="asset/마이페이지/card.png" alt="당신의 카드">
+                                        <div class="sec6_ri">
+                                            <h5>KB국민 nori 체크카드</h5>
+                                            <p>1004 1234 1004 1234</p>
+                                        </div>
+                                    </div>
+                                    <p><a href="#"></a>수정하기</p>
+                                </div>
+                            </div><!-- sec6 결제수단 -->
+                        </div>
+                        <div id="shared_detail_frame" class="detail_frame  active">
+                            <div class="theme">
+                                <h4>구독 테마</h4>
+                                <div class="box_all">
+                                    <div class="theme_box on">
+                                        <img src="asset/마이페이지/check_icon.png" alt="check" class="icon">
+                                        <div class="tit">스토리 구독 BOX</div>
+                                        <div class="img"></div>
+                                    </div>
+                                    <div class="theme_box">
+                                        <img src="asset/마이페이지/check_icon.png" alt="check" class="icon">
+                                        <div class="tit">상황 구독 BOX</div>
+                                        <div class="img"></div>
+                                    </div>
+                                    <div class="theme_box">
+                                        <img src="asset/마이페이지/check_icon.png" alt="check" class="icon">
+                                        <div class="tit">문화 구독 BOX</div>
+                                        <div class="img"></div>
+                                    </div>
+                                </div>
+                            </div><!-- 구독테마 -->
+                            <div class="method">
+                                <h4>구독방식</h4>
+                                <div class="method_button">
+                                    <label class="method_wrap">
+                                        <input type="radio" name="method" value="receive" />
+                                        <span class="custom_radio"></span>
+                                        랜덤받기
+                                    </label>
+
+                                    <label class="method_wrap">
+                                        <input type="radio" name="method" value="receive" checked />
+                                        <span class="custom_radio"></span>
+                                        매 달 직접 선택하기
+                                    </label>
+                                </div>
+                            </div><!-- 구독방식 -->
+                            <div class="calendar">
+                                <h4>배송 받는 날짜 설정</h4>
+                                <div class="calendar_header">
+                                    <span class="calendar_month">1월</span>
+                                </div>
+
+                                <table class="calendar_table">
+                                    <thead>
+                                        <tr>
+                                            <th class="satur">일</th>
+                                            <th>월</th>
+                                            <th>화</th>
+                                            <th>수</th>
+                                            <th>목</th>
+                                            <th>금</th>
+                                            <th class="satur">토</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                            <td class="satur">4</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="satur">5</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                            <td>8</td>
+                                            <td>9</td>
+                                            <td>10</td>
+                                            <td class="satur">11</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="satur">12</td>
+                                            <td>13</td>
+                                            <td>14</td>
+                                            <td>15</td>
+                                            <td>16</td>
+                                            <td>17</td>
+                                            <td class="satur">18</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="satur">19</td>
+                                            <td>20</td>
+                                            <td>21</td>
+                                            <td>22</td>
+                                            <td>23</td>
+                                            <td>24</td>
+                                            <td class="satur">25</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="satur">26</td>
+                                            <td>27</td>
+                                            <td>28</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div><!-- 배송주기 -->
+                            <div class="sec5">
+                                <h4>배송지</h4>
+                                <div class="sec5_box">
+                                    <div class="sec5_left">
+                                        <div class="sec5_t">
+                                            <em>집</em>
+                                            <span>김말자 010-1004-8282</span>
+                                        </div>
+                                        <div class="sec5_b">
+                                            <p>서울 서대문구 디지털로 10길, 밥잇슈오피스텔 1004호<br>[100400]</p>
+                                        </div>
+                                    </div>
+                                    <div class="sec5_right">
+                                        <p><a href="#"></a>수정하기</p>
+                                    </div>
+                                </div>
+                            </div><!-- sec5 배송지 -->
+                            <div class="sec6">
+                                <h4>결제수단</h4>
+                                <div class="sec6_card">
+                                    <div class="left">
+                                        <img src="asset/마이페이지/card.png" alt="당신의 카드">
+                                        <div class="sec6_ri">
+                                            <h5>KB국민 nori 체크카드</h5>
+                                            <p>1004 1234 1004 1234</p>
+                                        </div>
+                                    </div>
+                                    <p><a href="#"></a>수정하기</p>
+                                </div>
+                            </div><!-- sec6 결제수단 -->
+                            <div class="sns">
+                                <h4>SNS 알람 설정</h4>
+                                <div class="sns_button">
+                                    <label class="radio_wrap">
+                                        <input type="radio" name="sns" value="receive" checked />
+                                        <span class="custom_radio"></span>
+                                        수신
+                                    </label>
+
+                                    <label class="radio_wrap">
+                                        <input type="radio" name="sns" value="refusal" />
+                                        <span class="custom_radio"></span>
+                                        거부
+                                    </label>
+                                </div>
+                            </div><!-- //.sns 알람 설정 -->
+                        </div>
+
+                    </div><!-- box_type -->
+
+                    <div id="cupon_type" class="cupon_type">
+                        <div class="sec1">
+                            <h4>배송지</h4>
+                            <div class="sec1_box">
+                                <div class="sec1_left">
+                                    <div class="sec1_t">
+                                        <em>집</em>
+                                        <span>김말자 010-1004-8282</span>
+                                    </div>
+                                    <div class="sec1_b">
+                                        <p>서울 서대문구 디지털로 10길, 밥잇슈오피스텔 1004호<br>[100400]</p>
+                                    </div>
+                                </div>
+                                <div class="sec1_right">
+                                    <p><a href="#"></a>기본배송지</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sec2">
+                            <h4>결제수단</h4>
+                            <div class="sec2_card">
+                                <div class="left">
+                                    <img src="asset/마이페이지/card.png" alt="당신의 카드">
+                                    <div class="sec2_ri">
+                                        <h5>KB국민 nori 체크카드</h5>
+                                        <p>1004 1234 1004 1234</p>
+                                    </div>
+                                </div>
+                                <button>
+                                    수정하기
+                                </button>
+                            </div>
+                        </div>
+                        <div class="sec3">
+                            <h4>쿠폰선택</h4>
+                            <div class="coupon_wrapper">
+                                <!-- 쿠폰 1 -->
+                                <div class="coupon on">
+                                    <img src="asset/마이페이지/check_icon.png" alt="check">
+                                    <h3>일인분 잇슈 FLEX 6</h3>
+                                    <p>1인용 밀키트 6팩 선택하슈!</p>
+                                    <strong>48,000원</strong>
+                                </div>
+
+                                <!-- 쿠폰 2 -->
+                                <div class="coupon">
+                                    <img src="asset/마이페이지/check_icon.png" alt="check">
+                                    <h3>밥 더 잇슈 PLUS</h3>
+                                    <p>4팩 구매 시 +1팩 더 잇슈!</p>
+                                    <strong>43,000원</strong>
+                                </div>
+
+                                <!-- 쿠폰 3 -->
+                                <div class="coupon">
+                                    <img src="asset/마이페이지/check_icon.png" alt="check">
+                                    <h3>선물이 잇슈</h3>
+                                    <p>기프트형 3팩을 선물하슈!</p>
+                                    <strong>39,000원</strong>
+                                </div>
+
+                                <!-- 쿠폰 4 -->
+                                <div class="coupon">
+                                    <img src="asset/마이페이지/check_icon.png" alt="check">
+                                    <h3>트래블 잇슈</h3>
+                                    <p>여행용 밀키트 3팩잇슈!</p>
+                                    <strong>39,000원</strong>
+                                </div>
+                            </div><!-- //.coupon_wrapper -->
+                        </div>
+                    </div><!-- cupon_type -->
+                    <div class="button">
+                        <p class="ex"><a href="#"></a>임시저장하기</p>
+                        <p><a href="#"></a>수정하기</p>
+                    </div>
+                </div><!-- //.add -->
+            </section>
+        </div>
+        <script>
+            /* 달력수정하는데 1일로 기본 설정되어있음 */
+            document.addEventListener('DOMContentLoaded', () => {
+                const calendarCells = document.querySelectorAll('.calendar_table td');
+
+                calendarCells.forEach(cell => {
+                    const text = cell.textContent.trim();
+
+                    // 숫자 감싸기
+                    if (text !== '' && !cell.querySelector('span')) {
+                        cell.innerHTML = `<span class="day-text">${text}</span>`;
+                    }
+
+                    // ✅ 1일 자동 선택
+                    if (text === '1') {
+                        cell.classList.add('selected');
+                    }
+
+                    // 클릭 시 선택/해제
+                    cell.addEventListener('click', () => {
+                        if (text === '') return;
+
+                        if (cell.classList.contains('selected')) {
+                            cell.classList.remove('selected');
+                        } else {
+                            calendarCells.forEach(td => td.classList.remove('selected'));
+                            cell.classList.add('selected');
+                        }
+                    });
+                });
+            });
+
+
+        </script>
+</body>
+
+</html>

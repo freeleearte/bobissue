@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>장바구니</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/order_sheet.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/common.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header-placeholder"></div>
+        <header id="mainHeader"></header>
+        <div class="banner_txt">
+            <p>주문서</p>
+        </div>
+        <div class="inner">
+            <div class="main">
+                <div class="sec1">
+                    <h4>주문상품</h4>
+                    <a href="#">
+                        <div class="left">
+                            <img src="asset/마이페이지/order_img1.jpg" alt="제품페이지">
+                        </div>
+                        <div class="center">
+                            <span>[프레시지]</span>
+                            <p>캠핑포차 김치어묵 우동전골 2인분 1,080g</p>
+                            <div class="bottom_txt">
+                                <p>27%
+                                    <span>16,980원</span>
+                                </p>
+                                <span>수량 1</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="sec2">
+                    <div class="top">
+                        <h4>배송정보</h4>
+
+                        <span>배송지 변경 <img src="asset/order_arrow.png" alt="arrow"></span>
+
+                    </div>
+
+                    <p>배송지</p>
+                    <div class="sec2_box">
+                        <div class="sec2_left">
+                            <div class="sec2_t">
+                                <em>우리집</em>
+                                <span>김말자 010-1004-8282</span>
+                            </div>
+                            <div class="sec2_b">
+                                <p>서울 서대문구 디지털로 10길, 밥잇슈오피스텔 1004호<br>[100400]</p>
+                            </div>
+                        </div>
+                        <div class="sec2_right">
+                            <p><a href="#">기본 배송지</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sec3">
+                    <h4>요청사항</h4>
+                    <div class="custom_select" id="requestSelect">
+                        <button class="select_btn"><span class="label">요청사항을 입력해주세요.</span>
+                            <img src="./subscription_details.img/chevron-right.png" alt="down" class="arrow"></button>
+                        <ul class="select_options">
+                            <li>베송 전에 미리 연락 바랍니다.</li>
+                            <li>문 앞에 놔주세요.</li>
+                            <li>택배함에 놔주세요.</li>
+                            <li>부재 시 핸드폰으로 연락주세요.</li>
+                            <li>경비실에 맡겨주세요.</li>
+                            <li data-custom="true">직접 입력</li>
+                        </ul>
+                        <div class="custom_input_wrap" style="display: none;">
+                            <textarea placeholder="요청사항을 입력해주세요."></textarea>
+                        </div>
+                    </div><!-- custom_select -->
+                </div>
+                <div class="sec4">
+                    <h4>쿠폰</h4>
+                    <div class="custom_select">
+                        <button class="select_btn"><span class="label">사용가능 쿠폰 1장 / 전체 2장</span>
+                            <img src="./subscription_details.img/chevron-right.png" alt="down" class="arrow"></button>
+                        <ul class="select_options">
+                            <li>일인분 잇슈 FLEX 6 쿠폰</li>
+                            <li>2000원 할인 쿠폰</li>
+
+                        </ul>
+                    </div><!-- custom_select -->
+                </div>
+                <div class="sec5">
+                    <div class="top">
+                        <h4>결제수단</h4>
+
+                        <span>결제수단 변경 <img src="asset/order_arrow.png" alt="arrow"></span>
+                    </div>
+
+
+                    <section class="payment-method">
+                        <ul class="method-list">
+                            <li>
+                                <label>
+                                    <input type="radio" name="payment" checked />
+                                    <span class="custom_radio"></span>
+                                    <div class="method_content this">
+                                        <div class="left">
+                                            <img src="asset/마이페이지/card.png" alt="당신의 카드" class="icon">
+                                            <div class="sec5_ri">
+                                                <p>KB국민 nori 체크카드</p>
+                                                <span>1004 1234 1004 1234</span>
+                                            </div>
+                                        </div>
+                                        <div class="btn">
+                                            <p>기본 결제수단</p>
+                                        </div>
+                                    </div>
+                                </label>
+                            </li>
+
+                            <li>
+                                <label>
+                                    <input type="radio" name="payment" checked />
+                                    <span class="custom_radio"></span>
+                                    <div class="method_content">
+                                        <img src="asset/pay_toss.png" alt="toss pay" class="icon">
+                                        <span class="badge">혜택</span>
+                                    </div>
+                                </label>
+                            </li>
+
+                            <li>
+                                <label>
+                                    <input type="radio" name="payment" checked />
+                                    <span class="custom_radio"></span>
+                                    <div class="method_content">
+                                        <img src="asset/pay_kakao.png" alt="kakao pay" class="icon">
+                                        <span class="badge">혜택</span>
+                                    </div>
+                                </label>
+                            </li>
+
+                            <li>
+                                <label>
+                                    <input type="radio" name="payment" checked />
+                                    <span class="custom_radio"></span>
+                                    <div class="method_content">
+                                        <img src="asset/pay_na.png" alt="naver pay" class="icon">
+                                    </div>
+                                </label>
+                            </li>
+
+                            <li>
+                                <label>
+                                    <input type="radio" name="payment" checked />
+                                    <span class="custom_radio"></span>
+                                    <div class="method_content">
+                                        <strong>다른 결제수단</strong>
+                                        <span>신용카드 · 핸드폰 · 간편결제</span>
+                                    </div>
+                                </label>
+                            </li>
+                        </ul>
+                    </section>
+
+                </div>
+                <div class="sec6">
+                    <h4>개인정보 결제 및 동의</h4>
+                    <ul>
+                        <li>개인정보 수집 · 이용 및 처리 동의 <a href="#">보기</a></li>
+                        <li>전자지급 결제대행 서비스 이용약관 동의 <a href="#">보기</a></li>
+                        <li>선불전자지급수단 이용약관 동의 <a href="#">보기</a>
+                        </li>
+                    </ul>
+                    <label>
+                        <input type="radio" name="payment" checked />
+                        <span class="custom_radio"></span>
+                        <div class="method_content">
+                            <p>위 내용을 확인하였으며 결제에 동의합니다.</p>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="btn">
+                    <p><a href="#">구매하기</a></p>
+                </div>
+
+                <div class="modal-bg">
+                    <div class="result-modal">
+                        <img src="asset/order_icon.png" alt="밥이슈 이미지">
+                        <p>결제가 완료되었습니다.</p>
+                        <div class="btn">
+                            <p><a href="#">홈으로 가기</a></p>
+                            <p><a href="#">주문내역 가기</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- wrap -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 🔶 요청사항 select
+            const requestSelect = document.getElementById('requestSelect');
+            if (requestSelect) {
+                const requestBtn = requestSelect.querySelector('.select_btn');
+                const requestOptions = requestSelect.querySelector('.select_options');
+                const requestLabel = requestSelect.querySelector('.label');
+                const inputWrap = requestSelect.querySelector('.custom_input_wrap');
+                const defaultLabel = '요청사항을 입력해주세요.';
+
+                requestBtn.addEventListener('click', () => {
+                    requestSelect.classList.toggle('on');
+                });
+
+                requestOptions.querySelectorAll('li').forEach((li) => {
+                    li.addEventListener('click', () => {
+                        requestSelect.classList.remove('on');
+
+                        if (li.dataset.custom === 'true') {
+                            requestLabel.textContent = defaultLabel;
+                            inputWrap.style.display = 'block';
+                        } else {
+                            requestLabel.textContent = li.textContent;
+                            inputWrap.style.display = 'none';
+                        }
+                    });
+                });
+            }
+
+            // 🔷 쿠폰 select (sec4)
+            const couponSelect = document.querySelector('.sec4 .custom_select');
+            if (couponSelect) {
+                const couponBtn = couponSelect.querySelector('.select_btn');
+                const couponLabel = couponBtn.querySelector('.label');
+                const couponOptions = couponSelect.querySelector('.select_options');
+
+                couponBtn.addEventListener('click', () => {
+                    couponSelect.classList.toggle('on');
+                });
+
+                couponOptions.querySelectorAll('li').forEach((li) => {
+                    li.addEventListener('click', () => {
+                        couponLabel.textContent = li.textContent;
+                        couponSelect.classList.remove('on');
+                    });
+                });
+            }
+        });
+
+
+
+    </script>
+
+</body>
+
+</html>

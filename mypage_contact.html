@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mypage_like</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/mypage_contact.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/mypage_common.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header-placeholder"></div>
+        <header id="mainHeader"></header>
+
+        <div class="main_visual">
+        </div><!-- //.main_visual -->
+        <div class="inner">
+            <div class="tap">
+                <div class="inner">
+                    <div class=" list one">
+                        <span>마이잇슈</span>
+                        <img src="asset/마이페이지/top_no_arrow.png" alt="arrow">
+                    </div>
+                    <div class="list two">
+                        <span>문의햇슈</span>
+                    </div>
+                </div>
+            </div>
+            <section class="con1">
+                <div class="tab_wrapper" id="myTab"></div>
+
+                <div class="main">
+                    <div class="one">
+                        <div class="top_txt">
+                            <strong>주문배송현황</strong>
+                            <div class="option">
+                                <button class="">
+                                    <span class="selected-text">최신순</span>
+                                    <img src="asset/마이페이지/option.png" alt="arrow">
+                                </button>
+                                <ul class="dropdown">
+                                    <li data-value="최신순">최신순</li>
+                                    <li data-value="오래된순">오래된순</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="content">
+                            <ul>
+                                <li class="list">
+                                    <div class="top">
+                                        <div class="q">
+                                            Q
+                                        </div>
+                                        <p>답변대기중</p>
+                                    </div>
+                                    <div class="tit">
+                                        <p>폭싹 삭았수다 구독 박스 구매했는데 배송 날짜 변경 가능할까요?</p>
+                                        <span>2025.05.13 15:00</span>
+                                    </div>
+
+                                </li>
+                                <li class="list">
+                                    <div class="top">
+                                        <div class="q">
+                                            Q
+                                        </div>
+                                        <p>답변대기중</p>
+                                    </div>
+                                    <div class="tit">
+                                        <p>폭싹 삭았수다 구독 박스 구매했는데 배송 날짜 변경 가능할까요?</p>
+                                        <span>2025.05.13 15:00</span>
+                                </li>
+                                <li class="list">
+                                    <div class="top">
+                                        <div class="q">
+                                            Q
+                                        </div>
+                                        <p>답변완료</p>
+                                    </div>
+                                    <div class="tit">
+                                        <p>오징어게임 구독 박스 구매했는데 언제 배송되나요?</p>
+                                        <strong>- 안녕하세요, 고객님^^<br>
+                                            주문하신 구독 박스는 월요일날 출고 예정입니다. 감사합니다.</strong>
+                                        <span>2025.05.13 15:00</span>
+                                    </div>
+
+                                </li>
+                                <li class="list">
+                                    <div class="top">
+                                        <div class="q">
+                                            Q
+                                        </div>
+                                        <p>답변완료</p>
+                                    </div>
+                                    <div class="tit">
+                                        <p>오징어게임 구독 박스 구매했는데 언제 배송되나요?</p>
+                                        <strong>- 안녕하세요, 고객님^^<br>
+                                            주문하신 구독 박스는 월요일날 출고 예정입니다. 감사합니다.</strong>
+                                        <span>2025.05.13 15:00</span>
+                                    </div>
+
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                        <ul class="pagination">
+                            <li class="left_btn"><img src="asset/left_bob.png" alt="왼쪽 버튼"></li>
+                            <li class="page-btn on" data-page="1">1</li>
+                            <li class="page-btn" data-page="2">2</li>
+                            <li class="page-btn" data-page="3">3</li>
+                            <li class="right_btn"><img src="asset/right_bob.png" alt="오른쪽 버튼"></li>
+                        </ul> <!-- //.pagination -->
+
+                    </div>
+                </div><!-- main -->
+            </section>
+        </div>
+        <script>
+            $(function () {
+                const $option = $('.option');
+                const $dropdown = $option.find('.dropdown');
+                const $selected = $option.find('.selected-text');
+
+                $option.find('button').on('click', function (e) {
+                    e.stopPropagation();
+                    $dropdown.stop().slideToggle(200).css('opacity', 1);
+                });
+
+                $dropdown.find('li').on('click', function () {
+                    $selected.text($(this).data('value'));
+                    $dropdown.stop().slideUp(200).css('opacity', 0);
+                });
+
+                $(document).on('click', function () {
+                    $dropdown.stop().slideUp(200).css('opacity', 0);
+                });
+            });
+
+
+        </script>
+</body>
+
+</html>
