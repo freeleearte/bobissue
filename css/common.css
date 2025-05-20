@@ -16,14 +16,19 @@
     --title-font-family: 'Cafe24Ohsquare', sans-serif;
 
     /* font */
-
-    --mp-title-font: 400 60px 'Cafe24Ohsquare', sans-serif;
+    --mp-title-font: 400 80px 'Cafe24Ohsquare', sans-serif;
     --sp-title-font: 400 45px 'Cafe24Ohsquare', sans-serif;
     --pre-13-r: 400 13px "Pretendard", sans-serif;
     --pre-13-sb: 600 13px "Pretendard", sans-serif;
     --pre-13-m: 500 13px "Pretendard", sans-serif;
     --pre-15-m: 500 15px "Pretendard", sans-serif;
+<<<<<<< HEAD
+    --pre-15-b: 700 15px "Pretendard", sans-serif;
+    --pre-16-m: 500 16px "Pretendard", sans-serif;
+=======
+    --pre-15-sb: 600 15px "Pretendard", sans-serif;
     --pre-15-r: 400 15px "Pretendard", sans-serif;
+>>>>>>> 21623a1f20e137c3f878623487ba59af8d7a6895
     --pre-18-r: 400 18px "Pretendard", sans-serif;
     --pre-18-m: 500 18px "Pretendard", sans-serif;
     --pre-18-sb: 600 18px "Pretendard", sans-serif;
@@ -40,13 +45,13 @@
     --pre-28-sb: 600 28px "Pretendard", sans-serif;
     --pre-30-sb: 600 30px "Pretendard", sans-serif;
     --pre-30-b: 700 30px "Pretendard", sans-serif;
+    --pre-34-m: 400 34px "Pretendard", sans-serif;
     --pre-35-sb: 600 35px "Pretendard", sans-serif;
     --pre-35-b: 700 35px "Pretendard", sans-serif;
     --pre-35-l: 300 35px "Pretendard", sans-serif;
     --pre-40-m: 400 40px "Pretendard", sans-serif;
     --pre-40-b: 700 40px "Pretendard", sans-serif;
     --pre-45-b: 700 45px "Pretendard", sans-serif;
-    --pre-40-b: 700 40px "Pretendard", sans-serif;
     --pre-50-b: 700 50px "Pretendard", sans-serif;
     --pre-80-eb: 800 80px "Pretendard", sans-serif;
     --pre-80-r: 400 80px "Pretendard", sans-serif;
@@ -55,7 +60,6 @@
     --main-color: #005731;
     --sub-color-1: #FF6B00;
     --sub-color-2: #F5B642;
-    --bg-con-color: #F6F6F6;
     --light-yellow: #FFF49E;
     --more-light-yellow: #FEFCF2;
     --dark-green: #80A55C;
@@ -88,7 +92,7 @@
 
 /* header */
 .header-placeholder {
-    height: 162px;
+    height: 172px;
 }
 
 header {
@@ -202,7 +206,7 @@ header .mid .left ul li {
     font-size: 25px;
     color: var(--txt-gray);
     padding-inline: 15px;
-    border-right: 2px solid var(--txt-medium-gray);
+    border-right: 1.5px solid var(--txt-medium-gray);
 }
 
 header .mid .left ul li:last-child {
@@ -232,13 +236,13 @@ header .mid .left .sub_ad img {
     }
 
     50% {
-        margin-left: -40px;
+        margin-left: 0;
     }
 }
 
 header .bot {
     width: 100%;
-    height: 55px;
+    height: 65px;
 }
 
 header .bot .inner {
@@ -261,14 +265,6 @@ header .bot nav ul li a {
     font-weight: 500;
     font-size: 18px;
     color: var(--txt-gray);
-    transition: .3s;
-    border-bottom: 2px solid transparent;
-}
-
-header .bot nav ul li:hover a {
-    border-color: red;
-    color: red;
-    padding-bottom: 13px;
 }
 
 /* .scroll */
@@ -281,9 +277,24 @@ header.scroll .bot .inner {
     justify-content: space-between;
 }
 
-header ul.right-menu {
+header.scroll .bot ul.s_right {
     display: flex;
     gap: 20px;
+}
+
+header .bot ul.s_right li {}
+
+header .bot ul.s_right li a {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-content: center;
+}
+
+header ul.right-menu {
+    display: flex;
+    gap: 40px;
 }
 
 header ul.right-menu li a {
@@ -365,66 +376,59 @@ footer .logo img {
     width: 100%;
 }
 
-footer .f_left .info {
+footer .f_left .f_nav {
     display: flex;
+    margin-bottom: 30px;
+}
+
+footer .f_left .f_nav li {
+    padding-right: 15px;
+    border-right: 1px solid var(--txt-medium-gray);
+    margin-right: 15px;
+}
+
+footer .f_left .f_nav li:last-child {
+    padding-right: 0;
+    border-right: 0;
+    margin-right: 0;
+}
+
+footer .f_left .f_nav li a {
     color: var(--txt-w-color);
-    gap: 60px;
-    height: 110px;
+    font-size: 20px;
 }
 
-footer .f_left .info strong {
-    font: var(--pre-35-sb);
+footer .f_left .info {
+    width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    column-gap: 20px;
 }
 
-footer .f_left .info p {
-    font: var(--pre-18-r);
+footer .f_left .info li {
+    font-size: 23px;
+    color: var(--txt-light-gray);
 }
 
-footer .f_left .info img {
-    width: 109px;
-    height: fit-content;
-    margin-left: -20px;
-}
-
-footer .f_left .info div {
+footer .f_right {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 10px;
 }
 
-footer .f_left .info .time_num {}
-
-footer .f_left .info .time_num i {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    font-size: 15px;
+footer .f_right strong {
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--txt-w-color);
 }
 
-footer .f_left .info .f_nav {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+footer .f_right p {
+    font-size: 18px;
+    color: var(--txt-light-gray);
 }
 
-footer .f_left .info .f_nav li a {
-    font-size: 15px;
-}
-
-footer .f_right .sns {
-    display: flex;
-    gap: 25px;
-}
-
-footer .f_right .sns li {
-    width: 36px;
-}
-
-footer .f_right .sns li img {
-    width: 100%;
-}
-
-footer .inner>span {
+footer span {
     display: block;
     text-align: right;
     font-size: 18px;
