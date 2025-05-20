@@ -37,7 +37,10 @@ body {
     font-weight: 700;
     color: var(--main-color);
 }
-
+.tap .list span a{
+    display: block;
+    cursor: pointer;
+}
 .tap .list img {
     width: 8px;
     height: 14px;
@@ -163,7 +166,7 @@ body {
     width: 100%;
     height: 150px;
     border-radius: 15px;
-    background-color:var(--more-light-yellow);
+    background-color: var(--more-light-yellow);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -235,16 +238,18 @@ body {
 
     display: inline-flex;
     align-items: center;
-     justify-content: space-between;
+    justify-content: center;
     gap: 10px;
-    padding: 10px 20px;
-    width: 130px;
+    padding: 10px;
+    width: 110px;
+    min-width: 110px;
     background-color: #56b6a9;
     color: var(--txt-w-color);
-    font: var(--pre-18-sb);
+    font: var(--pre-15-r);
     border: none;
     border-radius: 30px;
     cursor: pointer;
+    box-sizing: border-box;
 }
 
 .option img {
@@ -274,6 +279,7 @@ body {
 }
 
 .option .dropdown li {
+    width: 100%;
     color: #777;
     font-weight: 600;
     cursor: pointer;
@@ -282,7 +288,7 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    font: var(--pre-18-sb);
+      font: var(--pre-15-r);
     color: var(--txt-gray);
     transition: .3s;
     border-radius: 8px 8px 0 0;
@@ -338,22 +344,25 @@ body {
 
 .main .two .content .main_con li .top .right a {
     text-decoration: underline;
-    font: var(--pre-18-r);
+    font: var(--pre-15-r);
 }
 
 .main .two .content .main_con li .bottom {
     background-color: var(--bg-con-color);
     border-radius: 10px;
     padding: 0 20px;
+    height: 150px;
+    display: flex;
+    align-items: center;
 }
 
 .main .two .content .main_con li .bottom a {
     width: 100%;
-    height: 170px;
+    height: 100%;
     display: flex;
     gap: 30px;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
 
 }
 
@@ -366,7 +375,7 @@ body {
     width: 100%;
 }
 
-.main .two .content .main_con li .bottom span {
+.main .two .content .main_con li .bottom .center span {
     font: var(--pre-15-m);
     color: var(--txt-medium-m-gray);
 }
@@ -393,10 +402,10 @@ body {
     font: var(--pre-25-sb);
     color: var(--txt-dark-gray);
 }
-
-.main .two .content .main_con li .bottom .bottom_txt span {
+.main .two .content .main_con li .bottom strong{
     font: var(--pre-20-b);
     color: var(--sub-color-1);
+    width: 100px;
 }
 
 
@@ -439,5 +448,5 @@ body {
 .pagination li.on {
     color: var(--txt-w-color);
     background-color: var(--sub-color-1);
-   border: 1px solid var(--sub-color-1);
+    border: 1px solid var(--sub-color-1);
 }

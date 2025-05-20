@@ -7,7 +7,7 @@
 h2 {
   font-family: var(--eng-font-family);
   color: var(--main-color);
-  font-size: 50px;
+  font-size: 45px;
 }
 
 .main_visual {
@@ -53,7 +53,7 @@ h2 {
 .con1 .icon {
   width: 280px;
   height: 250px;
-  background: url(../asset/mounillssue/icon.png) no-repeat;
+  background: url(../asset/mounillssue/icon.png) no-repeat center/contain;
 }
 
 
@@ -86,13 +86,13 @@ h2 {
 .event_list .event_item .evicon1,
 .event_list .event_item .evicon3 {
   position: absolute;
-  left: -5%;
+  left: -4.5%;
   top: 25%;
 }
 
 .event_list .event_item .evicon2 {
   position: absolute;
-  left: -4%;
+  left: -4.5%;
   top: 30%;
 }
 
@@ -152,6 +152,7 @@ h2 {
   display: inline-block;
   position: relative;
   z-index: 1;
+  color: var(--txt-w-color);
 }
 
 .event_list .event_item .tag::after {
@@ -178,12 +179,12 @@ h2 {
 
 /* 공지사항 */
 .con3 {
-  padding: 100px 0 100px 0;
+  padding: 100px 0;
 }
 
 .notice_header {
   width: 100%;
-  height: 100px;
+  height: 120px;
   background: url(../asset/mounillssue/notice_top.png) no-repeat;
   border-radius: 30px 30px 0 0;
   display: flex;
@@ -193,6 +194,7 @@ h2 {
 
 .notice_header h2 {
   color: var(--txt-w-color);
+  font-size: 45px;
 }
 
 .notice {
@@ -205,30 +207,35 @@ h2 {
 }
 
 .notice_list {
-  width: 70%;
+  width: 100%;
   height: 500px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: start;
-  gap: 30px;
-  padding: 60px 0 60px 150px;
-  flex: 1;
 }
 
 .notice_item {
-  width: 695px;
-  display: flex;
+  width: 100%;
   flex: 1;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: space-between;
+  border-bottom: 1px solid var(--main-color);
   font: var(--pre-25-r);
+}
+
+.notice_item:last-child {
+  border: 0;
 }
 
 .question {
   width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 15px 25px;
+  cursor: pointer;
 }
 
 .qnum {
@@ -250,8 +257,12 @@ h2 {
   color: var(--txt-dark-gray);
 }
 
+.notice_item.on span.qtext {
+  font: var(--pre-25-b);
+  color: var(--sub-color-1);
+}
+
 .arrow {
-  margin-left: auto;
   width: 20px;
   height: auto;
   display: flex;
@@ -259,9 +270,20 @@ h2 {
   justify-content: flex-end;
 }
 
-.notice_character {
-  padding: 100px 60px 0 0;
+/* 공지사항 답변 on */
+.notice_answer {
+  display: none;
+  padding: 0 0 20px 110px;
+  font: var(--pre-18-r);
+  color: var(--txt-dark-gray);
 }
+
+.notice_item.on .notice_answer {
+  display: block;
+}
+
+
+
 
 
 /* 밥잇슈 */
@@ -328,9 +350,9 @@ h2 {
 }
 
 .faq_left h2 {
-  font-family: var(--title-font-family);
-  color: var(--txt-w-color);
+  font-family: var(--eng-font-family);
   font-size: 45px;
+  color: var(--txt-w-color);
   text-align: center;
 }
 
@@ -338,14 +360,15 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 30px;
-
 }
 
 .faq_left .faq_icons button {
   border: 0;
   background: transparent;
   cursor: pointer;
+  width: 40px;
 }
+
 
 
 /* Q&A 오른쪽 리스트 */
@@ -369,15 +392,20 @@ h2 {
   justify-content: start;
 }
 
+.faq_item:last-child {
+  border: 0;
+}
+
 .faq_item.on {
   height: 216px;
+  overflow: hidden;
 }
 
 .faq_question {
   height: 105px;
   /* 기존보다 줄여서 아래 공간 확보 */
   padding: 0;
-  font: var(--pre-20-r);
+  font: var(--pre-25-r);
   text-align: left;
   background: none;
   border: none;
@@ -387,6 +415,7 @@ h2 {
   justify-content: start;
   gap: 15px;
 }
+
 
 .faq_item.on .faq_question {
   height: 86px;
@@ -410,14 +439,14 @@ h2 {
 }
 
 .faq_item.on span {
-  font: var(--pre-20-b);
+  font: var(--pre-25-b);
   color: var(--sub-color-1);
 }
 
 .faq_answer {
   height: 0;
   color: var(--txt-dark-gray);
-  font: var(--pre-18-r);
+  font: var(--pre-25-b);
   overflow: hidden;
   padding-left: 40px;
   transition: height 0.3s ease;
@@ -431,5 +460,6 @@ h2 {
 }
 
 .faq_answer p {
+  font: var(--pre-18-r);
   margin: 0;
 }

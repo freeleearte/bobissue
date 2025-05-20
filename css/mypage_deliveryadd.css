@@ -145,7 +145,7 @@ h4 {
 
 /* 오른쪽 파트 */
 .form {
-  width: 100%;
+  flex: 1;
 }
 
 .delivery_form {
@@ -177,7 +177,7 @@ h4 {
   padding: 15px;
   font: var(--pre-18-r);
   border-radius: 5px;
-  border: 2px solid var(--main-color);
+  border: 1px solid var(--main-color);
 }
 
 
@@ -201,7 +201,7 @@ h4 {
 .custom_radio {
   width: 18px;
   height: 18px;
-  border: 2px solid var(--txt-light-gray);
+  border: 1px solid var(--txt-light-gray);
   border-radius: 50%;
   position: relative;
   font: var(--pre-20-r);
@@ -243,9 +243,14 @@ h4 {
   color: var(--txt-w-color);
   cursor: pointer;
  font: var(--pre-20-m);
-  border-radius: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border-radius: 10px;
+  
 }
 
+.button p a{
+display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
