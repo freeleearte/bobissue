@@ -389,7 +389,6 @@ body {
     justify-content: center;
     gap: 5px;
     padding: 50px 0 40px 0;
-    padding-bottom: 40px;
 }
 
 .modal_test_wrap .result>.txt h3 {
@@ -429,7 +428,37 @@ body {
     align-items: flex-end;
     padding: 8px 15px;
     color: var(--txt-w-color);
+    position: relative;
 }
+
+
+
+.modal_test_wrap .result ul li a>img {
+    width: 40px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+
+}
+
+.modal_test_wrap .result ul li a>img.gray {
+    display: block;
+}
+
+.modal_test_wrap .result ul li a>img.red {
+    display: none;
+}
+
+.modal_test_wrap .result ul li a>img.on.red {
+    display: block;
+}
+
+.modal_test_wrap .result ul li a>img.on.gray {
+    display: none;
+}
+
+
 
 .modal_test_wrap .result ul li .txt {
     display: flex;
@@ -756,6 +785,27 @@ body {
     align-items: flex-end;
     padding: 15px 20px;
     color: var(--txt-w-color);
+    position: relative;
+}
+
+.story .content-section .story-all li a>img {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 50px;
+}
+.story .content-section .story-all li a>img.gray{
+    display: block;
+}
+.story .content-section .story-all li a>img.on.gray{
+    display: block;
+}
+.story .content-section .story-all li a>img.red {
+    display: none;
+}
+
+.story .content-section .story-all li a>img.on.red {
+    display: block;
 }
 
 .story .content-section .story-all li .txt {

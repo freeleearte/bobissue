@@ -7,7 +7,7 @@ $(function () {
   let totalQuestions = $('.quiz .question').length; // 전체 질문 수
 
   // 테스트 시작
-  $('.modal_test_wrap .start button').on('click', function () {
+  $('.modal_test_wrap .start .button').on('click', function () {
     $('.modal_test_wrap .start').removeClass('on');
     $('.modal_test_wrap .quiz').addClass('on');
     showQuestion($('.first'));
@@ -130,7 +130,7 @@ $(function () {
       resultAlt = "꿀밥이 이미지";
     } else {
       resultType = "담밥이";
-      resultText = "균형 잡힌 취향의 당신에게 어울리는 담백한 이야기!";
+      resultText = "균형 잡힌 당신위한 담백한 이야기!";
       resultImg = "../stroy.img/modal_normal.jpg";
       resultAlt = "담밥이 이미지";
     }
