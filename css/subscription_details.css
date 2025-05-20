@@ -16,7 +16,6 @@ div.scroll {
 
 /* 상단 */
 .checked {
-    height: 768px;
     margin-top: 60px;
 }
 
@@ -397,9 +396,8 @@ div.scroll {
 }
 
 .con .hidden_wrap .containner {
-    padding: 100px 0;
+    padding-top: 100px;
     display: flex;
-    height: 1800px;
     width: 1000px;
     flex-direction: column;
     gap: 80px;

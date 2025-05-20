@@ -143,7 +143,7 @@ h4 {
 
 /* 오른쪽 파트 */
 .form {
-  width: 100%;
+  flex: 1;
 }
 
 .memberinfo_form {
@@ -186,7 +186,7 @@ h4 {
   max-width: 400px; /* 너무 넓지 않게 제한 */
   padding: 15px;
   font: var(--pre-18-r);
-  border: 2px solid var(--main-color);
+  border: 1px solid var(--main-color);
   border-radius: 5px;
 }
 
@@ -204,6 +204,7 @@ h4 {
   position: absolute;
   left: 55%;
   top: 3px;
+
 }
 
 select,
@@ -237,6 +238,7 @@ select:focus {
   display: flex;
   justify-content: center;
   width: 100%;
+
 }
 
 .address_row .form_inner {
@@ -253,6 +255,7 @@ select:focus {
   font: var(--pre-20-r);
   color: var(--txt-dark-gray);
   padding-top: 14px;
+    
 }
 
 .address_row .form_content {
@@ -267,10 +270,11 @@ select:focus {
   width: 100%;
   padding: 14px;
   font: var(--pre-18-r);
-  border: 1px solid #000;
+  
   border-radius: 6px;
   box-sizing: border-box;
   max-width: none;
+   border: 1px solid var(--main-color);
 }
 
 .address_row .desc {
@@ -304,7 +308,7 @@ select:focus {
   flex: 1;
   padding: 0 20px;
   background: var(--txt-w-color);
-  border: 1px solid #000;
+   border: 1px solid var(--main-color);
   border-radius: 5px;
   align-items: center;
   max-width: 390px;
@@ -314,6 +318,7 @@ select:focus {
   width: 80px;
   text-align: center;
   border: none;
+
 }
 
 /* .gender_options {
@@ -373,7 +378,7 @@ justify-content: center;
   transform: translateY(-50%);
   height: 20px;
   width: 20px;
-  border: 2px solid var(--txt-light-gray);
+  border: 1px solid var(--txt-light-gray);
   border-radius: 50%;
   box-sizing: border-box;
 }
@@ -411,8 +416,13 @@ justify-content: center;
   color: var(--txt-w-color);
   cursor: pointer;
  font: var(--pre-20-m);
-  border-radius: 15px;
-  display: flex;
+  border-radius: 10px;
+ 
+}
+.button p a{
+ display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  height: 100%;
 }
