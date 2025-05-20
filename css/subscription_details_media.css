@@ -242,6 +242,7 @@
 
     .containner .top ul {
         gap: 20px;
+        overflow: hidden;
     }
 
     .containner .top ul li {
@@ -455,7 +456,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-       background-color: rgba(0, 0, 0, 0.4);
+        background-color: rgba(0, 0, 0, 0.4);
         /* 초기 투명 */
         z-index: 350;
         opacity: 0;
@@ -464,11 +465,11 @@
         display: flex;
         justify-content: center;
         align-items: flex-end;
-          transition: opacity 0.3s ease;
+        transition: opacity 0.3s ease;
     }
 
     .option_overlay.active {
-        
+
         /* 어두운 배경 */
         opacity: 1;
         pointer-events: auto;
@@ -760,7 +761,30 @@
     }
 
     /* 아코디언 */
+    .containner .top h3 {
+        font-size: 30px;
+    }
 
+    .containner .top>p {
+        font: var(--pre-18-r);
+        text-align: center;
+    }
+
+    .containner .top p span {
+        font: var(--pre-20-b);
+    }
+
+    .containner>.bottom h3 {
+        font-size: 30px;
+    }
+
+    .containner>.bottom p {
+        font: var(--pre-18-r);
+    }
+
+    .containner>.bottom p span {
+        font: var(--pre-20-b);
+    }
 
     .con .banner button {
         width: 160px;
@@ -768,13 +792,65 @@
         font: var(--pre-15-m);
     }
 
+    .containner .top ul li .txt .top p {
+        text-align: left;
+    }
+
+    .containner>.bottom ul li .txt .top p {
+        text-align: left;
+    }
+
+    .containner>.bottom ul {
+        flex-wrap: nowrap;
+        /*     overflow: hidden; */
+        justify-content: flex-start;
+        width: auto;
+        gap: 10px;
+    }
+
+    /* 스와이퍼  */
+
+    .swiper {
+        width: 100%;
+        overflow: visible;
+        padding-right: 20px;
+        overflow-x: hidden
+    }
+
+    .acodian .swiper-wrapper,
+    .acodian_2 .swiper-wrapper {
+        display: flex;
+        width: max-content !important;
+    }
 
 
+    .acodian,
+    .acodian_2 {
+        overflow-x: visible;
+        padding-right: 20px;
+    }
 
+    .acodian_2 .swiper-wrapper::after {
+        content: "";
+        display: block;
+        width: 24px;
+        /* ✅ 원하는 여백 */
+        flex-shrink: 0;
+    }
 
+    /*    .acodian_2.swiper {
+        padding-right: 20px;
 
+    } */
 
+    .swiper-slide {
+        width: 190px;
+        flex-shrink: 0;
+    }
 
-
+    /* .acodian_2 .swiper-slide:last-child {
+  margin-right: 20px;
+}
+ */
 
 }

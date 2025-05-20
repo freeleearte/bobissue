@@ -91,22 +91,22 @@ $(function () {
 
 
 
-// 열기
-  $('.option_bar_before button').on('click', function () {
-    $('.option_overlay').addClass('active');
-  });
+    // 열기
+    $('.option_bar_before button').on('click', function () {
+        $('.option_overlay').addClass('active');
+    });
 
-  // 닫기 - 엑스버튼
-  $('.option_overlay .cancle').on('click', function () {
-    $('.option_overlay').removeClass('active');
-  });
+    // 닫기 - 엑스버튼
+    $('.option_overlay .cancle').on('click', function () {
+        $('.option_overlay').removeClass('active');
+    });
 
-  // 닫기 - 바깥 클릭 시 (option_bar 외부 클릭)
-  $(document).on('click', function (e) {
-    if ($(e.target).hasClass('option_overlay')) {
-      $('.option_overlay').removeClass('active');
-    }
-  });
+    // 닫기 - 바깥 클릭 시 (option_bar 외부 클릭)
+    $(document).on('click', function (e) {
+        if ($(e.target).hasClass('option_overlay')) {
+            $('.option_overlay').removeClass('active');
+        }
+    });
 
 
 
@@ -121,4 +121,36 @@ $(function () {
             $(this).parent('.banner').siblings('.hidden').slideDown();
         }
     });
+
+    /* 스와이퍼 */
+
+    // 모든 .acodian, .acodian_2 슬라이더 개별 초기화
+    document.querySelectorAll('.acodian').forEach((swiperContainer) => {
+        new Swiper(swiperContainer, {
+            slidesPerView: 'auto',
+            spaceBetween: 16,
+            centeredSlides: true,
+            slidesOffsetAfter: 20,
+            pagination: {
+                el: swiperContainer.querySelector('.swiper-pagination'),
+                clickable: true,
+            },
+        });
+    });
+
+    document.querySelectorAll('.acodian_2').forEach((swiperContainer) => {
+        new Swiper(swiperContainer, {
+            slidesPerView: 'auto',
+            spaceBetween: 16,
+            centeredSlides: true,
+            slidesOffsetAfter: 20,
+            pagination: {
+                el: swiperContainer.querySelector('.swiper-pagination2'),
+                clickable: true,
+            },
+        });
+    });
+
+
+
 });

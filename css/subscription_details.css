@@ -3,8 +3,11 @@
 body {
     font-family: var(--main-font-family);
     color: var(--txt-dark-gray);
+    /* ✅ 전체 스크롤 방지 */
 }
-
+html, body {
+    overflow-x: hidden;
+}
 
 
 .gototop {
@@ -549,6 +552,7 @@ section.txt .all .con3 img {
     width: 100%;
     height: 235px;
     border-radius: 5px 5px 0 0;
+     object-fit: cover;
 }
 
 .containner .top ul li .txt {
@@ -689,6 +693,7 @@ section.txt .all .con3 img {
     width: 100%;
     height: 235px;
     border-radius: 5px 5px 0 0;
+     object-fit: cover;
 }
 
 .containner>.bottom ul li .txt {

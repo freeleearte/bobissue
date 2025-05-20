@@ -9,8 +9,10 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/subscription_details.css">
     <link rel="stylesheet" href="css/subscription_details_media.css">
+    
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/subscription_details.js"></script>
 
@@ -29,103 +31,103 @@
             </div>
         </div>
         <div class="option_overlay">
-        <div class="option_bar">
-            <div class="select">
-                <div class="cancle"><img src="subscription_details.img/cancle_icon.png" alt="나가기"></div>
-                <div class="custom_select">
-                    <button class="select_btn"><span class="label">컨텐츠를 선택해주세요.</span>
-                        <img src="./subscription_details.img/chevron-right.png" alt="down" class="arrow"></button>
-                    <ul class="select_options">
-                        <li>오징어 게임을 먹어볼슈?</li>
-                        <li>오늘도 고생햇수다 제주 드셔봣슈</li>
-                        <li>우리 모두가 흑백 요리사! 전문적인 잇슈</li>
-                        <li>대환장, 기안장 우리함께 대환장이슈</li>
-                        <li>화제 잇슈를 먹어 볼 누구 없슈 ?</li>
-                        <li>연예인의 스타 레시피, 집에서 스타잇슈</li>
-                    </ul>
-                </div><!-- custom_select -->
-                <div class="custom_select">
-                    <button class="select_btn"><span class="label">원하는 구성을 선택해주세요.</span>
-                        <img src="./subscription_details.img/chevron-right.png" alt="down" class="arrow"></button>
-                    <ul class="select_options">
-                        <li>밥이슈가 선정한 랜덤 BOX !</li>
-                        <li>밀키트 구성은 제가 구성할래요 !
-                        </li>
-                    </ul>
-                </div><!-- custom_select -->
+            <div class="option_bar">
+                <div class="select">
+                    <div class="cancle"><img src="subscription_details.img/cancle_icon.png" alt="나가기"></div>
+                    <div class="custom_select">
+                        <button class="select_btn"><span class="label">컨텐츠를 선택해주세요.</span>
+                            <img src="./subscription_details.img/chevron-right.png" alt="down" class="arrow"></button>
+                        <ul class="select_options">
+                            <li>오징어 게임을 먹어볼슈?</li>
+                            <li>오늘도 고생햇수다 제주 드셔봣슈</li>
+                            <li>우리 모두가 흑백 요리사! 전문적인 잇슈</li>
+                            <li>대환장, 기안장 우리함께 대환장이슈</li>
+                            <li>화제 잇슈를 먹어 볼 누구 없슈 ?</li>
+                            <li>연예인의 스타 레시피, 집에서 스타잇슈</li>
+                        </ul>
+                    </div><!-- custom_select -->
+                    <div class="custom_select">
+                        <button class="select_btn"><span class="label">원하는 구성을 선택해주세요.</span>
+                            <img src="./subscription_details.img/chevron-right.png" alt="down" class="arrow"></button>
+                        <ul class="select_options">
+                            <li>밥이슈가 선정한 랜덤 BOX !</li>
+                            <li>밀키트 구성은 제가 구성할래요 !
+                            </li>
+                        </ul>
+                    </div><!-- custom_select -->
 
-                <div class="custom_select">
-                    <button class="select_btn"><span class="label">(필수 3개)원하는 밀키트를 구성해주세요.</span>
-                        <img src="./subscription_details.img/chevron-right.png" alt="down" class="arrow"></button>
-                    <ul class="select_options check">
-                        <li>
-                            <div class="left">
-                                <img src="subscription_details.img/check_off.png" alt="check_off" class="check_off">
-                                <img src="subscription_details.img/check_on.png" alt="check_on" class="check_on">
-                                소갈비찜 세트
-                            </div>
-                        </li>
-                        <li>
-                            <div class="left">
-                                <img src="subscription_details.img/check_off.png" alt="check_off" class="check_off">
-                                <img src="subscription_details.img/check_on.png" alt="check_on" class="check_on">
-                                전 부침 세트 키트
-                            </div>
-                        </li>
-                        <li>
-                            <div class="left">
-                                <img src="subscription_details.img/check_off.png" alt="check_off" class="check_off">
-                                <img src="subscription_details.img/check_on.png" alt="check_on" class="check_on">
-                                소고기 무굿 키트
-                        </li>
-                        <li>
-                            <div class="left">
-                                <img src="subscription_details.img/check_off.png" alt="check_off" class="check_off">
-                                <img src="subscription_details.img/check_on.png" alt="check_on" class="check_on">
-                                우대 갈비찜 키트
-                        </li>
-                        <li>
-                            <div class="left">
-                                <img src="subscription_details.img/check_off.png" alt="check_off" class="check_off">
-                                <img src="subscription_details.img/check_on.png" alt="check_on" class="check_on">
-                                감자퓨레 키트
-                            </div>
-                        </li>
-                        <li>
-                            <div class="left">
-                                <img src="subscription_details.img/check_off.png" alt="check_off" class="check_off">
-                                <img src="subscription_details.img/check_on.png" alt="check_on" class="check_on">
-                                비프 브루기농 키트
-                            </div>
-                        </li>
-                        <li>
-                            <div class="left">
-                                <img src="subscription_details.img/check_off.png" alt="check_off" class="check_off">
-                                <img src="subscription_details.img/check_on.png" alt="check_on" class="check_on">
-                                순살 갈비찜 키트
-                            </div>
-                        </li>
-                        <li>
-                            <div class="left">
-                                <img src="subscription_details.img/check_off.png" alt="check_off" class="check_off">
-                                <img src="subscription_details.img/check_on.png" alt="check_on" class="check_on">
-                                대화 치즈 계란말이 키트
-                            </div>
-                        </li>
-                        <li>
-                            <div class="left">
-                                <img src="subscription_details.img/check_off.png" alt="check_off" class="check_off">
-                                <img src="subscription_details.img/check_on.png" alt="check_on" class="check_on">
-                                어묵 볶음 키트
-                            </div>
-                        </li>
-                    </ul>
-                </div><!-- custom_select -->
-            </div><!-- //.select -->
-            <div class="btn">
-                <a href="story_mypage_subscription_add.html">구독하러가기</a>
-            </div>
-        </div><!-- option_bar -->
+                    <div class="custom_select">
+                        <button class="select_btn"><span class="label">(필수 3개)원하는 밀키트를 구성해주세요.</span>
+                            <img src="./subscription_details.img/chevron-right.png" alt="down" class="arrow"></button>
+                        <ul class="select_options check">
+                            <li>
+                                <div class="left">
+                                    <img src="subscription_details.img/check_off.png" alt="check_off" class="check_off">
+                                    <img src="subscription_details.img/check_on.png" alt="check_on" class="check_on">
+                                    소갈비찜 세트
+                                </div>
+                            </li>
+                            <li>
+                                <div class="left">
+                                    <img src="subscription_details.img/check_off.png" alt="check_off" class="check_off">
+                                    <img src="subscription_details.img/check_on.png" alt="check_on" class="check_on">
+                                    전 부침 세트 키트
+                                </div>
+                            </li>
+                            <li>
+                                <div class="left">
+                                    <img src="subscription_details.img/check_off.png" alt="check_off" class="check_off">
+                                    <img src="subscription_details.img/check_on.png" alt="check_on" class="check_on">
+                                    소고기 무굿 키트
+                            </li>
+                            <li>
+                                <div class="left">
+                                    <img src="subscription_details.img/check_off.png" alt="check_off" class="check_off">
+                                    <img src="subscription_details.img/check_on.png" alt="check_on" class="check_on">
+                                    우대 갈비찜 키트
+                            </li>
+                            <li>
+                                <div class="left">
+                                    <img src="subscription_details.img/check_off.png" alt="check_off" class="check_off">
+                                    <img src="subscription_details.img/check_on.png" alt="check_on" class="check_on">
+                                    감자퓨레 키트
+                                </div>
+                            </li>
+                            <li>
+                                <div class="left">
+                                    <img src="subscription_details.img/check_off.png" alt="check_off" class="check_off">
+                                    <img src="subscription_details.img/check_on.png" alt="check_on" class="check_on">
+                                    비프 브루기농 키트
+                                </div>
+                            </li>
+                            <li>
+                                <div class="left">
+                                    <img src="subscription_details.img/check_off.png" alt="check_off" class="check_off">
+                                    <img src="subscription_details.img/check_on.png" alt="check_on" class="check_on">
+                                    순살 갈비찜 키트
+                                </div>
+                            </li>
+                            <li>
+                                <div class="left">
+                                    <img src="subscription_details.img/check_off.png" alt="check_off" class="check_off">
+                                    <img src="subscription_details.img/check_on.png" alt="check_on" class="check_on">
+                                    대화 치즈 계란말이 키트
+                                </div>
+                            </li>
+                            <li>
+                                <div class="left">
+                                    <img src="subscription_details.img/check_off.png" alt="check_off" class="check_off">
+                                    <img src="subscription_details.img/check_on.png" alt="check_on" class="check_on">
+                                    어묵 볶음 키트
+                                </div>
+                            </li>
+                        </ul>
+                    </div><!-- custom_select -->
+                </div><!-- //.select -->
+                <div class="btn">
+                    <a href="story_mypage_subscription_add.html">구독하러가기</a>
+                </div>
+            </div><!-- option_bar -->
         </div><!-- option_overlay -->
         <div class="scroll">
             <section class="checked">
@@ -148,7 +150,7 @@
                             </div>
                             <p>랜덤 구성! 또는 내가 고른 구성!<br>콘텐츠 기반으로 골라 담는, 밥이슈만의 스토리 구독 BOX</p>
                         </div>
-                        
+
                         <div class="select">
                             <div class="custom_select">
                                 <button class="select_btn"><span class="label">컨텐츠를 선택해주세요.</span>
@@ -305,81 +307,86 @@
                                 <div class="top">
                                     <img src="subscription_details.img/box_bg.png" alt="">
                                     <h3>밥잇슈 추천 조합</h3>
-                                    <p> <span>고민 없이 바로 즐기고 싶다면,</span>이 구성 그대로 담아보세유 !</p>
-                                    <ul>
-                                        <li>
-                                            <div class="img">
-                                                <img src="subscription_details.img/check_on.png" alt=""
-                                                    class="check_icon">
-                                                <img src="asset/storyissuesubmain_img/스토리/오징어/gnb2-2.jpg" alt=""
-                                                    class="food">
-                                            </div>
-                                            <div class="txt">
-                                                <div class="top">
-                                                    <span>[피코크]</span>
-                                                    <p>추억의 옛날 도시락<br>간단 메추리 장조림 350g</p>
+                                    <p> <span>고민 없이 바로 즐기고 싶다면,<br></span>이 구성 그대로 담아보세유 !</p>
+                                    <div class="swiper acodian">
+                                        <ul class="swiper-wrapper">
+                                            <li  class="swiper-slide">
+                                                <div class="img">
+                                                    <img src="subscription_details.img/check_on.png" alt=""
+                                                        class="check_icon">
+                                                    <img src="asset/storyissuesubmain_img/스토리/오징어/gnb2-2.jpg" alt=""
+                                                        class="food">
                                                 </div>
-                                                <div class="bottom">
-                                                    <span>15,500원</span>
-                                                    <div class="b_t">
-                                                        <strong>16%</strong>
-                                                        <p>12,990원</p>
+                                                <div class="txt">
+                                                    <div class="top">
+                                                        <span>[피코크]</span>
+                                                        <p>추억의 옛날 도시락<br>간단 메추리 장조림 350g</p>
+                                                    </div>
+                                                    <div class="bottom">
+                                                        <span>15,500원</span>
+                                                        <div class="b_t">
+                                                            <strong>16%</strong>
+                                                            <p>12,990원</p>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="img">
-                                                <img src="subscription_details.img/check_on.png" alt=""
-                                                    class="check_icon">
-                                                <img src="asset/storyissuesubmain_img/스토리/오징어/gnb3-3.jpg" alt=""
-                                                    class="food">
-                                            </div>
-                                            <div class="txt">
-                                                <div class="top">
-                                                    <span>[프레시지]</span>
-                                                    <p>고급 야채구이<br> 모듬 세트 2인분 540g</p>
+                                            </li>
+                                            <li  class="swiper-slide">
+                                                <div class="img">
+                                                    <img src="subscription_details.img/check_on.png" alt=""
+                                                        class="check_icon">
+                                                    <img src="asset/storyissuesubmain_img/스토리/오징어/gnb3-3.jpg" alt=""
+                                                        class="food">
                                                 </div>
-                                                <div class="bottom">
-                                                    <span>28,300원</span>
-                                                    <div class="b_t">
-                                                        <strong>17%</strong>
-                                                        <p>23,300원</p>
+                                                <div class="txt">
+                                                    <div class="top">
+                                                        <span>[프레시지]</span>
+                                                        <p>고급 야채구이<br> 모듬 세트 2인분 540g</p>
+                                                    </div>
+                                                    <div class="bottom">
+                                                        <span>28,300원</span>
+                                                        <div class="b_t">
+                                                            <strong>17%</strong>
+                                                            <p>23,300원</p>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="img">
-                                                <img src="subscription_details.img/check_on.png" alt=""
-                                                    class="check_icon">
-                                                <img src="asset/storyissuesubmain_img/스토리/오징어/gnb3-2.jpg" alt=""
-                                                    class="food">
-                                            </div>
-                                            <div class="txt">
-                                                <div class="top">
-                                                    <span>[백년밥상]</span>
-                                                    <p>바로 구워먹는<br>가리비 치즈 버터구이 키트</p>
+                                            </li>
+                                            <li  class="swiper-slide">
+                                                <div class="img">
+                                                    <img src="subscription_details.img/check_on.png" alt=""
+                                                        class="check_icon">
+                                                    <img src="asset/storyissuesubmain_img/스토리/오징어/gnb3-2.jpg" alt=""
+                                                        class="food">
                                                 </div>
-                                                <div class="bottom">
-                                                    <span>32,500원</span>
-                                                    <div class="b_t">
-                                                        <strong>15%</strong>
-                                                        <p>16,980원</p>
+                                                <div class="txt">
+                                                    <div class="top">
+                                                        <span>[백년밥상]</span>
+                                                        <p>바로 구워먹는<br>가리비 치즈 버터구이 키트</p>
+                                                    </div>
+                                                    <div class="bottom">
+                                                        <span>32,500원</span>
+                                                        <div class="b_t">
+                                                            <strong>15%</strong>
+                                                            <p>16,980원</p>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </li>
-                                    </ul>
+                                            </li>
+                                        </ul>
+                                          <div class="swiper-pagination"></div> 
+                                    </div>
+
                                 </div>
                                 <img src="subscription_details.img/box_icon.png" alt="plus" class="plus">
                                 <div class="bottom">
                                     <div class="txt2">
                                         <h3>다른 조합으로 먹고싶다면?</h3>
-                                        <p><span>다른 키트 상품으로도 변경 </span>할 수 있어요 !</p>
+                                        <p><span>다른 키트 상품으로도 변경</span>할 수 있어요 !</p>
                                     </div>
-                                    <ul>
-                                        <li>
+                                    <div class="swiper acodian_2">
+                                         <ul class="swiper-wrapper">
+                                        <li class="swiper-slide">
                                             <div class="img">
 
                                                 <img src="asset/storyissuesubmain_img/스토리/오징어/gnb3-1.jpg" alt=""
@@ -399,7 +406,7 @@
                                                 </div>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="swiper-slide">
                                             <div class="img">
                                                 <img src="asset/storyissuesubmain_img/스토리/오징어/gnb2-3.jpg" alt=""
                                                     class="food">
@@ -418,7 +425,7 @@
                                                 </div>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="swiper-slide">
                                             <div class="img">
                                                 <img src="asset/storyissuesubmain_img/스토리/오징어/gnb2-1.jpg" alt=""
                                                     class="food">
@@ -437,7 +444,7 @@
                                                 </div>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="swiper-slide">
                                             <div class="img">
                                                 <img src="asset/storyissuesubmain_img/스토리/오징어/gnb1-3.jpg" alt=""
                                                     class="food">
@@ -456,7 +463,7 @@
                                                 </div>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="swiper-slide">
                                             <div class="img">
                                                 <img src="asset/storyissuesubmain_img/스토리/오징어/gnb1-1.jpg" alt=""
                                                     class="food">
@@ -475,7 +482,7 @@
                                                 </div>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="swiper-slide">
                                             <div class="img">
                                                 <img src="subscription_details.img/foodimg_1.jpg" alt="" class="food">
                                             </div>
@@ -495,6 +502,9 @@
                                             </div>
                                         </li>
                                     </ul>
+                                    <div class="swiper-pagination2"></div> 
+                                    </div>
+                                   
                                 </div>
                             </div>
 
@@ -511,81 +521,86 @@
                                 <div class="top">
                                     <img src="subscription_details.img/box_bg.png" alt="">
                                     <h3>밥잇슈 추천 조합</h3>
-                                    <p> <span>고민 없이 바로 즐기고 싶다면,</span>이 구성 그대로 담아보세유 !</p>
-                                    <ul>
-                                        <li>
-                                            <div class="img">
-                                                <img src="subscription_details.img/check_on.png" alt=""
-                                                    class="check_icon">
-                                                <img src="asset/storyissuesubmain_img/스토리/오징어/gnb2-2.jpg" alt=""
-                                                    class="food">
-                                            </div>
-                                            <div class="txt">
-                                                <div class="top">
-                                                    <span>[피코크]</span>
-                                                    <p>추억의 옛날 도시락<br>간단 메추리 장조림 350g</p>
+                                    <p> <span>고민 없이 바로 즐기고 싶다면,<br></span>이 구성 그대로 담아보세유 !</p>
+                                    <div class="swiper acodian">
+                                        <ul class="swiper-wrapper">
+                                            <li  class="swiper-slide">
+                                                <div class="img">
+                                                    <img src="subscription_details.img/check_on.png" alt=""
+                                                        class="check_icon">
+                                                    <img src="asset/storyissuesubmain_img/스토리/오징어/gnb2-2.jpg" alt=""
+                                                        class="food">
                                                 </div>
-                                                <div class="bottom">
-                                                    <span>15,500원</span>
-                                                    <div class="b_t">
-                                                        <strong>16%</strong>
-                                                        <p>12,990원</p>
+                                                <div class="txt">
+                                                    <div class="top">
+                                                        <span>[피코크]</span>
+                                                        <p>추억의 옛날 도시락<br>간단 메추리 장조림 350g</p>
+                                                    </div>
+                                                    <div class="bottom">
+                                                        <span>15,500원</span>
+                                                        <div class="b_t">
+                                                            <strong>16%</strong>
+                                                            <p>12,990원</p>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="img">
-                                                <img src="subscription_details.img/check_on.png" alt=""
-                                                    class="check_icon">
-                                                <img src="asset/storyissuesubmain_img/스토리/오징어/gnb3-3.jpg" alt=""
-                                                    class="food">
-                                            </div>
-                                            <div class="txt">
-                                                <div class="top">
-                                                    <span>[프레시지]</span>
-                                                    <p>고급 야채구이<br> 모듬 세트 2인분 540g</p>
+                                            </li>
+                                            <li  class="swiper-slide">
+                                                <div class="img">
+                                                    <img src="subscription_details.img/check_on.png" alt=""
+                                                        class="check_icon">
+                                                    <img src="asset/storyissuesubmain_img/스토리/오징어/gnb3-3.jpg" alt=""
+                                                        class="food">
                                                 </div>
-                                                <div class="bottom">
-                                                    <span>28,300원</span>
-                                                    <div class="b_t">
-                                                        <strong>17%</strong>
-                                                        <p>23,300원</p>
+                                                <div class="txt">
+                                                    <div class="top">
+                                                        <span>[프레시지]</span>
+                                                        <p>고급 야채구이<br> 모듬 세트 2인분 540g</p>
+                                                    </div>
+                                                    <div class="bottom">
+                                                        <span>28,300원</span>
+                                                        <div class="b_t">
+                                                            <strong>17%</strong>
+                                                            <p>23,300원</p>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="img">
-                                                <img src="subscription_details.img/check_on.png" alt=""
-                                                    class="check_icon">
-                                                <img src="asset/storyissuesubmain_img/스토리/오징어/gnb3-2.jpg" alt=""
-                                                    class="food">
-                                            </div>
-                                            <div class="txt">
-                                                <div class="top">
-                                                    <span>[백년밥상]</span>
-                                                    <p>바로 구워먹는<br>가리비 치즈 버터구이 키트</p>
+                                            </li>
+                                            <li  class="swiper-slide">
+                                                <div class="img">
+                                                    <img src="subscription_details.img/check_on.png" alt=""
+                                                        class="check_icon">
+                                                    <img src="asset/storyissuesubmain_img/스토리/오징어/gnb3-2.jpg" alt=""
+                                                        class="food">
                                                 </div>
-                                                <div class="bottom">
-                                                    <span>32,500원</span>
-                                                    <div class="b_t">
-                                                        <strong>15%</strong>
-                                                        <p>16,980원</p>
+                                                <div class="txt">
+                                                    <div class="top">
+                                                        <span>[백년밥상]</span>
+                                                        <p>바로 구워먹는<br>가리비 치즈 버터구이 키트</p>
+                                                    </div>
+                                                    <div class="bottom">
+                                                        <span>32,500원</span>
+                                                        <div class="b_t">
+                                                            <strong>15%</strong>
+                                                            <p>16,980원</p>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </li>
-                                    </ul>
+                                            </li>
+                                        </ul>
+                                          <div class="swiper-pagination"></div> 
+                                    </div>
+
                                 </div>
                                 <img src="subscription_details.img/box_icon.png" alt="plus" class="plus">
                                 <div class="bottom">
                                     <div class="txt2">
                                         <h3>다른 조합으로 먹고싶다면?</h3>
-                                        <p><span>다른 키트 상품으로도 변경 </span>할 수 있어요 !</p>
+                                        <p><span>다른 키트 상품으로도 변경</span>할 수 있어요 !</p>
                                     </div>
-                                    <ul>
-                                        <li>
+                                    <div class="swiper acodian_2">
+                                         <ul class="swiper-wrapper">
+                                        <li class="swiper-slide">
                                             <div class="img">
 
                                                 <img src="asset/storyissuesubmain_img/스토리/오징어/gnb3-1.jpg" alt=""
@@ -605,7 +620,7 @@
                                                 </div>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="swiper-slide">
                                             <div class="img">
                                                 <img src="asset/storyissuesubmain_img/스토리/오징어/gnb2-3.jpg" alt=""
                                                     class="food">
@@ -624,7 +639,7 @@
                                                 </div>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="swiper-slide">
                                             <div class="img">
                                                 <img src="asset/storyissuesubmain_img/스토리/오징어/gnb2-1.jpg" alt=""
                                                     class="food">
@@ -643,7 +658,7 @@
                                                 </div>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="swiper-slide">
                                             <div class="img">
                                                 <img src="asset/storyissuesubmain_img/스토리/오징어/gnb1-3.jpg" alt=""
                                                     class="food">
@@ -662,7 +677,7 @@
                                                 </div>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="swiper-slide">
                                             <div class="img">
                                                 <img src="asset/storyissuesubmain_img/스토리/오징어/gnb1-1.jpg" alt=""
                                                     class="food">
@@ -681,7 +696,7 @@
                                                 </div>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="swiper-slide">
                                             <div class="img">
                                                 <img src="subscription_details.img/foodimg_1.jpg" alt="" class="food">
                                             </div>
@@ -701,8 +716,12 @@
                                             </div>
                                         </li>
                                     </ul>
+                                    <div class="swiper-pagination2"></div> 
+                                    </div>
+                                   
                                 </div>
                             </div>
+
                         </div>
                     </article>
                 </div>
@@ -716,81 +735,86 @@
                                 <div class="top">
                                     <img src="subscription_details.img/box_bg.png" alt="">
                                     <h3>밥잇슈 추천 조합</h3>
-                                    <p> <span>고민 없이 바로 즐기고 싶다면,</span>이 구성 그대로 담아보세유 !</p>
-                                    <ul>
-                                        <li>
-                                            <div class="img">
-                                                <img src="subscription_details.img/check_on.png" alt=""
-                                                    class="check_icon">
-                                                <img src="asset/storyissuesubmain_img/스토리/오징어/gnb2-2.jpg" alt=""
-                                                    class="food">
-                                            </div>
-                                            <div class="txt">
-                                                <div class="top">
-                                                    <span>[피코크]</span>
-                                                    <p>추억의 옛날 도시락<br>간단 메추리 장조림 350g</p>
+                                    <p> <span>고민 없이 바로 즐기고 싶다면,<br></span>이 구성 그대로 담아보세유 !</p>
+                                    <div class="swiper acodian">
+                                        <ul class="swiper-wrapper">
+                                            <li  class="swiper-slide">
+                                                <div class="img">
+                                                    <img src="subscription_details.img/check_on.png" alt=""
+                                                        class="check_icon">
+                                                    <img src="asset/storyissuesubmain_img/스토리/오징어/gnb2-2.jpg" alt=""
+                                                        class="food">
                                                 </div>
-                                                <div class="bottom">
-                                                    <span>15,500원</span>
-                                                    <div class="b_t">
-                                                        <strong>16%</strong>
-                                                        <p>12,990원</p>
+                                                <div class="txt">
+                                                    <div class="top">
+                                                        <span>[피코크]</span>
+                                                        <p>추억의 옛날 도시락<br>간단 메추리 장조림 350g</p>
+                                                    </div>
+                                                    <div class="bottom">
+                                                        <span>15,500원</span>
+                                                        <div class="b_t">
+                                                            <strong>16%</strong>
+                                                            <p>12,990원</p>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="img">
-                                                <img src="subscription_details.img/check_on.png" alt=""
-                                                    class="check_icon">
-                                                <img src="asset/storyissuesubmain_img/스토리/오징어/gnb3-3.jpg" alt=""
-                                                    class="food">
-                                            </div>
-                                            <div class="txt">
-                                                <div class="top">
-                                                    <span>[프레시지]</span>
-                                                    <p>고급 야채구이<br> 모듬 세트 2인분 540g</p>
+                                            </li>
+                                            <li  class="swiper-slide">
+                                                <div class="img">
+                                                    <img src="subscription_details.img/check_on.png" alt=""
+                                                        class="check_icon">
+                                                    <img src="asset/storyissuesubmain_img/스토리/오징어/gnb3-3.jpg" alt=""
+                                                        class="food">
                                                 </div>
-                                                <div class="bottom">
-                                                    <span>28,300원</span>
-                                                    <div class="b_t">
-                                                        <strong>17%</strong>
-                                                        <p>23,300원</p>
+                                                <div class="txt">
+                                                    <div class="top">
+                                                        <span>[프레시지]</span>
+                                                        <p>고급 야채구이<br> 모듬 세트 2인분 540g</p>
+                                                    </div>
+                                                    <div class="bottom">
+                                                        <span>28,300원</span>
+                                                        <div class="b_t">
+                                                            <strong>17%</strong>
+                                                            <p>23,300원</p>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="img">
-                                                <img src="subscription_details.img/check_on.png" alt=""
-                                                    class="check_icon">
-                                                <img src="asset/storyissuesubmain_img/스토리/오징어/gnb3-2.jpg" alt=""
-                                                    class="food">
-                                            </div>
-                                            <div class="txt">
-                                                <div class="top">
-                                                    <span>[백년밥상]</span>
-                                                    <p>바로 구워먹는<br>가리비 치즈 버터구이 키트</p>
+                                            </li>
+                                            <li  class="swiper-slide">
+                                                <div class="img">
+                                                    <img src="subscription_details.img/check_on.png" alt=""
+                                                        class="check_icon">
+                                                    <img src="asset/storyissuesubmain_img/스토리/오징어/gnb3-2.jpg" alt=""
+                                                        class="food">
                                                 </div>
-                                                <div class="bottom">
-                                                    <span>32,500원</span>
-                                                    <div class="b_t">
-                                                        <strong>15%</strong>
-                                                        <p>16,980원</p>
+                                                <div class="txt">
+                                                    <div class="top">
+                                                        <span>[백년밥상]</span>
+                                                        <p>바로 구워먹는<br>가리비 치즈 버터구이 키트</p>
+                                                    </div>
+                                                    <div class="bottom">
+                                                        <span>32,500원</span>
+                                                        <div class="b_t">
+                                                            <strong>15%</strong>
+                                                            <p>16,980원</p>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </li>
-                                    </ul>
+                                            </li>
+                                        </ul>
+                                          <div class="swiper-pagination"></div> 
+                                    </div>
+
                                 </div>
                                 <img src="subscription_details.img/box_icon.png" alt="plus" class="plus">
                                 <div class="bottom">
                                     <div class="txt2">
                                         <h3>다른 조합으로 먹고싶다면?</h3>
-                                        <p><span>다른 키트 상품으로도 변경 </span>할 수 있어요 !</p>
+                                        <p><span>다른 키트 상품으로도 변경</span>할 수 있어요 !</p>
                                     </div>
-                                    <ul>
-                                        <li>
+                                    <div class="swiper acodian_2">
+                                         <ul class="swiper-wrapper">
+                                        <li class="swiper-slide">
                                             <div class="img">
 
                                                 <img src="asset/storyissuesubmain_img/스토리/오징어/gnb3-1.jpg" alt=""
@@ -810,7 +834,7 @@
                                                 </div>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="swiper-slide">
                                             <div class="img">
                                                 <img src="asset/storyissuesubmain_img/스토리/오징어/gnb2-3.jpg" alt=""
                                                     class="food">
@@ -829,7 +853,7 @@
                                                 </div>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="swiper-slide">
                                             <div class="img">
                                                 <img src="asset/storyissuesubmain_img/스토리/오징어/gnb2-1.jpg" alt=""
                                                     class="food">
@@ -848,7 +872,7 @@
                                                 </div>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="swiper-slide">
                                             <div class="img">
                                                 <img src="asset/storyissuesubmain_img/스토리/오징어/gnb1-3.jpg" alt=""
                                                     class="food">
@@ -867,7 +891,7 @@
                                                 </div>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="swiper-slide">
                                             <div class="img">
                                                 <img src="asset/storyissuesubmain_img/스토리/오징어/gnb1-1.jpg" alt=""
                                                     class="food">
@@ -886,7 +910,7 @@
                                                 </div>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="swiper-slide">
                                             <div class="img">
                                                 <img src="subscription_details.img/foodimg_1.jpg" alt="" class="food">
                                             </div>
@@ -906,8 +930,12 @@
                                             </div>
                                         </li>
                                     </ul>
+                                    <div class="swiper-pagination2"></div> 
+                                    </div>
+                                   
                                 </div>
                             </div>
+
                         </div>
                     </article>
                 </div>
@@ -916,86 +944,91 @@
                         <button class="accordion" aria-controls="panel4" aria-expanded="false">이야기 펼쳐보기</button>
                     </div>
                     <article id="panel4" class="hidden">
-                        <div class="hidden_wrap">
+                                           <div class="hidden_wrap">
                             <div class="containner">
                                 <div class="top">
                                     <img src="subscription_details.img/box_bg.png" alt="">
                                     <h3>밥잇슈 추천 조합</h3>
-                                    <p> <span>고민 없이 바로 즐기고 싶다면,</span>이 구성 그대로 담아보세유 !</p>
-                                    <ul>
-                                        <li>
-                                            <div class="img">
-                                                <img src="subscription_details.img/check_on.png" alt=""
-                                                    class="check_icon">
-                                                <img src="asset/storyissuesubmain_img/스토리/오징어/gnb2-2.jpg" alt=""
-                                                    class="food">
-                                            </div>
-                                            <div class="txt">
-                                                <div class="top">
-                                                    <span>[피코크]</span>
-                                                    <p>추억의 옛날 도시락<br>간단 메추리 장조림 350g</p>
+                                    <p> <span>고민 없이 바로 즐기고 싶다면,<br></span>이 구성 그대로 담아보세유 !</p>
+                                    <div class="swiper acodian">
+                                        <ul class="swiper-wrapper">
+                                            <li  class="swiper-slide">
+                                                <div class="img">
+                                                    <img src="subscription_details.img/check_on.png" alt=""
+                                                        class="check_icon">
+                                                    <img src="asset/storyissuesubmain_img/스토리/오징어/gnb2-2.jpg" alt=""
+                                                        class="food">
                                                 </div>
-                                                <div class="bottom">
-                                                    <span>15,500원</span>
-                                                    <div class="b_t">
-                                                        <strong>16%</strong>
-                                                        <p>12,990원</p>
+                                                <div class="txt">
+                                                    <div class="top">
+                                                        <span>[피코크]</span>
+                                                        <p>추억의 옛날 도시락<br>간단 메추리 장조림 350g</p>
+                                                    </div>
+                                                    <div class="bottom">
+                                                        <span>15,500원</span>
+                                                        <div class="b_t">
+                                                            <strong>16%</strong>
+                                                            <p>12,990원</p>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="img">
-                                                <img src="subscription_details.img/check_on.png" alt=""
-                                                    class="check_icon">
-                                                <img src="asset/storyissuesubmain_img/스토리/오징어/gnb3-3.jpg" alt=""
-                                                    class="food">
-                                            </div>
-                                            <div class="txt">
-                                                <div class="top">
-                                                    <span>[프레시지]</span>
-                                                    <p>고급 야채구이<br> 모듬 세트 2인분 540g</p>
+                                            </li>
+                                            <li  class="swiper-slide">
+                                                <div class="img">
+                                                    <img src="subscription_details.img/check_on.png" alt=""
+                                                        class="check_icon">
+                                                    <img src="asset/storyissuesubmain_img/스토리/오징어/gnb3-3.jpg" alt=""
+                                                        class="food">
                                                 </div>
-                                                <div class="bottom">
-                                                    <span>28,300원</span>
-                                                    <div class="b_t">
-                                                        <strong>17%</strong>
-                                                        <p>23,300원</p>
+                                                <div class="txt">
+                                                    <div class="top">
+                                                        <span>[프레시지]</span>
+                                                        <p>고급 야채구이<br> 모듬 세트 2인분 540g</p>
+                                                    </div>
+                                                    <div class="bottom">
+                                                        <span>28,300원</span>
+                                                        <div class="b_t">
+                                                            <strong>17%</strong>
+                                                            <p>23,300원</p>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="img">
-                                                <img src="subscription_details.img/check_on.png" alt=""
-                                                    class="check_icon">
-                                                <img src="asset/storyissuesubmain_img/스토리/오징어/gnb3-2.jpg" alt=""
-                                                    class="food">
-                                            </div>
-                                            <div class="txt">
-                                                <div class="top">
-                                                    <span>[백년밥상]</span>
-                                                    <p>바로 구워먹는<br>가리비 치즈 버터구이 키트</p>
+                                            </li>
+                                            <li  class="swiper-slide">
+                                                <div class="img">
+                                                    <img src="subscription_details.img/check_on.png" alt=""
+                                                        class="check_icon">
+                                                    <img src="asset/storyissuesubmain_img/스토리/오징어/gnb3-2.jpg" alt=""
+                                                        class="food">
                                                 </div>
-                                                <div class="bottom">
-                                                    <span>32,500원</span>
-                                                    <div class="b_t">
-                                                        <strong>15%</strong>
-                                                        <p>16,980원</p>
+                                                <div class="txt">
+                                                    <div class="top">
+                                                        <span>[백년밥상]</span>
+                                                        <p>바로 구워먹는<br>가리비 치즈 버터구이 키트</p>
+                                                    </div>
+                                                    <div class="bottom">
+                                                        <span>32,500원</span>
+                                                        <div class="b_t">
+                                                            <strong>15%</strong>
+                                                            <p>16,980원</p>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </li>
-                                    </ul>
+                                            </li>
+                                        </ul>
+                                          <div class="swiper-pagination"></div> 
+                                    </div>
+
                                 </div>
                                 <img src="subscription_details.img/box_icon.png" alt="plus" class="plus">
                                 <div class="bottom">
                                     <div class="txt2">
                                         <h3>다른 조합으로 먹고싶다면?</h3>
-                                        <p><span>다른 키트 상품으로도 변경 </span>할 수 있어요 !</p>
+                                        <p><span>다른 키트 상품으로도 변경</span>할 수 있어요 !</p>
                                     </div>
-                                    <ul>
-                                        <li>
+                                    <div class="swiper acodian_2">
+                                         <ul class="swiper-wrapper">
+                                        <li class="swiper-slide">
                                             <div class="img">
 
                                                 <img src="asset/storyissuesubmain_img/스토리/오징어/gnb3-1.jpg" alt=""
@@ -1015,7 +1048,7 @@
                                                 </div>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="swiper-slide">
                                             <div class="img">
                                                 <img src="asset/storyissuesubmain_img/스토리/오징어/gnb2-3.jpg" alt=""
                                                     class="food">
@@ -1034,7 +1067,7 @@
                                                 </div>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="swiper-slide">
                                             <div class="img">
                                                 <img src="asset/storyissuesubmain_img/스토리/오징어/gnb2-1.jpg" alt=""
                                                     class="food">
@@ -1053,7 +1086,7 @@
                                                 </div>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="swiper-slide">
                                             <div class="img">
                                                 <img src="asset/storyissuesubmain_img/스토리/오징어/gnb1-3.jpg" alt=""
                                                     class="food">
@@ -1072,7 +1105,7 @@
                                                 </div>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="swiper-slide">
                                             <div class="img">
                                                 <img src="asset/storyissuesubmain_img/스토리/오징어/gnb1-1.jpg" alt=""
                                                     class="food">
@@ -1091,7 +1124,7 @@
                                                 </div>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="swiper-slide">
                                             <div class="img">
                                                 <img src="subscription_details.img/foodimg_1.jpg" alt="" class="food">
                                             </div>
@@ -1111,8 +1144,12 @@
                                             </div>
                                         </li>
                                     </ul>
+                                    <div class="swiper-pagination2"></div> 
+                                    </div>
+                                   
                                 </div>
                             </div>
+
                         </div>
                     </article>
                 </div>
@@ -1121,86 +1158,91 @@
                         <button class="accordion" aria-controls="panel5" aria-expanded="false">이야기 펼쳐보기</button>
                     </div>
                     <article id="panel5" class="hidden">
-                        <div class="hidden_wrap">
+                       <div class="hidden_wrap">
                             <div class="containner">
                                 <div class="top">
                                     <img src="subscription_details.img/box_bg.png" alt="">
                                     <h3>밥잇슈 추천 조합</h3>
-                                    <p> <span>고민 없이 바로 즐기고 싶다면,</span>이 구성 그대로 담아보세유 !</p>
-                                    <ul>
-                                        <li>
-                                            <div class="img">
-                                                <img src="subscription_details.img/check_on.png" alt=""
-                                                    class="check_icon">
-                                                <img src="asset/storyissuesubmain_img/스토리/오징어/gnb2-2.jpg" alt=""
-                                                    class="food">
-                                            </div>
-                                            <div class="txt">
-                                                <div class="top">
-                                                    <span>[피코크]</span>
-                                                    <p>추억의 옛날 도시락<br>간단 메추리 장조림 350g</p>
+                                    <p> <span>고민 없이 바로 즐기고 싶다면,<br></span>이 구성 그대로 담아보세유 !</p>
+                                    <div class="swiper acodian">
+                                        <ul class="swiper-wrapper">
+                                            <li  class="swiper-slide">
+                                                <div class="img">
+                                                    <img src="subscription_details.img/check_on.png" alt=""
+                                                        class="check_icon">
+                                                    <img src="asset/storyissuesubmain_img/스토리/오징어/gnb2-2.jpg" alt=""
+                                                        class="food">
                                                 </div>
-                                                <div class="bottom">
-                                                    <span>15,500원</span>
-                                                    <div class="b_t">
-                                                        <strong>16%</strong>
-                                                        <p>12,990원</p>
+                                                <div class="txt">
+                                                    <div class="top">
+                                                        <span>[피코크]</span>
+                                                        <p>추억의 옛날 도시락<br>간단 메추리 장조림 350g</p>
+                                                    </div>
+                                                    <div class="bottom">
+                                                        <span>15,500원</span>
+                                                        <div class="b_t">
+                                                            <strong>16%</strong>
+                                                            <p>12,990원</p>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="img">
-                                                <img src="subscription_details.img/check_on.png" alt=""
-                                                    class="check_icon">
-                                                <img src="asset/storyissuesubmain_img/스토리/오징어/gnb3-3.jpg" alt=""
-                                                    class="food">
-                                            </div>
-                                            <div class="txt">
-                                                <div class="top">
-                                                    <span>[프레시지]</span>
-                                                    <p>고급 야채구이<br> 모듬 세트 2인분 540g</p>
+                                            </li>
+                                            <li  class="swiper-slide">
+                                                <div class="img">
+                                                    <img src="subscription_details.img/check_on.png" alt=""
+                                                        class="check_icon">
+                                                    <img src="asset/storyissuesubmain_img/스토리/오징어/gnb3-3.jpg" alt=""
+                                                        class="food">
                                                 </div>
-                                                <div class="bottom">
-                                                    <span>28,300원</span>
-                                                    <div class="b_t">
-                                                        <strong>17%</strong>
-                                                        <p>23,300원</p>
+                                                <div class="txt">
+                                                    <div class="top">
+                                                        <span>[프레시지]</span>
+                                                        <p>고급 야채구이<br> 모듬 세트 2인분 540g</p>
+                                                    </div>
+                                                    <div class="bottom">
+                                                        <span>28,300원</span>
+                                                        <div class="b_t">
+                                                            <strong>17%</strong>
+                                                            <p>23,300원</p>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="img">
-                                                <img src="subscription_details.img/check_on.png" alt=""
-                                                    class="check_icon">
-                                                <img src="asset/storyissuesubmain_img/스토리/오징어/gnb3-2.jpg" alt=""
-                                                    class="food">
-                                            </div>
-                                            <div class="txt">
-                                                <div class="top">
-                                                    <span>[백년밥상]</span>
-                                                    <p>바로 구워먹는<br>가리비 치즈 버터구이 키트</p>
+                                            </li>
+                                            <li  class="swiper-slide">
+                                                <div class="img">
+                                                    <img src="subscription_details.img/check_on.png" alt=""
+                                                        class="check_icon">
+                                                    <img src="asset/storyissuesubmain_img/스토리/오징어/gnb3-2.jpg" alt=""
+                                                        class="food">
                                                 </div>
-                                                <div class="bottom">
-                                                    <span>32,500원</span>
-                                                    <div class="b_t">
-                                                        <strong>15%</strong>
-                                                        <p>16,980원</p>
+                                                <div class="txt">
+                                                    <div class="top">
+                                                        <span>[백년밥상]</span>
+                                                        <p>바로 구워먹는<br>가리비 치즈 버터구이 키트</p>
+                                                    </div>
+                                                    <div class="bottom">
+                                                        <span>32,500원</span>
+                                                        <div class="b_t">
+                                                            <strong>15%</strong>
+                                                            <p>16,980원</p>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </li>
-                                    </ul>
+                                            </li>
+                                        </ul>
+                                          <div class="swiper-pagination"></div> 
+                                    </div>
+
                                 </div>
                                 <img src="subscription_details.img/box_icon.png" alt="plus" class="plus">
                                 <div class="bottom">
                                     <div class="txt2">
                                         <h3>다른 조합으로 먹고싶다면?</h3>
-                                        <p><span>다른 키트 상품으로도 변경 </span>할 수 있어요 !</p>
+                                        <p><span>다른 키트 상품으로도 변경</span>할 수 있어요 !</p>
                                     </div>
-                                    <ul>
-                                        <li>
+                                    <div class="swiper acodian_2">
+                                         <ul class="swiper-wrapper">
+                                        <li class="swiper-slide">
                                             <div class="img">
 
                                                 <img src="asset/storyissuesubmain_img/스토리/오징어/gnb3-1.jpg" alt=""
@@ -1220,7 +1262,7 @@
                                                 </div>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="swiper-slide">
                                             <div class="img">
                                                 <img src="asset/storyissuesubmain_img/스토리/오징어/gnb2-3.jpg" alt=""
                                                     class="food">
@@ -1239,7 +1281,7 @@
                                                 </div>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="swiper-slide">
                                             <div class="img">
                                                 <img src="asset/storyissuesubmain_img/스토리/오징어/gnb2-1.jpg" alt=""
                                                     class="food">
@@ -1258,7 +1300,7 @@
                                                 </div>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="swiper-slide">
                                             <div class="img">
                                                 <img src="asset/storyissuesubmain_img/스토리/오징어/gnb1-3.jpg" alt=""
                                                     class="food">
@@ -1277,7 +1319,7 @@
                                                 </div>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="swiper-slide">
                                             <div class="img">
                                                 <img src="asset/storyissuesubmain_img/스토리/오징어/gnb1-1.jpg" alt=""
                                                     class="food">
@@ -1296,7 +1338,7 @@
                                                 </div>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="swiper-slide">
                                             <div class="img">
                                                 <img src="subscription_details.img/foodimg_1.jpg" alt="" class="food">
                                             </div>
@@ -1316,6 +1358,9 @@
                                             </div>
                                         </li>
                                     </ul>
+                                    <div class="swiper-pagination2"></div> 
+                                    </div>
+                                   
                                 </div>
                             </div>
 
@@ -1332,81 +1377,86 @@
                                 <div class="top">
                                     <img src="subscription_details.img/box_bg.png" alt="">
                                     <h3>밥잇슈 추천 조합</h3>
-                                    <p> <span>고민 없이 바로 즐기고 싶다면,</span>이 구성 그대로 담아보세유 !</p>
-                                    <ul>
-                                        <li>
-                                            <div class="img">
-                                                <img src="subscription_details.img/check_on.png" alt=""
-                                                    class="check_icon">
-                                                <img src="asset/storyissuesubmain_img/스토리/오징어/gnb2-2.jpg" alt=""
-                                                    class="food">
-                                            </div>
-                                            <div class="txt">
-                                                <div class="top">
-                                                    <span>[피코크]</span>
-                                                    <p>추억의 옛날 도시락<br>간단 메추리 장조림 350g</p>
+                                    <p> <span>고민 없이 바로 즐기고 싶다면,<br></span>이 구성 그대로 담아보세유 !</p>
+                                    <div class="swiper acodian">
+                                        <ul class="swiper-wrapper">
+                                            <li  class="swiper-slide">
+                                                <div class="img">
+                                                    <img src="subscription_details.img/check_on.png" alt=""
+                                                        class="check_icon">
+                                                    <img src="asset/storyissuesubmain_img/스토리/오징어/gnb2-2.jpg" alt=""
+                                                        class="food">
                                                 </div>
-                                                <div class="bottom">
-                                                    <span>15,500원</span>
-                                                    <div class="b_t">
-                                                        <strong>16%</strong>
-                                                        <p>12,990원</p>
+                                                <div class="txt">
+                                                    <div class="top">
+                                                        <span>[피코크]</span>
+                                                        <p>추억의 옛날 도시락<br>간단 메추리 장조림 350g</p>
+                                                    </div>
+                                                    <div class="bottom">
+                                                        <span>15,500원</span>
+                                                        <div class="b_t">
+                                                            <strong>16%</strong>
+                                                            <p>12,990원</p>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="img">
-                                                <img src="subscription_details.img/check_on.png" alt=""
-                                                    class="check_icon">
-                                                <img src="asset/storyissuesubmain_img/스토리/오징어/gnb3-3.jpg" alt=""
-                                                    class="food">
-                                            </div>
-                                            <div class="txt">
-                                                <div class="top">
-                                                    <span>[프레시지]</span>
-                                                    <p>고급 야채구이<br> 모듬 세트 2인분 540g</p>
+                                            </li>
+                                            <li  class="swiper-slide">
+                                                <div class="img">
+                                                    <img src="subscription_details.img/check_on.png" alt=""
+                                                        class="check_icon">
+                                                    <img src="asset/storyissuesubmain_img/스토리/오징어/gnb3-3.jpg" alt=""
+                                                        class="food">
                                                 </div>
-                                                <div class="bottom">
-                                                    <span>28,300원</span>
-                                                    <div class="b_t">
-                                                        <strong>17%</strong>
-                                                        <p>23,300원</p>
+                                                <div class="txt">
+                                                    <div class="top">
+                                                        <span>[프레시지]</span>
+                                                        <p>고급 야채구이<br> 모듬 세트 2인분 540g</p>
+                                                    </div>
+                                                    <div class="bottom">
+                                                        <span>28,300원</span>
+                                                        <div class="b_t">
+                                                            <strong>17%</strong>
+                                                            <p>23,300원</p>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="img">
-                                                <img src="subscription_details.img/check_on.png" alt=""
-                                                    class="check_icon">
-                                                <img src="asset/storyissuesubmain_img/스토리/오징어/gnb3-2.jpg" alt=""
-                                                    class="food">
-                                            </div>
-                                            <div class="txt">
-                                                <div class="top">
-                                                    <span>[백년밥상]</span>
-                                                    <p>바로 구워먹는<br>가리비 치즈 버터구이 키트</p>
+                                            </li>
+                                            <li  class="swiper-slide">
+                                                <div class="img">
+                                                    <img src="subscription_details.img/check_on.png" alt=""
+                                                        class="check_icon">
+                                                    <img src="asset/storyissuesubmain_img/스토리/오징어/gnb3-2.jpg" alt=""
+                                                        class="food">
                                                 </div>
-                                                <div class="bottom">
-                                                    <span>32,500원</span>
-                                                    <div class="b_t">
-                                                        <strong>15%</strong>
-                                                        <p>16,980원</p>
+                                                <div class="txt">
+                                                    <div class="top">
+                                                        <span>[백년밥상]</span>
+                                                        <p>바로 구워먹는<br>가리비 치즈 버터구이 키트</p>
+                                                    </div>
+                                                    <div class="bottom">
+                                                        <span>32,500원</span>
+                                                        <div class="b_t">
+                                                            <strong>15%</strong>
+                                                            <p>16,980원</p>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </li>
-                                    </ul>
+                                            </li>
+                                        </ul>
+                                          <div class="swiper-pagination"></div> 
+                                    </div>
+
                                 </div>
                                 <img src="subscription_details.img/box_icon.png" alt="plus" class="plus">
                                 <div class="bottom">
                                     <div class="txt2">
                                         <h3>다른 조합으로 먹고싶다면?</h3>
-                                        <p><span>다른 키트 상품으로도 변경 </span>할 수 있어요 !</p>
+                                        <p><span>다른 키트 상품으로도 변경</span>할 수 있어요 !</p>
                                     </div>
-                                    <ul>
-                                        <li>
+                                    <div class="swiper acodian_2">
+                                         <ul class="swiper-wrapper">
+                                        <li class="swiper-slide">
                                             <div class="img">
 
                                                 <img src="asset/storyissuesubmain_img/스토리/오징어/gnb3-1.jpg" alt=""
@@ -1426,7 +1476,7 @@
                                                 </div>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="swiper-slide">
                                             <div class="img">
                                                 <img src="asset/storyissuesubmain_img/스토리/오징어/gnb2-3.jpg" alt=""
                                                     class="food">
@@ -1445,7 +1495,7 @@
                                                 </div>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="swiper-slide">
                                             <div class="img">
                                                 <img src="asset/storyissuesubmain_img/스토리/오징어/gnb2-1.jpg" alt=""
                                                     class="food">
@@ -1464,7 +1514,7 @@
                                                 </div>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="swiper-slide">
                                             <div class="img">
                                                 <img src="asset/storyissuesubmain_img/스토리/오징어/gnb1-3.jpg" alt=""
                                                     class="food">
@@ -1483,7 +1533,7 @@
                                                 </div>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="swiper-slide">
                                             <div class="img">
                                                 <img src="asset/storyissuesubmain_img/스토리/오징어/gnb1-1.jpg" alt=""
                                                     class="food">
@@ -1502,7 +1552,7 @@
                                                 </div>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="swiper-slide">
                                             <div class="img">
                                                 <img src="subscription_details.img/foodimg_1.jpg" alt="" class="food">
                                             </div>
@@ -1522,6 +1572,9 @@
                                             </div>
                                         </li>
                                     </ul>
+                                    <div class="swiper-pagination2"></div> 
+                                    </div>
+                                   
                                 </div>
                             </div>
 
