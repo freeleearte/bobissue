@@ -10,12 +10,6 @@ $(function () {
         const allRequiredChecked = $('.terms input[required]').length === $('.terms input[required]:checked').length;
 
         if (
-            id === '.' &&
-            pw === '.' &&
-            pw2 === '.' &&
-            name === '.' &&
-            phone === '.' &&
-            address === '.' &&
             allRequiredChecked
         ) {
             $('.wrap').addClass('on');

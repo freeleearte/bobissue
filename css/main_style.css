@@ -16,7 +16,7 @@ button {
 
 .goto_top {
     position: fixed;
-    width: 90px;
+    width: 100px;
     right: 50px;
     bottom: 50px;
     z-index: 200;

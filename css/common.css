@@ -90,6 +90,12 @@
     margin-inline: auto;
 }
 
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+
 /* header */
 .header-placeholder {
     height: 172px;
@@ -303,6 +309,11 @@ header ul.right-menu li a {
     height: 40px;
     justify-content: center;
     align-content: center;
+}
+
+header ul.right-menu li.heart_icon a img {
+    width: 100%;
+    transition: .2s;
 }
 
 .search_container {

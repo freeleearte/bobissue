@@ -283,6 +283,8 @@ p {
     font: var(--pre-20-m);
     border-radius: 10px;
 
+.button ul li:nth-child(1) {
+    background: var(--sub-color-1);
 }
 
 .button p a{

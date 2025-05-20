@@ -1,5 +1,5 @@
 $(function () {
-    const products = [
+    window.products = [
         {
             id: 1,
             name: "매콤 깻잎 순대 볶음 냉장 밀키트 (2인분)",
@@ -528,6 +528,69 @@ $(function () {
             category: "grill",
             img: "./asset/product48.png"
         },
+        {
+            id: 1001,
+            name: "애순이 가리비 구이 키트",
+            originalPrice: 14000,
+            salePrice: 9900,
+            category: "폭싹 속았수다",
+        },
+        {
+            id: 1002,
+            name: "완두콩 도시락 키트",
+            originalPrice: 15900,
+            salePrice: 11900,
+            category: "폭싹 속았수다",
+        },
+        {
+            id: 1003,
+            name: "애순이 오징어뭇국 키트",
+            originalPrice: 19400,
+            salePrice: 5200,
+            category: "폭싹 속았수다",
+        },
+        {
+            id: 1007,
+            name: "한우 소고기 미역국",
+            originalPrice: 12000,
+            salePrice: 7990,
+            category: "오징어 게임",
+        },
+        {
+            id: 1008,
+            name: "추억의 옛날 도시락 키트",
+            originalPrice: 17000,
+            salePrice: 13900,
+            category: "오징어 게임",
+        },
+        {
+            id: 1009,
+            name: "갈치 구이 키트",
+            originalPrice: 12000,
+            salePrice: 7900,
+            category: "오징어 게임",
+        },
+        {
+            id: 10013,
+            name: "맨손 짜자장 키트",
+            originalPrice: 12900,
+            salePrice: 10900,
+            category: "대환장 기안장",
+        },
+        {
+            id: 10014,
+            name: "기안표 북한식 두부밥",
+            originalPrice: 13000,
+            salePrice: 9900,
+            category: "대환장 기안장",
+        },
+        {
+            id: 10015,
+            name: "울릉도 가득 물회 키트",
+            originalPrice: 21000,
+            salePrice: 14900,
+            category: "대환장 기안장",
+        },
     ];
 
     // 임의 상품 추가
@@ -560,7 +623,9 @@ $(function () {
             const brandMatch = selectedBrands.length === 0 || selectedBrands.includes(p.brand);
             const amountMatch = selectedAmounts.length === 0 || selectedAmounts.includes(p.amount);
             const categoryMatch = selectedCategories.length === 0 || selectedCategories.includes(p.category);
-            return brandMatch && amountMatch && categoryMatch;
+            const idValid = p.id < 1000;
+
+            return brandMatch && amountMatch && categoryMatch && idValid;
         });
     }
 
@@ -578,6 +643,8 @@ $(function () {
     }
 
     function renderProducts() {
+        const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+
         let filtered = getFilteredProducts();  // 필터된 상품
         filtered = sortProducts(filtered);  // 정렬
 
@@ -593,13 +660,15 @@ $(function () {
         } else {
             // 상품이 있을 경우
             paginated.forEach(p => {
+                const isWished = wishlist.includes(p.id);  // 찜 여부 체크
+                const heartImg = isWished ? './asset/heart_item_on.png' : './asset/heart_item.png';
                 $menuList.append(`
                 <li class="menu ${p.brand}">
-                    <a href="#">
+                    <a href="./detailpage_bob.html?id=${p.id}">
                         <div class="img">
                         <img src="${p.img}" alt="${p.name}">
-                        <button class="heart-btn">
-                        <img src="./asset/heart_item.png" alt="찜하기">
+                        <button class="heart-btn" data-id="${p.id}">
+                        <img src="${heartImg}" alt="찜하기">
                         </button>
                         </div>
                         <div class="info">
@@ -631,17 +700,34 @@ $(function () {
     }
 
     $(document).on('click', '.heart-btn', function (e) {
-        e.preventDefault(); // a 태그로 감싸져 있어서 기본 동작 방지
+        e.preventDefault();
         const $img = $(this).find('img');
         const src = $img.attr('src');
+        const productId = $(this).data('id'); // data-id 가져오기
+
+        // 기존에 저장된 찜 리스트 가져오기
+        let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
 
         if (src.includes('heart_item_on.png')) {
             alert("찜을 취소 하셨습니다!");
             $img.attr('src', './asset/heart_item.png');
+
+            // localStorage에서 제거
+            wishlist = wishlist.filter(id => id !== productId);
         } else {
             alert("찜을 하셨습니다!");
             $img.attr('src', './asset/heart_item_on.png');
+
+            // localStorage에 추가 (중복 방지)
+            if (!wishlist.includes(productId)) {
+                wishlist.push(productId);
+            }
         }
+
+        // localStorage에 저장
+        localStorage.setItem('wishlist', JSON.stringify(wishlist));
+
+        console.log("현재 찜 리스트:", wishlist);
     });
 
     $(document).on('mouseenter', '.menu a', function () {

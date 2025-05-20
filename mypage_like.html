@@ -11,6 +11,8 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/mypage_common.js"></script>
+    <script src="js/bobStore.js"></script>
+    <script src="js/mypage_like.js"></script>
 </head>
 
 <body>
@@ -36,7 +38,29 @@
                 <div class="tab_wrapper" id="myTab"></div>
 
                 <div class="main">
-
+                    <div class="con_wrap">
+                        <div class="sort">
+                            <ul>
+                                <li class="on"><span>추천순</span></li>
+                                <li><span>신상품순</span></li>
+                                <li><span>판매량순</span></li>
+                                <li><span>낮은 가격순</span></li>
+                                <li><span>높은 가격순</span></li>
+                            </ul>
+                        </div> <!-- //.sort -->
+                        <div class="con">
+                            <div class="menu_wrap">
+                                <ul class="menu_list"></ul>
+                                <ul class="pagination">
+                                    <li class="left_btn"><img src="asset/left_bob.png" alt="왼쪽 버튼"></li>
+                                    <li class="page-btn" data-page="1">1</li>
+                                    <li class="page-btn" data-page="2">2</li>
+                                    <li class="page-btn" data-page="3">3</li>
+                                    <li class="right_btn"><img src="asset/right_bob.png" alt="오른쪽 버튼"></li>
+                                </ul> <!-- //.pagination -->
+                            </div> <!-- //.menu_wrap -->
+                        </div> <!-- //.con -->
+                    </div> <!-- //.con_wrap -->
                 </div><!-- main -->
             </section>
         </div>

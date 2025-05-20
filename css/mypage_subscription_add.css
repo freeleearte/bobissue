@@ -306,8 +306,8 @@ h4 {
     justify-content: space-between;
 }
 
-.box_type .theme .box_all .theme_box {
-     width: 330px;
+.box_type .theme .box_all .theme_box a {
+    width: 330px;
     height: 285px;
     border: 1px solid var(--txt-gray);
     border-radius: 10px;
