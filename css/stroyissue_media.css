@@ -41,7 +41,7 @@
 /* 태블릿 원 사이즈 */
 @media screen and (max-width : 834px) {
     .inner {
-        width: 90%;
+        width: 95%;
     }
 
     .wrap {

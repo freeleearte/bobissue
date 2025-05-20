@@ -14,134 +14,53 @@ $(function () {
         $select.toggleClass('on');
     });
 
-    /* 옵션 클릭시 텍스트 변환 */
-    /*     $(document).on('click', '.select_options li', function () {
-            const selectedText = $(this).text().trim();
-            const $select = $(this).closest('.custom_select');
-    
-            console.log('✅ 선택한 텍스트:', selectedText);
-    
-            $select.find('.label').text(selectedText);
-            $select.removeClass('on');
-    
-            // 두 번째 셀렉트인 경우
-            const index = $('.custom_select').index($select);
-            const $thirdSelect = $('.custom_select').eq(2);
-    
-            if (index === 1) {
-                if (selectedText.includes('밥이슈')) {
-                    $thirdSelect.addClass('disabled');
-                    $thirdSelect.find('.label').text('(필수 3개)원하는 밀키트를 구성해주세요.');
-                } else if (selectedText.includes('구성할래요')) {
-                    $thirdSelect.removeClass('disabled');
-                }
-            }
-        }); */
-
-
-
-
-
-    /*     $(document).on('click', '.select_options li', function () {
-            const selectedText = $(this).text().trim();
-            const $select = $(this).closest('.custom_select');
-            const $label = $select.find('.label');
-    
-            // 선택한 텍스트 반영
-            $label.text(selectedText);
-            $select.removeClass('on');
-    
-            // 두 번째 셀렉트일 경우 → 세 번째 컨트롤
-            const index = $('.custom_select').index($select);
-            const $thirdSelect = $('.custom_select').eq(2);
-            const $thirdLabel = $thirdSelect.find('.label');
-    
-            if (index === 1) {
-                if (selectedText.includes('밥이슈')) {
-                    // 비활성화 + 안내 텍스트 초기화
-                    $thirdSelect.addClass('disabled');
-                    $thirdLabel.text('해당 구성 방법은 선택이 불가합니다.');
-                } else if (selectedText.includes('구성할래요')) {
-                    // 다시 활성화 + 원래 텍스트 복원
-                    $thirdSelect.removeClass('disabled');
-                    $thirdLabel.text('(필수 3개)원하는 밀키트를 구성해주세요.');
-                }
-            }
-        });
-    
-        $(document).on('click', '.custom_select:eq(2) .select_options.check li', function () {
-            const $clicked = $(this);
-            const $list = $clicked.closest('.select_options.check');
-            const $selected = $list.find('li.on');
-    
-            if ($clicked.hasClass('on')) {
-                // 이미 선택된 항목 → 해제
-                $clicked.removeClass('on');
-                return;
-            }
-    
-            if ($selected.length < 3) {
-                // 아직 3개 미만 → 선택 허용
-                $clicked.addClass('on');
-            } else {
-                // 3개 초과 선택 시 차단
-                alert('최대 3개까지만 선택할 수 있어요!');
-            }
-        }); */
-
-    // ✅ 셀렉트 버튼 클릭 시 드롭다운 열기/닫기
+    // ✅ 셀렉트 버튼 클릭 시 열기/닫기
     $(document).on('click', '.select_btn', function (e) {
         e.stopPropagation();
 
         const $select = $(this).closest('.custom_select');
-        $('.custom_select').not($select).removeClass('on'); // 다른 셀렉트 닫기
-
-        $select.toggleClass('on'); // 클릭한 셀렉트 열기/닫기
+        // 다른 셀렉트 닫기 (단, 다중 선택 중엔 닫히지 않게 필터링)
+        $('.custom_select').not($select).removeClass('on');
+        $select.toggleClass('on');
     });
 
-
-    // ✅ 일반 (1~2번째) 셀렉트: 텍스트 반영 + 닫기
-    $(document).on('click', '.select_options li', function () {
-        const $select = $(this).closest('.custom_select');
-        const index = $('.custom_select').index($select);
-
-        // 세 번째 셀렉트는 제외 (다중 선택 전용)
-        if (index === 2) return;
-
-        const selectedText = $(this).text().trim();
+    // ✅ 1, 2번째 셀렉트 (단일 선택)
+    $(document).on('click', '.custom_select:not(:has(.select_options.check)) .select_options li', function () {
+        const $li = $(this);
+        const $select = $li.closest('.custom_select');
         const $label = $select.find('.label');
+        const selectedText = $li.text().trim();
 
-        $label.text(selectedText); // 텍스트 반영
-        $select.removeClass('on'); // 드롭다운 닫기
+        $label.text(selectedText);
+        $select.removeClass('on');
 
-        // 두 번째 셀렉트일 경우 → 세 번째 제어
-        const $thirdSelect = $('.custom_select').eq(2);
-        const $thirdLabel = $thirdSelect.find('.label');
+        // 두 번째 셀렉트 → 세 번째 제어
+        const index = $('.custom_select').index($select);
+        const $third = $('.custom_select').eq(index + 1); // 보통 다음 형제
+        const $thirdLabel = $third.find('.label');
 
-        if (index === 1) {
-            if (selectedText.includes('밥이슈')) {
-                $thirdSelect.addClass('disabled');
-                $thirdLabel.text('해당 구성 방법은 선택이 불가합니다.');
-            } else if (selectedText.includes('구성할래요')) {
-                $thirdSelect.removeClass('disabled');
-                $thirdLabel.text('(필수 3개)원하는 밀키트를 구성해주세요.');
-            }
+        if (selectedText.includes('밥이슈')) {
+            $third.addClass('disabled');
+            $thirdLabel.text('해당 구성 방법은 선택이 불가합니다.');
+        } else if (selectedText.includes('구성할래요')) {
+            $third.removeClass('disabled');
+            $thirdLabel.text('(필수 3개)원하는 밀키트를 구성해주세요.');
         }
     });
 
+    // ✅ 3번째 셀렉트 (다중 선택)
+    $(document).on('click', '.custom_select .select_options.check li', function (e) {
+        e.stopPropagation(); // ✅ 닫힘 방지
 
-    // ✅ 세 번째 셀렉트 (다중 선택 전용)
-    $(document).on('click', '.custom_select:eq(2) .select_options.check li', function () {
         const $clicked = $(this);
-        const $list = $clicked.closest('.select_options.check');
-        const $thirdLabel = $('.custom_select').eq(2).find('.label');
+        const $select = $clicked.closest('.custom_select');
+        const $list = $select.find('.select_options.check');
+        const $label = $select.find('.label');
         const $selected = $list.find('li.on');
 
-        // 선택 해제
         if ($clicked.hasClass('on')) {
             $clicked.removeClass('on');
         } else {
-            // 최대 3개 제한
             if ($selected.length >= 3) {
                 alert('최대 3개까지만 선택할 수 있어요!');
                 return;
@@ -149,24 +68,19 @@ $(function () {
             $clicked.addClass('on');
         }
 
-        // ✅ 선택된 항목 이름만 요약 (금액 없음)
         const selectedItems = $list.find('li.on .left').map(function () {
             return $(this).text().trim();
         }).get();
 
-        if (selectedItems.length > 0) {
-            $thirdLabel.text(selectedItems.join(', '));
-        } else {
-            $thirdLabel.text('(필수 3개)원하는 밀키트를 구성해주세요.');
-        }
+        $label.text(selectedItems.length > 0 ? selectedItems.join(', ') : '(필수 3개)원하는 밀키트를 구성해주세요.');
     });
 
-
+    // ✅ 셀렉트 외부 클릭 시 닫기 (단, 다중 선택 클릭은 유지)
     $(document).on('click', function (e) {
         const $target = $(e.target);
 
-        // 클릭된 요소가 세 번째 custom_select 내부일 경우 무시
-        if ($target.closest('.custom_select').index() === 2) {
+        // 다중 선택 영역 안이면 닫기 금지
+        if ($target.closest('.select_options.check').length > 0 || $target.closest('.custom_select').length > 0) {
             return;
         }
 
@@ -177,7 +91,26 @@ $(function () {
 
 
 
+// 열기
+  $('.option_bar_before button').on('click', function () {
+    $('.option_overlay').addClass('active');
+  });
 
+  // 닫기 - 엑스버튼
+  $('.option_overlay .cancle').on('click', function () {
+    $('.option_overlay').removeClass('active');
+  });
+
+  // 닫기 - 바깥 클릭 시 (option_bar 외부 클릭)
+  $(document).on('click', function (e) {
+    if ($(e.target).hasClass('option_overlay')) {
+      $('.option_overlay').removeClass('active');
+    }
+  });
+
+
+
+    /* 아코디언 */
 
     $('.con .banner .accordion').click(function () {
 
