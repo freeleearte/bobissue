@@ -13,22 +13,8 @@ $(function () {
         return products.filter(p => wishlist.includes(p.id));
     }
 
-    function sortProducts(filtered) {
-        switch (sortType) {
-            case '신상품순':
-                return filtered.sort((a, b) => b.id - a.id);
-            case '낮은 가격순':
-                return filtered.sort((a, b) => a.salePrice - b.salePrice);
-            case '높은 가격순':
-                return filtered.sort((a, b) => b.salePrice - a.salePrice);
-            default:
-                return filtered; // 기본 정렬
-        }
-    }
-
     function renderProducts() {
         let filtered = getWishlistProducts();  // ✅ 찜한 상품만 가져오기
-        filtered = sortProducts(filtered);     // 정렬
 
         const totalPages = Math.ceil(filtered.length / itemsPerPage);  // 페이지 수 계산
         const start = (currentPage - 1) * itemsPerPage;  // 시작 인덱스
@@ -123,9 +109,15 @@ $(function () {
     $(".sort li").click(function () {
         $(".sort li").removeClass("on");
         $(this).addClass("on");
-        sortType = $(this).text().trim();
-        currentPage = 1;
-        renderProducts();
+        if ($(".sort li").first().hasClass('on')) {
+            $(".menu_wrap").removeClass('on');
+            $(".menu_wrap").first().addClass('on');
+            currentPage = 1;
+            renderProducts();
+        } else if ($(".sort li").last().hasClass('on')) {
+            $(".menu_wrap").removeClass('on');
+            $(".menu_wrap").last().addClass('on');
+        }
     });
 
     $(document).on('click', '.heart-btn', function (e) {

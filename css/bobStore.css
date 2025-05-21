@@ -88,7 +88,6 @@ section {
     gap: 20px;
 }
 
-.con .filter .filter_sec:first-child,
 .con .filter .filter_sec:last-child {
     border-bottom: 0;
 }
@@ -100,6 +99,7 @@ section {
     padding-bottom: 15px;
     flex-direction: row;
     gap: 0;
+    border-bottom: 0;
 }
 
 .con .filter .filter_sec strong {
@@ -165,6 +165,7 @@ section {
     height: 20px;
     display: inline-block;
     margin-right: 7px;
+    background-position: center;
 }
 
 .con .filter .filter_sec ul li.on::before {
