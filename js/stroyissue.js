@@ -7,7 +7,8 @@ $(function () {
   let totalQuestions = $('.quiz .question').length; // 전체 질문 수
 
   // 테스트 시작
-  $('.modal_test_wrap .start .button').on('click', function () {
+  $('.modal_test_wrap .start .button').on('click', function (e) {
+    e.preventDefault();
     $('.modal_test_wrap .start').removeClass('on');
     $('.modal_test_wrap .quiz').addClass('on');
     showQuestion($('.first'));
@@ -121,17 +122,17 @@ $(function () {
     if (a > 3) {
       resultType = "불밥이";
       resultText = "불같이 뜨거운 당신을 위한 매운 스토리!";
-      resultImg = "../stroy.img/modal_spicy.jpg";
+      resultImg = "./stroy.img/modal_spicy.jpg";
       resultAlt = "불밥이 이미지";
     } else if (b > 3) {
       resultType = "꿀밥이";
       resultText = "달콤한 당신을 위한 꿀 같은 스토리!";
-      resultImg = "../stroy.img/modal_sweet.jpg";
+      resultImg = "./stroy.img/modal_sweet.jpg";
       resultAlt = "꿀밥이 이미지";
     } else {
       resultType = "담밥이";
-      resultText = "균형 잡힌 당신위한 담백한 이야기!";
-      resultImg = "../stroy.img/modal_normal.jpg";
+      resultText = "균형 잡힌 당신에게 어울리는 담백한 이야기!";
+      resultImg = "./stroy.img/modal_normal.jpg";
       resultAlt = "담밥이 이미지";
     }
 
@@ -159,7 +160,8 @@ $(function () {
   }
 
   // 테스트 다시하기
-  $('.re-test').on('click', function () {
+  $('.ex a').on('click', function (e) {
+    e.preventDefault();
     a = 0;
     b = 0;
     answeredQuestions = {};
@@ -200,6 +202,20 @@ $(function () {
 
     // 드롭다운 닫기
     $('.dropdown-menu').removeClass('active');
+  });
+
+  $(document).on('click', '.heart-btn', function (e) {
+    e.preventDefault();
+    const $img = $(this).find('img');
+    const src = $img.attr('src');
+
+    if (src.includes('heart_item_on.png')) {
+      alert("찜을 취소 하셨습니다!");
+      $img.attr('src', './asset/heart_item.png');
+    } else {
+      alert("찜을 하셨습니다!");
+      $img.attr('src', './asset/heart_item_on.png');
+    }
   });
 
 });

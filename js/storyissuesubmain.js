@@ -8,7 +8,7 @@ $(document).ready(function () {
         /* 제목 */
         $('.txt h2 span').text('비오는 날,');
         $('.txt h2 em').text('어떤 음식을 드시나요?');
-        $('.txt img').attr('src', 'asset/storyissuesubmain_img/비오는날/icon.png')
+        $('.txt img').attr('src', '../asset/storyissuesubmain_img/비오는날/icon.png')
             .attr('alt', '비오는날 밥이');
 
         /* 버튼 텍스트 및 이미지 */
@@ -129,7 +129,7 @@ $(document).ready(function () {
         /* 제목 */
         $('.txt h2 span').text('오징어게임,');
         $('.txt h2 em').text('그 장면 속 한상');
-        $('.txt img').attr('src', 'asset/story_main_icon_.png')
+        $('.txt img').attr('src', 'asset/storyissuesubmain_img/오징어게임.png')
             .attr('alt', '오징어게임의 밥이');
 
         /* 버튼 텍스트 및 이미지 */
@@ -250,7 +250,7 @@ $(document).ready(function () {
         /* 제목 */
         $('.txt h2 span').text('된장과 어울린,');
         $('.txt h2 em').text(' 어떤 음식을 드시나요?');
-        $('.txt img').attr('src', 'asset/story_main_icon_food.png')
+        $('.txt img').attr('src', 'asset/storyissuesubmain_img/된장밥이.png')
             .attr('alt', '된장의 밥이');
 
         /* 버튼 텍스트 및 이미지 */

@@ -815,4 +815,34 @@ $(function () {
     });
 
     renderProducts();
+
+    function handleResponsiveClick() {
+        if ($(window).width() <= 375) {
+            // 기존 이벤트 제거 후 다시 바인딩
+            $(".sort ul li").off("click").on("click", function () {
+                const $clicked = $(this);
+
+                if ($clicked.hasClass("on")) {
+                    // 처음 li.on을 클릭했을 때만 active 부여
+                    $(".sort ul li").addClass("active").removeClass("on");
+                } else {
+                    // 그 다음부터는 on 이동 및 active 제거
+                    $(".sort ul li").removeClass("on active");
+                    $clicked.addClass("on");
+
+                    sortType = $clicked.text().trim();
+                    renderProducts(); // 정렬 적용
+                }
+            });
+        } else {
+            $(".sort ul li").off("click");
+        }
+    }
+
+    handleResponsiveClick();
+    $(window).on('resize', handleResponsiveClick);
+
+    $(".con .filter .icon").click(function () {
+        $(".con .filter").toggleClass("on");
+    });
 });

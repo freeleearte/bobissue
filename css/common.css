@@ -23,15 +23,12 @@
     --pre-15-sb: 600 15px "Pretendard", sans-serif;
     --pre-15-r: 400 15px "Pretendard", sans-serif;
     --pre-16-r: 400 16px "Pretendard", sans-serif;
-    --pre-16-sb: 600 16px "Pretendard", sans-serif;
     --pre-18-r: 400 18px "Pretendard", sans-serif;
-    --pre-18-m: 500 18px "Pretendard", sans-serif;
     --pre-18-sb: 600 18px "Pretendard", sans-serif;
-    --pre-18-b: 700 18px "Pretendard", sans-serif;
     --pre-20-r: 400 20px/30px "Pretendard", sans-serif;
     --pre-20-m: 500 20px "Pretendard", sans-serif;
-    --pre-20-sb: 600 20px "Pretendard", sans-serif;
     --pre-20-b: 700 20px "Pretendard", sans-serif;
+    --pre-20-sb: 600 20px "Pretendard", sans-serif;
     --pre-22-b: 700 22px "Pretendard", sans-serif;
     --pre-25-sb: 600 25px "Pretendard", sans-serif;
     --pre-25-r: 400 25px "Pretendard", sans-serif;
@@ -43,7 +40,7 @@
     --pre-30-sb: 600 30px "Pretendard", sans-serif;
     --pre-30-b: 700 30px "Pretendard", sans-serif;
     --pre-35-sb: 600 35px "Pretendard", sans-serif;
-    --pre-35-b: 700 35px "Pretendard", sans-serif;
+    --pre-35-b: 600 35px "Pretendard", sans-serif;
     --pre-35-l: 300 35px "Pretendard", sans-serif;
     --pre-40-m: 400 40px "Pretendard", sans-serif;
     --pre-40-b: 700 40px "Pretendard", sans-serif;
@@ -82,6 +79,42 @@
     --bt-pad: 100px;
     --tit-pad: 120px;
     --fc-pad: 200px;
+}
+
+#btn_pc_one {
+    background-color: var(--sub-color-1);
+    border-radius: 10px;
+    width: 330px;
+    height: 60px;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+#btn_pc_two {
+    background-color: var(--sub-color-1);
+    border-radius: 10px;
+    width: 250px;
+    height: 55px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#btn_tab_one {
+    background-color: var(--sub-color-1);
+    border-radius: 10px;
+    width: 250px;
+    height: 45px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#btn_tab_two {
+    background-color: var(--sub-color-1);
+    border-radius: 10px;
+    width: 200px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 400;
 }
 
 .inner {
@@ -414,6 +447,7 @@ footer .f_left .info strong {
 
 footer .f_left .info p {
     font: var(--pre-18-r);
+    color: var(--txt-w-color);
 }
 
 footer .f_left .info img {

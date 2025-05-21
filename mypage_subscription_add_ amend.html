@@ -59,29 +59,29 @@
                             <h4>구독유형</h4>
                             <div class="type_all">
                                 <div class="type_box basic on">
-                                  <img src="asset/마이페이지/check_icon.png" alt="check" class="icon">
+                                    <img src="asset/마이페이지/check_icon.png" alt="check" class="icon">
                                     <h3>BASIC</h3>
                                     <p class="desc">무료배송</p>
                                     <div class="price"><span>₩ 5,000</span> | Month</div>
-                                   
+
                                 </div>
                                 <div class="type_box premium">
-                                   
-                                         <img src="asset/마이페이지/check_icon.png" alt="check" class="icon">
+
+                                    <img src="asset/마이페이지/check_icon.png" alt="check" class="icon">
                                     <h3>PREMIUM</h3>
                                     <p class="desc">이달의 스토리 컨텐츠 3종</p>
                                     <div class="price"><span>₩ 39,900</span> | Month</div>
-                                
-                                   
+
+
                                 </div>
                                 <div class="type_box GLOBAL">
-                                   
-                                         <img src="asset/마이페이지/check_icon.png" alt="check" class="icon">
+
+                                    <img src="asset/마이페이지/check_icon.png" alt="check" class="icon">
                                     <h3>GLOBAL</h3>
                                     <p class="desc">PREMIUM + 굿즈/선물</p>
                                     <div class="price"><span>₩ 49,900</span> | Month</div>
-                                    
-                                   
+
+
                                 </div>
                             </div>
                         </div>
@@ -124,26 +124,26 @@
                                     <div class="theme_box on">
                                         <a href="">
                                             <img src="asset/마이페이지/check_icon.png" alt="check" class="icon">
-                                        <div class="tit">스토리 구독 BOX</div>
-                                        <div class="img"></div>
+                                            <div class="tit">스토리 구독 BOX</div>
+                                            <div class="img"></div>
                                         </a>
-                                        
+
                                     </div>
                                     <div class="theme_box">
                                         <a href="">
                                             <img src="asset/마이페이지/check_icon.png" alt="check" class="icon">
-                                        <div class="tit">상황 구독 BOX</div>
-                                        <div class="img"></div>
+                                            <div class="tit">상황 구독 BOX</div>
+                                            <div class="img"></div>
                                         </a>
-                                        
+
                                     </div>
                                     <div class="theme_box">
                                         <a href="">
-                                             <img src="asset/마이페이지/check_icon.png" alt="check" class="icon">
-                                        <div class="tit">문화 구독 BOX</div>
-                                        <div class="img"></div>
+                                            <img src="asset/마이페이지/check_icon.png" alt="check" class="icon">
+                                            <div class="tit">문화 구독 BOX</div>
+                                            <div class="img"></div>
                                         </a>
-                                       
+
                                     </div>
                                 </div>
                             </div><!-- 구독테마 -->
@@ -308,7 +308,7 @@
                                         <p>1004 1234 1004 1234</p>
                                     </div>
                                 </div>
-                           <div class="sec2_right">
+                                <div class="sec2_right">
                                     <p><a href="#">수정하기</a></p>
                                 </div>
                             </div>
@@ -357,40 +357,43 @@
                 </div><!-- //.add -->
             </section>
         </div>
-        <script>
-            /* 달력수정하는데 1일로 기본 설정되어있음 */
-            document.addEventListener('DOMContentLoaded', () => {
-                const calendarCells = document.querySelectorAll('.calendar_table td');
+        <footer id="mainFooter"></footer>
+    </div>
 
-                calendarCells.forEach(cell => {
-                    const text = cell.textContent.trim();
+    <script>
+        /* 달력수정하는데 1일로 기본 설정되어있음 */
+        document.addEventListener('DOMContentLoaded', () => {
+            const calendarCells = document.querySelectorAll('.calendar_table td');
 
-                    // 숫자 감싸기
-                    if (text !== '' && !cell.querySelector('span')) {
-                        cell.innerHTML = `<span class="day-text">${text}</span>`;
-                    }
+            calendarCells.forEach(cell => {
+                const text = cell.textContent.trim();
 
-                    // ✅ 1일 자동 선택
-                    if (text === '1') {
+                // 숫자 감싸기
+                if (text !== '' && !cell.querySelector('span')) {
+                    cell.innerHTML = `<span class="day-text">${text}</span>`;
+                }
+
+                // ✅ 1일 자동 선택
+                if (text === '1') {
+                    cell.classList.add('selected');
+                }
+
+                // 클릭 시 선택/해제
+                cell.addEventListener('click', () => {
+                    if (text === '') return;
+
+                    if (cell.classList.contains('selected')) {
+                        cell.classList.remove('selected');
+                    } else {
+                        calendarCells.forEach(td => td.classList.remove('selected'));
                         cell.classList.add('selected');
                     }
-
-                    // 클릭 시 선택/해제
-                    cell.addEventListener('click', () => {
-                        if (text === '') return;
-
-                        if (cell.classList.contains('selected')) {
-                            cell.classList.remove('selected');
-                        } else {
-                            calendarCells.forEach(td => td.classList.remove('selected'));
-                            cell.classList.add('selected');
-                        }
-                    });
                 });
             });
+        });
 
 
-        </script>
+    </script>
 </body>
 
 </html>

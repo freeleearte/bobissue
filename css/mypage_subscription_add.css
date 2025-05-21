@@ -828,27 +828,28 @@ h4 {
 
 /* 하단 버튼 */
 .button {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding-top: var(--bt-pad);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: var(--bt-pad);
 }
 
 .button p {
-    width: 250px;
-    height: 55px;
-    border: 0;
-    background: var(--sub-color-1);
-    color: var(--txt-w-color);
-    cursor: pointer;
-    font: var(--pre-20-m);
-    border-radius: 10px;
-
+  background-color: var(--sub-color-1);
+  border-radius: 10px;
+  width: 330px;
+  height: 60px;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--txt-w-color);
+  cursor: pointer;
+  border-radius: 10px;
 }
-.button p a{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+.button p a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

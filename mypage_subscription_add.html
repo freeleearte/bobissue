@@ -294,7 +294,7 @@
                                         <p>1004 1234 1004 1234</p>
                                     </div>
                                 </div>
-                               <div class="sec2_right">
+                                <div class="sec2_right">
                                     <p><a href="#">수정하기</a></p>
                                 </div>
                             </div>
@@ -342,35 +342,38 @@
                 </div><!-- //.add -->
             </section>
         </div>
-        <script>
-            /* 달력 선택 js */
-            document.addEventListener('DOMContentLoaded', () => {
-                const calendarCells = document.querySelectorAll('.calendar_table td');
+        <footer id="mainFooter"></footer>
+    </div>
 
-                calendarCells.forEach(cell => {
-                    const text = cell.textContent.trim();
+    <script>
+        /* 달력 선택 js */
+        document.addEventListener('DOMContentLoaded', () => {
+            const calendarCells = document.querySelectorAll('.calendar_table td');
 
-                    // 숫자 감싸기 (중복 방지)
-                    if (text !== '' && !cell.querySelector('span')) {
-                        cell.innerHTML = `<span class="day-text">${text}</span>`;
+            calendarCells.forEach(cell => {
+                const text = cell.textContent.trim();
+
+                // 숫자 감싸기 (중복 방지)
+                if (text !== '' && !cell.querySelector('span')) {
+                    cell.innerHTML = `<span class="day-text">${text}</span>`;
+                }
+
+                cell.addEventListener('click', () => {
+                    if (!text) return;
+
+                    // 이미 선택된 셀이면 선택 해제
+                    if (cell.classList.contains('selected')) {
+                        cell.classList.remove('selected');
+                    } else {
+                        // 다른 셀 선택 전 기존 선택 해제
+                        calendarCells.forEach(td => td.classList.remove('selected'));
+                        cell.classList.add('selected');
                     }
-
-                    cell.addEventListener('click', () => {
-                        if (!text) return;
-
-                        // 이미 선택된 셀이면 선택 해제
-                        if (cell.classList.contains('selected')) {
-                            cell.classList.remove('selected');
-                        } else {
-                            // 다른 셀 선택 전 기존 선택 해제
-                            calendarCells.forEach(td => td.classList.remove('selected'));
-                            cell.classList.add('selected');
-                        }
-                    });
                 });
             });
+        });
 
-        </script>
+    </script>
 </body>
 
 </html>

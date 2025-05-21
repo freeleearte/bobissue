@@ -3,6 +3,7 @@
 body {
     font-family: var(--main-font-family);
     color: var(--txt-dark-gray);
+    overflow-x: hidden;
 }
 
 .wrap {

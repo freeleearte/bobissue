@@ -843,14 +843,14 @@ h4 {
 }
 
 .button p {
+   border-radius: 10px;
     width: 250px;
     height: 55px;
-    border: 0;
+    font-size: 20px;
+    font-weight: 500;
     background: var(--sub-color-1);
     color: var(--txt-w-color);
     cursor: pointer;
-    font: var(--pre-20-m);
-    border-radius: 10px;
 }
 .button p a{
     width: 100%;
