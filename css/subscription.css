@@ -12,7 +12,7 @@ body {
 .main_visual {
     width: 100%;
     height: 400px;
-    background: var(--light-green);
+    background: url(../asset/subscription/main_visual.png) no-repeat center/cover;
 }
 
 /* 폰트 일괄 지정 */
@@ -362,8 +362,8 @@ p {
 }
 
 .con3 .ch_right {
-    width: 670px;
-    height: 340px;
+    width: 350px;
+    height: 300px;
     background: url(../asset/subscription/banner1.png) no-repeat center/cover;
     border-radius: 30px;
 }
@@ -411,8 +411,8 @@ p {
 }
 
 .con3 .op_right {
-    width: 670px;
-    height: 340px;
+    width: 350px;
+    height: 300px;
     background: url(../asset/subscription/banner2.png) no-repeat center/cover;
     border-radius: 30px;
 }
@@ -485,8 +485,8 @@ p {
 }
 
 .con3 .pre_right {
-    width: 670px;
-    height: 340px;
+    width: 350px;
+    height: 220px;
     background: url(../asset/subscription/banner3.png) no-repeat center/cover;
     border-radius: 30px;
 }
@@ -539,8 +539,8 @@ p {
 }
 
 .con3 .di_right {
-    width: 670px;
-    height: 340px;
+    width: 350px;
+    height: 300px;
     background: url(../asset/subscription/banner4.png) no-repeat center/cover;
     border-radius: 30px;
 }
@@ -877,7 +877,10 @@ p {
     border-radius: 15px;
     margin: 0 auto;
     font: var(--pre-25-sb);
+}
 
+.con5 .tit br {
+  display: none;
 }
 
 .con5 .button a {
