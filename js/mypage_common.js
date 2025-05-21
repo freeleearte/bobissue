@@ -108,4 +108,9 @@ $(function () {
   updateProfileSection();
   highlightCurrentMenu();
   addOnClassStyles();
+
+  $('#backButton').on('click', function (e) {
+    e.preventDefault();
+    window.history.back();
+  });
 });

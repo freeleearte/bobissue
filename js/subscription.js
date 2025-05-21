@@ -61,4 +61,14 @@ $(function () {
       target.scrollIntoView({ behavior: 'smooth' });
     }
   });
+
+  $('.con5 .button a').on('click', function (e) {
+    e.preventDefault();
+    $('.opinion_modal').addClass('on');
+  });
+
+  $('.cancel_btn').on('click', function (e) {
+    e.preventDefault();
+    $('.opinion_modal').removeClass('on');
+  });
 });

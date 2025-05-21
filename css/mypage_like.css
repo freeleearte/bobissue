@@ -85,6 +85,7 @@ body {
     padding: 20px;
     border-radius: 15px;
     background-color: var(--more-light-yellow);
+    flex-shrink: 0;
 }
 
 .tab_wrapper img {
@@ -154,4 +155,332 @@ body {
     height: 1080px;
     padding: 25px;
     border-radius: 20px;
+}
+
+section {
+    font-family: var(--main-font-family);
+}
+
+.banner {
+    width: 100%;
+    height: 400px;
+    background: #ccc;
+    margin-bottom: 80px;
+}
+
+.con_wrap {}
+
+.title {
+    display: flex;
+    justify-content: center;
+}
+
+.title h2 {
+    font-size: 50px;
+    font-weight: 700;
+}
+
+/* sort */
+.sort {
+    margin-top: 50px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.sort ul {
+    display: flex;
+}
+
+.sort ul li {
+    font-size: 15px;
+    color: var(--txt-medium-gray);
+    padding-inline: 15px;
+    border-right: 0.8px solid var(--txt-medium-gray);
+}
+
+.sort ul li span {
+    cursor: pointer;
+}
+
+.sort ul li.on {
+    color: var(--txt-gray);
+}
+
+.sort ul li:last-child {
+    border-right: 0;
+    padding-right: 0;
+}
+
+.con {
+    width: 100%;
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+}
+
+.menu_wrap {
+    display: none;
+}
+
+.menu_wrap.on {
+    display: block;
+}
+
+/* menu */
+.menu_list {
+    display: flex;
+    column-gap: 20px;
+    row-gap: 40px;
+    flex-wrap: wrap;
+    width: 1100px;
+}
+
+.menu {
+    width: 260px;
+    height: 420px;
+}
+
+.menu a {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.menu .img {
+    width: 260px;
+    height: 260px;
+    background: #ccc;
+    position: relative;
+}
+
+.menu .img button {
+    border: 0;
+    background: none;
+    position: absolute;
+    right: 5px;
+    bottom: 10px;
+    width: 50px;
+    cursor: pointer;
+}
+
+.menu-hover {
+    box-shadow: 0px 0px 5px 1px var(--sub-color-1);
+}
+
+.menu-heart-hover {
+    box-shadow: 0px 0px 5px 1px red;
+}
+
+.menu .img img {
+    width: 100%;
+    height: 100%;
+}
+
+.menu .info {
+    padding: 5px 10px 14px 15px;
+    display: flex;
+    height: 150px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu .info .top_txt {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    /* margin-bottom: 22px; */
+}
+
+.menu .info .top_txt strong {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--txt-dark-gray);
+    /* letter-spacing: -1px; */
+    line-height: 24px;
+}
+
+.fresheasy .info .top_txt strong::before {
+    content: '[프레시지]';
+    font-size: 15px;
+    color: var(--txt-medium-m-gray);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.bs100 .info .top_txt strong::before {
+    content: '[백년밥상]';
+    font-size: 15px;
+    color: var(--txt-medium-m-gray);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.peacock .info .top_txt strong::before {
+    content: '[피코크]';
+    font-size: 15px;
+    color: var(--txt-medium-m-gray);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.menu .info .bottom_txt {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 8px;
+}
+
+.menu .info .bottom_txt span {
+    font-size: 14px;
+    font-weight: 500;
+    color: #aaaaaa;
+    text-decoration: line-through;
+    margin-bottom: 4px;
+}
+
+.menu .info .bottom_txt p {
+    font-size: 23px;
+    font-weight: 600;
+    color: var(--sub-color-1);
+}
+
+.menu .info .bottom_txt p em {
+    font-weight: 700;
+    color: var(--txt-dark-gray);
+    margin-left: 8px;
+}
+
+.pagination {
+    margin-top: 122px;
+    margin-bottom: 88px;
+    display: flex;
+    justify-self: center;
+    gap: 5px;
+}
+
+.pagination li {
+    width: 34px;
+    height: 34px;
+    border: 1px solid var(--txt-light-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--txt-medium-m-gray);
+    cursor: pointer;
+}
+
+.pagination li.on {
+    border-color: var(--sub-color-1);
+    color: var(--sub-color-1);
+}
+
+.menu_wrap .story-all {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 50px 0;
+}
+
+.menu_wrap .story-all li {
+    width: 460px;
+    /* 3개씩, gap 합 = 20*2=40 */
+    /*     max-width: 460px; */
+    height: 320px;
+    border-radius: 30px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+    cursor: pointer;
+    margin-bottom: 2vh;
+}
+
+.menu_wrap .story-all li a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    padding: 15px 20px;
+    color: var(--txt-w-color);
+    position: relative;
+    box-sizing: border-box;
+}
+
+.menu_wrap .story-all li a button {
+    border: 0;
+    background: none;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 50px;
+    cursor: pointer;
+}
+
+.menu_wrap .story-all li a button img {
+    width: 100%;
+}
+
+.menu_wrap .story-all li .txt {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.menu_wrap .story-all li .txt p {
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.menu_wrap .story-all li .txt .under {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.menu_wrap .story-all li .txt .under .left {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--sub-color-2);
+}
+
+.menu_wrap .story-all li .txt .under .left img {
+    width: 20px;
+    height: 20px;
+}
+
+
+
+.menu_wrap .story-all li .txt .under .right {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 400;
+    gap: 10px;
+}
+
+
+
+.menu_wrap .story-all li .txt .under .right img {
+    width: 12px;
+    height: 20px;
+}
+
+.story-all li:nth-child(1) {
+    background-image: linear-gradient(180deg, rgba(51, 51, 51, 0.00) 21.46%, rgba(16, 16, 16, 0.68) 61.33%, #000 99.74%), url(../stroy.img/story-card-1.jpg);
+}
+
+.story-all li:nth-child(2) {
+    background-image: linear-gradient(180deg, rgba(51, 51, 51, 0.00) 21.46%, rgba(16, 16, 16, 0.68) 61.33%, #000 99.74%), url(../stroy.img/story-situation-5.jpg);
 }

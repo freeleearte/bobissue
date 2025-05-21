@@ -45,7 +45,10 @@ p {
     font-weight: 700;
     color: var(--main-color);
 }
-
+.tap .list span a{
+    display: block;
+    cursor: pointer;
+}
 .tap .list img {
     width: 8px;
     height: 14px;
@@ -293,19 +296,7 @@ p {
     color: var(--txt-medium-m-gray);
 }
 
-.sec4_right {
-    width: 120px;
-    height: 35px;
-    background: var(--sub-color-1);
-    border-radius: 5px;
-}
 
-.sec4_right p {
-    font: var(--pre-18-r);
-    color: var(--txt-w-color);
-    text-align: center;
-    line-height: 35px;
-}
 
 
 /* 결제수단 */
@@ -337,17 +328,6 @@ p {
     color: var(--txt-medium-gray);
 }
 
-.sec5_card>p {
-    width: 120px;
-    height: 35px;
-    background: var(--sub-color-1);
-    border-radius: 5px;
-    font: var(--pre-18-r);
-    color: var(--txt-w-color);
-    text-align: center;
-    line-height: 35px;
-}
-
 
 
 
@@ -371,7 +351,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 .button ul li:nth-child(2) {

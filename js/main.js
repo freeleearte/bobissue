@@ -44,26 +44,58 @@ gsap.timeline({
     });
 
 /* 첫번째 캐릭터 모션 */
-gsap.timeline({
-    scrollTrigger: {
-        trigger: ".char1_wrap",
-        start: "top 20%",
-        end: "bottom -20%",
-        scrub: true,
-        // markers: true,
 
+function char1Position() {
+    let windowWidth = $(window).width();
+
+    if (windowWidth >= 834) {
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: ".char1_wrap",
+                start: "top 20%",
+                end: "bottom -20%",
+                scrub: true,
+                // markers: true,
+
+            }
+        })
+            .to(".char1_wrap", {
+                right: 1000 + 'px',
+                top: 900 + 'px',
+                ease: "power1.out",
+            })
+            .to(".char1_wrap", {
+                right: 1900 + 'px',
+                top: 1600 + 'px',
+                ease: "power1.out",
+            });
+    } else {
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: ".char1_wrap",
+                start: "top 20%",
+                end: "bottom -20%",
+                scrub: true,
+                // markers: true,
+
+            }
+        })
+            .to(".char1_wrap", {
+                right: 550 + 'px',
+                top: 250 + 'px',
+                ease: "power1.out",
+            })
+            .to(".char1_wrap", {
+                right: 1000 + 'px',
+                top: 500 + 'px',
+                ease: "power1.out",
+            });
     }
-})
-    .to(".char1_wrap", {
-        right: 1000 + 'px',
-        top: 900 + 'px',
-        ease: "power1.out",
-    })
-    .to(".char1_wrap", {
-        right: 1900 + 'px',
-        top: 1600 + 'px',
-        ease: "power1.out",
-    });
+}
+
+// 초기 실행 + 리사이즈 이벤트
+char1Position();
+$(window).on('resize', char1Position);
 
 $("#stopBtn").on("click", function () {
     // 모든 이미지의 애니메이션을 멈추고 top: 0으로 고정
@@ -203,38 +235,83 @@ $('.sw_btn').click(function () {
 });
 
 /* 두번째 캐릭터 모션 */
-gsap.timeline({
-    scrollTrigger: {
-        trigger: ".char2_wrap",
-        start: "top 40%",
-        end: "bottom -160%",
-        scrub: true,
-        // markers: true,
 
+
+function char2Position() {
+    let windowWidth = $(window).width();
+
+    if (windowWidth >= 834) {
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: ".char2_wrap",
+                start: "top 40%",
+                end: "bottom -160%",
+                scrub: true,
+                // markers: true,
+
+            }
+        })
+            .to(".char2_wrap", {
+                left: 1000 + 'px',
+                top: 300 + 'px',
+                ease: "power1.out",
+            })
+            .to(".char2_wrap", {
+                left: 1900 + 'px',
+                top: 1000 + 'px',
+                ease: "power1.out",
+            })
+            .to(".char2_wrap", {
+                left: 1300 + 'px',
+                top: 1600 + 'px',
+                scale: 0.6,
+                ease: "power1.out",
+            })
+            .to(".char2_wrap", {
+                left: 1900 + 'px',
+                top: 2300 + 'px',
+                scale: 0.3,
+                ease: "power1.out",
+            });
+    } else {
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: ".char2_wrap",
+                start: "top 60%",
+                end: "bottom -160%",
+                scrub: true,
+                // markers: true,
+
+            }
+        })
+            .to(".char2_wrap", {
+                left: 450 + 'px',
+                top: 100 + 'px',
+                ease: "power1.out",
+            })
+            .to(".char2_wrap", {
+                left: 900 + 'px',
+                top: 600 + 'px',
+                ease: "power1.out",
+            })
+            .to(".char2_wrap", {
+                left: 500 + 'px',
+                top: 500 + 'px',
+                scale: 0.6,
+                ease: "power1.out",
+            })
+            .to(".char2_wrap", {
+                left: 900 + 'px',
+                top: 700 + 'px',
+                scale: 0.3,
+                ease: "power1.out",
+            });
     }
-})
-    .to(".char2_wrap", {
-        left: 1000 + 'px',
-        top: 300 + 'px',
-        ease: "power1.out",
-    })
-    .to(".char2_wrap", {
-        left: 1900 + 'px',
-        top: 1000 + 'px',
-        ease: "power1.out",
-    })
-    .to(".char2_wrap", {
-        left: 1300 + 'px',
-        top: 1600 + 'px',
-        scale: 0.6,
-        ease: "power1.out",
-    })
-    .to(".char2_wrap", {
-        left: 1900 + 'px',
-        top: 2300 + 'px',
-        scale: 0.3,
-        ease: "power1.out",
-    });
+}
+
+// 초기 실행 + 리사이즈 이벤트
+char2Position();
+$(window).on('resize', char2Position);
 
 let topSwiper = new Swiper(".con3_top", {
     loop: true,
@@ -300,17 +377,60 @@ topSwiper.on("slideChange", function () {
 });
 
 
-document.querySelectorAll('.parallax').forEach(el => {
-    const speed = parseFloat(el.dataset.speed);
+const parallaxEls = document.querySelectorAll('.parallax');
 
-    gsap.to(el, {
-        y: () => window.innerHeight * speed,
-        ease: 'power1.out',
-        scrollTrigger: {
-            trigger: el,
-            start: 'top bottom',
-            end: 'bottom top',
-            scrub: 1 // 부드럽게
-        }
-    });
+ScrollTrigger.matchMedia({
+    // 데스크탑 (1900px 이하)
+    "(min-width: 835px)": function () {
+        const speeds = [-0.7, -0.6, -0.4, -0.9, -0.7, -0.9];
+
+        parallaxEls.forEach((el, index) => {
+            gsap.to(el, {
+                y: () => window.innerHeight * speeds[index],
+                ease: 'power1.out',
+                scrollTrigger: {
+                    trigger: el,
+                    start: 'top bottom',
+                    end: 'bottom top',
+                    scrub: 1
+                }
+            });
+        });
+    },
+
+    // 태블릿 (834px 이하)
+    "(max-width: 834px)": function () {
+        const speeds = [-0.5, -0.5, -0.7, -0.7, -0.9, -0.9];
+
+        parallaxEls.forEach((el, index) => {
+            gsap.to(el, {
+                y: () => window.innerHeight * speeds[index],
+                ease: 'power1.out',
+                scrollTrigger: {
+                    trigger: el,
+                    start: 'top bottom',
+                    end: 'bottom top',
+                    scrub: 1
+                }
+            });
+        });
+    },
+
+    // 모바일 (375px 이하)
+    "(max-width: 375px)": function () {
+        const speeds = [-0.5, -0.5, -0.5, -0.5, -0.5, -0.5];
+
+        parallaxEls.forEach((el, index) => {
+            gsap.to(el, {
+                y: () => window.innerHeight * speeds[index],
+                ease: 'power1.out',
+                scrollTrigger: {
+                    trigger: el,
+                    start: 'top bottom',
+                    end: 'bottom top',
+                    scrub: 1
+                }
+            });
+        });
+    }
 });
