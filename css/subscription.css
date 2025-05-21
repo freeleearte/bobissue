@@ -29,7 +29,7 @@ h4 {
     font-weight: 500;
     background: #FFF8ED;
     border: 1px solid var(--sub-color-1);
-    color: var(--sub-color-1);
+    color: var(--sub-color-1); 
     text-align: center;
     line-height: 50px;
     border-radius: 10px;
@@ -40,10 +40,6 @@ b {
     color: var(--sub-color-1);
 }
 
-<<<<<<< HEAD
-span {
-    font: var(--pre-40-b);
-=======
 p {
     font: var(--pre-28-r);
     line-height: 2.4rem;
@@ -52,15 +48,15 @@ p {
 
 .inner span {
     font-weight: 600;
->>>>>>> 21623a1f20e137c3f878623487ba59af8d7a6895
     color: var(--main-color);
 }
 
 .con1 {
-    width: 100%;
+    width: 1440px;
     display: flex;
     justify-content: center;
-    padding-top: 100px;
+    padding: 200px 0 100px 0;
+    text-align: center;
 }
 
 .con1 .banner {
@@ -79,6 +75,10 @@ p {
     background: url(../img/bobhi.png) no-repeat center/contain;
     display: flex;
     justify-content: center;
+}
+
+.con1 .banner_left {
+    width: 100%;
 }
 
 .con1 .banner_left h3 {
@@ -307,17 +307,20 @@ p {
 }
 
 .con3 .inner {
-    background: var(--more-light-yellow);
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .con3 .choice_all {
     width: 100%;
+    height: 450px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 42px 45px;
-
+    background: #FFFCE6;
 }
 
 .con3 .choice_all .tit {
@@ -352,10 +355,6 @@ p {
     font: var(--pre-40-b);
 }
 
-.con3 .choice_all {
-    background: url(--light-green);
-}
-
 .con3 .choice_all p,
 .con3 .option_all p {
     font: var(--pre-20-r);
@@ -371,7 +370,7 @@ p {
 
 .con3 .option_all {
     width: 100%;
-    /* height: 100%; */
+    height: 450px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -420,7 +419,8 @@ p {
 
 .con3 .premium_all {
     width: 100%;
-    /* height: 100%; */
+    height: 450px;
+    background: #FFFCE6;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -493,7 +493,7 @@ p {
 
 .con3 .discount {
     width: 100%;
-    /* height: 100%; */
+    height: 450px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -529,7 +529,7 @@ p {
     padding-bottom: 20px;
 }
 
-.con3 .choice_all span {
+.con3 .discount span {
     font: var(--pre-40-b);
 }
 
@@ -562,6 +562,10 @@ p {
     display: flex;
     flex-direction: column;
     align-items: end;
+}
+
+.side_tab span {
+    letter-spacing: 0.4rem;
 }
 
 .tab {
@@ -604,6 +608,7 @@ p {
     height: 100%;
     position: relative;
     margin-top: -300px;
+    padding-bottom: var(--con-pad);
 }
 
 .con4 .all {
@@ -618,7 +623,7 @@ p {
 .con4 .item .num {
     width: 75px;
     height: 78px;
-    background: url(../img/tabmenu1.png);
+    background: url(../img/tabmenu1.png) no-repeat center/contain;
     color: var(--txt-w-color);
     line-height: 75px;
     font-size: 30px;
@@ -627,7 +632,7 @@ p {
 }
 
 .con4 .box .item .num {
-    background: url(../img/tabmenu2.png);
+    background: url(../img/tabmenu2.png) no-repeat center/contain;
 }
 
 .coupon_box {
@@ -671,7 +676,7 @@ p {
 .coupon_wrapper .coupon {
     width: 460px;
     height: 202px;
-    background: url(../asset/subscription/coupon.png) no-repeat center/cover;
+    background: url(../asset/subscription/coupon.png) no-repeat center/contain;
     display: flex;
 }
 
@@ -679,8 +684,6 @@ p {
     width: 105px;
     height: 100%;
     text-align: center;
-    font: var(--pre-25-sb);
-    color: var(--txt-w-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -771,7 +774,7 @@ p {
 
 .plan_card {
     width: 440px;
-    height: 450px;
+    /* height: 450px; */
     display: flex;
     flex-direction: column;
     gap: 25px;
@@ -785,15 +788,15 @@ p {
 }
 
 .plan_top p {
-    font: var(--pre-34-m);
+    font: var(--pre-35-sb);
     color: var(--txt-gray);
-    line-height: 1.4;
+    padding-top: 10px;
 }
 
 .plan_box {
     width: 100%;
-    height: 350px;
-    border: 1px solid var(--sub-color-1);
+    height: 250px;
+    border: 2px solid var(--sub-color-1);
     border-radius: 15px;
     display: flex;
     flex-direction: column;
@@ -803,7 +806,8 @@ p {
 }
 
 .plan_box h3 {
-    font: var(--pre-28-sb);
+    font-family: var(--title-font-family);
+    font-size: 28px;
     color: var(--sub-color-1);
     padding-bottom: 20px;
 }
@@ -813,7 +817,7 @@ p {
     height: 70px;
     background: var(--sub-color-1);
     color: var(--txt-w-color);
-    font: var(--pre-20-r);
+    font: var(--pre-25-r);
     border-radius: 15px;
     display: inline-block;
     line-height: 70px;
@@ -837,11 +841,13 @@ p {
 .con5 {
     width: 100%;
     text-align: center;
-    padding: 300px 0;
+    padding: 100px 0;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    background: #FFFCE6;
+    margin-bottom: 200px;
 }
 
 .con5 .text_all {
@@ -851,8 +857,9 @@ p {
     padding-bottom: 160px;
 }
 
-.con5 .text_all .tit {
-    font: var(--pre-40-b);
+.con5 .text_all .tit h2 {
+    font: var(--pre-40-m);
+    color: #000;
 }
 
 .con5 .text_all p {
@@ -885,7 +892,7 @@ p {
 .con5 .button_icon {
     width: 150px;
     height: 100px;
-    background: url(../asset/subscription/bottonicon.png) no-repeat;
+    background: url(../asset/subscription/bottonicon.png) no-repeat center/contain;
     position: absolute;
     top: 55%;
     left: 50%;
