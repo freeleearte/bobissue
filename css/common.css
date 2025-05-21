@@ -22,9 +22,11 @@
     --pre-15-m: 500 15px "Pretendard", sans-serif;
     --pre-15-sb: 600 15px "Pretendard", sans-serif;
     --pre-15-r: 400 15px "Pretendard", sans-serif;
+    --pre-16-sb: 600 16px "Pretendard", sans-serif;
     --pre-16-r: 400 16px "Pretendard", sans-serif;
     --pre-18-r: 400 18px "Pretendard", sans-serif;
     --pre-18-sb: 600 18px "Pretendard", sans-serif;
+    --pre-18-b: 700 18px "Pretendard", sans-serif;
     --pre-20-r: 400 20px/30px "Pretendard", sans-serif;
     --pre-20-m: 500 20px "Pretendard", sans-serif;
     --pre-20-b: 700 20px "Pretendard", sans-serif;
@@ -269,6 +271,7 @@ header nav ul.nav-menu li a {
     border-bottom: 2px solid transparent;
 }
 
+
 header nav ul.nav-menu li:hover a {
     border-color: red;
     color: red;
@@ -288,7 +291,6 @@ header.scroll .bot .inner {
 header ul.right-menu {
     display: flex;
     gap: 20px;
-}
 
 header ul.right-menu li:last-child {
     display: none;
@@ -393,8 +395,6 @@ footer .f_left .info {
     color: var(--txt-w-color);
     gap: 60px;
     height: 110px;
-    order: 2;
-}
 
 footer .f_left .info .group {
     display: flex;
@@ -453,7 +453,7 @@ footer .f_right .sns li {
 footer .f_right .sns li img {
     width: 100%;
 }
-
+  
 footer .inner>span {
     display: block;
     text-align: right;

@@ -3,33 +3,100 @@
 .main_visual {
     width: 100%;
     height: 1000px;
-    background: url(../asset/brand/main_visual.png);
+    background: url(../asset/brand/main_visual2.png) no-repeat center/cover;
 }
 
 .con1 {
     width: 100%;
     text-align: center;
-    padding: 150px 0 300px 0;
-}
-
-.con1 h2 {
-    font: var(--pre-50-b);
-    padding-bottom: 120px;
+    padding: 200px 0 300px 0;
+    background: #F6F1E9;
+    position: relative;
 }
 
 .con1 p {
-    font: var(--pre-40-b);
-    line-height: 1.5;
+    font: var(--pre-40-m);
+    font-weight: 300;
+    line-height: 1.2;
 }
 
-.con1 b {
-    color: var(--main-color);
+.con1 span {
+    font: var(--pre-50-b);
 }
+
+.con1_leaf ul {
+    width: 100%;
+    height: 100%;
+}
+
+.con1_leaf ul li:nth-child(1) {
+    width: 60px;
+    height: 70px;
+    background: url(../asset/brand/main_leaf_1.png) no-repeat center/contain;
+    position: absolute;
+    left: 10%;
+    top: 5%;
+}
+
+.con1_leaf ul li:nth-child(2) {
+    width: 90px;
+    height: 100px;
+    background: url(../asset/brand/main_leaf_2.png) no-repeat center/contain;
+    position: absolute;
+    left: 2%;
+    top: 40%;
+    opacity: 0.5;
+}
+
+.con1_leaf ul li:nth-child(3) {
+    width: 80px;
+    height: 90px;
+    background: url(../asset/brand/main_leaf_3.png) no-repeat center/contain;
+    position: absolute;
+    left: 15%;
+    bottom: 20%;
+    opacity: 0.9;
+}
+
+.con1_leaf ul li:nth-child(4) {
+    width: 70px;
+    height: 80px;
+    background: url(../asset/brand/main_leaf_4.png) no-repeat center/contain;
+    position: absolute;
+    right: 15%;
+    top: 20%;
+    opacity: 0.6;
+}
+
+.con1_leaf ul li:nth-child(5) {
+    width: 60px;
+    height: 70px;
+    background: url(../asset/brand/main_leaf_5.png) no-repeat center/contain;
+    position: absolute;
+    right: 4%;
+    top: 50%;
+}
+
+.con1_leaf ul li:nth-child(6) {
+    width: 100px;
+    height: 90px;
+    background: url(../asset/brand/main_leaf_6.png) no-repeat center/contain;
+    position: absolute;
+    right: 25%;
+    bottom: 4%;
+    opacity: 0.8;
+}
+
 
 .con2 {
     width: 100%;
-    height: 1800px;
-    background: url(../asset/brand/con2_bg.png);
+    height: 100%;
+    padding-top: 200px;
+}
+
+.con2 .with {
+    padding-bottom: 200px;
+    background: url(../asset/brand/con2_bg.png) no-repeat;
 }
 
 .con2 h2 {
@@ -37,15 +104,14 @@
     font-family: var(--eng-font-family);
     font-size: 80px;
     color: var(--main-color);
-    padding: 180px 0;
+    padding: 250px 0 200px 0;
 }
-
-.con2 .logo_all {}
 
 .con2 ul {
     width: 100%;
     height: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -53,141 +119,126 @@
 }
 
 .con2 ul li {
-    /* width: 300px; */
-    height: 300px;
-    width: calc(100% / 3 - 10px);
-    /* 3등분 - gap 보정 */
-    box-sizing: border-box;
+    flex: 0 0 calc((100% - 60px) / 3);
+    /* 3등분 - gap 고려 (30px * 2) */
+    max-width: calc((100% - 60px) / 3);
+    height: 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .con2 ul li:nth-child(1) {
-    background: url(../asset/brand/logo1.png) no-repeat;
+    background: url(../asset/brand/logo1.png) no-repeat center/contain;
 }
 
 .con2 ul li:nth-child(2) {
-    background: url(../asset/brand/logo2.png) no-repeat;
+    background: url(../asset/brand/logo2.png) no-repeat center/contain;
 }
 
 .con2 ul li:nth-child(3) {
-    background: url(../asset/brand/logo3.png) no-repeat;
+    background: url(../asset/brand/logo3.png) no-repeat center/contain;
 }
 
 .con2 ul li:nth-child(4) {
-    background: url(../asset/brand/logo4.png) no-repeat;
+    background: url(../asset/brand/logo4.png) no-repeat center/contain;
 }
 
 .con2 ul li:nth-child(5) {
-    background: url(../asset/brand/logo5.png) no-repeat;
+    background: url(../asset/brand/logo5.png) no-repeat center/contain;
 }
 
 .con2 ul li:nth-child(6) {
-    background: url(../asset/brand/logo6.png) no-repeat;
+    background: url(../asset/brand/logo6.png) no-repeat center/contain;
 }
 
 .main {
     width: 100%;
 }
 
-.banner {
+
+/* 입점 제휴 안내 */
+.con3 {
     width: 100%;
-    height: 1024px;
-    position: relative;
-    background: linear-gradient(to bottom right,
-            #A1D782 0%,
-            #A1D782 50%,
-            rgba(161, 215, 130, 0) 50%,
-            rgba(161, 215, 130, 0) 100%),
-        linear-gradient(to bottom right,
-            rgba(255, 211, 114, 0) 0%,
-            rgba(255, 211, 114, 0) 50%,
-            #FFD372 50%,
-            #FFD372 100%);
+    height: 100%;
+    padding-top: 200px;
 }
 
-.banner .banner_object {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    pointer-events: none;
-    z-index: 1;
-}
-
-
-
-
-
-/* about */
-.about {
+.content {
     width: 100%;
-    height: 100vh;
-    position: relative;
-    background-color: var(--bg-be-color);
-    display: flex;
-    align-items: center;
-}
-
-.about .inner .tit ul {
-    display: flex;
-    flex-direction: column;
-    gap: 35px;
-}
-
-.about .inner .tit ul li {
-    font: var(--pre-40-m);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.about .inner .tit ul li span {
-    font: var(--pre-50-b);
-    color: var(--main-color);
-}
-
-
-.sec1 {
-    position: relative;
-    width: 100%;
-    height: 1835px;
-    background-color: var(--light-yellow);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.sec1 .back_bg {
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
-.sec1 .back_bg img {
-    width: 100%;
-}
-
-.sec1 .contain {
-    position: relative;
-    z-index: 10;
-}
-
-.sec1 .contain .back_leaf {}
-
-.sec1 .contain .inner {}
-
-.sec1 .contain .inner .top {
-    position: relative;
+    height: 100%;
+    padding-bottom: 200px;
+    background: url(../asset/brand/con3_bg.png) no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
-.sec1 .contain .inner .top .txt {
-    position: absolute;
+.content h2 {
+    text-align: center;
+    font-family: var(--eng-font-family);
+    font-size: 80px;
+    color: var(--light-yellow);
+    padding: 250px 0 200px 0;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.partnership h3 {
+    font: var(--pre-45-b);
+    color: var(--light-yellow);
+    padding-bottom: 30px;
+}
+
+.partnership .icon_list {
     width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 50px;
 }
 
+.partnership .icon_list li p {
+    font: var(--pre-28-r);
+    color: var(--txt-w-color);
+}
+
+.partnership .icon_list li .icon {
+    width: 200px;
+    height: 200px;
+    padding-bottom: 30px;
+}
+
+.partnership .icon_list .icon1 {
+    background: url(../asset/brand/icon1.png) no-repeat center/contain;
+}
+
+.partnership .icon_list .icon2 {
+    background: url(../asset/brand/icon2.png) no-repeat center/contain;
+}
+
+.partnership .icon_list .icon3 {
+    background: url(../asset/brand/icon3.png) no-repeat center/contain;
+}
+
+.partnership .icon_list .icon4 {
+    background: url(../asset/brand/icon4.png) no-repeat center/contain;
+}
+
+.partnership .icon_list .icon5 {
+    background: url(../asset/brand/icon5.png) no-repeat center/contain;
+}
+
+.partnership .icon_list .icon6 {
+    background: url(../asset/brand/icon6.png) no-repeat center/contain;
+}
 
 .sec1 .contain .inner .top img {
     width: 800px;
