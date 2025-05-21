@@ -308,7 +308,7 @@
 
     .story .content-section .con1 .txt .button a {
         font: var(--pre-13-sb);
-        width: 135px;
+        width: 150px;
         height: 30px;
     }
 
@@ -441,8 +441,8 @@
     .result-modal {
         width: 330px;
         height: 350px;
-        top: 30%;
-        left: 25%;
+        top: 50%;
+        left: 50%;
         transform: translate(-50%, -50%);
         padding: 0;
     }
@@ -663,7 +663,7 @@
 
     }
 
-    .story .content-section .story-all li .txt .under .left {
+    .story .content-section .story-all li .txt .under .left,.story .content-section .story-all li .txt .under .right {
         font: var(--pre-15-m);
     }
 

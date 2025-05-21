@@ -424,6 +424,7 @@ section.txt .all .con3 img {
     align-items: flex-end;
     justify-content: center;
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .con .banner.one {

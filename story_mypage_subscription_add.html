@@ -101,26 +101,26 @@
                             <div class="type_all">
                                 <div class="type_box basic">
                                     <a href="">
-                                    <img src="asset/마이페이지/check_icon.png" alt="check" class="icon">
-                                    <h3>BASIC</h3>
-                                    <p class="desc">무료배송</p>
-                                    <div class="price"><span>₩ 5,000</span> | Month</div>
+                                        <img src="asset/마이페이지/check_icon.png" alt="check" class="icon">
+                                        <h3>BASIC</h3>
+                                        <p class="desc">무료배송</p>
+                                        <div class="price"><span>₩ 5,000</span> | Month</div>
                                     </a>
                                 </div>
                                 <div class="type_box premium on">
                                     <a href="">
-                                    <img src="asset/마이페이지/check_icon.png" alt="check" class="icon">
-                                    <h3>PREMIUM</h3>
-                                    <p class="desc">이달의 스토리 컨텐츠 3종</p>
-                                    <div class="price"><span>₩ 39,900</span> | Month</div>
+                                        <img src="asset/마이페이지/check_icon.png" alt="check" class="icon">
+                                        <h3>PREMIUM</h3>
+                                        <p class="desc">이달의 스토리 컨텐츠 3종</p>
+                                        <div class="price"><span>₩ 39,900</span> | Month</div>
                                     </a>
                                 </div>
                                 <div class="type_box GLOBAL">
                                     <a href="#">
-                                    <img src="asset/마이페이지/check_icon.png" alt="check" class="icon">
-                                    <h3>GLOBAL</h3>
-                                    <p class="desc">PREMIUM + 굿즈/선물</p>
-                                    <div class="price"><span>₩ 49,900</span> | Month</div>
+                                        <img src="asset/마이페이지/check_icon.png" alt="check" class="icon">
+                                        <h3>GLOBAL</h3>
+                                        <p class="desc">PREMIUM + 굿즈/선물</p>
+                                        <div class="price"><span>₩ 49,900</span> | Month</div>
                                     </a>
                                 </div>
                             </div>
@@ -272,35 +272,37 @@
                 </div><!-- //.add -->
             </section>
         </div>
-        <script>
-            /* 달력 선택 js */
-            document.addEventListener('DOMContentLoaded', () => {
-                const calendarCells = document.querySelectorAll('.calendar_table td');
+        <footer id="mainFooter"></footer>
+    </div>
+    <script>
+        /* 달력 선택 js */
+        document.addEventListener('DOMContentLoaded', () => {
+            const calendarCells = document.querySelectorAll('.calendar_table td');
 
-                calendarCells.forEach(cell => {
-                    const text = cell.textContent.trim();
+            calendarCells.forEach(cell => {
+                const text = cell.textContent.trim();
 
-                    // 숫자 감싸기 (중복 방지)
-                    if (text !== '' && !cell.querySelector('span')) {
-                        cell.innerHTML = `<span class="day-text">${text}</span>`;
+                // 숫자 감싸기 (중복 방지)
+                if (text !== '' && !cell.querySelector('span')) {
+                    cell.innerHTML = `<span class="day-text">${text}</span>`;
+                }
+
+                cell.addEventListener('click', () => {
+                    if (!text) return;
+
+                    // 이미 선택된 셀이면 선택 해제
+                    if (cell.classList.contains('selected')) {
+                        cell.classList.remove('selected');
+                    } else {
+                        // 다른 셀 선택 전 기존 선택 해제
+                        calendarCells.forEach(td => td.classList.remove('selected'));
+                        cell.classList.add('selected');
                     }
-
-                    cell.addEventListener('click', () => {
-                        if (!text) return;
-
-                        // 이미 선택된 셀이면 선택 해제
-                        if (cell.classList.contains('selected')) {
-                            cell.classList.remove('selected');
-                        } else {
-                            // 다른 셀 선택 전 기존 선택 해제
-                            calendarCells.forEach(td => td.classList.remove('selected'));
-                            cell.classList.add('selected');
-                        }
-                    });
                 });
             });
+        });
 
-        </script>
+    </script>
 </body>
 
 </html>

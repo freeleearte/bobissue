@@ -257,25 +257,25 @@ input {
   width: 100%;
   display: flex;
   justify-content: center;
-  gap: 35px;
-  padding-top: var(--con-pad);
+  padding-top: var(--bt-pad);
 }
 
 .button p {
-  width: 250px;
-  height: 55px;
-  border: 0;
-  background: var(--sub-color-1);
+  background-color: var(--sub-color-1);
+  border-radius: 10px;
+  width: 330px;
+  height: 60px;
+  font-size: 22px;
+  font-weight: 500;
   color: var(--txt-w-color);
   cursor: pointer;
- font: var(--pre-20-m);
   border-radius: 10px;
-
 }
-.button p a{
+
+.button p a {
   width: 100%;
   height: 100%;
-    display: flex;
+  display: flex;
   align-items: center;
   justify-content: center;
 }

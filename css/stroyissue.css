@@ -98,11 +98,11 @@ body {
 .modal_test_wrap .start .button p {
     width: 330px;
     height: 60px;
-    border: 0;
+    font-size: 22px;
+    font-weight: 500;
     background: var(--sub-color-1);
     color: var(--txt-w-color);
     cursor: pointer;
-    font: var(--pre-25-m);
     border-radius: 10px;
 
 }
@@ -829,15 +829,13 @@ body {
 .story .content-section .story-all li .txt .under {
     display: flex;
     justify-content: space-between;
-
 }
 
 .story .content-section .story-all li .txt .under .left {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     gap: 10px;
-    font-size: 15px;
-    font-weight: 600;
+   font: var(--pre-18-sb);
     color: var(--sub-color-2);
 }
 
@@ -851,8 +849,7 @@ body {
 .story .content-section .story-all li .txt .under .right {
     display: flex;
     align-items: center;
-    font-size: 15px;
-    font-weight: 400;
+    font: var(--pre-18-sb);
     gap: 10px;
 }
 

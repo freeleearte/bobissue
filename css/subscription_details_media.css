@@ -207,6 +207,29 @@
         width: 100%;
     }
 
+    .con .banner.one {
+        background-image: url(../subscription_details.img/banner1_tap.jpg);
+    }
+
+    .con .banner.two {
+        background-image: url(../subscription_details.img/banner2_tap.jpg);
+    }
+
+    .con .banner.three {
+        background-image: url(../subscription_details.img/banner3_tap.jpg);
+    }
+
+    .con .banner.four {
+        background-image: url(../subscription_details.img/banner4_tap.jpg);
+    }
+
+    .con .banner.five {
+        background-image: url(../subscription_details.img/banner5_tap.png);
+    }
+
+    .con .banner.six {
+        background-image: url(../subscription_details.img/banner6_tap.png);
+    }
 
 
     .con .banner button {
@@ -760,6 +783,30 @@
         font: var(--pre-22-b);
     }
 
+    .con .banner.one {
+        background-image: url(../subscription_details.img/banner1_mob.jpg);
+    }
+
+    .con .banner.two {
+        background-image: url(../subscription_details.img/banner2_mob.jpg);
+    }
+
+    .con .banner.three {
+        background-image: url(../subscription_details.img/banner3_mob.jpg);
+    }
+
+    .con .banner.four {
+        background-image: url(../subscription_details.img/banner4_mob.jpg);
+    }
+
+    .con .banner.five {
+        background-image: url(../subscription_details.img/banner5_mob.png);
+    }
+
+    .con .banner.six {
+        background-image: url(../subscription_details.img/banner6_mob.png);
+    }
+
     /* 아코디언 */
     .containner .top h3 {
         font-size: 30px;
@@ -807,6 +854,12 @@
         width: auto;
         gap: 10px;
     }
+
+
+
+
+
+
 
     /* 스와이퍼  */
 

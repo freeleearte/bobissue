@@ -349,18 +349,19 @@ p {
     gap: 35px;
     color: var(--txt-w-color);
     cursor: pointer;
-    font: var(--pre-20-m);
     padding-top: var(--bt-pad);
 }
 
 .button ul li {
+   border-radius: 10px;
     width: 250px;
     height: 55px;
+    font-size: 20px;
+    font-weight: 500;
     background: var(--txt-gray);
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 10px;
 }
 
 .button ul li:nth-child(2) {
