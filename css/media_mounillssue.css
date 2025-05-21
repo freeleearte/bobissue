@@ -269,5 +269,159 @@
         background: orange;
     }
 
-    
+    .con1 {
+        padding: 30px;
+    }
+
+    .con1 h3 {
+        font: var(--pre-20-b);
+        white-space: nowrap;
+    }
+
+    .con1 b::after {
+        left: -10px;
+        bottom: -35px;
+        width: 170px;
+    }
+
+    .con1 .icon {
+        width: 50%;
+        height: 140px;
+    }
+
+    .con2 {
+        padding: 30px 0;
+    }
+
+    .con2 h2 {
+        font-size: 24px;
+    }
+
+    .event_list {
+        gap: 60px;
+    }
+
+    .event_list .event_item {
+        width: 335px;
+        height: 130px;
+        background: url(../asset/mounillssue/card_m_bg.png) no-repeat;
+        background-size: contain;
+        padding: 0;
+        gap: 80px;
+        justify-content: center;
+    }
+
+    .event_list .event_item .evicon1,
+    .event_list .event_item .evicon3 {
+        width: 50px;
+        position: absolute;
+        left: 10%;
+        top: -28%;
+    }
+
+    .event_list .event_item .evicon2 {
+        width: 50px;
+        left: 75%;
+        top: -24%;
+    }
+
+    .event_list .event_item .vector1,
+    .event_list .event_item .vector3 {
+        width: 30px;
+        left: 0;
+        top: -34%;
+    }
+
+    .event_list .event_item .vector2 {
+        width: 30px;
+        left: 90%;
+        top: -32%;
+        rotate: 42deg;
+    }
+
+    .event_list .event_item .box {
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .event_list .event_item .text_box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+    }
+
+    .event_list .event_item .text_box strong {
+        font: var(--pre-18-sb);
+    }
+
+    .event_list .event_item .text_box p {
+        font: var(--pre-14-r);
+    }
+
+    .event_list .event_item .tag {
+        font: var(--pre-14-b);
+    }
+
+    .event_list .event_item .tag::after {
+        bottom: -275%;
+        width: 70px;
+    }
+
+    .con3 {
+        padding: 30px 0;
+    }
+
+    .notice_header {
+        height: 40px;
+        border-radius: 7px 7px 0 0;
+    }
+
+    .notice_header h2 {
+        font-size: 24px;
+    }
+
+    .notice {
+        border-radius: 0 0 10px 10px;
+    }
+
+    .notice_list {
+        height: 240px;
+        padding: 0 9px;
+    }
+
+    .question {
+        padding: 12px 14px;
+    }
+
+    .qnum {
+        width: 22px;
+        height: 22px;
+        font-size: 12px;
+    }
+
+    .qtext {
+        font: var(--pre-14-r);
+        padding-left: 12px;
+    }
+
+    .notice_item.on span.qtext {
+        font: var(--pre-14-b);
+    }
+
+    .arrow img {
+        width: 13px;
+    }
+
+    .notice_answer {
+        font-size: 13px;
+        padding: 0 0 10px 50px;
+        overflow-wrap: break-word;
+    }
+
+    .bobissue {
+        padding: 15px 0;
+    }
 }
