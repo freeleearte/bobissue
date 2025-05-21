@@ -18,7 +18,9 @@ body {
 .main_visual {
     width: 100%;
     height: 400px;
-    background-color: var(--light-yellow);
+      background-image: url(../asset/mypage_banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 

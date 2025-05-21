@@ -9,7 +9,8 @@
     .main_visual {
         width: 100%;
         height: 250px;
-        background: cadetblue;
+        background-image: url(../asset/notice_banner_phone.jpg);
+
     }
 
     .con1 {
@@ -266,8 +267,8 @@
 
     .main_visual {
         height: 150px;
-        background: orange;
+        background-image: url(../asset/notice_banner_tap.jpg);
     }
 
-    
+
 }

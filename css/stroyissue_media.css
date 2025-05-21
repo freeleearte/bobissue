@@ -55,6 +55,7 @@
 
     .title {
         height: 250px;
+        background-image: url(../asset/storyissue_banner_tap.jpg);
     }
 
     /* 테스트 섹션 */
@@ -360,6 +361,7 @@
 
     .title {
         height: 150px;
+         background-image: url(../asset/storyissue_banner_phone.jpg);
     }
 
     /* 테스트 섹션 */
