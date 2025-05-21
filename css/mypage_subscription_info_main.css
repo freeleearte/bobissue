@@ -9,7 +9,9 @@ body {
 .main_visual {
     width: 100%;
     height: 400px;
-    background-color: var(--light-yellow);
+    background-image: url(../asset/mypage_banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 h4 {
@@ -282,7 +284,7 @@ p {
     cursor: pointer;
     font: var(--pre-20-m);
     border-radius: 10px;
-
+}
 .button ul li:nth-child(1) {
     background: var(--sub-color-1);
 }

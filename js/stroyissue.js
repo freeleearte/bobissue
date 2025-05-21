@@ -131,8 +131,8 @@ $(function () {
       resultAlt = "꿀밥이 이미지";
     } else {
       resultType = "담밥이";
-      resultText = "균형 잡힌 취향의 당신에게 어울리는 담백한 이야기!";
-      resultImg = "./stroy.img/modal_normal.jpg";
+      resultText = "균형 잡힌 당신위한 담백한 이야기!";
+      resultImg = "../stroy.img/modal_normal.jpg";
       resultAlt = "담밥이 이미지";
     }
 

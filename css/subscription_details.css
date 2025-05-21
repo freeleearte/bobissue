@@ -3,7 +3,45 @@
 body {
     font-family: var(--main-font-family);
     color: var(--txt-dark-gray);
+    /* ✅ 전체 스크롤 방지 */
 }
+html, body {
+    overflow-x: hidden;
+}
+
+
+.gototop {
+    position: fixed;
+    width: 100px;
+    right: 50px;
+    bottom: 50px;
+    z-index: 200;
+    cursor: pointer;
+}
+
+.gototop img {
+    width: 100%;
+}
+
+.option_bar_before {
+    display: none;
+}
+
+
+.option_bar {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 div.scroll {
     width: 100%;
@@ -11,7 +49,7 @@ div.scroll {
     display: flex;
     flex-direction: column;
     gap: 300px;
-    padding-bottom: 300px;
+    padding-bottom: var(--sec-pad);
 }
 
 /* 상단 */
@@ -22,12 +60,15 @@ div.scroll {
 .checked .inner {
     display: flex;
     gap: 52px;
-
+    flex-wrap: wrap;
 }
 
-.checked img {
+.checked .img {
     width: 680px;
     height: 647px;
+    background-image: url(../subscription_details.img/top_img_pc.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .checked .right {
@@ -35,6 +76,7 @@ div.scroll {
     flex-direction: column;
     flex: 1;
     gap: 20px;
+    min-width: 0;
 }
 
 .checked .right .tit {
@@ -95,7 +137,10 @@ div.scroll {
 .checked .right .small_tit>p {
     font: var(--pre-18-r);
     line-height: 25px;
+    color: var(--txt-medium-m-gray);
 }
+
+
 
 .select {
     display: flex;
@@ -105,7 +150,9 @@ div.scroll {
 }
 
 .custom_select {
+    width: 100%;
     position: relative;
+    box-sizing: border-box;
 }
 
 .custom_select .select_btn {
@@ -116,6 +163,7 @@ div.scroll {
     color: var(--txt-gray);
     display: flex;
     justify-content: space-between;
+    text-align: left;
     align-items: center;
     padding: 0 20px;
     border-radius: 5px;
@@ -123,6 +171,8 @@ div.scroll {
     background-color: transparent;
     cursor: pointer;
     transition: .3s;
+
+    box-sizing: border-box;
 }
 
 /* 버튼을 클릭했을때  */
@@ -132,10 +182,18 @@ div.scroll {
     color: var(--sub-color-1);
 }
 
+.select_btn .label {
+    flex: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
 .custom_select .select_btn img {
     width: 25px;
     height: 25px;
     transition: .6s;
+    flex-shrink: 0;
 }
 
 .custom_select.on .select_btn img {
@@ -157,6 +215,10 @@ div.scroll {
     border-top: 0;
     display: none;
     transition: .6s;
+    flex: 1;
+    /* overflow: hidden; */
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .custom_select.on .select_options {
@@ -165,7 +227,7 @@ div.scroll {
 
 
 .custom_select .select_options li {
-    height: 55px !important;
+    height: 55px;
     line-height: normal;
     align-items: center;
     font: var(--pre-15-m);
@@ -238,35 +300,44 @@ div.scroll {
     justify-content: center;
     border-radius: 5px;
     cursor: pointer;
+    box-sizing: border-box;
 }
 
 
 /* txt */
 
 
-.txt {
+section.txt {
     height: 477px;
+
+
+}
+
+section.txt .inner {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
 }
 
-.txt h2 {
+section.txt h2 {
     font-size: 40px;
     font-weight: 700;
     color: var(--sub-color-1);
     padding-bottom: 15px;
 }
 
-.txt p {
+section.txt h2 br {
+    display: none;
+}
+
+section.txt p {
     font-size: 25px;
     line-height: 43px;
     color: var(--txt-gray);
 }
 
-.txt .all {
+section.txt .all {
     display: flex;
     width: 1044px;
     height: 251px;
@@ -278,7 +349,7 @@ div.scroll {
     padding-top: 120px;
 }
 
-.txt .all .con1 {
+section.txt .all .con1 {
     width: 245px;
     height: 100%;
     background-image: url(../subscription_details.img/txtsection_1.png);
@@ -288,8 +359,8 @@ div.scroll {
     justify-content: center;
 }
 
-.txt .all .con1 p,
-.txt .all .con2 p {
+section.txt .all .con1 p,
+section.txt .all .con2 p {
     font-size: 28px;
     font-weight: 600;
     line-height: 45px;
@@ -297,7 +368,7 @@ div.scroll {
     color: var(--txt-w-color);
 }
 
-.txt .all .con2 {
+section.txt .all .con2 {
     width: 251px;
     height: 100%;
     background-color: var(--main-color);
@@ -308,12 +379,12 @@ div.scroll {
 }
 
 
-.txt .all .con3 {
+section.txt .all .con3 {
     position: relative;
     flex: 1;
 }
 
-.txt .all .con3 p {
+section.txt .all .con3 p {
     font-size: 40px;
     font-weight: 800;
     line-height: 60px;
@@ -321,11 +392,11 @@ div.scroll {
 
 }
 
-.txt .all .con3 p span {
+section.txt .all .con3 p span {
     color: var(--main-color);
 }
 
-.txt .all .con3 img {
+section.txt .all .con3 img {
     position: absolute;
     left: -40px;
     top: 60px;
@@ -354,21 +425,28 @@ div.scroll {
     justify-content: center;
     background-size: cover;
 }
-.con .banner.one{
+
+.con .banner.one {
     background-image: url(../subscription_details.img/banner1.jpg);
-}.con .banner.two{
+}
+
+.con .banner.two {
     background-image: url(../subscription_details.img/banner2.jpg);
 }
-.con .banner.three{
+
+.con .banner.three {
     background-image: url(../subscription_details.img/banner3.jpg);
 }
-.con .banner.four{
+
+.con .banner.four {
     background-image: url(../subscription_details.img/banner4.jpg);
 }
-.con .banner.five{
+
+.con .banner.five {
     background-image: url(../subscription_details.img/banner5.png);
 }
-.con .banner.six{
+
+.con .banner.six {
     background-image: url(../subscription_details.img/banner6.png);
 }
 
@@ -449,7 +527,7 @@ div.scroll {
 
 .containner .top ul li {
     width: 240px;
-    height: 385px;
+    height: 370px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -475,6 +553,7 @@ div.scroll {
     width: 100%;
     height: 235px;
     border-radius: 5px 5px 0 0;
+     object-fit: cover;
 }
 
 .containner .top ul li .txt {
@@ -525,20 +604,19 @@ div.scroll {
 .containner .top ul li .txt .bottom .b_t {
     display: flex;
     align-items: center;
+    gap: 10px;
+    font: var(--pre-20-sb);
 }
 
 .containner .top ul li .txt .bottom .b_t strong {
-    font-size: 20px;
-    font-weight: 600;
     color: var(--sub-color-1);
     display: block;
     line-height: 1;
 }
 
 .containner .top ul li .txt .bottom .b_t p {
-    font-size: 20px;
-    font-weight: 600;
     color: var(--txt-dark-gray);
+    font: var(--pre-20-sb);
     line-height: 1.5;
 
 }
@@ -547,18 +625,21 @@ div.scroll {
     width: 56px;
     height: 56px;
 }
-.containner > .bottom{
+
+.containner>.bottom {
     width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
-.containner > .bottom .txt2{
+
+.containner>.bottom .txt2 {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-.containner > .bottom h3 {
+
+.containner>.bottom h3 {
     font-family: var(--title-font-family);
     font-size: 40px;
     color: var(--sub-color-1);
@@ -569,7 +650,8 @@ div.scroll {
     font-size: 24px;
     font-weight: 400;
 }
-.containner>.bottom p span{
+
+.containner>.bottom p span {
     font-size: 26px;
     font-weight: 600;
 }
@@ -612,6 +694,7 @@ div.scroll {
     width: 100%;
     height: 235px;
     border-radius: 5px 5px 0 0;
+     object-fit: cover;
 }
 
 .containner>.bottom ul li .txt {

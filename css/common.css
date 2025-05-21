@@ -29,6 +29,7 @@
     --pre-18-b: 700 18px "Pretendard", sans-serif;
     --pre-20-r: 400 20px/30px "Pretendard", sans-serif;
     --pre-20-m: 500 20px "Pretendard", sans-serif;
+    --pre-20-sb: 600 20px "Pretendard", sans-serif;
     --pre-20-b: 700 20px "Pretendard", sans-serif;
     --pre-22-b: 700 22px "Pretendard", sans-serif;
     --pre-25-sb: 600 25px "Pretendard", sans-serif;
@@ -271,7 +272,6 @@ header nav ul.nav-menu li a {
     border-bottom: 2px solid transparent;
 }
 
-
 header nav ul.nav-menu li:hover a {
     border-color: red;
     color: red;
@@ -291,6 +291,7 @@ header.scroll .bot .inner {
 header ul.right-menu {
     display: flex;
     gap: 20px;
+}
 
 header ul.right-menu li:last-child {
     display: none;
@@ -395,6 +396,7 @@ footer .f_left .info {
     color: var(--txt-w-color);
     gap: 60px;
     height: 110px;
+}
 
 footer .f_left .info .group {
     display: flex;
