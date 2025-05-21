@@ -22,6 +22,7 @@
     --pre-15-m: 500 15px "Pretendard", sans-serif;
     --pre-15-sb: 600 15px "Pretendard", sans-serif;
     --pre-15-r: 400 15px "Pretendard", sans-serif;
+    --pre-16-sb: 600 16px "Pretendard", sans-serif;
     --pre-16-r: 400 16px "Pretendard", sans-serif;
     --pre-18-r: 400 18px "Pretendard", sans-serif;
     --pre-18-sb: 600 18px "Pretendard", sans-serif;
@@ -431,7 +432,6 @@ footer .f_left .info {
     color: var(--txt-w-color);
     gap: 60px;
     height: 110px;
-    order: 2;
 }
 
 footer .f_left .info .group {
@@ -492,7 +492,7 @@ footer .f_right .sns li {
 footer .f_right .sns li img {
     width: 100%;
 }
-
+  
 footer .inner>span {
     display: block;
     text-align: right;

@@ -11,6 +11,7 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/mypage_common.js"></script>
+    <script src="js/mypage_subscription_add.js"></script>
 </head>
 
 <body>
@@ -48,7 +49,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div id="box_type" class="box_type">
+                    <div id="box_type" class="box_type on">
                         <div class="type">
                             <h4>구독유형</h4>
                             <div class="type_all">
@@ -280,7 +281,7 @@
                                     </div>
                                 </div>
                                 <div class="sec1_right">
-                                    <p><a href="#">수정하기</a></p>
+                                    <p><a href="mypage_deliveryadd.html">수정하기</a></p>
                                 </div>
                             </div>
                         </div>
@@ -295,7 +296,7 @@
                                     </div>
                                 </div>
                                 <div class="sec2_right">
-                                    <p><a href="#">수정하기</a></p>
+                                    <p><a href="mypage_payment_register.html">수정하기</a></p>
                                 </div>
                             </div>
                         </div>
@@ -337,43 +338,13 @@
                         </div>
                     </div><!-- cupon_type -->
                     <div class="button">
-                        <p><a href="#">구독하기</a></p>
+                        <p><a href="mypage_main.html" id="subscribeBtn">구독하기</a></p>
                     </div>
                 </div><!-- //.add -->
             </section>
         </div>
         <footer id="mainFooter"></footer>
     </div>
-
-    <script>
-        /* 달력 선택 js */
-        document.addEventListener('DOMContentLoaded', () => {
-            const calendarCells = document.querySelectorAll('.calendar_table td');
-
-            calendarCells.forEach(cell => {
-                const text = cell.textContent.trim();
-
-                // 숫자 감싸기 (중복 방지)
-                if (text !== '' && !cell.querySelector('span')) {
-                    cell.innerHTML = `<span class="day-text">${text}</span>`;
-                }
-
-                cell.addEventListener('click', () => {
-                    if (!text) return;
-
-                    // 이미 선택된 셀이면 선택 해제
-                    if (cell.classList.contains('selected')) {
-                        cell.classList.remove('selected');
-                    } else {
-                        // 다른 셀 선택 전 기존 선택 해제
-                        calendarCells.forEach(td => td.classList.remove('selected'));
-                        cell.classList.add('selected');
-                    }
-                });
-            });
-        });
-
-    </script>
 </body>
 
 </html>
