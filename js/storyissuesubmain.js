@@ -129,7 +129,7 @@ $(document).ready(function () {
         /* 제목 */
         $('.txt h2 span').text('오징어게임,');
         $('.txt h2 em').text('그 장면 속 한상');
-        $('.txt img').attr('src', '')
+        $('.txt img').attr('src', 'asset/story_main_icon_.png')
             .attr('alt', '오징어게임의 밥이');
 
         /* 버튼 텍스트 및 이미지 */
@@ -250,7 +250,7 @@ $(document).ready(function () {
         /* 제목 */
         $('.txt h2 span').text('된장과 어울린,');
         $('.txt h2 em').text(' 어떤 음식을 드시나요?');
-        $('.txt img').attr('src', '')
+        $('.txt img').attr('src', 'asset/story_main_icon_food.png')
             .attr('alt', '된장의 밥이');
 
         /* 버튼 텍스트 및 이미지 */
