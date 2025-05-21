@@ -1,10 +1,10 @@
 $(function () {
     // 회원 리스트: 아이디, 비밀번호, 이름
     const members = [
-        { id: '1', pw: '1', name: '김말숙' },
-        { id: '2', pw: '2', name: '이국밥' },
-        { id: '3', pw: '3', name: '박키트' },
-        { id: '4', pw: '4', name: '...' }
+        { id: 'admin1', pw: 'admin1', name: '김말숙' },
+        { id: 'admin2', pw: 'admin2', name: '이국밥' },
+        { id: 'admin3', pw: 'admin3', name: '박키트' },
+        { id: 'admin4', pw: 'admin4', name: '...' }
     ];
 
     $('#loginBtn').on('click', function () {

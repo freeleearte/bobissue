@@ -11,6 +11,7 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/mypage_common.js"></script>
+    <script src="js/mypage_subscription_add.js"></script>
 </head>
 
 <body>
@@ -23,11 +24,11 @@
             <div class="tap">
                 <div class="inner">
                     <div class=" list one">
-                        <span>마이잇슈</span>
+                        <span><a href="#">마이잇슈</a></span>
                         <img src="asset/마이페이지/top_no_arrow.png" alt="arrow">
                     </div>
                     <div class="list two">
-                        <span>구독신청</span>
+                        <span><a href="#">구독신청</a></span>
                     </div>
                 </div>
             </div>
@@ -48,27 +49,36 @@
                             </li>
                         </ul>
                     </div>
-                    <div id="box_type" class="box_type">
+                    <div id="box_type" class="box_type on">
                         <div class="type">
                             <h4>구독유형</h4>
                             <div class="type_all">
                                 <div class="type_box basic">
+
                                     <img src="asset/마이페이지/check_icon.png" alt="check" class="icon">
                                     <h3>BASIC</h3>
                                     <p class="desc">무료배송</p>
                                     <div class="price"><span>₩ 5,000</span> | Month</div>
+
+
                                 </div>
                                 <div class="type_box premium">
+
                                     <img src="asset/마이페이지/check_icon.png" alt="check" class="icon">
                                     <h3>PREMIUM</h3>
                                     <p class="desc">이달의 스토리 컨텐츠 3종</p>
                                     <div class="price"><span>₩ 39,900</span> | Month</div>
+
+
                                 </div>
                                 <div class="type_box GLOBAL">
+
                                     <img src="asset/마이페이지/check_icon.png" alt="check" class="icon">
                                     <h3>GLOBAL</h3>
                                     <p class="desc">PREMIUM + 굿즈/선물</p>
                                     <div class="price"><span>₩ 49,900</span> | Month</div>
+
+
                                 </div>
                             </div>
                         </div>
@@ -86,7 +96,7 @@
                                         </div>
                                     </div>
                                     <div class="sec5_right">
-                                        <p><a href="#"></a>수정하기</p>
+                                        <p><a href="mypage_deliveryadd.html">수정하기</a></p>
                                     </div>
                                 </div>
                             </div><!-- sec5 배송지 -->
@@ -100,7 +110,7 @@
                                             <p>1004 1234 1004 1234</p>
                                         </div>
                                     </div>
-                                    <p><a href="#"></a>수정하기</p>
+                                    <p><a href="mypage_payment_register.html">수정하기</a></p>
                                 </div>
                             </div><!-- sec6 결제수단 -->
                         </div>
@@ -108,21 +118,21 @@
                             <div class="theme">
                                 <h4>구독 테마</h4>
                                 <div class="box_all">
-                                    <div class="theme_box">
-                                        <img src="asset/마이페이지/check_icon.png" alt="check" class="icon">
-                                        <div class="tit">스토리 구독 BOX</div>
-                                        <div class="img"></div>
-                                    </div>
-                                    <div class="theme_box">
-                                        <img src="asset/마이페이지/check_icon.png" alt="check" class="icon">
-                                        <div class="tit">상황 구독 BOX</div>
-                                        <div class="img"></div>
-                                    </div>
-                                    <div class="theme_box">
-                                        <img src="asset/마이페이지/check_icon.png" alt="check" class="icon">
-                                        <div class="tit">문화 구독 BOX</div>
-                                        <div class="img"></div>
-                                    </div>
+                                    <div class="theme_box"><a href="subscription_details.html">
+                                            <img src="asset/마이페이지/check_icon.png" alt="check" class="icon">
+                                            <div class="tit">스토리 구독 BOX</div>
+                                            <div class="img"></div>
+                                        </a></div>
+                                    <div class="theme_box"><a href="subscription_details.html">
+                                            <img src="asset/마이페이지/check_icon.png" alt="check" class="icon">
+                                            <div class="tit">상황 구독 BOX</div>
+                                            <div class="img"></div>
+                                        </a></div>
+                                    <div class="theme_box"><a href="subscription_details.html">
+                                            <img src="asset/마이페이지/check_icon.png" alt="check" class="icon">
+                                            <div class="tit">문화 구독 BOX</div>
+                                            <div class="img"></div>
+                                        </a></div>
                                 </div>
                             </div><!-- 구독테마 -->
                             <div class="method">
@@ -221,7 +231,7 @@
                                         </div>
                                     </div>
                                     <div class="sec5_right">
-                                        <p><a href="#"></a>수정하기</p>
+                                        <p><a href="mypage_deliveryadd.html">수정하기</a></p>
                                     </div>
                                 </div>
                             </div><!-- sec5 배송지 -->
@@ -235,7 +245,7 @@
                                             <p>1004 1234 1004 1234</p>
                                         </div>
                                     </div>
-                                    <p><a href="#"></a>수정하기</p>
+                                    <p><a href="mypage_payment_register.html">수정하기</a></p>
                                 </div>
                             </div><!-- sec6 결제수단 -->
                             <div class="sns">
@@ -271,7 +281,7 @@
                                     </div>
                                 </div>
                                 <div class="sec1_right">
-                                    <p><a href="#"></a>기본배송지</p>
+                                    <p><a href="mypage_deliveryadd.html">수정하기</a></p>
                                 </div>
                             </div>
                         </div>
@@ -285,9 +295,9 @@
                                         <p>1004 1234 1004 1234</p>
                                     </div>
                                 </div>
-                                <button>
-                                    수정하기
-                                </button>
+                                <div class="sec2_right">
+                                    <p><a href="mypage_payment_register.html">수정하기</a></p>
+                                </div>
                             </div>
                         </div>
                         <div class="sec3">
@@ -328,40 +338,11 @@
                         </div>
                     </div><!-- cupon_type -->
                     <div class="button">
-                        <p><a href="#"></a>구독하기</p>
+                        <p><a href="mypage_main.html" id="subscribeBtn">구독하기</a></p>
                     </div>
                 </div><!-- //.add -->
             </section>
         </div>
-        <script>
-            /* 달력 선택 js */
-            document.addEventListener('DOMContentLoaded', () => {
-                const calendarCells = document.querySelectorAll('.calendar_table td');
-
-                calendarCells.forEach(cell => {
-                    const text = cell.textContent.trim();
-
-                    // 숫자 감싸기 (중복 방지)
-                    if (text !== '' && !cell.querySelector('span')) {
-                        cell.innerHTML = `<span class="day-text">${text}</span>`;
-                    }
-
-                    cell.addEventListener('click', () => {
-                        if (!text) return;
-
-                        // 이미 선택된 셀이면 선택 해제
-                        if (cell.classList.contains('selected')) {
-                            cell.classList.remove('selected');
-                        } else {
-                            // 다른 셀 선택 전 기존 선택 해제
-                            calendarCells.forEach(td => td.classList.remove('selected'));
-                            cell.classList.add('selected');
-                        }
-                    });
-                });
-            });
-
-        </script>
 </body>
 
 </html>

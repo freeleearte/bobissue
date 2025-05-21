@@ -168,7 +168,11 @@ select:focus {
   z-index: 10;
   background: url(../asset/detailpage_bob/cart_modal.png) no-repeat;
   color: var(--txt-medium-m-gray);
-  /* display: none; */
+  display: none;
+}
+
+.cart_modal.on {
+  display: block;
 }
 
 .modal_btns {
@@ -190,6 +194,15 @@ select:focus {
 
 .modal_btns .yes_btn {
   background: var(--light-green);
+}
+
+.right .sc_top {
+  position: absolute;
+  bottom: -7%;
+  left: 50%;
+  transform: translateX(-50%);
+  font: var(--pre-15-m);
+  cursor: pointer;
 }
 
 /* ↑↑↑↑↑ 오른쪽 고정 옵션바 박스 끝 ↑↑↑↑↑ */
@@ -312,7 +325,8 @@ select:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative
+  position: relative;
+  cursor: pointer;
 }
 
 .tab_bar ul li::after {
@@ -939,6 +953,10 @@ select:focus {
   align-items: center;
 }
 
+.inquiry_modal.on {
+  display: block;
+}
+
 /* 모달 박스 */
 .modal_content {
   position: absolute;
@@ -1027,32 +1045,32 @@ select:focus {
 
 
 .secret_check input[type="checkbox"] {
-    width: 16px;
-    height: 16px;
-    appearance: none;
-    -webkit-appearance: none;
-    border: 1px solid var(--txt-medium-gray);
-    border-radius: 50%;
-    background-color: var(--bg-w-color);
-    cursor: pointer;
-    position: relative;
-    transform: translateY(-7px);
+  width: 16px;
+  height: 16px;
+  appearance: none;
+  -webkit-appearance: none;
+  border: 1px solid var(--txt-medium-gray);
+  border-radius: 50%;
+  background-color: var(--bg-w-color);
+  cursor: pointer;
+  position: relative;
+  transform: translateY(-7px);
 }
 
 .secret_check input[type="checkbox"]:checked {
-    background-color: var(--main-color);
-    border-color: var(--main-color);
+  background-color: var(--main-color);
+  border-color: var(--main-color);
 }
 
 .secret_check input[type="checkbox"]:checked::after {
-    content: '';
-    position: absolute;
-    top: 4px;
-    left: 4px;
-    width: 6px;
-    height: 6px;
-    background: var(--bg-w-color);
-    border-radius: 50%;
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 6px;
+  height: 6px;
+  background: var(--bg-w-color);
+  border-radius: 50%;
 }
 
 .secret_check label {

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/main_style.css">
+    <link rel="stylesheet" href="css/main_media.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-simplyscroll/2.1.1/jquery.simplyscroll.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -42,6 +43,7 @@
                     <ul class="updown1">
                         <li><img src="asset/simp_scroll1.png" alt="">
                             <img src="asset/simp_scroll1.png" alt="">
+                            <img src="asset/simp_scroll2.png" alt="">
                         </li>
                     </ul>
                     <ul class="updown2">
@@ -52,8 +54,10 @@
                 </div> <!-- //.r_text -->
             </div> <!-- //.main_visual -->
 
-            <div class="con_wrap">
-                <div class="con_bg"><img src="asset/main_bg.png" alt="background"></div>
+            <div class="con_wrap1">
+                <div class="con_bg"><img src="asset/main_bg.png" alt="background">
+                    <div class="extra"></div>
+                </div>
 
                 <div class="char1_wrap">
                     <img src="asset/char1.png" alt="character" class="char1">
@@ -201,7 +205,7 @@
                     <div class="txt">
                         <h2>밥잇슈를 구독햇슈다</h2>
                         <p>오늘 뭐 먹지?에 대답하는 가장 편리한 방법</p>
-                        <button class="more">구독 더 알아보기</button>
+                        <button class="more" onclick="location.href='./subscription.html'">구독 더 알아보기</button>
                     </div> <!-- //.txt -->
                     <article>
                         <div class="img_container ">
@@ -217,10 +221,9 @@
                             <div class="con_wrap box1">
                                 <h3>BOB BOX</h3>
                                 <strong>사용자, 상황 맞춤 밀키트 구독 서비스</strong>
-                                <b>드라마 속 장면처럼, 당신의 하루를 주인공으로 만들어줄 밀키트가 식탁에 도착합니다. <br>스토리, 이야기, 문화가 함께 담긴 밥잇슈 박스로 오늘의
-                                    식탁을 더
-                                    특별하게
-                                    만들어보세요. </b>
+                                <b>드라마 속 장면처럼, 당신의 하루를 주인공으로 만들어줄 밀키트가
+                                    도착합니다. 스토리, 이야기, 문화가 함께 담긴 밥잇슈 박스로 더
+                                    특별한 식사를 경험하세요. </b>
                                 <ul>
                                     <li><img src="asset/bobbox1.png" alt="bob box 1"></li>
                                     <li><img src="asset/bobbox2.png" alt="bob box 2"></li>
@@ -230,10 +233,9 @@
                             <div class="con_wrap box2">
                                 <h3>BOB COUPON</h3>
                                 <strong>사용자, 상황 맞춤 밀키트 구독 서비스</strong>
-                                <b>드라마 속 장면처럼, 당신의 하루를 주인공으로 만들어줄 밀키트가 식탁에 도착합니다. <br>스토리, 이야기, 문화가 함께 담긴 밥잇슈 박스로 오늘의
-                                    식탁을 더
-                                    특별하게
-                                    만들어보세요. </b>
+                                <b>드라마 속 장면처럼, 당신의 하루를 주인공으로 만들어줄 밀키트가
+                                    도착합니다. 스토리, 이야기, 문화가 함께 담긴 밥잇슈 박스로 더
+                                    특별한 식사를 경험하세요. </b>
                                 <ul>
                                     <li><img src="asset/bobcoupon1.png" alt="bob coupon 1"></li>
                                     <li><img src="asset/bobcoupon2.png" alt="bob coupon 2"></li>
@@ -286,7 +288,8 @@
                                     <h3>애순이 가리비 구이 키트</h3>
                                     <b>제주의 바다향 가득, 노릇하게 구워낸 가리비로<br>식탁 위의 해녀 이모들의 손맛을 느껴보세요.</b>
                                 </div> <!-- //.info -->
-                                <button class="buy">Buy<img src="asset/con3_arrow.png" alt="바로가기 화살표"></button>
+                                <button class="buy" onclick="location.href = './detailpage_bob.html?id=1001' ">Buy<img
+                                        src="asset/con3_arrow.png" alt="바로가기 화살표"></button>
                             </li>
                             <li class="active swiper-slide">
                                 <div class="star"><img src="asset/star.png" alt="별점"></div>
@@ -298,7 +301,8 @@
                                     <h3>완두콩 도시락 키트</h3>
                                     <b>알알이 담긴 제철 완두콩의 고소함,<br>관식이의 사랑이 담긴 한 끼를 넉넉하게.</b>
                                 </div> <!-- //.info -->
-                                <button class="buy">Buy<img src="asset/con3_arrow.png" alt="바로가기 화살표"></button>
+                                <button class="buy" onclick="location.href = './detailpage_bob.html?id=1002' ">Buy<img
+                                        src="asset/con3_arrow.png" alt="바로가기 화살표"></button>
                             </li>
                             <li class="swiper-slide">
                                 <div class="star"><img src="asset/star.png" alt="별점"></div>
@@ -310,7 +314,8 @@
                                     <h3>애순이 오징어뭇국 키트</h3>
                                     <b>뭇국 한술에 오징어 풍미가 폭싹!<br>제주 할망 손맛처럼 따스한 국물 한 그릇.</b>
                                 </div> <!-- //.info -->
-                                <button class="buy">Buy<img src="asset/con3_arrow.png" alt="바로가기 화살표"></button>
+                                <button class="buy" onclick="location.href = './detailpage_bob.html?id=1003' ">Buy<img
+                                        src="asset/con3_arrow.png" alt="바로가기 화살표"></button>
                             </li>
                             <li class="swiper-slide">
                                 <div class="star"><img src="asset/star.png" alt="별점"></div>
@@ -322,7 +327,8 @@
                                     <h3>애순이 가리비 구이 키트</h3>
                                     <b>제주의 바다향 가득, 노릇하게 구워낸 가리비로<br>식탁 위의 해녀 이모들의 손맛을 느껴보세요.</b>
                                 </div> <!-- //.info -->
-                                <button class="buy">Buy<img src="asset/con3_arrow.png" alt="바로가기 화살표"></button>
+                                <button class="buy" onclick="location.href = './detailpage_bob.html?id=1001' ">Buy<img
+                                        src="asset/con3_arrow.png" alt="바로가기 화살표"></button>
                             </li>
                             <li class="active swiper-slide">
                                 <div class="star"><img src="asset/star.png" alt="별점"></div>
@@ -334,7 +340,8 @@
                                     <h3>완두콩 도시락 키트</h3>
                                     <b>알알이 담긴 제철 완두콩의 고소함,<br>관식이의 사랑이 담긴 한 끼를 넉넉하게.</b>
                                 </div> <!-- //.info -->
-                                <button class="buy">Buy<img src="asset/con3_arrow.png" alt="바로가기 화살표"></button>
+                                <button class="buy" onclick="location.href = './detailpage_bob.html?id=1002' ">Buy<img
+                                        src="asset/con3_arrow.png" alt="바로가기 화살표"></button>
                             </li>
                             <li class="swiper-slide">
                                 <div class="star"><img src="asset/star.png" alt="별점"></div>
@@ -346,7 +353,8 @@
                                     <h3>애순이 오징어뭇국 키트</h3>
                                     <b>뭇국 한술에 오징어 풍미가 폭싹!<br>제주 할망 손맛처럼 따스한 국물 한 그릇.</b>
                                 </div> <!-- //.info -->
-                                <button class="buy">Buy<img src="asset/con3_arrow.png" alt="바로가기 화살표"></button>
+                                <button class="buy" onclick="location.href = './detailpage_bob.html?id=1003' ">Buy<img
+                                        src="asset/con3_arrow.png" alt="바로가기 화살표"></button>
                             </li>
                         </ul>
                         <ul class="slide-tem ver2">
@@ -360,7 +368,8 @@
                                     <h3>한우 소고기 미역국</h3>
                                     <b>오징어 게임에서 식판으로 나오던<br>고기 듬뿍 미역국을 집에서 즐겨보세요.</b>
                                 </div> <!-- //.info -->
-                                <button class="buy">Buy<img src="asset/con3_arrow.png" alt="바로가기 화살표"></button>
+                                <button class="buy" onclick="location.href = './detailpage_bob.html?id=1007' ">Buy<img
+                                        src="asset/con3_arrow.png" alt="바로가기 화살표"></button>
                             </li>
                             <li class="active swiper-slide">
                                 <div class="star"><img src="asset/star.png" alt="별점"></div>
@@ -372,7 +381,8 @@
                                     <h3>추억의 옛날 도시락 키트</h3>
                                     <b>오징어 게임이라고 하면 누구나 떠올리는<br>추억의 도시락으로 옛 추억을 기억해보세요.</b>
                                 </div> <!-- //.info -->
-                                <button class="buy">Buy<img src="asset/con3_arrow.png" alt="바로가기 화살표"></button>
+                                <button class="buy" onclick="location.href = './detailpage_bob.html?id=1008' ">Buy<img
+                                        src="asset/con3_arrow.png" alt="바로가기 화살표"></button>
                             </li>
                             <li class="swiper-slide">
                                 <div class="star"><img src="asset/star.png" alt="별점"></div>
@@ -384,7 +394,8 @@
                                     <h3>갈치 구이 키트</h3>
                                     <b>오징어 게임 첫 장면, 기훈의 노모가 구워준<br>갈치 구이 한 상의 훈훈한 가정의 온기를 느껴보세요.</b>
                                 </div> <!-- //.info -->
-                                <button class="buy">Buy<img src="asset/con3_arrow.png" alt="바로가기 화살표"></button>
+                                <button class="buy" onclick="location.href = './detailpage_bob.html?id=1009' ">Buy<img
+                                        src="asset/con3_arrow.png" alt="바로가기 화살표"></button>
                             </li>
                             <li class="swiper-slide">
                                 <div class="star"><img src="asset/star.png" alt="별점"></div>
@@ -396,7 +407,8 @@
                                     <h3>한우 소고기 미역국</h3>
                                     <b>오징어 게임에서 식판으로 나오던<br>고기 듬뿍 미역국을 집에서 즐겨보세요.</b>
                                 </div> <!-- //.info -->
-                                <button class="buy">Buy<img src="asset/con3_arrow.png" alt="바로가기 화살표"></button>
+                                <button class="buy" onclick="location.href = './detailpage_bob.html?id=1007' ">Buy<img
+                                        src="asset/con3_arrow.png" alt="바로가기 화살표"></button>
                             </li>
                             <li class="active swiper-slide">
                                 <div class="star"><img src="asset/star.png" alt="별점"></div>
@@ -408,7 +420,8 @@
                                     <h3>추억의 옛날 도시락 키트</h3>
                                     <b>오징어 게임이라고 하면 누구나 떠올리는<br>추억의 도시락으로 옛 추억을 기억해보세요.</b>
                                 </div> <!-- //.info -->
-                                <button class="buy">Buy<img src="asset/con3_arrow.png" alt="바로가기 화살표"></button>
+                                <button class="buy" onclick="location.href = './detailpage_bob.html?id=1008' ">Buy<img
+                                        src="asset/con3_arrow.png" alt="바로가기 화살표"></button>
                             </li>
                             <li class="swiper-slide">
                                 <div class="star"><img src="asset/star.png" alt="별점"></div>
@@ -420,7 +433,8 @@
                                     <h3>갈치 구이 키트</h3>
                                     <b>오징어 게임 첫 장면, 기훈의 노모가 구워준<br>갈치 구이 한 상의 훈훈한 가정의 온기를 느껴보세요.</b>
                                 </div> <!-- //.info -->
-                                <button class="buy">Buy<img src="asset/con3_arrow.png" alt="바로가기 화살표"></button>
+                                <button class="buy" onclick="location.href = './detailpage_bob.html?id=1009' ">Buy<img
+                                        src="asset/con3_arrow.png" alt="바로가기 화살표"></button>
                             </li>
                         </ul>
                         <ul class="slide-tem ver3">
@@ -434,7 +448,8 @@
                                     <h3>맨손 짜자장 키트</h3>
                                     <b>고기 듬뿍, 야채 듬뿍<br>기안장에서 먹던 맨손 짜장면을 즐겨보세요.</b>
                                 </div> <!-- //.info -->
-                                <button class="buy">Buy<img src="asset/con3_arrow.png" alt="바로가기 화살표"></button>
+                                <button class="buy" onclick="location.href = './detailpage_bob.html?id=10013' ">Buy<img
+                                        src="asset/con3_arrow.png" alt="바로가기 화살표"></button>
                             </li>
                             <li class="active swiper-slide">
                                 <div class="star"><img src="asset/star.png" alt="별점"></div>
@@ -444,9 +459,10 @@
                                 <div class="info">
                                     <p>대환장 기안장</p>
                                     <h3>기안표 북한식 두부밥</h3>
-                                    <b>기안이 탈북민 게스트를 위해 만든 북한식 두부밥,<br>그 장면의 감동을 직접 느껴보세요.</b>
+                                    <b>기안이 탈북민 게스트를 위해 만든 북한식<br>두부밥, 그 장면의 감동을 직접 느껴보세요.</b>
                                 </div> <!-- //.info -->
-                                <button class="buy">Buy<img src="asset/con3_arrow.png" alt="바로가기 화살표"></button>
+                                <button class="buy" onclick="location.href = './detailpage_bob.html?id=10014' ">Buy<img
+                                        src="asset/con3_arrow.png" alt="바로가기 화살표"></button>
                             </li>
                             <li class="swiper-slide">
                                 <div class="star"><img src="asset/star.png" alt="별점"></div>
@@ -458,7 +474,8 @@
                                     <h3>울릉도 가득 물회 키트</h3>
                                     <b>울릉도의 바다향 가득,<br>해산물 가득 푸짐한 구성의 밥상을 느껴보세요.</b>
                                 </div> <!-- //.info -->
-                                <button class="buy">Buy<img src="asset/con3_arrow.png" alt="바로가기 화살표"></button>
+                                <button class="buy" onclick="location.href = './detailpage_bob.html?id=10015' ">Buy<img
+                                        src="asset/con3_arrow.png" alt="바로가기 화살표"></button>
                             </li>
                             <li class="swiper-slide">
                                 <div class="star"><img src="asset/star.png" alt="별점"></div>
@@ -470,7 +487,8 @@
                                     <h3>맨손 짜자장 키트</h3>
                                     <b>고기 듬뿍, 야채 듬뿍<br>기안장에서 먹던 맨손 짜장면을 즐겨보세요.</b>
                                 </div> <!-- //.info -->
-                                <button class="buy">Buy<img src="asset/con3_arrow.png" alt="바로가기 화살표"></button>
+                                <button class="buy" onclick="location.href = './detailpage_bob.html?id=10013' ">Buy<img
+                                        src="asset/con3_arrow.png" alt="바로가기 화살표"></button>
                             </li>
                             <li class="active swiper-slide">
                                 <div class="star"><img src="asset/star.png" alt="별점"></div>
@@ -480,9 +498,10 @@
                                 <div class="info">
                                     <p>대환장 기안장</p>
                                     <h3>기안표 북한식 두부밥</h3>
-                                    <b>기안이 탈북민 게스트를 위해 만든 북한식 두부밥,<br>그 장면의 감동을 직접 느껴보세요.</b>
+                                    <b>기안이 탈북민 게스트를 위해 만든 북한식<br>두부밥, 그 장면의 감동을 직접 느껴보세요.</b>
                                 </div> <!-- //.info -->
-                                <button class="buy">Buy<img src="asset/con3_arrow.png" alt="바로가기 화살표"></button>
+                                <button class="buy" onclick="location.href = './detailpage_bob.html?id=10014' ">Buy<img
+                                        src="asset/con3_arrow.png" alt="바로가기 화살표"></button>
                             </li>
                             <li class="swiper-slide">
                                 <div class="star"><img src="asset/star.png" alt="별점"></div>
@@ -494,7 +513,8 @@
                                     <h3>울릉도 가득 물회 키트</h3>
                                     <b>울릉도의 바다향 가득,<br>해산물 가득 푸짐한 구성의 밥상을 느껴보세요.</b>
                                 </div> <!-- //.info -->
-                                <button class="buy">Buy<img src="asset/con3_arrow.png" alt="바로가기 화살표"></button>
+                                <button class="buy" onclick="location.href = './detailpage_bob.html?id=10015' ">Buy<img
+                                        src="asset/con3_arrow.png" alt="바로가기 화살표"></button>
                             </li>
                         </ul>
                     </article>
@@ -507,7 +527,7 @@
                     </div> <!-- //.txt -->
                     <article class="inner">
                         <ul>
-                            <li class="parallax" data-speed="-.7"><a href="#">
+                            <li class="parallax"><a href="#">
                                     <div class="img"><img src="asset/review_img1.png" alt="review1"></div>
                                     <div class="info">
                                         <img src="asset/quote.png" alt="따옴표">
@@ -518,7 +538,7 @@
                                         </div>
                                     </div>
                                 </a></li>
-                            <li class="parallax" data-speed="-.6"><a href="#">
+                            <li class="parallax"><a href="#">
                                     <div class="img"><img src="asset/review_img2.png" alt="review2"></div>
                                     <div class="info">
                                         <img src="asset/quote.png" alt="따옴표">
@@ -529,7 +549,7 @@
                                         </div>
                                     </div>
                                 </a></li>
-                            <li class="parallax" data-speed="-.4"><a href="#">
+                            <li class="parallax"><a href="#">
                                     <div class="img"><img src="asset/review_img3.png" alt="review3"></div>
                                     <div class="info">
                                         <img src="asset/quote.png" alt="따옴표">
@@ -540,7 +560,7 @@
                                         </div>
                                     </div>
                                 </a></li>
-                            <li class="parallax" data-speed="-.9"><a href="#">
+                            <li class="parallax"><a href="#">
                                     <div class="img"><img src="asset/review_img4.png" alt="review4"></div>
                                     <div class="info">
                                         <img src="asset/quote.png" alt="따옴표">
@@ -551,7 +571,7 @@
                                         </div>
                                     </div>
                                 </a></li>
-                            <li class="parallax" data-speed="-.7"><a href="#">
+                            <li class="parallax"><a href="#">
                                     <div class="img"><img src="asset/review_img5.png" alt="review5"></div>
                                     <div class="info">
                                         <img src="asset/quote.png" alt="따옴표">
@@ -562,7 +582,7 @@
                                         </div>
                                     </div>
                                 </a></li>
-                            <li class="parallax" data-speed="-.9"><a href="#">
+                            <li class="parallax"><a href="#">
                                     <div class="img"><img src="asset/review_img6.png" alt="review6"></div>
                                     <div class="info">
                                         <img src="asset/quote.png" alt="따옴표">

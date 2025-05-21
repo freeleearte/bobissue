@@ -47,7 +47,9 @@ body {
     color: var(--txt-medium-m-gray);
     font-weight: 500;
 }
-
+.tap .one span a{
+    display: block;
+}
 .con1 {
     width: 100%;
     display: flex;
@@ -171,24 +173,24 @@ body {
     font-weight: 400;
 }
 
-.main .one .order_list .top .right a {
-    text-decoration: underline;
-    font: var(--pre-18-r);
-}
+
 
 .main .one .order_list .bottom {
     background-color: var(--bg-con-color);
     border-radius: 10px;
     padding: 0 20px;
+    height: 150px;
+    display: flex;
+    align-items: center;
 }
 
 .main .one .order_list .bottom a {
     width: 100%;
-    height: 170px;
+    height: 100%;
     display: flex;
     gap: 30px;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
 
 }
 
@@ -229,9 +231,10 @@ body {
     color: var(--txt-dark-gray);
 }
 
-.main .one .order_list .bottom .bottom_txt span {
+.main .one .order_list .bottom  strong{
     font: var(--pre-20-b);
     color: var(--sub-color-1);
+    width: 100px;
 }
 
 

@@ -102,6 +102,24 @@ h2 {
   position: absolute;
   left: -12%;
   top: 16%;
+  /* transition: .2s; */
+}
+
+.event_list .event_item:hover .vector1,
+.event_list .event_item:hover .vector2,
+.event_list .event_item:hover .vector3 {
+  
+  animation: rotateV .6s linear infinite;
+}
+
+@keyframes rotateV {
+  0%,100% {
+    transform: rotate(30deg);
+  }
+
+  50% {
+    transform: rotate(0);
+  }
 }
 
 .event_list .event_item .box {
@@ -272,7 +290,7 @@ h2 {
 .bobissue {
   width: 100%;
   padding: 50px 0;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .bobissue ul {
@@ -280,6 +298,17 @@ h2 {
   gap: 20px;
   font-family: var(--eng-font-family);
   font-size: 133px;
+  animation: scroll-left 10s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .bobissue ul li {

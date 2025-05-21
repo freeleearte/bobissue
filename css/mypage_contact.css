@@ -161,6 +161,7 @@ body {
 }
 
 
+
 .option {
 
     position: relative;
@@ -172,16 +173,18 @@ body {
 
     display: inline-flex;
     align-items: center;
-     justify-content: space-between;
+    justify-content: center;
     gap: 10px;
-    padding: 10px 20px;
-    width: 130px;
+    padding: 10px;
+    width: 110px;
+    min-width: 110px;
     background-color: #56b6a9;
     color: var(--txt-w-color);
-    font: var(--pre-18-sb);
+    font: var(--pre-15-r);
     border: none;
     border-radius: 30px;
     cursor: pointer;
+    box-sizing: border-box;
 }
 
 .option img {
@@ -211,6 +214,7 @@ body {
 }
 
 .option .dropdown li {
+    width: 100%;
     color: #777;
     font-weight: 600;
     cursor: pointer;
@@ -219,7 +223,7 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    font: var(--pre-18-sb);
+      font: var(--pre-15-r);
     color: var(--txt-gray);
     transition: .3s;
     border-radius: 8px 8px 0 0;

@@ -915,6 +915,10 @@ p {
     align-items: center;
 }
 
+.opinion_modal.on {
+    display: block;
+}
+
 /* 모달 박스 */
 .modal_content {
     position: absolute;
