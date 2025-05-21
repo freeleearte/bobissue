@@ -69,7 +69,7 @@ button {
 }
 
 .main_visual .r_text ul {
-    width: 435px;
+    width: 305px;
     height: 100%;
     position: absolute;
 }
@@ -85,6 +85,10 @@ button {
 .main_visual .r_text ul li {
     margin-bottom: 15px;
     position: absolute;
+}
+
+.main_visual .r_text ul li img {
+    width: 100%;
 }
 
 .main_visual .r_text ul.updown1 li {
@@ -119,7 +123,7 @@ button {
     }
 }
 
-.con_wrap {
+.con_wrap1 {
     position: relative;
 }
 
@@ -150,10 +154,15 @@ button {
 }
 
 .vector1 {
+    width: 100%;
     padding-top: 1000px;
     position: relative;
     z-index: 2;
     background-color: var(--main-color);
+}
+
+.vector1 img {
+    width: 100%;
 }
 
 /* section common */
@@ -516,6 +525,11 @@ section article .more_wrap img {
 .con2 .vector3 {
     position: absolute;
     transform: translateY(-100%);
+    width: 100%;
+}
+
+.con2 .vector3 img {
+    width: 100%;
 }
 
 .con2 .txt {
@@ -568,8 +582,6 @@ section article .more_wrap img {
 .con2 article .img_container .sw_btn {
     width: 80px;
     height: 80px;
-    border-radius: 50%;
-    /* background: #000; */
     position: absolute;
     top: 50%;
     right: 0;
@@ -747,9 +759,12 @@ section article .more_wrap img {
 .vector2 {
     position: absolute;
     z-index: -1;
+    width: 100%;
 }
 
-.vector2 img {}
+.vector2 img {
+    width: 100%;
+}
 
 /* con3 */
 .con3 {
@@ -1016,12 +1031,11 @@ section article .more_wrap img {
 
 .con4 ul li .info .btn {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
 }
 
 .con4 ul li .info b {
-    border: 0;
     width: 220px;
     height: 45px;
     border-radius: 0 50px 0 20px;
@@ -1037,4 +1051,5 @@ section article .more_wrap img {
 .con4 ul li .info span {
     font: var(--pre-25-b);
     color: var(--sub-color-1);
+    align-self: center;
 }

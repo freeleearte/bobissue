@@ -55,8 +55,9 @@
 .con2 ul li {
     /* width: 300px; */
     height: 300px;
-    width: calc(100% / 3 - 10px); /* 3등분 - gap 보정 */
-  box-sizing: border-box;
+    width: calc(100% / 3 - 10px);
+    /* 3등분 - gap 보정 */
+    box-sizing: border-box;
 }
 
 .con2 ul li:nth-child(1) {
@@ -81,6 +82,7 @@
 
 .con2 ul li:nth-child(6) {
     background: url(../asset/brand/logo6.png) no-repeat;
+}
 
 .main {
     width: 100%;
