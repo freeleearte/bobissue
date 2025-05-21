@@ -10,7 +10,7 @@ $(function () {
 
   const boxArticle = document.querySelector('article.box');
   const tabBox = document.querySelector('.side_tab .box');
-  const tabCoupon = document.querySelector('.side_tab .coupon');
+  const tabCoupon = document.querySelector('.side_tab .coupontab');
   const character = document.querySelector('.side_character');
 
   console.log('boxArticle:', boxArticle);

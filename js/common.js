@@ -32,7 +32,7 @@ $(function () {
     <li><a href="./login.html">로그인</a></li>
 </ul>
 <ul class="nav-menu">
-    <li><a href=" #">브랜드</a></li>
+    <li><a href="./brand.html">브랜드</a></li>
     <li><a href="./storyissue.html">스토리잇슈</a></li>
     <li><a href="./bobStore.html">밥도잇슈</a></li>
     <li><a href="./mounillssue.html">뭔일잇슈</a></li>

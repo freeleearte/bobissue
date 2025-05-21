@@ -13,7 +13,8 @@ h2 {
 .main_visual {
   width: 100%;
   height: 400px;
-  background: url(../asset/mounillssue/main_visual.png);
+  background-image: url(../asset/mounillssue/main_visual.png);
+  background-size: cover;
 }
 
 .con1 {
@@ -108,12 +109,14 @@ h2 {
 .event_list .event_item:hover .vector1,
 .event_list .event_item:hover .vector2,
 .event_list .event_item:hover .vector3 {
-  
+
   animation: rotateV .6s linear infinite;
 }
 
 @keyframes rotateV {
-  0%,100% {
+
+  0%,
+  100% {
     transform: rotate(30deg);
   }
 
@@ -270,17 +273,22 @@ h2 {
   justify-content: flex-end;
 }
 
+.arrow img {
+  transition: transform 0.4s ease;
+}
+
+.arrow img.rotate {
+  transform: rotate(180deg);
+}
+
 /* 공지사항 답변 on */
 .notice_answer {
-  display: none;
+  /* display: none; */
   padding: 0 0 20px 110px;
   font: var(--pre-18-r);
   color: var(--txt-dark-gray);
 }
 
-.notice_item.on .notice_answer {
-  display: block;
-}
 
 
 

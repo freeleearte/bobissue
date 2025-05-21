@@ -259,8 +259,12 @@ input[type="checkbox"]:checked {
 .modal_test_wrap .img {
     width: 450px;
     height: 250px;
-    background: #ccc;
+    /* background: #ccc; */
     margin-bottom: 30px;
+}
+
+.modal_test_wrap .img img {
+    width: 100%;
 }
 
 .modal_test_wrap h3 {
@@ -319,9 +323,10 @@ input[type="checkbox"]:checked {
     position: absolute;
     left: 0;
     height: 100%;
-    width: 20%;
+    width: 0%;
     background-color: var(--sub-color-2);
     border-radius: 100px;
+    transition: width 0.3s ease;
 }
 
 .modal_test_wrap .quiz .question {

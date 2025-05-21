@@ -1,4 +1,21 @@
 $(document).ready(function () {
+    $('.notice_answer').hide(); // 초기에는 모두 숨김
+
+    $('.notice_item .question').on('click', function () {
+        var $clickedAnswer = $(this).next('.notice_answer');
+
+        if ($clickedAnswer.is(':visible')) {
+            $clickedAnswer.stop().slideUp(400);
+            $(this).find('.arrow img').removeClass('rotate');
+        } else {
+            $('.notice_answer').stop().slideUp(400); // 다른 열려 있는 것 닫기
+            $('.arrow img').removeClass('rotate');
+
+            $clickedAnswer.stop().slideDown(400);
+            $(this).find('.arrow img').addClass('rotate');
+        }
+    });
+
     /* li 복제하기 */
     const $ul = $('.bobissue ul');
     const $clone = $ul.clone();

@@ -12,7 +12,7 @@
 
   .main_visual {
     height: 250px;
-    background: hotpink;
+    background-image: url(../../asset/mypage_banner_tap.jpg);
   }
 
   .main {
@@ -141,10 +141,9 @@
   .main_visual {
     height: 150px;
     width: 100vw;
-    background-color: var(--light-yellow);
+    background-image: url(../../asset/mypage_banner_phone.jpg);
     display: block;
     box-sizing: border-box;
-    background: cadetblue;
   }
 
   .tab_wrapper {
@@ -274,7 +273,16 @@
     border-radius: 30px 30px 0 0;
     border: 2px solid var(--main-color);
     box-sizing: border-box;
-    position: relative;
+    position: fixed;
+    bottom: -90%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    transition: .6s;
+  }
+
+  .mobile_bar.on {
+    bottom: -30%;
   }
 
   .tab_inner {
@@ -375,39 +383,5 @@
   .custom_check input[type="checkbox"]:checked~.check_text {
     color: var(--txt-gray);
     font: var(--pre-15-sb);
-  }
-
-  /* ---------- */
-
-
-  .button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 65px;
-  }
-
-  button {
-    width: 200px;
-    height: 40px;
-    background: var(--sub-color-1);
-    text-align: center;
-    line-height: 40px;
-    border-radius: 8px;
-    border: 0;
-  }
-
-  button a {
-    width: 100%;
-    height: 100%;
-    display: block;
-    font: var(-pre-15-sb);
-    color: var(--txt-w-color);
-  }
-
-  /* ====================== */
-
-  footer {
-    display: block;
   }
 }

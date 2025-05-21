@@ -108,6 +108,8 @@ $(function () {
 
         const index = $question.index();
 
+        progressBarUpdate($question);
+
         // 답변 복원
         const savedIndex = answeredQuestions[index];
         if (savedIndex !== undefined) {
@@ -129,5 +131,14 @@ $(function () {
         } else {
             $question.find('.next').hide();
         }
+    }
+
+    function progressBarUpdate($question) {
+        const $questions = $('.quiz .question');
+        const currentIndex = $questions.index($question); // 정확한 index
+        const totalQuestions = $questions.length;
+
+        const progress = ((currentIndex + 1) / totalQuestions) * 100;
+        $('.progress_bar .done').css('width', progress + '%');
     }
 });

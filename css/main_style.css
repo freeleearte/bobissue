@@ -167,7 +167,7 @@ button {
     padding-top: 1000px;
     position: relative;
     z-index: 2;
-    background-color: var(--main-color);
+    background-color: #FF7C19;
 }
 
 .vector1 img {
@@ -209,8 +209,8 @@ section .txt p {
 }
 
 section button.more {
-    width: 300px;
-    height: 50px;
+    width: 330px;
+    height: 60px;
     border: 0;
     border-radius: 15px;
     background-color: var(--sub-color-1);
@@ -222,16 +222,31 @@ section button.more {
 
 /* con1 */
 .con1 {
-    background: var(--main-color);
+    background: var(--light-yellow);
     position: relative;
 }
 
 .con1 .txt h2 {
-    color: var(--light-yellow);
+    color: var(--main-color);
+}
+
+.con1 .txt h2 strong {
+    color: var(--sub-color-1);
+}
+
+.con1 .vector3 {
+    position: absolute;
+    transform: translateY(-90%);
+    width: 100%;
+    z-index: 2;
+}
+
+.con1 .vector3 img {
+    width: 100%;
 }
 
 .con1 .txt p {
-    color: var(--txt-w-color);
+    color: var(--txt-gray);
 }
 
 .con1 .inner {
@@ -260,10 +275,15 @@ section button.more {
     height: 440px;
     border-radius: 15px;
     background-color: var(--txt-w-color);
-    box-shadow: 0 0 0 5px var(--sub-color-1) inset;
-    border: 5px solid var(--sub-color-1);
+    box-shadow: 0 0 0 5px var(--main-color) inset;
+    border: 5px solid var(--main-color);
     position: relative;
     overflow: hidden;
+}
+
+.con1 article ul li:nth-child(2) {
+    box-shadow: 0 0 0 5px var(--sub-color-1) inset;
+    border: 5px solid var(--sub-color-1);
 }
 
 .con1 article ul li h3 {
@@ -378,8 +398,12 @@ section article .more_wrap img {
 .modal_test_wrap .img {
     width: 450px;
     height: 250px;
-    background: #ccc;
+    /* background: #ccc; */
     margin-bottom: 30px;
+}
+
+.modal_test_wrap .img img {
+    width: 100%;
 }
 
 .modal_test_wrap h3 {
@@ -438,9 +462,10 @@ section article .more_wrap img {
     position: absolute;
     left: 0;
     height: 100%;
-    width: 20%;
+    width: 0%;
     background-color: var(--sub-color-2);
     border-radius: 100px;
+    transition: width 0.3s ease;
 }
 
 .modal_test_wrap .quiz .question {
@@ -529,16 +554,6 @@ section article .more_wrap img {
 .con2 {
     /* background: #818181; */
     position: relative;
-}
-
-.con2 .vector3 {
-    position: absolute;
-    transform: translateY(-95%);
-    width: 100%;
-}
-
-.con2 .vector3 img {
-    width: 100%;
 }
 
 .con2 .txt {
@@ -896,7 +911,7 @@ section article .more_wrap img {
 }
 
 .con3 article .con3_bot ul.slide li .img_wrap {
-    width: 230px;
+    width: 200px;
     position: absolute;
     right: 5%;
     top: -35%;

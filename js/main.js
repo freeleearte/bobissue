@@ -199,6 +199,8 @@ function showQuestion($question) {
 
     const index = $question.index();
 
+    progressBarUpdate($question);
+
     // 답변 복원
     const savedIndex = answeredQuestions[index];
     if (savedIndex !== undefined) {
@@ -220,6 +222,15 @@ function showQuestion($question) {
     } else {
         $question.find('.next').hide();
     }
+}
+
+function progressBarUpdate($question) {
+    const $questions = $('.quiz .question');
+    const currentIndex = $questions.index($question); // 정확한 index
+    const totalQuestions = $questions.length;
+
+    const progress = ((currentIndex + 1) / totalQuestions) * 100;
+    $('.progress_bar .done').css('width', progress + '%');
 }
 
 
@@ -343,12 +354,12 @@ let botSwiper = new Swiper(".con3_bot", {
 function updateActiveSlide() {
     // 기존 active 제거
     $('.con3 .con3_bot ul.slide li').removeClass('active');
-    $('.con3 .con3_bot ul.slide li .star img').attr('src', 'asset/star.png');
+    // $('.con3 .con3_bot ul.slide li .star img').attr('src', 'asset/star.png');
 
     // 가운데 슬라이드에 active 부여
     const $centerSlide = $('.con3 .con3_bot ul.slide li.swiper-slide-active');
     $centerSlide.addClass('active');
-    $centerSlide.find('.star img').attr('src', 'asset/star_active.png');
+    // $centerSlide.find('.star img').attr('src', 'asset/star_active.png');
 }
 
 document.addEventListener("DOMContentLoaded", function () {

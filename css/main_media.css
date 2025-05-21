@@ -366,7 +366,7 @@
     .con_bg .extra {
         display: block;
         height: 100vh;
-        background-color: var(--main-color);
+        background-color: #FF7C19;
     }
 
     .char1_wrap {

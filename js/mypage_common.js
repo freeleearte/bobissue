@@ -113,4 +113,8 @@ $(function () {
     e.preventDefault();
     window.history.back();
   });
+
+  $(".mobile_bar .tab_icon").click(function () {
+    $(".mobile_bar").toggleClass("on");
+  });
 });

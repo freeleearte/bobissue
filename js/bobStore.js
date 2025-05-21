@@ -709,13 +709,13 @@ $(function () {
         let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
 
         if (src.includes('heart_item_on.png')) {
-            alert("찜을 취소 하셨습니다!");
+            // alert("찜을 취소 하셨습니다!");
             $img.attr('src', './asset/heart_item.png');
 
             // localStorage에서 제거
             wishlist = wishlist.filter(id => id !== productId);
         } else {
-            alert("찜을 하셨습니다!");
+            // alert("찜을 하셨습니다!");
             $img.attr('src', './asset/heart_item_on.png');
 
             // localStorage에 추가 (중복 방지)

@@ -9,7 +9,7 @@ body {
 .main_visual {
     width: 100%;
     height: 400px;
-       background-image: url(../asset/mypage_banner.jpg);
+    background-image: url(../asset/mypage_banner.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -836,28 +836,28 @@ h4 {
 
 /* 하단 버튼 */
 .button {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding-top: var(--bt-pad);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: var(--bt-pad);
 }
 
 .button p {
-  background-color: var(--sub-color-1);
-  border-radius: 10px;
-  width: 330px;
-  height: 60px;
-  font-size: 22px;
-  font-weight: 500;
-  color: var(--txt-w-color);
-  cursor: pointer;
-  border-radius: 10px;
+    background-color: var(--sub-color-1);
+    border-radius: 10px;
+    width: 330px;
+    height: 60px;
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--txt-w-color);
+    cursor: pointer;
+    border-radius: 10px;
 }
 
 .button p a {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
