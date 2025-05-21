@@ -53,6 +53,7 @@ $(function () {
         <img src="asset/h_tab_logo.png" alt="밥이 로고">
         <p>지금 구독하면<br>다양한 혜택이 기다리고있어요 !</p>
     </div>
+    <a href="./subscription.html" class="m_sub">구독잇슈</a>
     <nav class="nav-placeholder"></nav>
 </div>
 </div>
@@ -97,7 +98,7 @@ $(function () {
       <li><a href="./login.html">로그인</a></li>
     `);
 
-      $('.bot nav ul li').last().replaceWith('<li><a href="./login.html">MY잇슈</a></li>');
+      $('.nav-menu li').last().replaceWith('<li><a href="./login.html">MY잇슈</a></li>');
       $('.right-menu li').eq(1).replaceWith(`<li class="heart_icon"><a href="./login.html"><img src="asset/heart.png" alt="heart"></a></li>`);
       $('.right-menu li').eq(2).replaceWith(`<li><a href="./bag_none.html"><img src="asset/bag.png" alt="bag"></a></li>`);
     }
@@ -134,6 +135,8 @@ $(function () {
   }
 
   $(window).on('scroll', function () {
+    if (window.innerWidth <= 843) return;
+
     let currentScroll = $(this).scrollTop();
 
     if (currentScroll > lastScrollTop) {

@@ -57,6 +57,7 @@ button {
 .main_visual .l_slide img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 .main_visual .r_text {
@@ -94,6 +95,10 @@ button {
 .main_visual .r_text ul.updown1 li {
     animation: updown1 7s linear infinite;
     top: 0;
+}
+
+.main_visual .r_text ul.updown1 li img:nth-child(3) {
+    display: none;
 }
 
 .main_visual .r_text ul.updown2 li {
@@ -135,6 +140,10 @@ button {
 
 .con_bg img {
     width: 100%;
+}
+
+.con_bg .extra {
+    display: none;
 }
 
 /* char1 */
@@ -524,7 +533,7 @@ section article .more_wrap img {
 
 .con2 .vector3 {
     position: absolute;
-    transform: translateY(-100%);
+    transform: translateY(-95%);
     width: 100%;
 }
 
@@ -577,6 +586,7 @@ section article .more_wrap img {
     height: 100%;
     border-radius: 50px;
     background: #ccc;
+    object-fit: cover;
 }
 
 .con2 article .img_container .sw_btn {
@@ -699,7 +709,7 @@ section article .more_wrap img {
 
 .con2 article .img_container,
 .con2 article .con_container {
-    transition: top 0.8s ease, left 0.8s ease, right 0.8s ease;
+    transition: top 0.8s ease, left 0.8s ease, right 0.8s ease, transform 0.8s ease;
     /* 위치 변화에 transition 적용 */
 }
 
