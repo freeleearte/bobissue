@@ -416,21 +416,21 @@ ScrollTrigger.matchMedia({
         });
     },
 
-    // // 모바일 (1024px 이하)
-    // "(max-width: 1024px)": function () {
-    //     const speeds = [-0.4, -0.3, -0.4];
+    // 모바일 (375px 이하)
+    "(max-width: 375px)": function () {
+        const speeds = [-0.5, -0.5, -0.5, -0.5, -0.5, -0.5];
 
-    //     parallaxEls.forEach((el, index) => {
-    //         gsap.to(el, {
-    //             y: () => window.innerHeight * speeds[index],
-    //             ease: 'power1.out',
-    //             scrollTrigger: {
-    //                 trigger: el,
-    //                 start: 'top bottom',
-    //                 end: 'bottom top',
-    //                 scrub: 1
-    //             }
-    //         });
-    //     });
-    // }
+        parallaxEls.forEach((el, index) => {
+            gsap.to(el, {
+                y: () => window.innerHeight * speeds[index],
+                ease: 'power1.out',
+                scrollTrigger: {
+                    trigger: el,
+                    start: 'top bottom',
+                    end: 'bottom top',
+                    scrub: 1
+                }
+            });
+        });
+    }
 });

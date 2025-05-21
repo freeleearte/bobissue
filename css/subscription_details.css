@@ -383,6 +383,7 @@ div.scroll {
     font-weight: 500;
     color: var(--txt-w-color);
     font-family: var(--main-font-family);
+    cursor: pointer;
 }
 
 .con .hidden {

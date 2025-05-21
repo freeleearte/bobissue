@@ -175,17 +175,19 @@ $(function () {
 
 
 
-
-
-
-
     $('.con .banner .accordion').click(function () {
+        const $clicked = $(this);
+        const $target = $clicked.closest('.banner').siblings('.hidden');
+        const isVisible = $target.is(':visible');
+        const $all = $('.hidden');
 
-        let tf = $(this).parent('.banner').siblings('.hidden').is(':visible');
-        if (tf) {
-            $(this).parent('.banner').siblings('.hidden').slideUp();
-        } else {
-            $(this).parent('.banner').siblings('.hidden').slideDown();
+        // 모든 콘텐츠 닫기
+        $all.stop(true, true).slideUp(300);
+
+        if (!isVisible) {
+            // 클릭한 콘텐츠 열기 (스크롤 보정 없이)
+            $target.stop(true, true).slideDown(300);
         }
     });
+
 });

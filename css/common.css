@@ -381,6 +381,7 @@ footer .f_left {
 footer .logo {
     width: 265px;
     margin-bottom: 50px;
+    order: 1;
 }
 
 footer .logo img {
@@ -392,6 +393,7 @@ footer .f_left .info {
     color: var(--txt-w-color);
     gap: 60px;
     height: 110px;
+    order: 2;
 }
 
 footer .f_left .info .group {
@@ -463,14 +465,13 @@ footer .inner>span {
 
 /* 아이패드 프로 */
 @media screen and (max-width: 834px) {
+    .inner {
+        width: 740px;
+    }
 
     /* header */
     .header-placeholder {
         height: 70px;
-    }
-
-    .inner {
-        width: 740px;
     }
 
     header .top {
@@ -628,6 +629,12 @@ footer .inner>span {
         font: var(--pre-15-r);
     }
 
+    .header_tap_menu .m_sub {
+        display: none;
+        font: var(--pre-25-b);
+        color: var(--sub-color-1);
+    }
+
     header nav ul.nav-menu {
         flex-direction: column;
         gap: 50px;
@@ -641,6 +648,7 @@ footer .inner>span {
     /* footer */
     footer {
         height: 250px;
+        border-radius: 20px 20px 0 0;
     }
 
     footer .f_top {
@@ -651,12 +659,14 @@ footer .inner>span {
     footer .logo {
         width: 133px;
         margin-bottom: 30px;
+        order: 1;
     }
 
     footer .f_left .info {
         flex-direction: column;
         height: fit-content;
         gap: 30px;
+        order: 2;
     }
 
     footer .f_left .info .group {
@@ -702,5 +712,175 @@ footer .inner>span {
 @media screen and (max-width: 375px) {
     .inner {
         width: 335px;
+    }
+
+    /* header */
+    .header-placeholder {
+        height: 92px;
+    }
+
+    header {
+        width: 100vw;
+    }
+
+    header .top {
+        display: block;
+        height: 47px;
+    }
+
+    header .top .inner {
+        display: none;
+    }
+
+    header .mid {
+        height: 45px;
+    }
+
+    header .mid h1 a {
+        width: 94px;
+        height: 30px;
+    }
+
+    header .mid .left ul {
+        display: none;
+    }
+
+    header ul.right-menu li:nth-child(1) {
+        display: none;
+    }
+
+    header ul.right-menu li a {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* 탭 메뉴 */
+    .header_tap_menu {
+        width: 260px;
+        border-top-left-radius: 28px;
+    }
+
+    .header_tap_menu>img {
+        margin-bottom: 51px;
+    }
+
+    header ul.user-menu li a {
+        font-size: 16px;
+    }
+
+    header ul.user-menu li span {
+        font-size: 16px;
+    }
+
+    header ul.user-menu li span em {
+        font-size: 18px;
+    }
+
+    header ul.user-menu li button {
+        font-size: 16px;
+    }
+
+    header .tab_banner {
+        height: 75px;
+        margin-top: 75px;
+        margin-bottom: 25px;
+    }
+
+    header .tab_banner img {
+        width: 120px;
+    }
+
+    header .tab_banner p {
+        font-size: 14px;
+    }
+
+    .header_tap_menu .m_sub {
+        display: block;
+        margin-left: 20px;
+        margin-bottom: 30px;
+        font-size: 16px;
+    }
+
+    header nav ul.nav-menu {
+        gap: 30px;
+    }
+
+    header nav ul.nav-menu li a {
+        font-size: 16px;
+    }
+
+    /* footer */
+    footer {
+        height: 400px;
+    }
+
+    footer .f_right {
+        display: none;
+    }
+
+    footer .f_top {
+        margin-top: 20px;
+        position: relative;
+        justify-content: center;
+    }
+
+    footer .logo {
+        position: absolute;
+        left: 50%;
+        top: 25%;
+        transform: translateX(-50%);
+    }
+
+    footer .f_left .info .f_nav {
+        margin-bottom: 85px;
+        align-self: center;
+        gap: 0;
+    }
+
+    footer .f_left .info .f_nav li {
+        padding-inline: 10px;
+        border-right: 1px solid var(--light-yellow);
+        color: var(--light-yellow);
+        line-height: .6;
+    }
+
+    footer .f_left .info .f_nav li a {
+        font-size: 13px;
+    }
+
+    footer .f_left .info .f_nav li:nth-child(3) {
+        border-right: 0;
+    }
+
+    footer .f_left .info .f_nav li:nth-child(4),
+    footer .f_left .info .f_nav li:nth-child(5) {
+        display: none;
+    }
+
+    footer .f_left .info .group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .f_left .info .group .qr_txt {
+        display: none;
+    }
+
+    footer .f_left .info img {
+        margin-left: 0;
+        width: 98px;
+    }
+
+    footer .f_left .info .group .time_num {
+        text-align: center;
+        width: 155px;
+    }
+
+    footer .f_left .info strong {
+        margin-bottom: 13px;
+    }
+
+    footer .f_left .info .time_num i {
+        margin-bottom: 13px;
     }
 }
