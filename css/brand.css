@@ -152,6 +152,10 @@
     background: url(../asset/brand/logo6.png) no-repeat center/contain;
 }
 
+.main {
+    width: 100%;
+}
+
 
 /* 입점 제휴 안내 */
 .con3 {
@@ -236,3 +240,6 @@
     background: url(../asset/brand/icon6.png) no-repeat center/contain;
 }
 
+.sec1 .contain .inner .top img {
+    width: 800px;
+}
