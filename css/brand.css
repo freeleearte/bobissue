@@ -391,6 +391,7 @@ body {
     font: var(--pre-40-m);
     display: flex;
     align-items: center;
+    text-align: center;
 }
 
 .con5 li:nth-child(1) img {
