@@ -125,6 +125,10 @@ h2 {
   font: var(--pre-25-r);
 }
 
+.event_list .event_item .text_box .mobile_text {
+  display: none;
+}
+
 .event_list .event_item .tag {
   align-self: center;
   padding-bottom: 0px;

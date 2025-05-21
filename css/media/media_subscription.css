@@ -11,6 +11,7 @@
 
   .main_visual {
     height: 250px;
+    background: url(../../asset/subscription/main_visual_t.png) no-repeat;
   }
 
   .main_visual img {
@@ -151,8 +152,9 @@
   .con3 .option_all .op_right,
   .con3 .premium_all .pre_right,
   .con3 .discount .di_right {
-    width: 320px;
-    height: 165px;
+    width: 32%;
+    height: 100%;
+    background-size: contain;
     border-radius: 15px;
   }
 
@@ -215,9 +217,8 @@
   }
 
   .coupon_wrapper {
-    grid-template-columns: repeat(2, 325px);
-    gap: 35px 20px;
-    padding-top: 35px;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .coupon_wrapper .coupon {
@@ -323,11 +324,13 @@
   .plan_top p {
     font: var(--pre-18-b);
     padding: 0;
+    white-space: nowrap;
   }
 
   .con5 {
-    padding: 50px 0;
+    padding: 50px 0 150px 0;
     background: var(--bg-w-color);
+    margin: 0;
   }
 
   .con5 .text_all {
@@ -357,7 +360,7 @@
   .con5 .button_icon {
     width: 110px;
     height: 50px;
-    top: 59%;
+    top: 45%;
   }
 }
 
@@ -366,12 +369,24 @@
 
 
 @media screen and (max-width: 375px) {
+
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
   .inner {
     width: 335px;
   }
 
   .main_visual {
     height: 150px;
+    background: url(../../asset/subscription/main_visual_m.png) no-repeat;
   }
 
   .con1 {
@@ -481,8 +496,8 @@
   .con3 .option_all .op_right,
   .con3 .premium_all .pre_right,
   .con3 .discount .di_right {
-    width: 320px;
-    height: 165px;
+    width: 50%;
+    background-size: contain;
     border-radius: 15px;
   }
 
@@ -545,5 +560,122 @@
 
   .con4 {
     padding: 30px 0;
+  }
+
+  .con4 .item .num {
+    width: 45px;
+    height: 50px;
+    font: var(--pre-15-sb);
+  }
+
+  .coupon_box .item h3 {
+    font: var(--pre-22-b);
+    padding-bottom: 15px;
+  }
+
+  .coupon_box .item h2 {
+    font: var(--pre-18-sb);
+  }
+
+  .coupon_wrapper {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    justify-items: center;
+    box-sizing: border-box;
+    padding-top: 50px;
+  }
+
+  .coupon .coupon_right {
+    width: calc(100% - 75px);
+  }
+
+  .coupon .coupon_left span {
+    font: var(--pre-22-b);
+    line-height: 1;
+  }
+
+
+  /* 구독 #2 */
+  .box .item {
+    padding-top: 60px;
+  }
+
+  .box .item h3 {
+    font: var(--pre-22-b);
+  }
+
+  .box .item h2 {
+    font: var(--pre-18-sb);
+  }
+
+  .plan_section {
+    padding-top: 30px;
+  }
+
+  .plan {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 50px;
+  }
+
+  .plan_card {
+    width: 100%;
+  }
+
+  .plan_box h3 {
+    font: var(--pre-18-b);
+  }
+
+  .plan_box .price {
+    width: 185px;
+    height: 40px;
+  }
+
+
+  .con5 {
+    padding: 50px 0 30px 0;
+    margin-bottom: 0;
+  }
+
+  .con5 .text_all {
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+    padding-bottom: 60px;
+  }
+
+  .con5 .text_all .tit h2 {
+    font: var(--pre-22-m);
+    line-height: 1;
+  }
+
+  .con5 .text_all .tit b {
+    font: var(--pre-22-b);
+  }
+
+  .con5 .text_all .txt {
+    display: none;
+  }
+
+  .con5 .tit br {
+    display: block;
+  }
+
+  .con5 .button {
+    width: 200px;
+    height: 40px;
+    border-radius: 8px;
+    font: var(--pre-15-b);
+  }
+
+  .con5 .button_icon {
+    width: 110px;
+    height: 50px;
+    top: 53%;
   }
 }
