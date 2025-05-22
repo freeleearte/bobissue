@@ -193,8 +193,8 @@ body {
 }
 
 .main .one .top .btn {
-  width: 160px;
-  height: 50px;
+  width: 150px;
+  height: 45px;
   border-radius: 5px;
   background-color: var(--main-color);
 }
@@ -254,8 +254,8 @@ body {
 }
 
 .main .two .two_tit button {
-  width: 160px;
-  height: 50px;
+  width: 150px;
+  height: 45px;
   border: none;
   border-radius: 5px;
   background: var(--main-color);

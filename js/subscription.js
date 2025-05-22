@@ -48,7 +48,7 @@ $(function () {
     console.warn('boxArticle not found!');
   }
 
-  document.querySelector('.tab.coupon')?.addEventListener('click', () => {
+  document.querySelector('.tab.coupontab')?.addEventListener('click', () => {
     const target = document.querySelector('article.coupon_box');
     if (target) {
       target.scrollIntoView({ behavior: 'smooth' });

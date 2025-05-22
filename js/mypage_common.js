@@ -96,9 +96,9 @@ $(function () {
 
       // (선택) userName별로 등급을 다르게 지정하고 싶으면 매핑하세요
       const gradeMap = {
-        '김말숙': 'VIP',
-        '이국밥': 'Gold',
-        '박키트': 'Platinum'
+        '김말숙': 'PREMIUM',
+        '이국밥': 'COUPON',
+        '박키트': 'BASIC'
       };
       const grade = gradeMap[userName] || 'Basic';
       $gradeEl.text(grade);

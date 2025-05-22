@@ -7,8 +7,9 @@
     }
 
     .main_visual {
+        width: 100%;
         height: 250px;
-        background-image: url(../../asset/notice_banner_tap.jpg);
+        background: cadetblue;
     }
 
     .con1 {
@@ -103,14 +104,13 @@
     }
 
     .event_list .event_item .tag {
-        font-size: 15px;
-        font-weight: 700;
+        font: var(--pre-15-b);
         padding-right: 10px;
     }
 
     .event_list .event_item .tag::after {
         right: 0;
-        top: -40%;
+        top: -55%;
         /* bottom: 0%; */
         width: 80px;
     }
@@ -127,6 +127,10 @@
 
     .notice_header h2 {
         font-size: 30px;
+    }
+
+    .notice {
+        height: 100%;
     }
 
     .notice_list {
@@ -151,7 +155,7 @@
     }
 
     .notice_item.on span.qtext {
-        font: var(--pre-15-b);
+        /* font: var(--pre-15-b); */
     }
 
     .arrow img {
@@ -160,10 +164,8 @@
 
     .notice_answer {
         display: none;
-        padding: 0 0 10px 55px;
-        font-size: 15px;
-        font-weight: 500;
-        /* font: var(--pre-15-m); */
+        padding: 0 0 10px 70px;
+        font: var(--pre-15-m);
         color: var(--txt-dark-gray);
     }
 
@@ -223,8 +225,7 @@
     .faq_question {
         height: 45px;
         gap: 10px;
-        font-size: 16px;
-        /* font: var(--pre-16-m); */
+        font: var(--pre-16-m);
     }
 
     .faq_question img {
@@ -240,14 +241,8 @@
         opacity: 1;
     }
 
-    .faq_item span {
-        font-size: 16px;
-        font-weight: 400;
-    }
-
     .faq_item.on span {
-        font-size: 16px;
-        font-weight: 400;
+        font: var(--pre-16-m);
         color: var(--sub-color-1);
     }
 
@@ -368,8 +363,7 @@
     }
 
     .event_list .event_item .text_box p {
-        font-size: 14px;
-       /*  font: var(--pre-14-r); */
+        font: var(--pre-14-r);
     }
 
     .event_list .event_item .text_box .web_text {
@@ -381,12 +375,11 @@
     }
 
     .event_list .event_item .tag {
-        font-size: 14px;
-        /* font: var(--pre-14-b); */
+        font: var(--pre-14-b);
     }
 
     .event_list .event_item .tag::after {
-        bottom: -100%;
+        bottom: -275%;
         width: 70px;
     }
 
@@ -496,7 +489,7 @@
         height: 50px;
         padding-left: 0;
     }
-
+    
     .faq_item.on .faq_answer {
         padding-left: 26px;
         opacity: 1;
@@ -509,7 +502,7 @@
 
     .faq_answer p {
         height: auto;
-        /* font: var(--pre-14-r); */
+        font: var(--pre-14-r);
         font-size: 14px;
     }
 
@@ -519,13 +512,10 @@
 
     .faq_item span {
         font-size: 14px;
-        font-family: var(--main-font-family);
     }
 
     .faq_item.on span {
-        /* font: var(--pre-14-b); */
+        font: var(--pre-14-b);
         font-size: 14px;
     }
-
-
 }

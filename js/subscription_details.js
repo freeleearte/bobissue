@@ -127,29 +127,29 @@ $(function () {
     /* 스와이퍼 */
 
     // 모든 .acodian, .acodian_2 슬라이더 개별 초기화
-    document.querySelectorAll('.acodian').forEach((swiperContainer) => {
-        new Swiper(swiperContainer, {
-            slidesPerView: 'auto',
-            spaceBetween: 16,
-            centeredSlides: true,
-            slidesOffsetAfter: 20,
-            pagination: {
-                el: swiperContainer.querySelector('.swiper-pagination'),
-                clickable: true,
-            },
-        });
-    });
+    // document.querySelectorAll('.acodian').forEach((swiperContainer) => {
+    //     new Swiper(swiperContainer, {
+    //         slidesPerView: 'auto',
+    //         spaceBetween: 16,
+    //         centeredSlides: true,
+    //         slidesOffsetAfter: 20,
+    //         pagination: {
+    //             el: swiperContainer.querySelector('.swiper-pagination'),
+    //             clickable: true,
+    //         },
+    //     });
+    // });
 
-    document.querySelectorAll('.acodian_2').forEach((swiperContainer) => {
-        new Swiper(swiperContainer, {
-            slidesPerView: 'auto',
-            spaceBetween: 16,
-            centeredSlides: true,
-            slidesOffsetAfter: 20,
-            pagination: {
-                el: swiperContainer.querySelector('.swiper-pagination2'),
-                clickable: true,
-            },
-        });
-    });
+    // document.querySelectorAll('.acodian_2').forEach((swiperContainer) => {
+    //     new Swiper(swiperContainer, {
+    //         slidesPerView: 'auto',
+    //         spaceBetween: 16,
+    //         centeredSlides: true,
+    //         slidesOffsetAfter: 20,
+    //         pagination: {
+    //             el: swiperContainer.querySelector('.swiper-pagination2'),
+    //             clickable: true,
+    //         },
+    //     });
+    // });
 });
