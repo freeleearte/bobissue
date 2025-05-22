@@ -353,25 +353,38 @@ $(document).ready(function () {
             ],
         ];
 
-
-
-        /* ******************************************************** */
-
-        // 처음에 필요한 컨텐츠만 보여주기 (첫 번째 탭 활성화)
-        $('.gnb_item').removeClass('on').eq(0).addClass('on');
-        $('.right > div').hide().eq(0).show();
-
-        $('.gnb_item button').on('click', function () {
-            const index = $(this).parent().index(); // 현재 클릭된 버튼의 li 인덱스
-
-            // 탭 버튼 활성화 처리
-            $('.gnb_item').removeClass('on');
-            $(this).parent().addClass('on');
-
-            // 콘텐츠 표시
-            $('.right > div').hide().eq(index).fadeIn(300); // 부드럽게 나타나도록 설정
+        $('.right > div').each(function (groupIdx) {
+            $(this).find('ul li').each(function (itemIdx) {
+                const data = productList[groupIdx][itemIdx];
+                $(this).find('img.food')
+                    .attr('src', `${data.img}`)
+                    .attr('alt', `${data.name}`);
+                $(this).find('.top_txt span').html(data.brand);
+                $(this).find('.top_txt p').html(data.name);
+                $(this).find('.bottom_txt > span').text(data.price);
+                $(this).find('.b_t strong').text(data.discountRate);
+                $(this).find('.b_t p').text(data.discounted);
+            });
         });
-    };
+    }
 
+
+
+    /* ******************************************************** */
+
+    // 처음에 필요한 컨텐츠만 보여주기 (첫 번째 탭 활성화)
+    $('.gnb_item').removeClass('on').eq(0).addClass('on');
+    $('.right > div').hide().eq(0).show();
+
+    $('.gnb_item button').on('click', function () {
+        const index = $(this).parent().index(); // 현재 클릭된 버튼의 li 인덱스
+
+        // 탭 버튼 활성화 처리
+        $('.gnb_item').removeClass('on');
+        $(this).parent().addClass('on');
+
+        // 콘텐츠 표시
+        $('.right > div').hide().eq(index).fadeIn(300); // 부드럽게 나타나도록 설정
+    });
 });
 
