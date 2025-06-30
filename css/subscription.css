@@ -9,6 +9,12 @@ body {
     overflow-x: hidden;
 }
 
+/* 모달 열릴 때 배경 스크롤 방지 */
+body.modal-open {
+    overflow: hidden;
+    height: 100%;
+}
+
 .main_visual {
     width: 100%;
     height: 400px;
@@ -29,7 +35,7 @@ h4 {
     font-weight: 500;
     background: #FFF8ED;
     border: 1px solid var(--sub-color-1);
-    color: var(--sub-color-1); 
+    color: var(--sub-color-1);
     text-align: center;
     line-height: 50px;
     border-radius: 10px;
@@ -42,17 +48,16 @@ b {
 
 p {
     font: var(--pre-28-r);
-    line-height: 2.4rem;
     color: var(--txt-medium-m-gray);
 }
 
 .inner span {
-    font-weight: 600;
+    font-weight: 700;
     color: var(--main-color);
 }
 
 .con1 {
-    width: 1440px;
+    /*    width: 1440px; */
     display: flex;
     justify-content: center;
     padding: 200px 0 100px 0;
@@ -60,7 +65,7 @@ p {
 }
 
 .con1 .banner {
-    width: 1440px;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -123,13 +128,13 @@ p {
 
 .con2 .contents {
     width: 100%;
-    height: 785px;
+    padding-block: 50px;
     background: var(--light-green);
     background: var(--main-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 60px;
+    gap: 35px;
     overflow: hidden;
     position: relative;
 }
@@ -137,7 +142,7 @@ p {
 .con2 .contents .con_top,
 .con2 .contents .con_bottom {
     width: 100%;
-    height: 300px;
+
     overflow: hidden;
     position: relative;
 }
@@ -145,7 +150,7 @@ p {
 .con2 .contents .con_top ul,
 .con2 .contents .con_bottom ul {
     display: flex;
-    gap: 35px;
+    gap: 25px;
     width: max-content;
     animation-iteration-count: infinite;
     /* overflow: hidden; */
@@ -183,8 +188,8 @@ p {
 
 .con2 .contents .con_top ul li,
 .con2 .contents .con_bottom ul li {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     flex-shrink: 0;
     background: #ccc;
     border-radius: 10px;
@@ -313,35 +318,31 @@ p {
     gap: 30px;
 }
 
-.con3 .choice_all {
-    width: 100%;
-    height: 450px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 42px 45px;
-    background: #FFFCE6;
+
+
+.con3 .choice_all .ch_left {
+    width: 72%;
 }
 
-.con3 .choice_all .tit {
+/* .con3 .choice_all .tit {
     display: flex;
     align-items: center;
     gap: 20px;
     padding-bottom: 40px;
 }
+ */
 
-.con3 .choice_all .tit .num {
-    width: 40px;
-    height: 40px;
-    font: var(--pre-20-m);
-    border-radius: 40px;
-    background: var(--main-color);
-    color: var(--txt-w-color);
-    text-align: center;
-    line-height: 40px;
+
+.ch_right {
+    flex: 1;
 }
 
-.con3 .choice_all .tit .txt {
+.ch_right img {
+    width: 90%;
+    padding-left: 20px;
+}
+
+.tit .txt {
     color: var(--main-color);
     font: var(--pre-20-b);
 }
@@ -361,31 +362,30 @@ p {
     color: var(--txt-medium-m-gray);
 }
 
-.con3 .ch_right {
-    width: 350px;
-    height: 300px;
-    background: url(../asset/subscription/banner1.png) no-repeat center/cover;
-    border-radius: 30px;
-}
 
-.con3 .option_all {
+
+.con3 article {
     width: 100%;
     height: 450px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 42px 45px;
-    background: #DBE6D1;
+    padding: 42px 120px 42px 45px;
+    background: #DAF0C7;
 }
 
-.con3 .option_all .tit {
+.con3 .option_all .op_left {
+    width: 70%;
+}
+
+.con3 .tit {
     display: flex;
     align-items: center;
     gap: 20px;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
 }
 
-.con3 .option_all .tit .num {
+.num {
     width: 40px;
     height: 40px;
     font: var(--pre-20-m);
@@ -393,7 +393,10 @@ p {
     background: var(--main-color);
     color: var(--txt-w-color);
     text-align: center;
-    line-height: 40px;
+    /*     line-height: 40px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .con3 .option_all .tit .txt {
@@ -411,30 +414,28 @@ p {
 }
 
 .con3 .op_right {
-    width: 350px;
-    height: 300px;
-    background: url(../asset/subscription/banner2.png) no-repeat center/cover;
-    border-radius: 30px;
+    flex: 1;
 }
 
-.con3 .premium_all {
+.con3 .op_right img {
     width: 100%;
-    height: 450px;
-    background: #FFFCE6;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 42px 45px;
+
 }
 
-.con3 .premium_all .tit {
+
+
+.con3 .premium_all .pre_left {
+    width: 70%;
+}
+
+/* .con3 .premium_all .tit {
     display: flex;
     align-items: center;
     gap: 20px;
     padding-bottom: 40px;
-}
+} */
 
-.con3 .premium_all .tit .num {
+/* .con3 .premium_all .tit .num {
     width: 40px;
     height: 40px;
     font: var(--pre-20-m);
@@ -444,15 +445,15 @@ p {
     text-align: center;
     line-height: 40px;
 }
-
-.con3 .premium_all .tit .txt {
+ */
+/* .con3 .premium_all .tit .txt {
     color: var(--main-color);
     font: var(--pre-20-b);
 }
-
+ */
 .con3 .premium_all h2 {
     padding-bottom: 20px;
-    line-height: 1;
+    line-height: 1.3;
 }
 
 .con3 .premium_all .button {
@@ -485,30 +486,43 @@ p {
 }
 
 .con3 .pre_right {
-    width: 350px;
-    height: 220px;
-    background: url(../asset/subscription/banner3.png) no-repeat center/cover;
-    border-radius: 30px;
+    flex: 1;
 }
 
-.con3 .discount {
+.con3 .pre_right img {
+    width: 100%;
+}
+
+/* .con3 .discount {
     width: 100%;
     height: 450px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 42px 45px;
-    background: #DBE6D1;
+    padding: 42px 130px 42px 45px;
+    background: #DAF0C7;
+} */
+.con3 .premium_all {
+    background-color: #FFFCE6;
 }
 
+.con3 .choice_all {
+    background-color: #FFFCE6;
+}
+
+.con3 .discount .di_left {
+    width: 70%;
+}
+
+/* 
 .con3 .discount .tit {
     display: flex;
     align-items: center;
     gap: 20px;
-    padding-bottom: 40px;
-}
+    padding-bottom: 30px;
+} */
 
-.con3 .discount .tit .num {
+/* .con3 .discount .tit .num {
     width: 40px;
     height: 40px;
     font: var(--pre-20-m);
@@ -517,12 +531,12 @@ p {
     color: var(--txt-w-color);
     text-align: center;
     line-height: 40px;
-}
+} */
 
-.con3 .di_left .tit .txt {
+/* .con3 .di_left .tit .txt {
     color: var(--main-color);
     font: var(--pre-20-b);
-}
+} */
 
 .con3 .discount h2 {
     line-height: 1;
@@ -539,29 +553,30 @@ p {
 }
 
 .con3 .di_right {
-    width: 350px;
-    height: 300px;
-    background: url(../asset/subscription/banner4.png) no-repeat center/cover;
-    border-radius: 30px;
+    flex: 1;
 }
 
-/* 오른쪽 탭 바 */
+.con3 .di_right img {
+    width: 90%;
+}
+
+/* PC/태블릿용 탭바 - 기본 스타일 (768px 초과) */
 .side_all {
     position: sticky;
     height: auto;
-    top: 60%;
+    top: 30%;
     width: fit-content;
     left: 100%;
 }
 
 .side_tab {
-    position: relative;
-    /* top: 0;
-    right: 0; */
-    z-index: 1;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 15px 0 0 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    align-items: end;
+    gap: 0;
 }
 
 .side_tab span {
@@ -576,7 +591,7 @@ p {
     border-radius: 15px 0 0 15px;
     color: var(--sub-color-2);
     font-weight: bold;
-    font-size: 20px;
+    font-size: 25px;
     padding: 40px 20px;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -584,6 +599,7 @@ p {
     flex-direction: column;
     align-items: center;
 }
+
 
 .tab.active {
     background-color: var(--sub-color-2);
@@ -607,7 +623,6 @@ p {
     width: 100%;
     height: 100%;
     position: relative;
-    margin-top: -300px;
     padding-bottom: var(--con-pad);
 }
 
@@ -621,8 +636,8 @@ p {
 
 /* 쿠폰형 */
 .con4 .item .num {
-    width: 75px;
-    height: 78px;
+    width: 130px;
+    height: 80px;
     background: url(../img/tabmenu1.png) no-repeat center/contain;
     color: var(--txt-w-color);
     line-height: 75px;
@@ -637,6 +652,7 @@ p {
 
 .coupon_box {
     text-align: center;
+    width: 100%;
 }
 
 .coupon_box .item {
@@ -644,17 +660,16 @@ p {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding-top: 200px;
 }
 
-.coupon_box .item h3 {
+.coupon_box .item h2 {
     font: var(--pre-40-b);
     color: var(--main-color);
     padding-top: 10px;
     padding-bottom: 15px;
 }
 
-.coupon_box .item h2 {
+.coupon_box .item h3 {
     font: var(--pre-35-sb);
     color: #000;
     padding-bottom: 2px;
@@ -670,7 +685,9 @@ p {
     grid-template-columns: repeat(2, 460px);
     justify-content: center;
     gap: 50px 25px;
-    padding-top: 80px;
+    padding-top: 100px;
+    max-width: 100%;
+    width: 100%;
 }
 
 .coupon_wrapper .coupon {
@@ -681,7 +698,7 @@ p {
 }
 
 .coupon .coupon_left {
-    width: 105px;
+    width: 22%;
     height: 100%;
     text-align: center;
     display: flex;
@@ -709,13 +726,14 @@ p {
 }
 
 .coupon .coupon_right h3 {
-    font: var(--pre-25-sb);
+    font-size: 25px;
+    font-weight: 700;
     padding-bottom: 4px;
 }
 
 .coupon .coupon_right strong {
     font: var(--pre-35-sb);
-    padding-top: 17px;
+    padding-top: 25px;
 }
 
 .coupon .coupon_right p {
@@ -731,6 +749,7 @@ p {
 /* 박스형 */
 .box {
     text-align: center;
+    width: 100%;
 }
 
 .box .item {
@@ -741,35 +760,35 @@ p {
     padding-top: 200px;
 }
 
-.box .item h3 {
+.box .item h2 {
     font: var(--pre-40-b);
     color: var(--sub-color-1);
     padding-top: 10px;
     padding-bottom: 15px;
 }
 
-.box .item h2 {
+.box .item h3 {
     font: var(--pre-35-sb);
     color: #000;
     padding-bottom: 2px;
 }
 
 .box .item p {
-    font: var(--pre-20-m);
+    font: var(--pre-20-r);
     color: var(--txt-medium-m-gray);
 }
 
 .plan_section {
     width: 100%;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 100px;
 }
 
 .plan {
     display: flex;
     justify-content: space-between;
-    gap: 55px;
-    flex-wrap: no-wrap;
+    gap: 2%;
+    flex-wrap: nowrap;
 }
 
 .plan_card {
@@ -788,15 +807,16 @@ p {
 }
 
 .plan_top p {
-    font: var(--pre-35-sb);
+    font-size: 30px;
+    font-weight: 700;
     color: var(--txt-gray);
-    padding-top: 10px;
+    padding-top: 20px;
 }
 
 .plan_box {
     width: 100%;
     height: 250px;
-    border: 2px solid var(--sub-color-1);
+    border: 3px solid var(--sub-color-1);
     border-radius: 15px;
     display: flex;
     flex-direction: column;
@@ -813,7 +833,7 @@ p {
 }
 
 .plan_box .price {
-    width: 300px;
+    width: 90%;
     height: 70px;
     background: var(--sub-color-1);
     color: var(--txt-w-color);
@@ -858,13 +878,15 @@ p {
 }
 
 .con5 .text_all .tit h2 {
-    font: var(--pre-40-m);
-    color: #000;
+    font: var(--pre-40-sb);
+    color: #333;
+    text-align: center;
 }
 
 .con5 .text_all p {
-    font: var(--pre-25-m);
-    color: var(--txt-medium-m-gray);
+    font: var(--pre-25-r);
+    color: #333;
+    text-align: center;
 }
 
 .con5 .button {
@@ -874,13 +896,14 @@ p {
     color: var(--txt-w-color);
     text-align: center;
     line-height: 60px;
-    border-radius: 15px;
+    border-radius: 10px;
     margin: 0 auto;
     font: var(--pre-25-sb);
+    position: relative;
 }
 
 .con5 .tit br {
-  display: none;
+    display: none;
 }
 
 .con5 .button a {
@@ -897,7 +920,7 @@ p {
     height: 100px;
     background: url(../asset/subscription/bottonicon.png) no-repeat center/contain;
     position: absolute;
-    top: 55%;
+    top: -80px;
     left: 50%;
     transform: translateX(-50%);
     pointer-events: none;
@@ -913,27 +936,27 @@ p {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1000;
+    z-index: 100000;
     justify-content: center;
     align-items: center;
 }
 
 /* 모달 박스 */
 .modal_content {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    position: fixed;
     background: var(--txt-w-color);
-    border-radius: 15px;
-    width: 660px;
-    height: 550px;
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
     padding: 20px 25px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .modal_content h2 {
-    font: var(--pre-25-sb);
+    font: var(--pre-22-b);
     color: var(--txt-gray);
     padding-bottom: 20px;
     border-bottom: 1px solid var(--txt-light-gray);
@@ -948,13 +971,13 @@ p {
     display: flex;
     justify-content: space-between;
     gap: 50px;
-    padding: 14px 0;
+    padding: 20px 0;
 }
 
 .opinion_form label {
     width: 40px;
     display: block;
-    font: var(--pre-18-r);
+    font: var(--pre-15-r);
 }
 
 .opinion_form input[type="text"],
@@ -968,7 +991,7 @@ p {
 }
 
 .opinion_form textarea {
-    height: 230px;
+    height: 350px;
 }
 
 .secret_check {
@@ -1057,4 +1080,766 @@ p {
 
 .submit_btn {
     background: var(--main-color);
+}
+
+@media (max-width: 1024px) {
+    .main_visual {
+        width: 100%;
+        height: 250px;
+        background: url(../asset/subscription/main_visual_t.png) no-repeat center/cover;
+    }
+
+
+    /*        .inner {
+        max-width: 690px;
+    } */
+    .con1 .banner_right {
+        width: 35%;
+        height: 350px;
+    }
+
+    .con1 .banner_left h3 {
+        font: var(--pre-40-b);
+        line-height: 1;
+    }
+
+    .con1 .banner_left p {
+        font: var(--pre-25-r);
+        color: var(--txt-medium-m-gray);
+        text-align: center;
+        line-height: 2.5rem;
+    }
+
+    .con2 {
+        padding: 100px 0;
+    }
+
+
+
+    .con2 .contents {
+        gap: 25px;
+    }
+
+    .con2 .contents .con_top ul li,
+    .con2 .contents .con_bottom ul li {
+        width: 150px;
+        height: 150px;
+    }
+
+    .con2 .contents .con_top ul,
+    .con2 .contents .con_bottom ul {
+        gap: 15px;
+    }
+
+    h4 {
+        width: 180px;
+        height: 45px;
+        font: var(--pre-18-r);
+        font-weight: 500;
+        background: #FFF8ED;
+        border: 1px solid var(--sub-color-1);
+        color: var(--sub-color-1);
+        text-align: center;
+        line-height: 2.5;
+        border-radius: 10px;
+    }
+
+    .con2 .tit h2 {
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 40px;
+    }
+
+    .con2 .tit b {
+        font: var(--pre-30-b);
+    }
+
+    .con2 .tit {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        padding-bottom: 20px;
+    }
+
+    .con3 .inner {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .con3 .choice_all {
+        padding: 0 47px;
+    }
+
+    .con3 .premium_all {
+        padding: 0 47px;
+    }
+
+    .con3 .discount {
+        padding: 0 47px;
+    }
+
+    .con3 .option_all {
+        padding: 0 47px;
+    }
+
+    .tit .txt {
+        font-size: 20px;
+    }
+
+    .num {
+        width: 30px;
+        height: 30px;
+        font-size: 15px;
+
+    }
+
+    .con3 .tit {
+        gap: 10px;
+    }
+
+    h2 {
+        font: var(--pre-30-b);
+    }
+
+    .con3 .choice_all span {
+        font: var(--pre-30-b);
+    }
+
+    .con3 .option_all span {
+        font: var(--pre-30-b);
+    }
+
+
+    .con3 .discount span {
+        font: var(--pre-30-b);
+    }
+
+    .con3 article {
+        height: 350px;
+    }
+
+    .con3 .discount p {
+        font: var(--pre-18-r);
+    }
+
+    .con3 .choice_all p,
+    .con3 .option_all p {
+        font: var(--pre-18-r);
+        color: var(--txt-medium-m-gray);
+    }
+
+    .coupon_wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 100%;
+        width: 100%;
+        gap: 30px 20px;
+        padding-top: 100px;
+        padding-inline: 20px;
+    }
+
+    .coupon_wrapper .coupon {
+        width: 100%;
+        max-width: 400px;
+        height: 180px;
+        background: url(../asset/subscription/coupon.png) no-repeat center/contain;
+        display: flex;
+        margin: 0 auto;
+    }
+
+    .side_all .side_character {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+    }
+
+    .coupon_box .item h2 {
+        font: var(--pre-30-b);
+    }
+
+    .coupon_box .item h3 {
+        font: var(--pre-28-sb);
+    }
+
+    .box .item h2 {
+        font: var(--pre-30-b);
+    }
+
+    .box .item h3 {
+        font: var(--pre-28-sb);
+
+    }
+
+
+    .con4 .item .num {
+        width: 65px;
+        height: 100px;
+        background: url(../img/tabmenu1.png) no-repeat center/contain;
+        color: var(--txt-w-color);
+        line-height: 75px;
+        font-size: 25px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .coupon .coupon_left span {
+        /* writing-mode: vertical-rl;
+    text-orientation: upright; */
+        /* letter-spacing: 1px; */
+        color: var(--txt-w-color);
+        font: var(--pre-25-sb);
+        transform: rotate(-90deg);
+    }
+
+    .coupon .coupon_right h3 {
+        font-size: 20px;
+        font-weight: 700;
+        padding-bottom: 4px;
+    }
+
+    .coupon .coupon_right strong {
+        font: var(--pre-28-sb);
+        padding-top: 25px;
+    }
+
+    .coupon .coupon_right p {
+        font: var(--pre-18-r);
+        color: var(--txt-gray);
+    }
+
+    .coupon .coupon_right span {
+        font: var(--pre-25-m);
+        color: var(--txt-gray);
+    }
+
+    .box {
+        text-align: center;
+        width: 100%;
+        padding-inline: 20px;
+    }
+
+    .tab {
+        font-size: 20px;
+        padding: 20px 15px;
+    }
+
+    .plan_box h3 {
+        font-size: 22px;
+        padding-bottom: 20px;
+    }
+
+    .plan_box .price {
+        width: 80%;
+        height: 60px;
+        font: var(--pre-20-r);
+        line-height: normal;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .plan_box .price span {
+        font: var(--pre-20-sb);
+    }
+
+    .plan_box .desc {
+        font: var(--pre-18-r);
+        line-height: 22px;
+    }
+
+    .plan_top img {
+        width: 20px;
+    }
+
+    .plan_top p {
+        font-size: 22px;
+        font-weight: 700;
+        color: var(--txt-gray);
+        padding-top: 20px;
+    }
+
+    .con4 {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        padding-bottom: var(--bt-pad);
+    }
+
+    .con5 {
+        margin-bottom: 150px;
+        padding: 50px 0;
+    }
+
+    .con5 .text_all .tit h2 {
+        font: var(--pre-35-sb);
+        color: #333;
+        text-align: center;
+    }
+
+    b {
+        font: var(--pre-35-b);
+    }
+
+    .con5 .text_all p {
+        font: var(--pre-20-r);
+        color: #333;
+        text-align: center;
+    }
+
+    .con5 .button {
+        width: 280px;
+        height: 60px;
+        font-size: 22px;
+        font-weight: 600;
+        border-radius: 10px;
+    }
+
+    .con5 .button_icon {
+        width: 120px;
+        top: -75px;
+    }
+}
+
+/* 모바일용 탭바 - 하단 고정 (768px 이하) */
+@media (max-width: 768px) {
+    .side_all {
+        position: fixed;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        height: auto;
+        transform: none;
+        z-index: 9999;
+        margin: 0;
+        padding: 0;
+        background: transparent;
+    }
+
+    .side_tab {
+        position: static;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-radius: 0;
+        padding: 15px 20px;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        gap: 15px;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        margin: 0;
+    }
+
+    .tab {
+        position: static;
+        writing-mode: horizontal-tb;
+        text-orientation: mixed;
+        background-color: white;
+        border: 2px solid var(--sub-color-2);
+        border-radius: 10px;
+        color: var(--sub-color-2);
+        font-weight: bold;
+        padding: 0 10px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex: 1 1 50%;
+        height: 50px;
+        font-size: 18px;
+        min-width: 0;
+        max-width: 50%;
+        box-sizing: border-box;
+        text-align: center;
+        white-space: nowrap;
+        transform: none;
+        margin: 0;
+        line-height: 1.2;
+    }
+
+    .button_group {
+        padding-bottom: 100px;
+    }
+
+    .button_group button {
+        width: 180px;
+        height: 45px;
+    }
+
+    .side_tab span {
+        letter-spacing: normal;
+    }
+}
+
+
+
+@media (max-width: 767px) {
+    .main_visual {
+        width: 100%;
+        height: 150px;
+        background: url(../asset/subscription/main_visual_m.png) no-repeat center/cover;
+    }
+
+    .con1 .banner_right {
+        width: 50%;
+        height: 200px;
+    }
+
+    .con1 .banner_left h3 {
+        font: var(--pre-22-b);
+        line-height: 1;
+        padding-bottom: 15px;
+    }
+
+
+    .con1 .banner_left p {
+        font: var(--pre-15-r);
+        color: var(--txt-medium-m-gray);
+        text-align: center;
+        line-height: 1.5rem;
+    }
+
+
+    h4 {
+        width: 120px;
+        height: 25px;
+        font-size: 14px;
+        line-height: normal;
+        border-radius: 5px;
+    }
+
+
+    .con2 .tit {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding-bottom: 20px;
+    }
+
+    .con2 .tit h2 {
+        font: var(--pre-20-m);
+        line-height: 28px;
+    }
+
+    .con2 .tit b {
+        font: var(--pre-20-b);
+    }
+
+
+    .con2 .contents .con_bottom {
+        display: none;
+    }
+
+    .con3 article {
+        flex-direction: column;
+        gap: 30px;
+        height: auto;
+        text-align: center;
+    }
+
+    .con3 .tit {
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+
+
+
+    .con3 .choice_all,
+    .con3 .premium_all,
+    .con3 .discount,
+    .con3 .option_all {
+        padding: 20px;
+    }
+
+    h2 {
+        font: var(--pre-20-b);
+    }
+
+    .con3 .choice_all span {
+        font: var(--pre-20-b);
+    }
+
+    .con3 .option_all span {
+        font: var(--pre-20-b);
+    }
+
+
+    .con3 .discount span {
+        font: var(--pre-20-b);
+    }
+
+    .con3 .discount p {
+        font: var(--pre-15-m);
+
+    }
+
+    .con3 .choice_all p,
+    .con3 .option_all p {
+        font: var(--pre-15-m);
+        color: var(--txt-medium-m-gray);
+    }
+
+    .con3 .choice_all .ch_left {
+        width: 100%;
+    }
+
+    .con3 .option_all .op_left {
+        width: 100%;
+    }
+
+    .con3 .premium_all .pre_left {
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .con3 .discount .di_left {
+        width: 100%;
+    }
+
+
+    .ch_right img {
+        width: 45%;
+        padding-left: 10px;
+    }
+
+    .con3 .op_right img {
+        width: 50%;
+
+    }
+
+    .con3 .pre_right img {
+        width: 50%;
+    }
+
+
+    .con3 .di_right img {
+        width: 50%;
+    }
+
+    .con3 .choice_all h2 {
+        line-height: 1;
+        padding-bottom: 10px;
+    }
+
+    .con3 .pre_left .button img {
+        width: 18px;
+        height: 18px;
+        display: inline-block;
+    }
+
+    .con3 .pre_left .button {
+        width: 170px;
+        height: 35px;
+        background: var(--main-color);
+        color: var(--txt-w-color);
+        border-radius: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: 0;
+    }
+
+    .con3 .pre_left .button p {
+        font: var(--pre-15-sb);
+        color: var(--txt-w-color);
+    }
+
+    .tit .txt {
+        font-size: 15px;
+    }
+
+
+
+
+
+
+    .coupon_wrapper {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding-top: 50px;
+        padding-inline: 20px;
+        justify-items: center;
+    }
+
+    .coupon_wrapper .coupon {
+        min-width: 320px;
+        width: 100%;
+        height: 160px;
+    }
+
+    .coupon .coupon_right h3 {
+        font-size: 20px;
+        font-weight: 700;
+        padding-bottom: 10px;
+    }
+
+    .coupon .coupon_right strong {
+        font-size: 22px;
+        padding-top: 15px;
+    }
+
+    .coupon .coupon_right p {
+        font: var(--pre-12-r);
+        color: var(--txt-gray);
+    }
+
+    .coupon .coupon_left span {
+        font: var(--pre-20-sb);
+        transform: rotate(-90deg);
+    }
+
+    .coupon_box .item h2 {
+        font-size: 25px;
+    }
+
+    .coupon_box .item h3 {
+        font-size: 20px;
+    }
+
+    .box .item h2 {
+        font-size: 25px;
+    }
+
+    .box .item h3 {
+        font-size: 20px;
+
+    }
+
+    .con4 .item .num {
+        width: 46px;
+        height: 70px;
+        background: url(../img/tabmenu1.png) no-repeat center/contain;
+        color: var(--txt-w-color);
+        line-height: 75px;
+        font-size: 18px;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .coupon_box .item p {
+        font: var(--pre-18-m);
+        line-height: 20px;
+
+    }
+
+    .box .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    .box {
+        text-align: center;
+        width: 100%;
+        padding-inline: 0;
+    }
+
+    .plan {
+        display: flex;
+        justify-content: space-between;
+        gap: 50px;
+        flex-wrap: wrap;
+    }
+
+    .plan_card {
+        width: 100%;
+        /* height: 450px; */
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .plan_top p {
+        font-size: 22px;
+        font-weight: 700;
+        color: var(--txt-gray);
+        padding-top: 0px;
+    }
+
+    .box .item p {
+        font: var(--pre-18-m);
+        line-height: 20px;
+
+    }
+
+    .plan_section {
+        padding-top: 50px;
+    }
+
+    .plan_box .price {
+        width: 90%;
+
+    }
+
+    .con5 .text_all .tit h2 {
+        font-size: 22px;
+        color: #333;
+        text-align: center;
+    }
+
+    b {
+        font: var(--pre-22-b);
+    }
+
+    .con5 .tit br {
+        display: block;
+    }
+
+    .con5 .text_all p {
+        display: none;
+    }
+
+    .con5 .text_all {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding-bottom: 40px;
+    }
+
+    .con5 .button {
+        width: 200px;
+        height: 45px;
+        font-size: 18px;
+        font-weight: 600;
+        border-radius: 10px;
+    }
+
+    .con5 .button_icon {
+        width: 80px;
+        top: -65px;
+    }
+
+    .con4 {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        padding-bottom: var(--bt-pad);
+        padding-top: 50px;
+    }
+
+    .con1 {
+        /*    width: 1440px; */
+        display: flex;
+        justify-content: center;
+        padding: 50px 0 50px 0;
+        text-align: center;
+    }
+
+    .con2 {
+        padding: 0 0 50px 0;
+    }
 }

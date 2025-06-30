@@ -141,7 +141,9 @@ $(function () {
 
     if (currentScroll > lastScrollTop) {
       $('header').addClass('scroll');
-      moveMenu('bot');
+      if (window.innerWidth > 1440) {
+        moveMenu('bot');
+      }
     } else {
       $('header').removeClass('scroll');
       moveMenu('mid');
@@ -185,7 +187,7 @@ $(function () {
   function checkMenuPosition() {
     let windowWidth = $(window).width();
 
-    if (windowWidth >= 834) {
+    if (windowWidth > 834) {
       moveNavMenu('bot');
       moveUserMenu('top');
     } else {

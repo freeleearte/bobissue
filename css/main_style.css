@@ -108,23 +108,25 @@ button {
 
 @keyframes updown1 {
 
-    0% {
+    0%,
+    100% {
         top: 0;
     }
 
-    100% {
+    50% {
         top: -100%;
     }
 }
 
 @keyframes updown2 {
 
-    0% {
+    0%,
+    100% {
         top: -100%;
     }
 
-    100% {
-        top: 0;
+    50% {
+        top: 0%;
     }
 }
 
@@ -554,6 +556,7 @@ section article .more_wrap img {
 .con2 {
     /* background: #818181; */
     position: relative;
+    overflow-x: hidden;
 }
 
 .con2 .txt {
@@ -771,10 +774,17 @@ section article .more_wrap img {
     margin-top: 200px;
 }
 
+.char2_move_wrap {
+    position: absolute;
+    height: 300vh;
+    width: 100%;
+    overflow-x: hidden;
+}
+
 .char2_wrap {
     position: absolute;
     left: -300px;
-    top: -100px;
+    top: 0;
 }
 
 .char2_wrap img.char2 {
@@ -797,6 +807,7 @@ section article .more_wrap img {
     flex-direction: column;
     align-items: center;
     margin-top: -100px;
+    overflow-x: hidden;
 }
 
 .con3 .txt {

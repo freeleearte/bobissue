@@ -107,6 +107,48 @@ body {
     align-items: center;
 }
 
+.logIn .notice {
+    width: 100%;
+    box-sizing: border-box;
+    padding-block: 20px;
+    padding-inline: 25px;
+    border: 1px solid var(--light-green);
+    border-radius: 10px;
+    background-color: #F7FFF0;
+}
+
+.logIn .notice strong {
+    display: block;
+    margin-bottom: 15px;
+    font: var(--pre-18-sb);
+    color: var(--main-color);
+}
+
+.logIn .notice .info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.logIn .notice p {
+    display: flex;
+    gap: 10px;
+    font: var(--pre-16-r);
+    color: var(--txt-gray);
+}
+
+.logIn .notice p span {
+    width: 85px;
+}
+
+.logIn .notice p span:last-child {
+    width: fit-content;
+}
+
+.logIn .notice p span b {
+    font: var(--pre-16-sb);
+}
+
 @media screen and (max-width: 465px) {
     .logIn {
         width: 80%;
@@ -130,5 +172,19 @@ body {
 
     .logIn .bot li a {
         font-size: 15px;
+    }
+
+    .logIn .notice .info {
+        gap: 10px;
+    }
+
+    .logIn .notice p {
+        flex-wrap: wrap;
+        row-gap: 0;
+    }
+
+    .logIn .notice p span:last-child {
+        display: block;
+        width: fit-content;
     }
 }

@@ -503,6 +503,51 @@ footer .inner>span {
 }
 
 /* 반응형 */
+@media screen and (max-width: 1440px) {
+    .inner {
+        width: 75vw;
+    }
+
+    header .mid .left ul li {
+        font-size: 22px;
+    }
+
+    .search_input {
+        font-size: 15px;
+    }
+
+    .search_container.active .search_input {
+        width: 16vw;
+    }
+
+    header nav ul.nav-menu {
+        gap: 6vw;
+    }
+
+    header.scroll .bot .inner {
+        justify-content: center;
+    }
+
+    footer {
+        height: 420px;
+        border-radius: 30px 30px 0 0;
+    }
+
+    footer .f_right .sns {
+        position: absolute;
+        right: 5vw;
+    }
+
+    footer .inner>span {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1230px) {
+    header .mid .left .sub_ad {
+        display: none;
+    }
+}
 
 /* 아이패드 프로 */
 @media screen and (max-width: 834px) {
@@ -534,10 +579,6 @@ footer .inner>span {
     }
 
     header .mid .left ul li:first-child {
-        display: none;
-    }
-
-    header .mid .left .sub_ad {
         display: none;
     }
 
@@ -751,7 +792,7 @@ footer .inner>span {
 }
 
 /* 아이폰 13 미니 */
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 402px) {
     .inner {
         width: 335px;
     }
