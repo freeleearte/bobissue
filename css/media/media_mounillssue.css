@@ -644,7 +644,7 @@
   }
 
   .faq_container {
-    height: 400px;
+    height: fit-content;
     border-radius: 8px;
     border: 1px solid var(--main-color);
     flex-direction: column;
@@ -669,8 +669,13 @@
 
   .faq_item {
     padding-left: 15px;
+    height: fit-content;
+    padding-block: 0;
   }
 
+  .faq_item.on {
+    padding-block: 16px;
+  }
 
 
   .faq_question {
@@ -690,6 +695,10 @@
     padding-left: 26px;
     opacity: 1;
     /* max-height: 1000px; */
+  }
+
+  .faq_item:last-child.on {
+    position: static;
   }
 
   .faq_answer {

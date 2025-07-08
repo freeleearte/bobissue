@@ -357,7 +357,7 @@
 }
 
 /* 모바일 원 사이즈 */
-@media screen and (max-width : 375px) {
+@media screen and (max-width : 402px) {
 
     .title {
         height: 150px;
