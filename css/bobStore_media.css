@@ -157,7 +157,8 @@
     .con .filter {
         position: fixed;
         z-index: 10;
-        top: 95%;
+        top: auto;
+        bottom: -520px;
         left: 50%;
         transform: translateX(-50%);
         width: 100%;
@@ -167,7 +168,8 @@
     }
 
     .con .filter.on {
-        top: 25%;
+        bottom: -5%;
+        top: auto;
     }
 
     .con .filter .filter_sec ul {
