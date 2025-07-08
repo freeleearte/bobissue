@@ -231,11 +231,11 @@
 
     .con .filter .icon {
         width: 100px;
-        height: 75px;
-        margin-top: 20px;
+        height: 55px;
+        /* margin-top: 20px; */
     }
 
     .con .filter .icon img {
-        height: fit-content;
+        /* height: fit-content; */
     }
 }
